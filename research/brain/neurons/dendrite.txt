@@ -1,0 +1,3 @@
+# Dendrite
+
+Notes and research on the dendrite.

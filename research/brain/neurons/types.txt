@@ -1,0 +1,3 @@
+# Neuron Types
+
+Notes and research on neuron types.
