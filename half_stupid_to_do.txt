@@ -1,0 +1,258 @@
+half_stupid to do
+
+
+
+## **1. Define the Cognitive Model (Research Phase)**
+
+Before coding anything, we need to understand what we want to simulate.
+
+Research topics:
+
+* basic brain systems (homeostasis, emotion, memory, habits)
+* functions of amygdala, hippocampus, basal ganglia, prefrontal cortex
+* developmental psychology (how infants learn without language)
+* symbol grounding and emergent communication
+* simple reinforcement learning and animal learning theory
+
+Outcome:
+
+* a document describing each “brain region” and the simplified function we will implement.
+
+---
+
+## **2. Design the Agent Architecture**
+
+Translate the research into a workable structure.
+
+Define:
+
+* perception module
+* drives and needs
+* emotional system
+* fast instinct system (amygdala-like)
+* slow planning system (prefrontal-like)
+* episodic memory
+* procedural memory (habits)
+* naming system
+* communication channel
+* pointing mechanism
+* reward structure
+
+Outcome:
+
+* a blueprint showing how each module connects and what data flows between them.
+
+---
+
+## **3. Build the Environment Interface**
+
+Choose how the agent interacts with the world.
+
+Work:
+
+* connect to Minecraft (MineDojo, Malmo, or custom API)
+* define what the agent can observe
+* define what actions the agent can take
+* decide what sensory information the agent receives (no labels)
+
+Outcome:
+
+* the agent can *see* and *act* in the world.
+
+---
+
+## **4. Implement Perception + State Encoding**
+
+Convert Minecraft world data into useable signals.
+
+Tasks:
+
+* extract spatial grid around the agent
+* encode blocks without labels
+* encode entities as shapes/motion patterns
+* encode light, danger, noise
+* create a stable vector representation of “the world right now”
+
+Outcome:
+
+* the agent receives structured sensory data but no concepts.
+
+---
+
+## **5. Implement Drives and Homeostasis**
+
+Create the internal needs that push behavior.
+
+Drives:
+
+* hunger
+* safety
+* curiosity
+* energy
+* comfort
+
+Each drive changes over time.
+Each drive influences behavior.
+
+Outcome:
+
+* the agent has internal motivation.
+
+---
+
+## **6. Implement Emotion Module**
+
+Define emotional states based on drives and events.
+
+Examples:
+
+* fear
+* excitement
+* boredom
+* seeking
+* frustration
+
+Outcome:
+
+* actions are biased by emotional state.
+
+---
+
+## **7. Implement Fast System (Instincts)**
+
+A small neural network for:
+
+* danger reaction
+* avoiding threats
+* quick survival choices
+
+Outcome:
+
+* the agent can respond instantly without thinking.
+
+---
+
+## **8. Implement Slow System (Planning)**
+
+A deeper network (or simple planner) that uses:
+
+* memory
+* emotion
+* drives
+* sensory input
+
+This system chooses:
+
+* exploration
+* foraging
+* resting
+* long-term behavior
+
+Outcome:
+
+* the agent can plan beyond instincts.
+
+---
+
+## **9. Build the Memory System**
+
+Three layers:
+
+* **episodic memory** (what happened, where)
+* **semantic memory** (facts discovered over time)
+* **procedural memory** (habits, routines)
+
+Outcome:
+
+* the agent forms stable internal representations.
+
+---
+
+## **10. Implement Naming / Symbol Grounding**
+
+When the agent sees something new:
+
+* generates its own label
+* attaches the label to sensory features
+* updates dictionary over time
+
+Outcome:
+
+* the agent develops its own vocabulary.
+
+---
+
+## **11. Add Pointing & Communication**
+
+Agents can:
+
+* point at something
+* speak a symbol
+* align meanings
+* teach each other labels
+
+Outcome:
+
+* shared proto-language begins to emerge.
+
+---
+
+## **12. Multi-Agent Behavior**
+
+Introduce multiple agents with:
+
+* shared memory opportunities
+* conflicting needs
+* cooperation or competition potential
+
+Outcome:
+
+* culture-like patterns may emerge.
+
+---
+
+## **13. Training and Experimentation**
+
+Test different:
+
+* reward functions
+* drive weightings
+* personalities
+* environments
+* communication protocols
+
+Outcome:
+
+* observe emergent behavior and refine the model.
+
+---
+
+## **14. Documentation and Research Notes**
+
+Document:
+
+* what worked
+* what changed
+* what emerged
+* unexpected patterns
+
+Outcome:
+
+* the project becomes a research platform, not just code.
+
+---
+
+## **15. Iterative Improvement**
+
+Based on results, refine:
+
+* brain-module models
+* memory
+* perception
+* communication
+* reward shaping
+
+Outcome:
+
+* closer and closer approximation to mind-like behavior.
+

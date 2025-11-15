@@ -1,0 +1,142 @@
+research to do
+
+1. Brain Regions → Functional Models
+
+You don’t need biology, you need functional approximations.
+Search these:
+
+Keywords:
+
+“hypothalamus homeostasis simplified model”
+
+“amygdala fear response computational model”
+
+“basal ganglia reinforcement learning habit learning”
+
+“hippocampus spatial map place cells explained”
+
+“prefrontal cortex computational model working memory planning”
+
+Goal:
+
+Understand what each region does, so you can recreate the function.
+
+2. Basic Cognitive Science Principles
+
+You need the foundations of how agents form behavior.
+
+Keywords:
+
+“drives and motivation in cognitive science”
+
+“emotions as signals neuroscience”
+
+“symbol grounding problem simple explanation”
+
+“developmental psychology object permanence”
+
+“joint attention pointing cognitive development”
+
+Goal:
+
+Grasp how infants form meaning without language.
+
+3. Emergent Communication
+
+How simple agents develop shared signals.
+
+Keywords:
+
+“emergent communication multi agent reinforcement learning”
+
+“naming games computational models”
+
+“proto language emergence agents”
+
+“shared vocabulary emergence pointing”
+
+Goal:
+
+Learn how agents invent words and align meaning.
+
+4. Reinforcement Learning Basics (For Habits & Drives)
+
+Minimal RL theory needed for procedural memory.
+
+Keywords:
+
+“model free reinforcement learning explained simply”
+
+“Q learning intuitive”
+
+“reward shaping behavioral patterns”
+
+“intrinsic motivation curiosity exploration RL”
+
+Goal:
+
+Understand how habits and routines form.
+
+5. Spatial Memory & Maps
+
+Needed for “where things exist” in the world.
+
+Keywords:
+
+“cognitive maps neuroscience”
+
+“place cells grid cells simple explanation”
+
+“spatial representation in animals”
+
+“hippocampus spatial learning computational model”
+
+Goal:
+
+Learn how to build a basic world map inside the agent.
+
+6. Emotion in Computational Systems
+
+We keep emotions simple, but grounded.
+
+Keywords:
+
+“computational models of emotion”
+
+“affective computing core emotions”
+
+“emotion modulated decision making”
+
+Goal:
+
+Define fear, excitement, boredom, comfort as numeric states.
+
+7. Minimal Neural Architectures
+
+Learn which network types suit fast vs slow cognition.
+
+Keywords:
+
+“simple neural networks for control”
+
+“RNNs for decision making agents”
+
+“dual process theory system 1 system 2 computational model”
+
+Goal:
+
+Pick the right architectures.
+
+8. Developmental Psychology (For zero-knowledge agents)
+
+Understanding how humans start with nothing.
+
+Keywords:
+
+“infant learning no language”
+
+“how babies categorize objects”
+
+“sensorimotor intelligence Piaget summary”
+
+“how infants form concepts”
