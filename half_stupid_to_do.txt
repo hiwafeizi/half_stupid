@@ -1,258 +1,216 @@
-half_stupid to do
+# ⭐ **Core Brain Components You Need (Complete List)**
 
+## **1. Perception System (Vision)**
 
+Converts the world into structured features.
 
-## **1. Define the Cognitive Model (Research Phase)**
+* local grid
+* nearby objects/entities
+* danger cues
+* novelty cues
 
-Before coding anything, we need to understand what we want to simulate.
-
-Research topics:
-
-* basic brain systems (homeostasis, emotion, memory, habits)
-* functions of amygdala, hippocampus, basal ganglia, prefrontal cortex
-* developmental psychology (how infants learn without language)
-* symbol grounding and emergent communication
-* simple reinforcement learning and animal learning theory
-
-Outcome:
-
-* a document describing each “brain region” and the simplified function we will implement.
+Absolutely essential.
 
 ---
 
-## **2. Design the Agent Architecture**
+## **2. Drives / Internal Needs**
 
-Translate the research into a workable structure.
-
-Define:
-
-* perception module
-* drives and needs
-* emotional system
-* fast instinct system (amygdala-like)
-* slow planning system (prefrontal-like)
-* episodic memory
-* procedural memory (habits)
-* naming system
-* communication channel
-* pointing mechanism
-* reward structure
-
-Outcome:
-
-* a blueprint showing how each module connects and what data flows between them.
-
----
-
-## **3. Build the Environment Interface**
-
-Choose how the agent interacts with the world.
-
-Work:
-
-* connect to Minecraft (MineDojo, Malmo, or custom API)
-* define what the agent can observe
-* define what actions the agent can take
-* decide what sensory information the agent receives (no labels)
-
-Outcome:
-
-* the agent can *see* and *act* in the world.
-
----
-
-## **4. Implement Perception + State Encoding**
-
-Convert Minecraft world data into useable signals.
-
-Tasks:
-
-* extract spatial grid around the agent
-* encode blocks without labels
-* encode entities as shapes/motion patterns
-* encode light, danger, noise
-* create a stable vector representation of “the world right now”
-
-Outcome:
-
-* the agent receives structured sensory data but no concepts.
-
----
-
-## **5. Implement Drives and Homeostasis**
-
-Create the internal needs that push behavior.
-
-Drives:
+These create all motivation:
 
 * hunger
 * safety
 * curiosity
-* energy
+* comfort (optional but useful)
+* social need (stay near others)
+
+Without drives, nothing makes sense.
+
+---
+
+## **3. Emotion System**
+
+Emotions are numerical states that come from drives + outcomes:
+
+* valence (good–bad)
+* arousal (calm–alert)
+* fear
 * comfort
 
-Each drive changes over time.
-Each drive influences behavior.
-
-Outcome:
-
-* the agent has internal motivation.
+Emotions allow events to have meaning.
 
 ---
 
-## **6. Implement Emotion Module**
+## **4. **Short-Term Memory** (Working Memory) **
 
-Define emotional states based on drives and events.
+This is **crucial** and cannot be skipped.
 
-Examples:
+Short-term memory stores:
 
-* fear
-* excitement
-* boredom
-* seeking
-* frustration
+* what just happened
+* what the agent is currently doing
+* last few perceptions
+* temporary goals
+* temporary thoughts
 
-Outcome:
+It acts as the “scratchpad” for current thinking.
 
-* actions are biased by emotional state.
-
----
-
-## **7. Implement Fast System (Instincts)**
-
-A small neural network for:
-
-* danger reaction
-* avoiding threats
-* quick survival choices
-
-Outcome:
-
-* the agent can respond instantly without thinking.
+Without this, planning is impossible.
 
 ---
 
-## **8. Implement Slow System (Planning)**
+## **5. Long-Term Memory (Episodic Memory)**
 
-A deeper network (or simple planner) that uses:
+Stores past experiences:
 
-* memory
-* emotion
+```
+(situation, action, outcome, emotion)
+```
+
+Used for:
+
+* learning
+* avoiding past mistakes
+* repeating good behaviors
+
+---
+
+## **6. Semantic / Valence Memory**
+
+This stores cumulative emotional meaning:
+
+* place → average emotion
+* object → average emotion
+* agent → average emotion
+* event → emotional pattern
+
+This is how they “like” or “hate” things.
+
+---
+
+## **7. Spatial Memory**
+
+A map of:
+
+* where they have been
+* which places are good or bad
+* where food was found
+* where danger happened
+
+This gives them a sense of “world”.
+
+---
+
+## **8. Fast Thought System (System 1)**
+
+Runs constantly.
+
+* reflexes
+* immediate reactions
+* simple decisions
+* movement
+* basic exploration
+
+Small, cheap neural net or rules.
+
+---
+
+## **9. Slow Thought System (System 2)**
+
+Runs occasionally.
+
+* deeper thinking
+* evaluating memory
+* adjusting goals
+* updating preferences
+* forming “intentions”
+
+Outputs **biases**, not specific actions.
+
+---
+
+## **10. Planning / Intent Module**
+
+This is NOT a full planner.
+It’s a simple system that:
+
+* picks a **goal direction**
+* adjusts action tendencies
+* selects memory targets
+* connects emotions to future choices
+
+Essential for higher cognition.
+
+---
+
+## **11. Associative Learning System**
+
+This links:
+
+* events ↔ emotions
+* objects ↔ outcomes
+* places ↔ feelings
+* agents ↔ valence
+
+This is how meaning forms naturally.
+
+---
+
+## **12. Behavior / Action Selector**
+
+Combines:
+
+* fast reactions
+* slow intentions
+* emotions
 * drives
-* sensory input
+* memories
 
-This system chooses:
+And chooses one **generic action**:
 
-* exploration
-* foraging
-* resting
-* long-term behavior
+* walk
+* turn
+* explore
+* interact
+* follow
+* flee
+* rest
 
-Outcome:
-
-* the agent can plan beyond instincts.
-
----
-
-## **9. Build the Memory System**
-
-Three layers:
-
-* **episodic memory** (what happened, where)
-* **semantic memory** (facts discovered over time)
-* **procedural memory** (habits, routines)
-
-Outcome:
-
-* the agent forms stable internal representations.
+This keeps everything emergent.
 
 ---
 
-## **10. Implement Naming / Symbol Grounding**
+# ⭐ **Optional but Useful**
 
-When the agent sees something new:
+These are not essential for Brain v1 but will matter later.
 
-* generates its own label
-* attaches the label to sensory features
-* updates dictionary over time
+## **13. Sound Production (for language emergence)**
 
-Outcome:
+Just generic signals.
 
-* the agent develops its own vocabulary.
+## **14. Pointing / Attention Sharing**
 
----
+Critical for emergent communication later.
 
-## **11. Add Pointing & Communication**
+## **15. Social Bias Module**
 
-Agents can:
-
-* point at something
-* speak a symbol
-* align meanings
-* teach each other labels
-
-Outcome:
-
-* shared proto-language begins to emerge.
+A tiny system that makes them prefer being near others.
 
 ---
 
-## **12. Multi-Agent Behavior**
+# ⭐ **Final Essential List (Absolutely needed)**
 
-Introduce multiple agents with:
+To summarize the **minimum full brain model** that still feels mind-like:
 
-* shared memory opportunities
-* conflicting needs
-* cooperation or competition potential
-
-Outcome:
-
-* culture-like patterns may emerge.
-
----
-
-## **13. Training and Experimentation**
-
-Test different:
-
-* reward functions
-* drive weightings
-* personalities
-* environments
-* communication protocols
-
-Outcome:
-
-* observe emergent behavior and refine the model.
-
----
-
-## **14. Documentation and Research Notes**
-
-Document:
-
-* what worked
-* what changed
-* what emerged
-* unexpected patterns
-
-Outcome:
-
-* the project becomes a research platform, not just code.
-
----
-
-## **15. Iterative Improvement**
-
-Based on results, refine:
-
-* brain-module models
-* memory
-* perception
-* communication
-* reward shaping
-
-Outcome:
-
-* closer and closer approximation to mind-like behavior.
+1. Perception
+2. Drives
+3. Emotion
+4. Short-term memory
+5. Long-term memory
+6. Valence memory
+7. Spatial memory
+8. Fast thought
+9. Slow thought
+10. Planning / intent
+11. Associative learning
+12. Action selector
 
