@@ -1,0 +1,19 @@
+### **Origin: Adam and Eve**
+
+The project begins with two agents placed in a small paradise.
+They start with no knowledge, only basic drives like hunger, safety, curiosity, and bonding.
+They can reproduce, care for their offspring, and slowly grow a small community.
+
+
+**Rules of the origin scenario:**
+
+1. Two agents begin in a protected paradise with stable resources.
+2. They have basic drives and no built-in knowledge.
+3. They can bond and reproduce when conditions are safe.
+4. Parents provide basic care for their children.
+5. Offspring start with no knowledge but can learn from experience.
+6. The paradise has one or more hidden “exit buttons”.
+7. Agents can leave paradise only if their curiosity drive becomes strong enough to explore and discover the exit.
+8. Once an agent finds the way out, the larger world becomes accessible.
+
+Everything beyond these rules is left to emerge naturally.
