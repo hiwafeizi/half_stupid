@@ -1,19 +1,25 @@
 ### **Origin: Adam and Eve**
 
 The project begins with two agents placed in a small paradise.
-They start with no knowledge, only basic drives like hunger, safety, curiosity, and bonding.
-They can reproduce, care for their offspring, and slowly grow a small community.
-
+They start with no knowledge, only basic drives like hunger, safety, curiosity, exploration, and simple social bonding.
+They can raise offspring and gradually form a small community.
 
 **Rules of the origin scenario:**
 
 1. Two agents begin in a protected paradise with stable resources.
 2. They have basic drives and no built-in knowledge.
-3. They can bond and reproduce when conditions are safe.
-4. Parents provide basic care for their children.
-5. Offspring start with no knowledge but can learn from experience.
-6. The paradise has one or more hidden “exit buttons”.
-7. Agents can leave paradise only if their curiosity drive becomes strong enough to explore and discover the exit.
-8. Once an agent finds the way out, the larger world becomes accessible.
+3. Offspring start with no knowledge but learn from their own experience.
+4. Parents provide simple care and protection for their children.
+5. A **temple** exists in the center of paradise as an ancient, unexplained structure.
+6. The temple occasionally provides basic supplies, creating early positive meaning.
+7. The temple contains a **hidden maze** that only the most curious agents will explore deeply.
+8. At the end of the maze, the agent faces an **intentional choice**:
+   * **destroy the temple**
+   * **leave peacefully and return to normal life**
+9. Destroying the temple releases powerful benefits or unlocks new areas, but the agent does not know this beforehand.
+10. The paradise contains a **hidden exit door** that opens only when a curious agent discovers it.
+11. The door stays open **for a very short time**.
+12. Other agents can follow **only if they happen to be close enough and move quickly**.
+13. After the brief moment, the door closes again, and the remaining agents must rediscover the exit on their own.
 
-Everything beyond these rules is left to emerge naturally.
+Everything beyond these rules is left to emerge naturally — how they interpret the temple, how they view those who leave, and what meaning or mythology grows across generations.
