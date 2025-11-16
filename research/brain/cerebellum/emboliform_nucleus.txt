@@ -1,3 +1,20 @@
-# Emboliform Nucleus
+﻿# Emboliform Nucleus
 
-Notes and research on the emboliform nucleus.
+Functionality:
+- Deep cerebellar nucleus involved in regulating movement of the limbs, especially precision and timing
+
+What affects it:
+- Inhibitory input from Purkinje cells
+- Excitatory input from mossy and climbing fibers
+- Neurotransmitter levels
+
+How it affects other parts:
+- Sends output to red nucleus and spinal cord
+- Modulates voluntary limb movements
+
+Explanation:
+- The emboliform nucleus, also called the emboliform nucleus, is located between the dentate and globose nuclei. It receives inhibitory input from Purkinje cells and excitatory input from mossy and climbing fibers. This nucleus is particularly involved in the control of proximal limb movements and muscle tone. It projects to the red nucleus, which in turn influences the rubrospinal tract for skilled motor control. The emboliform nucleus contributes to the timing and coordination of voluntary movements, especially those requiring precision. Dysfunction here can lead to ataxia in the limbs, affecting activities like reaching and grasping.
+
+Implementation suggestions (code):
+- Model as an output node for limb movement control
+- Simulate its effect on timing and precision of actions

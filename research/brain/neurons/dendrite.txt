@@ -1,3 +1,22 @@
-# Dendrite
+﻿# Dendrite
 
-Notes and research on the dendrite.
+Functionality:
+- Receives and integrates synaptic inputs from other neurons
+
+What affects it:
+- Synaptic density and receptor types
+- Dendritic branching and spine morphology
+- Neurotransmitter and neuromodulator effects
+
+How it affects other parts:
+- Determines neuronal excitability and integration
+- Influences synaptic plasticity and learning
+- Shapes neural circuit dynamics
+
+Explanation:
+- Dendrites are branched extensions from the soma, covered with spines that house excitatory synapses. They receive thousands of inputs, integrating them through passive and active conductances. Dendritic computation includes coincidence detection, temporal summation, and nonlinear interactions. Spines allow local plasticity, with LTP/LTD changing synaptic strength. Dendritic morphology varies by neuron type: pyramidal neurons have apical and basal dendrites, Purkinje cells have highly branched dendrites. Active dendrites with voltage-gated channels enable complex processing before signals reach the soma.
+
+Implementation suggestions (code):
+- Model dendritic trees with compartmental modeling
+- Implement synaptic integration and plasticity
+- Simulate active dendritic processing

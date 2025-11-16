@@ -1,3 +1,20 @@
-# Dentate Nucleus
+﻿# Dentate Nucleus
 
-Notes and research on the dentate nucleus.
+Functionality:
+- Largest deep cerebellar nucleus; involved in planning, initiation, and control of voluntary movements
+
+What affects it:
+- Inhibitory input from Purkinje cells
+- Excitatory input from mossy and climbing fibers
+- Neurotransmitter levels
+
+How it affects other parts:
+- Sends output to motor and premotor cortex via thalamus
+- Influences fine motor skills and coordination
+
+Explanation:
+- The dentate nucleus is the largest and most lateral of the deep cerebellar nuclei, with a characteristic folded appearance resembling a tooth (hence its name). It receives inhibitory input from Purkinje cells and excitatory input from mossy and climbing fibers. The nucleus integrates cortical processing with direct inputs to generate refined motor commands. It projects via the thalamus to the motor and premotor cortices, enabling planning and execution of complex, skilled movements. The dentate nucleus is crucial for bimanual coordination, tool use, and fine motor skills. Lesions result in intention tremor and dysmetria, highlighting its role in movement precision and timing.
+
+Implementation suggestions (code):
+- Model as a central output node for voluntary movement
+- Simulate its role in motor planning and feedback

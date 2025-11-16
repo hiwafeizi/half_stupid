@@ -1,3 +1,22 @@
-# Cerebellum (Hindbrain)
+﻿# Cerebellum (Hindbrain)
 
-Notes and research on the cerebellum as part of the hindbrain.
+Functionality:
+- Coordinates movement, maintains balance, and refines motor skills through error correction
+
+What affects it:
+- Sensory feedback from proprioceptors and vestibular system
+- Motor commands from cortex via pontine nuclei
+- Climbing and mossy fiber inputs
+
+How it affects other parts:
+- Sends refined motor signals to brainstem and spinal cord
+- Influences muscle tone and posture
+- Modulates cognitive and emotional processing
+
+Explanation:
+- The cerebellum, attached to the hindbrain via cerebellar peduncles, is a key hindbrain component despite its distinct structure. It receives inputs via mossy fibers (from pontine nuclei) and climbing fibers (from inferior olive), processing them through its layered cortex to predict and correct movements. The cerebellum compares intended actions with sensory feedback, issuing corrective signals via deep nuclei. Its modular organization allows parallel processing of different motor domains. While primarily motor, it also contributes to timing, attention, and emotional regulation. Cerebellar dysfunction causes ataxia, characterized by uncoordinated movements and balance issues.
+
+Implementation suggestions (code):
+- Model as a predictive controller for motor actions
+- Implement error correction based on sensory feedback
+- Simulate timing and coordination functions

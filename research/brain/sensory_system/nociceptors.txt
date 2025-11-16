@@ -1,3 +1,22 @@
-# Nociceptors
+﻿# Nociceptors
 
-Notes and research on nociceptors.
+Functionality:
+- Detect potentially harmful stimuli to trigger protective responses
+
+What affects it:
+- Tissue damage, chemical irritants, extreme temperatures
+- Inflammatory mediators and sensitization
+- Central modulation and descending inhibition
+
+How it affects other parts:
+- Initiate pain perception and withdrawal reflexes
+- Trigger inflammatory and immune responses
+- Influence emotional and cognitive processing of pain
+
+Explanation:
+- Nociceptors are free nerve endings responding to noxious stimuli via ion channels (TRPV1 for heat, ASIC for acid). They include Aδ fibers (fast, sharp pain) and C-fibers (slow, dull pain). Polymodal nociceptors respond to multiple stimuli. Sensitization by inflammation lowers thresholds. Signals travel via spinothalamic tract to thalamus and cortex. Nociceptors protect by causing pain, but chronic activation leads to neuropathic pain. Central sensitization amplifies responses.
+
+Implementation suggestions (code):
+- Model nociceptor activation and sensitization
+- Implement pain pathways and modulation
+- Simulate protective reflexes and analgesia

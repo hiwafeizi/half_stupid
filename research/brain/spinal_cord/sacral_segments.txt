@@ -1,3 +1,29 @@
-# Sacral Segments
+﻿# Sacral Segments
 
 Notes and research on sacral segments of the spinal cord.
+
+
+Functionality:
+The sacral segments control pelvic organs, lower limb muscles, and contribute to bowel, bladder, and sexual function.
+
+
+What affects it:
+- Input from the brain and peripheral nerves
+- Sensory feedback from pelvic region
+- Autonomic (parasympathetic) signals
+- Injury or disease (e.g., spinal cord injury, spina bifida)
+
+
+How it affects other parts:
+- Regulates urination, defecation, and sexual reflexes
+- Influences lower limb movement and posture
+- Loss of function can cause incontinence or paralysis
+
+
+Explanation:
+The sacral spinal cord (S1-S5) is the lowest section, serving the pelvis and lower limbs. It is crucial for autonomic and somatic control of pelvic organs and lower extremities.
+
+
+Implementation suggestions (code):
+- Model sacral segments as nodes for pelvic and lower limb control.
+- Simulate autonomic reflexes for bladder and bowel function.

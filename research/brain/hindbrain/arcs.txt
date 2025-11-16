@@ -1,3 +1,22 @@
-# ARAS (Ascending Reticular Activating System)
+﻿# Arcs (Arcuate Nucleus)
 
-Notes and research on ARAS.
+Functionality:
+- Involved in regulating feeding behavior, energy homeostasis, and hormone release
+
+What affects it:
+- Nutrient levels (glucose, leptin, ghrelin)
+- Hormonal signals from periphery
+- Neural inputs from hypothalamus and brainstem
+
+How it affects other parts:
+- Releases neuropeptides to control appetite and metabolism
+- Influences pituitary gland via hypophyseal portal system
+- Modulates autonomic nervous system for energy balance
+
+Explanation:
+- The arcuate nucleus is a small cluster of neurons in the hypothalamus (though sometimes associated with hindbrain functions), located at the base of the third ventricle. It acts as a key integrator of peripheral signals about energy status, receiving inputs from hormones like leptin (satiety) and ghrelin (hunger). The nucleus contains two main populations: orexigenic neurons (NPY/AgRP) that promote feeding, and anorexigenic neurons (POMC/CART) that suppress appetite. These neurons project to other hypothalamic areas and the pituitary, regulating food intake, energy expenditure, and hormone secretion. Dysfunction contributes to obesity and metabolic disorders.
+
+Implementation suggestions (code):
+- Model as an energy balance regulator
+- Implement hunger/satiety signals based on nutrient status
+- Simulate hormonal feedback loops for appetite control

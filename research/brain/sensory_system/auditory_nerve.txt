@@ -1,3 +1,22 @@
-# Auditory Nerve
+﻿# Auditory Nerve
 
-Notes and research on the auditory nerve.
+Functionality:
+- Transmits auditory signals from cochlea to brainstem for initial processing
+
+What affects it:
+- Cochlear hair cell activity and synchronization
+- Myelination and conduction velocity
+- Acoustic neuroma or ototoxic drugs
+
+How it affects other parts:
+- Relays frequency and timing information to cochlear nucleus
+- Enables sound localization and pattern recognition
+- Damage causes sensorineural hearing loss
+
+Explanation:
+- The auditory nerve (cranial nerve VIII) consists of ~30,000 axons from spiral ganglion neurons, divided into vestibular (balance) and cochlear portions. Cochlear fibers are myelinated, conducting action potentials at 5-100 m/s depending on diameter. They preserve temporal precision for phase locking (up to 5 kHz). The nerve terminates in cochlear nucleus, where processing begins for frequency, intensity, and timing. Auditory nerve fibers show spontaneous activity and adaptation. Tumors or degeneration cause tinnitus and hearing loss.
+
+Implementation suggestions (code):
+- Model fiber conduction and temporal precision
+- Implement phase locking for pitch perception
+- Simulate nerve damage and hearing loss

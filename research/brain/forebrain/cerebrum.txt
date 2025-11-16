@@ -1,3 +1,24 @@
-# Cerebrum
+﻿# Cerebrum
 
-Notes and research on the cerebrum.
+Functionality:
+- Enables higher cognitive functions, voluntary movement, sensory perception, and conscious experience
+
+What affects it:
+- Sensory inputs from thalamus and direct pathways
+- Neurotransmitter systems and neuromodulators
+- Experience, education, and environmental enrichment
+- Genetic factors and developmental processes
+
+How it affects other parts:
+- Sends motor commands to brainstem and spinal cord
+- Modulates subcortical structures for emotion and motivation
+- Influences autonomic and endocrine systems via connections
+
+Explanation:
+- The cerebrum comprises two cerebral hemispheres connected by the corpus callosum, covered by a thick layer of neocortex organized into four lobes: frontal (planning, decision-making), parietal (sensory integration), temporal (memory, language), and occipital (vision). Beneath the cortex lie subcortical structures including the basal ganglia (motor control), amygdala (emotion), and hippocampus (memory). The cerebral cortex has six layers with distinct cell types and connectivity patterns, enabling hierarchical processing from primary sensory areas to multimodal association areas. This structure allows for complex cognition, abstract thinking, and voluntary action. The cerebrum's asymmetry (lateralization) supports specialized functions in each hemisphere, with language typically left-dominant and spatial processing right-dominant.
+
+Implementation suggestions (code):
+- Model as a hierarchical network with sensory, motor, and association layers
+- Implement working memory and executive functions in prefrontal cortex
+- Simulate interhemispheric communication via corpus callosum
+- Include plasticity mechanisms for learning and skill acquisition

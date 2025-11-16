@@ -1,3 +1,22 @@
-# Gonads (Ovaries/Testes)
+﻿# Gonads (Ovaries/Testes)
 
-Notes and research on the gonads (ovaries/testes).
+Functionality:
+- Produce sex steroids (estrogen, progesterone, testosterone) and gametes for reproduction
+
+What affects it:
+- FSH and LH from pituitary
+- Inhibin and activin feedback
+- Pubertal development and aging
+
+How it affects other parts:
+- Promote secondary sexual characteristics and fertility
+- Influence bone density, muscle mass, and fat distribution
+- Affect mood, cognition, and behavior
+
+Explanation:
+- Ovaries produce estrogen and progesterone, regulating menstrual cycle and pregnancy. Testes produce testosterone, supporting spermatogenesis and male traits. Gonadotropins (FSH, LH) control steroid production and gametogenesis. Sex steroids act on multiple tissues, including brain (affecting libido and mood), bones, and muscles. Gonadal dysfunction causes infertility, osteoporosis, and mood disorders. The HPG axis integrates with stress and metabolic systems.
+
+Implementation suggestions (code):
+- Model menstrual/testicular cycles
+- Implement steroid effects on secondary characteristics
+- Simulate reproductive and behavioral influences

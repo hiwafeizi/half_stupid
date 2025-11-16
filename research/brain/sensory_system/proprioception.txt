@@ -1,3 +1,22 @@
-# Proprioception
+﻿# Proprioception
 
-Notes and research on proprioceptive system.
+Functionality:
+- Provides awareness of body position, movement, and force for motor control
+
+What affects it:
+- Muscle spindle and Golgi tendon organ activity
+- Joint receptor feedback
+- Central integration with vision and vestibular input
+
+How it affects other parts:
+- Enables coordinated movement and posture
+- Contributes to balance and spatial orientation
+- Influences motor learning and adaptation
+
+Explanation:
+- Proprioception relies on muscle spindles (length/tension), Golgi tendon organs (force), and joint receptors. Signals travel via dorsal columns to cerebellum and cortex. It enables unconscious position sense and conscious kinesthesia. Proprioceptive feedback is crucial for motor control, allowing precise movements without visual guidance. Loss (as in tabes dorsalis) causes ataxia and sensory ataxia. The system integrates with vestibular and visual systems for multisensory balance.
+
+Implementation suggestions (code):
+- Model muscle spindle and tendon organ dynamics
+- Implement position and force sensing
+- Simulate motor control and balance integration

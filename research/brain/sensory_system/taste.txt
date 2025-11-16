@@ -1,3 +1,22 @@
-# Taste System
+﻿# Taste System
 
-Notes and research on taste (gustatory) system.
+Functionality:
+- Detects chemical composition of food for nutrient assessment and ingestion control
+
+What affects it:
+- Chemical interaction with taste receptors
+- Receptor distribution on tongue and oral cavity
+- Central processing and learning
+
+How it affects other parts:
+- Influences food selection and digestion
+- Contributes to pleasure and aversion responses
+- Affects appetite regulation and metabolism
+
+Explanation:
+- Taste buds on tongue contain receptor cells for sweet, sour, salty, bitter, and umami. Signals travel via cranial nerves to nucleus solitarius, then thalamus and gustatory cortex. Taste is influenced by smell (flavor) and texture. The system guides nutrient intake: sweet/salty promote, bitter/sour warn. Taste preferences are learned and culturally influenced. Age-related decline affects nutrition. The system integrates with reward pathways for eating behavior.
+
+Implementation suggestions (code):
+- Model taste receptor types and transduction
+- Implement flavor integration with olfaction
+- Simulate appetite and food preference learning

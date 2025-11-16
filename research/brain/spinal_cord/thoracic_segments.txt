@@ -1,3 +1,29 @@
-# Thoracic Segments
+﻿# Thoracic Segments
 
 Notes and research on thoracic segments of the spinal cord.
+
+
+Functionality:
+The thoracic segments of the spinal cord control trunk muscles and receive sensory input from the torso. They also contain sympathetic autonomic neurons.
+
+
+What affects it:
+- Input from the brain and peripheral nerves
+- Sensory feedback from the trunk
+- Autonomic signals (sympathetic nervous system)
+- Injury or disease (e.g., spinal cord injury)
+
+
+How it affects other parts:
+- Regulates posture and trunk stability
+- Influences autonomic functions (e.g., heart rate, blood pressure)
+- Loss of function can impair breathing and core stability
+
+
+Explanation:
+There are 12 thoracic segments (T1-T12) in the spinal cord. They serve as relay points for motor and sensory information to and from the trunk and internal organs. They are also important for autonomic (sympathetic) outflow.
+
+
+Implementation suggestions (code):
+- Model thoracic segments as nodes relaying signals between brain, trunk muscles, and organs.
+- Simulate autonomic output for physiological regulation.

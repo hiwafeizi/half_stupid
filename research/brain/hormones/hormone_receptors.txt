@@ -1,3 +1,22 @@
-# Hormone Receptors
+﻿# Hormone Receptors
 
-Notes and research on hormone receptors.
+Functionality:
+- Bind specific hormones and initiate intracellular signaling to mediate hormonal effects
+
+What affects it:
+- Hormone concentration and affinity
+- Receptor density and desensitization
+- Post-translational modifications
+
+How it affects other parts:
+- Transduce extracellular signals into intracellular responses
+- Regulate gene expression, metabolism, and cellular function
+- Determine tissue-specific responses to hormones
+
+Explanation:
+- Hormone receptors are proteins that specifically bind hormones, triggering signal transduction pathways. Membrane receptors (for peptide/amine hormones) use G-proteins, tyrosine kinases, or ion channels to activate second messengers like cAMP, IP3, or calcium. Intracellular receptors (for steroid/thyroid hormones) act as transcription factors, binding DNA to regulate gene expression. Receptor specificity ensures targeted responses, while desensitization and down-regulation prevent overstimulation. Receptor polymorphisms can affect hormone sensitivity, contributing to endocrine disorders.
+
+Implementation suggestions (code):
+- Model receptor-ligand binding with affinity constants
+- Implement signal transduction cascades for different receptor types
+- Simulate receptor regulation and desensitization

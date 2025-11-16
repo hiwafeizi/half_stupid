@@ -1,3 +1,20 @@
-# Hormone Types
+﻿# Hormone Types
 
-Notes and research on hormone types.
+Functionality:
+- Classify hormones by chemical structure and mechanism of action for targeted physiological regulation
+
+What affects it:
+- Evolutionary adaptations and physiological needs
+- Biochemical synthesis pathways in endocrine glands
+
+How it affects other parts:
+- Determines receptor specificity and signal transduction pathways
+- Influences duration and potency of hormonal effects
+
+Explanation:
+- Hormones are categorized into three main types based on chemical structure: peptide/protein hormones (water-soluble, act via second messengers like cAMP), steroid hormones (lipid-soluble, act via intracellular receptors), and amine hormones (derived from amino acids, e.g., thyroid hormones and catecholamines). Peptide hormones are stored in vesicles and released by exocytosis, while steroids are synthesized on demand from cholesterol. Amine hormones include both water-soluble (epinephrine) and lipid-soluble (thyroxine) varieties. The type determines how the hormone crosses cell membranes and interacts with receptors, affecting the speed and duration of responses.
+
+Implementation suggestions (code):
+- Implement different classes with appropriate binding and signaling mechanisms
+- Model transport and receptor interactions based on solubility
+- Simulate synthesis and release patterns for each type

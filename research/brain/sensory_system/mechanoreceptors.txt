@@ -1,3 +1,22 @@
-# Mechanoreceptors
+﻿# Mechanoreceptors
 
-Notes and research on mechanoreceptors.
+Functionality:
+- Detect mechanical stimuli like pressure, vibration, and stretch
+
+What affects it:
+- Mechanical deformation and vibration frequency
+- Receptor specialization (slow/fast adapting)
+- Skin thickness and receptor density
+
+How it affects other parts:
+- Provide tactile feedback for object manipulation
+- Contribute to proprioception and balance
+- Influence motor reflexes and coordination
+
+Explanation:
+- Mechanoreceptors include encapsulated (Pacini for vibration, Meissner for flutter, Ruffini for stretch) and non-encapsulated (Merkel for pressure) types. They transduce mechanical energy into electrical signals via ion channels. Fast-adapting receptors detect changes/transients, slow-adapting sustained stimuli. They are distributed in skin, muscles, tendons, and joints. Mechanoreceptors enable texture discrimination, vibration sense, and haptic exploration. Their signals travel via large myelinated fibers for precise, fast transmission.
+
+Implementation suggestions (code):
+- Model receptor adaptation and frequency response
+- Implement vibration and pressure detection
+- Simulate tactile feedback for motor control

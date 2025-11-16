@@ -1,3 +1,20 @@
-# Fastigial Nucleus
+﻿# Fastigial Nucleus
 
-Notes and research on the fastigial nucleus.
+Functionality:
+- Deep cerebellar nucleus involved in balance, posture, and eye movements
+
+What affects it:
+- Inhibitory input from Purkinje cells
+- Sensory input from vestibular and proprioceptive systems
+- Neurotransmitter levels
+
+How it affects other parts:
+- Projects to vestibular nuclei and reticular formation
+- Influences balance, posture, and gaze stabilization
+
+Explanation:
+- The fastigial nucleus is the most medial of the deep cerebellar nuclei, playing a key role in axial and proximal muscle control, balance, and vestibular functions. It receives inhibitory input from Purkinje cells and direct excitatory input from vestibular nuclei and spinal cord. The nucleus integrates this information to maintain posture and equilibrium, projecting to the vestibular nuclei, reticular formation, and spinal cord. It also influences eye movements through connections to oculomotor centers. Damage to the fastigial nucleus results in severe postural instability and nystagmus, underscoring its importance in maintaining body orientation and gaze stability.
+
+Implementation suggestions (code):
+- Model as a node integrating sensory and inhibitory signals
+- Simulate its effect on balance and posture control modules

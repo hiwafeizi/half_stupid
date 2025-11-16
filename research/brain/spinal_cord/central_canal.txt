@@ -1,3 +1,25 @@
-# Central Canal
+﻿# Central Canal
 
 Notes and research on the central canal of the spinal cord.
+
+
+Functionality:
+The central canal is a small, fluid-filled channel running through the spinal cord, containing cerebrospinal fluid (CSF).
+
+
+What affects it:
+- CSF production and flow
+- Blockage or abnormal dilation (syringomyelia)
+
+
+How it affects other parts:
+- Helps maintain spinal cord homeostasis
+- Blockage can cause neurological symptoms
+
+
+Explanation:
+The central canal is lined with ependymal cells and is continuous with the brain's ventricular system. It plays a minor role in adult humans but is important in development and some diseases.
+
+
+Implementation suggestions (code):
+- Model as a passive structure for completeness.

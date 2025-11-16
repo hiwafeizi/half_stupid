@@ -1,3 +1,22 @@
-# Tectum
+﻿# Tectum
 
-Notes and research on the tectum.
+Functionality:
+- Processes visual and auditory information for spatial orientation and reflexive responses
+
+What affects it:
+- Sensory input from eyes and ears
+- Cortical modulation for attention
+- Motor feedback for coordination
+
+How it affects other parts:
+- Generates orienting movements of eyes, head, and body
+- Influences auditory localization and startle responses
+- Modulates sensory processing in thalamus
+
+Explanation:
+- The tectum, the dorsal part of the midbrain, includes the superior colliculus (visual processing) and inferior colliculus (auditory processing). These structures create topographic maps of sensory space, allowing rapid detection of stimuli location. The superior colliculus integrates visual input with motor commands for saccadic eye movements and head turning. The inferior colliculus processes sound localization and intensity, relaying to auditory cortex. The tectum enables multisensory integration for behaviors like prey capture or threat avoidance, functioning largely subconsciously.
+
+Implementation suggestions (code):
+- Model sensory maps for visual/auditory space
+- Implement orienting reflexes and saccades
+- Simulate multisensory integration for spatial attention

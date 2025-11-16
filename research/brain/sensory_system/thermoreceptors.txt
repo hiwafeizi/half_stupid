@@ -1,3 +1,22 @@
-# Thermoreceptors
+﻿# Thermoreceptors
 
-Notes and research on thermoreceptors.
+Functionality:
+- Detect temperature changes for thermal sensation and homeostasis
+
+What affects it:
+- Temperature deviation from skin baseline
+- Receptor sensitivity to warm/cold
+- Central modulation and adaptation
+
+How it affects other parts:
+- Trigger thermoregulatory responses
+- Contribute to pain perception at extremes
+- Influence comfort and behavioral adjustments
+
+Explanation:
+- Thermoreceptors are free nerve endings in skin and mucous membranes, divided into warm (TRPV1-like) and cold (TRPM8-like) receptors. They respond to temperature changes, not absolute values, with dynamic ranges. Warm receptors activate above 30°C, cold below 25°C. Signals travel via C-fibers to spinothalamic tract and thalamus. Thermoreceptors enable thermal discrimination and drive behaviors like seeking warmth or cooling. They interact with nociceptors for burning/freezing pain.
+
+Implementation suggestions (code):
+- Model temperature thresholds and adaptation
+- Implement warm/cold discrimination
+- Simulate thermoregulatory feedback

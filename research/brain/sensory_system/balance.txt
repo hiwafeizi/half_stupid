@@ -1,3 +1,22 @@
-# Balance (Vestibular) System
+﻿# Balance (Vestibular) System
 
-Notes and research on balance/vestibular system.
+Functionality:
+- Detects head movement and position for balance, posture, and spatial orientation
+
+What affects it:
+- Head acceleration and tilt via semicircular canals and otolith organs
+- Visual and proprioceptive input for multisensory integration
+- Central processing in brainstem and cerebellum
+
+How it affects other parts:
+- Controls eye movements (VOR) and posture
+- Influences autonomic responses and spatial awareness
+- Contributes to motion sickness and vertigo
+
+Explanation:
+- The vestibular system in the inner ear includes semicircular canals (angular acceleration) and otolith organs (linear acceleration/gravity). Hair cells transduce movement into neural signals via vestibular nerve to vestibular nuclei, cerebellum, and cortex. The vestibulo-ocular reflex stabilizes gaze during head movement. Balance integrates vestibular, visual, and proprioceptive cues. Dysfunction causes vertigo, nystagmus, and imbalance. The system adapts to repeated stimuli, enabling habituation.
+
+Implementation suggestions (code):
+- Model canal and otolith dynamics
+- Implement VOR and postural control
+- Simulate motion sickness and adaptation

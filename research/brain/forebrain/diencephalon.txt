@@ -1,3 +1,24 @@
-# Diencephalon
+﻿# Diencephalon
 
-Notes and research on the diencephalon.
+Functionality:
+- Relays and processes sensory information, regulates homeostasis, and controls endocrine and autonomic functions
+
+What affects it:
+- Sensory inputs from body and environment
+- Hormonal feedback loops
+- Circadian rhythms and sleep-wake cycles
+- Stress and metabolic signals
+
+How it affects other parts:
+- Gates sensory information to cortex via thalamus
+- Controls pituitary gland and hormone release via hypothalamus
+- Influences arousal and attention through thalamic projections
+
+Explanation:
+- The diencephalon is the central core of the forebrain, located between the cerebral hemispheres and above the midbrain. It consists of the thalamus (sensory relay and consciousness), hypothalamus (homeostasis and hormone control), epithalamus (pineal gland and circadian rhythms), and subthalamus (motor coordination). The thalamus acts as a gateway, filtering and relaying sensory information to appropriate cortical areas while also contributing to consciousness and arousal. The hypothalamus maintains internal balance by regulating body temperature, hunger, thirst, and hormone secretion through the pituitary gland. The diencephalon's compact structure belies its critical role in integrating sensory, autonomic, and endocrine functions, forming a bridge between mind and body.
+
+Implementation suggestions (code):
+- Model thalamus as a sensory router and attention gate
+- Implement homeostasis regulators in hypothalamus
+- Simulate hormonal feedback loops
+- Connect to sleep-wake and circadian rhythm modules

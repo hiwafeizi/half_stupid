@@ -1,3 +1,22 @@
-# Touch System
+﻿# Touch System
 
-Notes and research on touch (somatosensory) system.
+Functionality:
+- Detects tactile stimuli for texture, pressure, vibration, and object manipulation
+
+What affects it:
+- Mechanical deformation of skin and receptors
+- Receptor density and innervation
+- Central processing and attention
+
+How it affects other parts:
+- Provides feedback for motor control and grasping
+- Contributes to body awareness and pain perception
+- Influences social touch and emotional bonding
+
+Explanation:
+- The somatosensory system includes mechanoreceptors (Merkel, Meissner, Pacini, Ruffini), nociceptors, and thermoreceptors in skin, muscles, and joints. Signals travel via dorsal root ganglia to dorsal column-medial lemniscus (fine touch) or spinothalamic tract (pain/temperature) to thalamus and somatosensory cortex. The cortex has somatotopic organization (homunculus). Touch processing involves texture discrimination, two-point threshold, and haptic perception. The system enables dexterous manipulation and social communication through touch.
+
+Implementation suggestions (code):
+- Model receptor types and adaptation
+- Implement somatotopic mapping
+- Simulate haptic feedback and object recognition

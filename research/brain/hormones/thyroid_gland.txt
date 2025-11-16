@@ -1,3 +1,22 @@
-# Thyroid Gland
+﻿# Thyroid Gland
 
-Notes and research on the thyroid gland.
+Functionality:
+- Produces thyroid hormones (T3/T4) that regulate metabolism, growth, and development
+
+What affects it:
+- TSH from pituitary gland
+- Iodine availability
+- Autoimmune factors
+
+How it affects other parts:
+- Increases basal metabolic rate and heat production
+- Promotes growth and CNS development
+- Affects heart rate, digestion, and muscle function
+
+Explanation:
+- The thyroid gland, located in the neck, produces thyroxine (T4) and triiodothyronine (T3), which bind to nuclear receptors to regulate gene expression. TSH stimulates thyroid hormone synthesis and release. Iodine is essential for hormone production. Hyperthyroidism causes weight loss and tachycardia, while hypothyroidism leads to fatigue and weight gain. Autoimmune disorders like Graves' disease (hyper) and Hashimoto's (hypo) are common.
+
+Implementation suggestions (code):
+- Model TSH-thyroid hormone feedback loop
+- Implement metabolic rate regulation
+- Simulate developmental effects on growth

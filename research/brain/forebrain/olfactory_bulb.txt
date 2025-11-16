@@ -1,3 +1,23 @@
-# Olfactory Bulb
+﻿# Olfactory Bulb
 
-Notes and research on the olfactory bulb.
+Functionality:
+- Primary processing center for olfactory information, receiving input from olfactory receptor neurons and relaying to higher brain areas
+
+What affects it:
+- Odorant molecules binding to olfactory receptors
+- Neurotransmitter levels (especially glutamate and GABA)
+- Experience-dependent plasticity
+- Age-related changes or damage
+
+How it affects other parts:
+- Sends processed olfactory signals to piriform cortex, amygdala, and hypothalamus
+- Influences emotional responses, memory formation, and feeding behavior
+
+Explanation:
+- The olfactory bulb is a bilateral structure located at the base of the forebrain, directly receiving axons from olfactory receptor neurons in the nasal epithelium. It consists of several layers: the olfactory nerve layer (incoming axons), glomerular layer (synaptic processing), mitral cell layer (output neurons), and granule cell layer (inhibitory interneurons). Odorants are encoded through combinatorial activation of glomeruli, creating a spatial map of olfactory information. The bulb performs initial processing, including contrast enhancement and pattern separation, before relaying to cortical areas. Its direct connection to limbic structures allows odors to evoke strong emotional and memory responses. The olfactory bulb exhibits significant neurogenesis in adults, contributing to olfactory learning and adaptation.
+
+Implementation suggestions (code):
+- Model as an input layer with glomerular units processing odor combinations
+- Implement pattern separation using inhibitory networks
+- Simulate neurogenesis for learning new odors
+- Connect to emotion and memory modules for associative learning

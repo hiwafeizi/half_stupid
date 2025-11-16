@@ -1,3 +1,22 @@
-# Pancreas
+﻿# Pancreas
 
-Notes and research on the pancreas.
+Functionality:
+- Produces insulin and glucagon to regulate blood glucose levels
+
+What affects it:
+- Blood glucose concentration
+- Neural and hormonal signals
+- Autoimmune destruction (in diabetes)
+
+How it affects other parts:
+- Promotes glucose uptake and storage in insulin-sensitive tissues
+- Stimulates glucose production and release from liver
+- Maintains blood glucose homeostasis
+
+Explanation:
+- The pancreas has endocrine (islets of Langerhans) and exocrine functions. Beta cells produce insulin (lowers blood sugar), alpha cells produce glucagon (raises blood sugar). Insulin promotes glucose uptake, glycogen synthesis, and fat storage. Glucagon stimulates glycogenolysis and gluconeogenesis. Type 1 diabetes results from beta cell destruction, type 2 from insulin resistance. The pancreas integrates neural and hormonal signals for precise glucose control.
+
+Implementation suggestions (code):
+- Model glucose-insulin feedback loop
+- Implement insulin resistance and diabetes simulation
+- Simulate hepatic glucose regulation

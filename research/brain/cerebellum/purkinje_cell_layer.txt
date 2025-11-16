@@ -1,3 +1,23 @@
-# Purkinje Cell Layer
+﻿# Purkinje Cell Layer
 
-Notes and research on the Purkinje cell layer of the cerebellar cortex.
+Functionality:
+- Main output neurons of the cerebellar cortex, providing inhibitory (GABAergic) signals to the deep cerebellar nuclei
+- Integrate inputs from parallel fibers (granule cells) and climbing fibers (inferior olive)
+
+What affects it:
+- Synaptic input from granule and climbing fibers
+- Neurotransmitter levels (especially GABA and glutamate)
+- Genetic and developmental factors
+- Neurodegenerative diseases (e.g., spinocerebellar ataxia)
+
+How it affects other parts:
+- Inhibits deep cerebellar nuclei, shaping cerebellar output
+- Modulates timing and precision of motor commands
+
+Explanation:
+- Purkinje cells are the principal neurons of the cerebellar cortex, located in a single layer between the molecular and granular layers. Each Purkinje cell receives thousands of excitatory inputs from parallel fibers (from granule cells) and a single powerful climbing fiber input from the inferior olive. This dual input system allows for complex integration: parallel fibers provide contextual information about ongoing movements, while climbing fibers signal errors or unexpected events. Purkinje cells release GABA, inhibiting the deep cerebellar nuclei. Long-term depression (LTD) at parallel fiber synapses and long-term potentiation (LTP) at climbing fiber synapses enable motor learning. Degeneration of Purkinje cells, as seen in cerebellar ataxias, leads to severe motor coordination deficits.
+
+Implementation suggestions (code):
+- Model Purkinje cells as inhibitory units receiving two types of input (parallel and climbing fibers)
+- Implement learning rules (e.g., LTD/LTP) for synaptic plasticity
+- Output from Purkinje cells should modulate deep nuclei activity

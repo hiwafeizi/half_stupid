@@ -1,3 +1,27 @@
-# Cervical Segments
+﻿# Cervical Segments
 
 Notes and research on cervical segments of the spinal cord.
+
+
+Functionality:
+The cervical segments control neck, shoulder, arm, and hand muscles, and receive sensory input from these regions. They are essential for upper limb movement and sensation.
+
+
+What affects it:
+- Input from the brain and peripheral nerves
+- Sensory feedback from the upper limbs
+- Injury or disease (e.g., cervical spinal cord injury)
+
+
+How it affects other parts:
+- Regulates arm and hand movement and sensation
+- Loss of function leads to weakness or paralysis of the upper limbs
+
+
+Explanation:
+There are 8 cervical segments (C1-C8) in the spinal cord. They serve as relay points for motor and sensory information to and from the upper limbs and neck.
+
+
+Implementation suggestions (code):
+- Model cervical segments as nodes relaying signals between brain and upper limbs.
+- Simulate arm and hand movement and sensation.

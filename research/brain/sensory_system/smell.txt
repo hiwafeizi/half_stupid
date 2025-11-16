@@ -1,3 +1,22 @@
-# Smell System
+﻿# Smell System
 
 Notes and research on smell (olfactory) system.
+
+Functionality:
+- 
+
+
+What affects it:
+- 
+
+
+How it affects other parts:
+- 
+
+
+Explanation:
+- 
+
+
+Implementation suggestions (code):
+- 

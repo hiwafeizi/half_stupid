@@ -1,3 +1,22 @@
-# Feedback Mechanisms
+﻿# Feedback Mechanisms
 
-Notes and research on hormonal feedback mechanisms.
+Functionality:
+- Regulate hormone secretion to maintain homeostasis and prevent over/under-secretion
+
+What affects it:
+- Blood levels of hormones and regulated substances
+- Sensitivity of feedback sensors
+- Time delays in hormone action
+
+How it affects other parts:
+- Adjust secretion rates of upstream glands
+- Maintain stable internal environment
+- Prevent hormone excess or deficiency
+
+Explanation:
+- Feedback mechanisms ensure hormonal balance through negative feedback (most common) where high hormone levels inhibit further secretion, and positive feedback (rare) where hormone levels stimulate more release. The hypothalamic-pituitary-target gland axis exemplifies negative feedback: target gland hormones inhibit pituitary tropic hormones and hypothalamic releasing hormones. Long-loop feedback involves direct effects on hypothalamus, while short-loop involves pituitary self-regulation. Feedforward mechanisms anticipate needs. Disruptions cause endocrine disorders like hyper/hypothyroidism.
+
+Implementation suggestions (code):
+- Implement negative feedback loops with set points
+- Model delays and oscillations in hormonal control
+- Simulate feedback disruptions and compensatory responses

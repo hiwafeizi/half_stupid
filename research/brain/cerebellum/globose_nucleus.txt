@@ -1,3 +1,20 @@
-# Globose Nucleus
+﻿# Globose Nucleus
 
-Notes and research on the globose nucleus.
+Functionality:
+- One of the deep cerebellar nuclei; involved in regulating limb movements and muscle tone
+
+What affects it:
+- Inhibitory input from Purkinje cells
+- Excitatory input from mossy and climbing fibers
+- Neurotransmitter balance
+
+How it affects other parts:
+- Sends output to motor control centers in the brainstem
+- Modulates motor coordination and precision
+
+Explanation:
+- The globose nucleus, also known as the globose nucleus, is a small, rounded structure in the deep cerebellar nuclei. It receives inhibitory GABAergic input from Purkinje cells of the cerebellar cortex and excitatory glutamatergic input from mossy and climbing fibers that bypass the cortex. This integration allows the nucleus to modulate motor signals, particularly for the distal limbs. The globose nucleus projects to the red nucleus and spinal cord, influencing rubrospinal tracts that control fine motor movements. Lesions here can cause specific deficits in limb coordination, highlighting its role in precise motor control.
+
+Implementation suggestions (code):
+- Model as an output node receiving both inhibitory and excitatory inputs
+- Simulate its effect on downstream motor pathways

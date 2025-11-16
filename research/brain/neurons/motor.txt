@@ -1,3 +1,22 @@
-# Motor Neurons
+﻿# Motor Neurons
 
-Notes and research on motor neurons.
+Functionality:
+- Transmit commands from CNS to muscles and glands for movement and secretion
+
+What affects it:
+- Cortical and brainstem inputs
+- Proprioceptive feedback
+- Neuromuscular junction integrity
+
+How it affects other parts:
+- Control skeletal muscle contraction
+- Regulate glandular secretion
+- Maintain posture and movement
+
+Explanation:
+- Motor neurons are multipolar, with large somas in ventral horn of spinal cord (lower motor neurons) or brainstem cranial nuclei (upper motor neurons). Lower motor neurons innervate skeletal muscles directly, releasing acetylcholine at neuromuscular junctions. Upper motor neurons from motor cortex synapse on lower motor neurons or interneurons. Alpha motor neurons control extrafusal fibers for movement, gamma for muscle spindle sensitivity. Motor units (neuron + muscle fibers) determine force gradation. Damage causes paralysis, as in ALS or spinal cord injury.
+
+Implementation suggestions (code):
+- Model motor unit recruitment and force control
+- Implement neuromuscular transmission
+- Simulate motor control and reflex pathways

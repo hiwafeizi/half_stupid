@@ -1,3 +1,22 @@
-# Reticulospinal Tracts
+﻿# Reticulospinal Tracts
 
-Notes and research on the reticulospinal tracts.
+Functionality:
+- Convey motor commands from the reticular formation to the spinal cord, influencing posture, locomotion, and reflex modulation
+
+What affects it:
+- Input from brainstem nuclei and cerebral cortex
+- Sensory feedback from proprioceptors and nociceptors
+- Neurotransmitter levels (serotonin, glutamate)
+
+How it affects other parts:
+- Modulates spinal motor neurons for postural adjustments
+- Influences muscle tone and reflex strength
+- Coordinates with vestibulospinal tracts for balance
+
+Explanation:
+- The reticulospinal tracts originate from the reticular formation in the pons and medulla, descending ipsilaterally and contralaterally to the spinal cord. They are divided into medial (pontine) and lateral (medullary) tracts, with different functions: the medial tract facilitates antigravity muscles for posture, while the lateral tract inhibits flexor reflexes and modulates locomotion. These tracts integrate cortical and subcortical inputs to adjust motor output based on behavioral context, such as preparing for movement or responding to threats. Their diffuse projections allow for broad influence on spinal circuits, complementing the more precise corticospinal tract.
+
+Implementation suggestions (code):
+- Model as descending pathways modulating spinal motor pools
+- Implement gain control for reflex amplification/suppression
+- Simulate postural adjustments based on reticular input

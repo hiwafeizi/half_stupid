@@ -1,3 +1,22 @@
-# Auditory Cortex
+﻿# Auditory Cortex
 
-Notes and research on the auditory cortex.
+Functionality:
+- Processes auditory information for sound recognition, speech comprehension, and music perception
+
+What affects it:
+- Thalamic input from medial geniculate nucleus
+- Feedback from higher cortical areas
+- Linguistic and musical experience
+
+How it affects other parts:
+- Enables language processing and communication
+- Influences emotional responses to sounds
+- Contributes to auditory memory and attention
+
+Explanation:
+- The auditory cortex occupies the temporal lobe, with primary cortex (A1) receiving tonotopic input. Belt and parabelt areas process complex sounds. Wernicke’s area handles speech comprehension. The cortex exhibits tonotopic organization and hierarchical processing: core for basic features, belt for patterns, parabelt for complex sounds. Plasticity allows adaptation to language or music. Damage causes auditory agnosia or aphasia. The system processes spectrotemporal features for speech and environmental sounds.
+
+Implementation suggestions (code):
+- Model tonotopic maps and hierarchical processing
+- Implement speech and music recognition
+- Simulate auditory attention and memory

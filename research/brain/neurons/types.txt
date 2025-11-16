@@ -1,3 +1,24 @@
-# Neuron Types
+﻿# Neuron Types
 
-Notes and research on neuron types.
+Functionality:
+- Sensory: detect environmental stimuli
+- Motor: control muscle and gland activity
+- Interneurons: integrate and modulate neural circuits
+
+What affects it:
+- Developmental gene expression
+- Environmental influences during critical periods
+- Injury or disease processes
+
+How it affects other parts:
+- Sensory neurons relay information to CNS
+- Motor neurons execute behavioral responses
+- Interneurons coordinate complex neural processing
+
+Explanation:
+- Neurons are classified by structure, function, and connectivity. Sensory neurons (afferent) have dendrites specialized for detecting touch, pain, temperature, etc., with cell bodies in dorsal root ganglia. Motor neurons (efferent) have large cell bodies in ventral horn of spinal cord, axons extending to muscles. Interneurons (association neurons) connect neurons within CNS, comprising 99% of neurons, enabling complex processing. Pseudounipolar, bipolar, and multipolar morphologies reflect different functions. This diversity allows specialized processing while maintaining unified communication via action potentials.
+
+Implementation suggestions (code):
+- Implement different neuron classes with specialized inputs/outputs
+- Model sensory transduction and motor control
+- Simulate interneuron-mediated circuit dynamics

@@ -1,3 +1,22 @@
-# Granular Layer
+﻿# Granular Layer
 
-Notes and research on the granular layer of the cerebellar cortex.
+Functionality:
+- Contains densely packed granule cells, which receive input from mossy fibers and send axons (parallel fibers) to the molecular layer
+- Initiates processing of sensory and motor information
+
+What affects it:
+- Input from mossy fibers (spinal cord, brainstem)
+- Synaptic plasticity and neurotransmitter levels
+- Developmental and genetic factors
+
+How it affects other parts:
+- Provides excitatory input to Purkinje cells via parallel fibers
+- Influences the timing and pattern of cerebellar output
+
+Explanation:
+- The granular layer contains the highest density of neurons in the brain, with granule cells receiving excitatory input from mossy fibers originating from various brain regions including the spinal cord, brainstem, and cerebral cortex. Each mossy fiber synapses with multiple granule cells via glomeruli, which also include inhibitory Golgi cells. Granule cells send their axons as parallel fibers through the molecular layer, where they synapse with thousands of Purkinje cells. This divergence amplifies sensory and motor information, creating a combinatorial code that allows the cerebellum to process complex patterns. The granular layer acts as a preprocessing stage, transforming diverse inputs into a uniform parallel fiber code for cortical processing.
+
+Implementation suggestions (code):
+- Model granule cells as input integrators
+- Simulate mossy fiber input and parallel fiber output
+- Implement mechanisms for synaptic plasticity

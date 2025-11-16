@@ -1,3 +1,22 @@
-# Substantia Nigra
+﻿# Substantia Nigra
 
-Notes and research on the substantia nigra.
+Functionality:
+- Produces dopamine for the basal ganglia, regulating movement and reward
+
+What affects it:
+- Cortical and striatal inputs
+- Glutamatergic and GABAergic modulation
+- Age and neurodegenerative processes
+
+How it affects other parts:
+- Facilitates smooth, coordinated movements
+- Reinforces rewarding behaviors and learning
+- Influences motivation and goal-directed actions
+
+Explanation:
+- The substantia nigra, visible as a dark pigmented region due to melanin in dopamine neurons, is divided into pars compacta (dopamine production) and pars reticulata (motor output). Dopamine from pars compacta projects to the striatum, enabling movement initiation and habit formation. Degeneration of these neurons causes Parkinson's disease, characterized by tremor, rigidity, and bradykinesia. The substantia nigra also contributes to reward prediction and motivation, with dopamine signaling prediction errors in reinforcement learning.
+
+Implementation suggestions (code):
+- Model dopamine release for movement and reward
+- Implement reinforcement learning algorithms
+- Simulate Parkinson's symptoms through dopamine depletion

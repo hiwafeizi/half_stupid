@@ -1,3 +1,22 @@
-# Visual Cortex
+﻿# Visual Cortex
 
-Notes and research on the visual cortex.
+Functionality:
+- Processes visual information for perception of objects, scenes, and spatial relationships
+
+What affects it:
+- Thalamic input from lateral geniculate nucleus
+- Feedback from higher cortical areas
+- Attention and task demands
+
+How it affects other parts:
+- Enables object recognition and visual memory
+- Guides motor actions and spatial navigation
+- Influences other sensory and cognitive processes
+
+Explanation:
+- The visual cortex occupies the occipital lobe, with primary visual cortex (V1/striate cortex) receiving thalamic input. V1 contains orientation-selective neurons with receptive fields. Extrastriate areas (V2-V4) process color, form, and motion. Dorsal stream (where/how) handles spatial/motion, ventral stream (what) handles object identity. MT processes motion, FFA faces. The cortex exhibits columnar organization and retinotopic mapping. Plasticity allows adaptation to visual deprivation or learning. Damage causes visual agnosia or neglect.
+
+Implementation suggestions (code):
+- Model hierarchical feature detection
+- Implement retinotopic mapping and columns
+- Simulate attention modulation and object recognition

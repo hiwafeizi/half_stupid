@@ -1,3 +1,22 @@
-# Olives (Medulla)
+﻿# Olives (Medulla)
 
-Notes and research on the olives of the medulla.
+Functionality:
+- Generate climbing fibers that provide timing signals to the cerebellum for motor learning
+
+What affects it:
+- Sensory inputs from spinal cord and brainstem
+- Motor commands from cortex and basal ganglia
+- Synaptic plasticity for learning
+
+How it affects other parts:
+- Send climbing fibers to Purkinje cells in cerebellar cortex
+- Modulate cerebellar output for error correction
+- Influence motor adaptation and timing
+
+Explanation:
+- The inferior olivary nucleus, appearing as an olive-shaped bulge on the medulla, is the source of climbing fibers to the cerebellum. Each climbing fiber synapses with a single Purkinje cell, providing powerful excitatory input that signals motor errors or unexpected events. The olivary nucleus receives inputs from various sources, including the spinal cord, red nucleus, and cerebral cortex, allowing it to detect discrepancies between intended and actual movements. This input is crucial for cerebellar learning, particularly long-term depression at parallel fiber-Purkinje synapses. The olivary nucleus's complex folding increases surface area for extensive connectivity.
+
+Implementation suggestions (code):
+- Model as a source of error signals for cerebellar learning
+- Implement climbing fiber input for timing and error detection
+- Simulate motor adaptation through olivary-cerebellar interactions

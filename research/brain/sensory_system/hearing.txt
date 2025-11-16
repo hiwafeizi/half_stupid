@@ -1,3 +1,22 @@
-# Hearing System
+﻿# Hearing System
 
-Notes and research on hearing.
+Functionality:
+- Detects sound waves and processes auditory information for speech, music, and environmental awareness
+
+What affects it:
+- Sound frequency, intensity, and temporal patterns
+- Head position and pinna shape
+- Auditory attention and context
+
+How it affects other parts:
+- Enables language comprehension and communication
+- Influences emotional responses and arousal
+- Contributes to spatial awareness and navigation
+
+Explanation:
+- The auditory system begins with sound waves vibrating the eardrum, transmitted through ossicles to cochlea where hair cells transduce mechanical to electrical signals. Spiral ganglion neurons send signals via auditory nerve to cochlear nucleus, superior olive, and inferior colliculus, then to medial geniculate and auditory cortex. The system processes frequency (tonotopic map), intensity, and timing for sound localization and pattern recognition. Binaural hearing enables sound source localization. Auditory processing is highly plastic, adapting to language or musical training.
+
+Implementation suggestions (code):
+- Model cochlear frequency analysis
+- Implement sound localization algorithms
+- Simulate speech and music processing

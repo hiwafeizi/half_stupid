@@ -1,3 +1,22 @@
-# Pineal Gland
+﻿# Pineal Gland
 
-Notes and research on the pineal gland.
+Functionality:
+- Produces melatonin to regulate circadian rhythms and seasonal reproduction
+
+What affects it:
+- Light/dark cycles via retinal input
+- Sympathetic nervous system activation
+- Age-related calcification
+
+How it affects other parts:
+- Promotes sleep and regulates sleep-wake cycles
+- Influences seasonal breeding and immune function
+- May affect mood and antioxidant activity
+
+Explanation:
+- The pineal gland, located in the epithalamus, synthesizes melatonin from serotonin in response to darkness. Light inhibits melatonin production via the suprachiasmatic nucleus and sympathetic nerves. Melatonin receptors are widespread, affecting circadian timing in peripheral tissues. It plays a role in seasonal reproduction by modulating gonadotropin release. Pineal tumors or calcification can disrupt sleep patterns. Melatonin supplementation is used for jet lag and sleep disorders.
+
+Implementation suggestions (code):
+- Model light-dependent melatonin production
+- Implement circadian rhythm regulation
+- Simulate seasonal and sleep-wake effects

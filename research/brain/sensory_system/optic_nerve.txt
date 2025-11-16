@@ -1,3 +1,22 @@
-# Optic Nerve
+﻿# Optic Nerve
 
-Notes and research on the optic nerve.
+Functionality:
+- Transmits visual information from retina to brain
+
+What affects it:
+- Retinal ganglion cell activity
+- Myelination and conduction velocity
+- Glaucomatous pressure or trauma
+
+How it affects other parts:
+- Relays visual signals to thalamus and midbrain
+- Enables conscious vision and reflexive eye movements
+- Damage causes visual field deficits
+
+Explanation:
+- The optic nerve consists of ~1.2 million axons from retinal ganglion cells, exiting the eye at the optic disc. It travels through the orbit, optic canal, and chiasm where nasal fibers cross. Post-chiasm, it forms optic tracts to lateral geniculate nucleus (vision) and superior colliculus (reflexes). The nerve is myelinated by oligodendrocytes, allowing fast conduction. It lacks regeneration capacity; damage causes permanent vision loss. The optic nerve head is visible during eye exams, revealing conditions like papilledema.
+
+Implementation suggestions (code):
+- Model fiber crossing at optic chiasm
+- Implement visual field mapping
+- Simulate conduction and damage effects

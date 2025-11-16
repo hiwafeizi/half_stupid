@@ -1,3 +1,27 @@
-# Lumbar Segments
+﻿# Lumbar Segments
 
 Notes and research on lumbar segments of the spinal cord.
+
+
+Functionality:
+The lumbar segments control lower limb muscles and receive sensory input from the legs and lower back. They are essential for walking and posture.
+
+
+What affects it:
+- Input from the brain and peripheral nerves
+- Sensory feedback from the legs
+- Injury or disease (e.g., lumbar spinal cord injury)
+
+
+How it affects other parts:
+- Regulates leg movement and posture
+- Loss of function leads to weakness or paralysis of the legs
+
+
+Explanation:
+There are 5 lumbar segments (L1-L5) in the spinal cord. They serve as relay points for motor and sensory information to and from the lower limbs.
+
+
+Implementation suggestions (code):
+- Model lumbar segments as nodes relaying signals between brain and legs.
+- Simulate walking and posture control.

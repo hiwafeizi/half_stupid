@@ -1,3 +1,22 @@
-# Sensory Neurons
+﻿# Sensory Neurons
 
-Notes and research on sensory neurons.
+Functionality:
+- Detect and transmit sensory information from periphery to CNS
+
+What affects it:
+- Stimulus modality (touch, pain, temperature, etc.)
+- Receptor sensitivity and adaptation
+- Axonal conduction properties
+
+How it affects other parts:
+- Relay sensory data to spinal cord and brain
+- Initiate reflex arcs
+- Contribute to perception and awareness
+
+Explanation:
+- Sensory neurons are pseudounipolar, with cell bodies in dorsal root ganglia (somatic) or cranial ganglia (visceral). They have specialized receptors: mechanoreceptors for touch/pressure, nociceptors for pain, thermoreceptors for temperature, chemoreceptors for taste/smell. Sensory transduction converts physical/chemical stimuli into electrical signals. Myelinated A-fibers conduct fast (touch, proprioception), unmyelinated C-fibers conduct slow (pain, temperature). Sensory neurons adapt to constant stimuli, allowing detection of changes. They form the afferent limb of reflexes and conscious sensation.
+
+Implementation suggestions (code):
+- Model sensory transduction for different modalities
+- Implement adaptation and threshold mechanisms
+- Simulate sensory pathways and reflex responses

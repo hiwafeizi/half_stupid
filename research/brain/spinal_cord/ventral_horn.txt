@@ -1,3 +1,30 @@
-# Ventral Horn
+﻿# Ventral Horn
 
 Notes and research on the ventral horn of the spinal cord.
+
+
+Functionality:
+The ventral horn contains the cell bodies of motor neurons that directly innervate skeletal muscles, enabling voluntary movement.
+
+
+What affects it:
+- Input from upper motor neurons in the brain
+- Sensory feedback from muscles and joints
+- Neurotransmitters (acetylcholine, glutamate)
+- Damage (e.g., spinal cord injury, ALS)
+
+
+How it affects other parts:
+- Sends motor commands to muscles
+- Influences muscle tone and reflexes
+- Loss of function leads to paralysis or weakness
+
+
+Explanation:
+The ventral horn is the anterior part of the spinal cord's gray matter. It is the final common pathway for voluntary and reflex motor output. Motor neuron activity here is shaped by descending brain signals and local spinal circuits.
+
+
+Implementation suggestions (code):
+- Model the ventral horn as a module that receives motor commands and outputs muscle activations.
+- Integrate with sensory feedback for reflex arcs.
+- Simulate damage by reducing or blocking output signals.

@@ -1,3 +1,21 @@
-# Cerebellar Cortex
+﻿# Cerebellar Cortex
 
-Notes and research on the cerebellar cortex.
+Functionality:
+- Outer layer of the cerebellum, organized into molecular, Purkinje, and granular layers
+- Processes sensory and motor information for coordination and learning
+
+What affects it:
+- Input from mossy and climbing fibers
+- Synaptic plasticity and neurotransmitter levels
+- Developmental and genetic factors
+
+How it affects other parts:
+- Modulates output to deep cerebellar nuclei
+- Influences timing and accuracy of movements
+
+Explanation:
+- The cerebellar cortex is a uniform, three-layered structure covering the cerebellar surface, characterized by its extensive folding that increases surface area dramatically. The outer molecular layer contains Purkinje cell dendrites and parallel fibers; the middle Purkinje cell layer has the inhibitory output neurons; the inner granular layer has densely packed granule cells. This organization allows for modular processing: each module (microzone) receives specific sensory inputs and controls particular motor outputs. The cortex performs predictive modeling, comparing expected and actual sensory feedback to generate error signals. Synaptic plasticity, particularly at parallel fiber-Purkinje cell synapses, enables motor learning and adaptation. The cortex's uniform structure across the cerebellum suggests a common computational principle applied to different functional domains.
+
+Implementation suggestions (code):
+- Model as a layered network with distinct cell types
+- Simulate parallel processing and learning mechanisms

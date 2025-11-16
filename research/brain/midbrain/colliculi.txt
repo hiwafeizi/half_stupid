@@ -1,3 +1,23 @@
-# Colliculi
+﻿# Colliculi
 
-Notes and research on the colliculi.
+Functionality:
+- Superior colliculus: controls eye movements and visual attention
+- Inferior colliculus: processes auditory information and sound localization
+
+What affects it:
+- Visual input from retina and cortex
+- Auditory input from brainstem
+- Motor commands for orientation
+
+How it affects other parts:
+- Generates saccadic eye movements and head turns
+- Relays auditory signals to thalamus and cortex
+- Influences startle responses and spatial attention
+
+Explanation:
+- The colliculi are paired structures on the tectum. The superior colliculus receives visual input and generates rapid eye movements (saccades) to foveate targets, integrating with head and body movements for spatial orientation. It contains a topographic map of visual space. The inferior colliculus processes auditory signals, computing sound location through interaural time and intensity differences, and relays to auditory cortex. Both colliculi enable reflexive responses to sudden stimuli, crucial for survival in dynamic environments.
+
+Implementation suggestions (code):
+- Model topographic sensory maps
+- Implement saccade generation and auditory localization
+- Simulate reflexive orienting behaviors

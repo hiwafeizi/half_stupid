@@ -1,3 +1,20 @@
-# Arbor Vitae
+﻿# Arbor Vitae
 
-Notes and research on the arbor vitae.
+Functionality:
+- White matter of the cerebellum, consisting of myelinated nerve fibers that connect the cortex with deep nuclei and other brain regions
+
+What affects it:
+- Myelination and integrity of nerve fibers
+- Demyelinating diseases (e.g., multiple sclerosis)
+- Developmental factors
+
+How it affects other parts:
+- Facilitates rapid communication within the cerebellum and with other brain regions
+- Disruption slows or impairs signal transmission, affecting coordination
+
+Explanation:
+- The arbor vitae ("tree of life") is the intricate branching network of white matter within the cerebellum, formed by myelinated axons connecting the cerebellar cortex to the deep nuclei and cerebellar peduncles. It consists of afferent fibers carrying sensory and motor information to the cortex, efferent fibers from Purkinje cells to the nuclei, and association fibers within the cerebellum. The tree-like structure arises from the folding of the cerebellar cortex, creating a complex, efficient pathway for signal routing. Myelination ensures rapid conduction, crucial for the cerebellum's role in real-time motor control. Diseases affecting myelin, such as multiple sclerosis, can severely impair cerebellar function, leading to coordination deficits.
+
+Implementation suggestions (code):
+- Model as a network of myelinated connections
+- Simulate effects of demyelination or signal delay

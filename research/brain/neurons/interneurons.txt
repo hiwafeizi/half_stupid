@@ -1,3 +1,22 @@
-# Interneurons
+﻿# Interneurons
 
-Notes and research on interneurons.
+Functionality:
+- Integrate and modulate neural circuits within the CNS
+
+What affects it:
+- Local circuit dynamics and synaptic inputs
+- Neurotransmitter diversity (GABA, glycine, etc.)
+- Circuit context and behavioral state
+
+How it affects other parts:
+- Shape neural processing and timing
+- Control excitation-inhibition balance
+- Enable complex computations and behaviors
+
+Explanation:
+- Interneurons are local circuit neurons that connect neurons within the same region, comprising ~99% of neurons. They use GABA or glycine for inhibition, or glutamate for excitation. Types include basket cells (perisomatic inhibition), chandelier cells (axo-axonic inhibition), and stellate cells (dendritic inhibition). Interneurons enable temporal precision, oscillatory activity, and gain control. In cortex, they form inhibitory networks for balanced excitation. Spinal interneurons mediate reflexes and locomotion. Interneuron dysfunction contributes to epilepsy, schizophrenia, and motor disorders.
+
+Implementation suggestions (code):
+- Model inhibitory networks and excitation-inhibition balance
+- Implement oscillatory dynamics and synchronization
+- Simulate interneuron roles in circuit computation

@@ -1,3 +1,21 @@
-# Cerebellar Peduncles
+﻿# Cerebellar Peduncles
 
-Notes and research on the cerebellar peduncles.
+Functionality:
+- Three paired bundles of nerve fibers (superior, middle, inferior) connecting the cerebellum to the brainstem
+- Transmit sensory and motor information to and from the cerebellum
+
+What affects it:
+- Integrity of nerve fibers
+- Lesions or demyelination (e.g., multiple sclerosis)
+- Neurodevelopmental factors
+
+How it affects other parts:
+- Disruption impairs communication between cerebellum and other brain regions
+- Affects coordination, balance, and motor learning
+
+Explanation:
+- The cerebellar peduncles are three pairs of thick fiber bundles connecting the cerebellum to the brainstem. The inferior cerebellar peduncle (restiform body) carries sensory information from the spinal cord and brainstem to the cerebellum. The middle cerebellar peduncle (brachium pontis) transmits cortical input via pontine nuclei. The superior cerebellar peduncle (brachium conjunctivum) carries cerebellar output to the thalamus and brainstem. These pathways enable bidirectional communication, allowing the cerebellum to receive diverse sensory and motor information and send back refined commands. Damage to specific peduncles can cause characteristic syndromes: inferior peduncle lesions affect balance, middle peduncle lesions impair coordination, and superior peduncle lesions cause intention tremor.
+
+Implementation suggestions (code):
+- Model as communication channels between modules
+- Simulate effects of signal disruption or delay

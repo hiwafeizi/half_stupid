@@ -1,3 +1,23 @@
-# Medulla Oblongata
+﻿# Medulla Oblongata
 
-Notes and research on the medulla oblongata.
+Functionality:
+- Controls vital autonomic functions, relays sensory and motor information, and houses cranial nerve nuclei
+
+What affects it:
+- Sensory inputs from body (pain, temperature, proprioception)
+- Descending commands from higher brain centers
+- Blood chemistry (pH, CO2 levels)
+- Baroreceptor and chemoreceptor signals
+
+How it affects other parts:
+- Regulates heart rate, blood pressure, and respiration
+- Relays touch and proprioceptive information to thalamus
+- Influences swallowing, coughing, and vomiting reflexes
+
+Explanation:
+- The medulla oblongata is the most caudal part of the brainstem, continuous with the spinal cord. It contains vital centers: the respiratory center (dorsal and ventral respiratory groups), cardiovascular center (regulating heart rate and vasomotor tone), and nuclei for cranial nerves IX (glossopharyngeal), X (vagus), XI (accessory), and XII (hypoglossal). The medulla integrates autonomic reflexes, such as the baroreceptor reflex for blood pressure control and chemoreceptor reflex for breathing. It also contains the pyramids (corticospinal tracts) and olives (climbing fiber source). Damage to the medulla is often fatal due to loss of respiratory or cardiovascular control.
+
+Implementation suggestions (code):
+- Model as a vital control center for autonomic functions
+- Implement respiratory and cardiovascular reflexes
+- Simulate sensory relay and motor control

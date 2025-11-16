@@ -1,3 +1,28 @@
-# Dorsal Horn
+﻿# Dorsal Horn
 
 Notes and research on the dorsal horn of the spinal cord.
+
+
+Functionality:
+The dorsal horn processes incoming sensory information (touch, pain, temperature) from the body and relays it to the brain.
+
+
+What affects it:
+- Sensory input from peripheral nerves
+- Modulation by descending brain signals
+- Injury or disease (e.g., chronic pain, spinal cord injury)
+
+
+How it affects other parts:
+- Relays sensory information to the brain
+- Modulates pain perception and reflexes
+- Dysfunction can cause abnormal sensation or pain
+
+
+Explanation:
+The dorsal horn is the posterior part of the spinal cord's gray matter. It is the first relay for sensory signals entering the spinal cord, integrating and modulating them before transmission to higher centers.
+
+
+Implementation suggestions (code):
+- Model the dorsal horn as a module that receives sensory input and relays it to the brain.
+- Implement pain modulation and reflex integration.

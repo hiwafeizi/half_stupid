@@ -1,3 +1,21 @@
-# Pyramids (Medulla)
+﻿# Pyramids (Medulla)
 
-Notes and research on the pyramids of the medulla.
+Functionality:
+- Contain the corticospinal tracts, relaying voluntary motor commands from the cortex to the spinal cord
+
+What affects it:
+- Input from motor cortex and premotor areas
+- Integrity of pyramidal tract neurons
+- Myelination and conduction velocity
+
+How it affects other parts:
+- Directly innervates spinal motor neurons for precise voluntary movements
+- Influences muscle control and fine motor skills
+
+Explanation:
+- The pyramids are prominent bulges on the ventral surface of the medulla oblongata, formed by the decussation (crossing) of corticospinal tract fibers. About 80-90% of these fibers cross to the contralateral side, forming the lateral corticospinal tract, while the remaining form the anterior tract. This crossing allows each cerebral hemisphere to control the opposite side of the body. The pyramidal system enables skilled, voluntary movements, with damage causing spastic paralysis and loss of fine motor control. The term "pyramidal" refers to both the anatomical structure and the motor system it represents.
+
+Implementation suggestions (code):
+- Model as the main voluntary motor pathway
+- Simulate contralateral control and fine motor precision
+- Implement effects of lesions on motor function

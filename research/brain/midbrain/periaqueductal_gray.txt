@@ -1,3 +1,22 @@
-# Periaqueductal Gray
+﻿# Periaqueductal Gray
 
-Notes and research on the periaqueductal gray.
+Functionality:
+- Modulates pain perception and defensive behaviors
+
+What affects it:
+- Nociceptive input from spinal cord
+- Emotional and cognitive influences
+- Opioid and non-opioid systems
+
+How it affects other parts:
+- Inhibits pain transmission via descending pathways
+- Triggers freezing, flight, or fight responses
+- Influences autonomic and endocrine stress responses
+
+Explanation:
+- The periaqueductal gray (PAG) surrounds the cerebral aqueduct and is a key center for pain control and defensive behaviors. It receives nociceptive input and can inhibit pain through endogenous opioid release, activated by placebo effects or acupuncture. The PAG organizes behavioral responses to threats: ventrolateral for flight, dorsolateral for fight, and ventromedial for freezing. It connects to hypothalamus for stress hormone release and locus coeruleus for arousal. Stimulation here can produce analgesia and calm states.
+
+Implementation suggestions (code):
+- Model pain modulation and stress responses
+- Implement defensive behavior selection
+- Simulate opioid analgesia effects

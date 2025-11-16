@@ -1,3 +1,22 @@
-# Molecular Layer
+﻿# Molecular Layer
 
-Notes and research on the molecular layer of the cerebellar cortex.
+Functionality:
+- Contains dendrites of Purkinje cells, parallel fibers of granule cells, and interneurons (stellate and basket cells)
+- Site of extensive synaptic integration and modulation
+
+What affects it:
+- Activity of granule cells, Purkinje cells, and interneurons
+- Neurotransmitter levels (GABA, glutamate)
+- Synaptic plasticity mechanisms
+
+How it affects other parts:
+- Modulates input to Purkinje cells, influencing cerebellar output
+- Affects timing and coordination of motor signals
+
+Explanation:
+- The molecular layer is the outermost layer of the cerebellar cortex, characterized by the extensive dendritic arborization of Purkinje cells and the horizontal passage of parallel fibers from granule cells. Interneurons, including stellate cells (in the outer molecular layer) and basket cells (near the Purkinje layer), provide inhibitory modulation. Parallel fibers synapse with Purkinje cell dendrites, creating a beam of excitation that can be modulated by interneurons. This layer enables precise temporal and spatial control of Purkinje cell firing, crucial for motor timing and coordination. Synaptic plasticity in this layer, particularly at parallel fiber-Purkinje cell synapses, underlies cerebellar learning and adaptation.
+
+Implementation suggestions (code):
+- Represent the molecular layer as a network of synaptic connections
+- Simulate interneuron modulation of Purkinje cell dendrites
+- Model plasticity at parallel fiber-Purkinje cell synapses

@@ -1,3 +1,22 @@
-# Vision System
+﻿# Vision System
 
-Notes and research on vision.
+Functionality:
+- Detects light and processes visual information for perception of form, color, motion, and depth
+
+What affects it:
+- Light wavelength, intensity, and pattern
+- Eye movements and accommodation
+- Visual attention and expectation
+
+How it affects other parts:
+- Guides motor actions and spatial navigation
+- Influences circadian rhythms and alertness
+- Contributes to emotional and cognitive processing
+
+Explanation:
+- The visual system begins with light entering the eye, focusing on the retina where photoreceptors (rods for low light, cones for color) convert photons to electrical signals. Bipolar and ganglion cells process signals, which travel via optic nerve to lateral geniculate nucleus, then to primary visual cortex (V1). Higher cortical areas (V2-V5, MT) process features like color, motion, and faces. The system has parallel pathways: magnocellular for motion/motion, parvocellular for form/color. Binocular vision enables depth perception. Visual processing is highly plastic, adapting to deprivation or learning.
+
+Implementation suggestions (code):
+- Model retinal processing and receptive fields
+- Implement hierarchical feature extraction
+- Simulate depth perception and motion tracking

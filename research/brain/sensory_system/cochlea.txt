@@ -1,3 +1,22 @@
-# Cochlea
+﻿# Cochlea
 
-Notes and research on the cochlea.
+Functionality:
+- Transduces sound vibrations into electrical signals for frequency analysis
+
+What affects it:
+- Sound pressure waves and frequency
+- Hair cell integrity and stereocilia
+- Endolymph composition and fluid dynamics
+
+How it affects other parts:
+- Sends frequency-mapped signals to auditory nerve
+- Enables pitch discrimination and sound analysis
+- Damage causes frequency-specific hearing loss
+
+Explanation:
+- The cochlea is a spiral-shaped organ in the inner ear with three fluid-filled chambers. Sound vibrations cause basilar membrane displacement, stimulating hair cells at frequency-specific locations (high frequencies at base, low at apex). Inner hair cells transduce via tip links and potassium channels, outer hair cells amplify via electromotility. The organ of Corti contains hair cells and supporting cells. Tonotopic organization maps frequency to place. The cochlea's active mechanics enhance sensitivity and frequency selectivity. Age-related or noise-induced hair cell loss causes permanent hearing loss.
+
+Implementation suggestions (code):
+- Model basilar membrane vibration and tonotopic mapping
+- Implement hair cell transduction and amplification
+- Simulate frequency analysis and damage effects

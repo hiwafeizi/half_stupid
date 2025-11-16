@@ -1,3 +1,22 @@
-# Axon
+﻿# Axon
 
-Notes and research on the axon.
+Functionality:
+- Conducts action potentials from soma to synaptic terminals
+
+What affects it:
+- Myelination for conduction speed
+- Diameter and length
+- Ion channel distribution
+
+How it affects other parts:
+- Transmits signals to distant targets
+- Enables long-range neural communication
+- Influences synaptic efficacy and timing
+
+Explanation:
+- The axon is a long, thin extension from the soma, specialized for impulse conduction. Action potentials propagate via saltatory conduction in myelinated axons (jumping between nodes of Ranvier), reaching speeds up to 100 m/s. Unmyelinated axons conduct slower (0.5-10 m/s). The axon hillock integrates inputs, and the terminal bouton contains synaptic vesicles. Axonal transport moves materials bidirectionally: anterograde for neurotransmitters, retrograde for trophic factors. Axon damage causes Wallerian degeneration, with potential regeneration in PNS but limited in CNS.
+
+Implementation suggestions (code):
+- Model action potential propagation with cable theory
+- Implement myelination effects on conduction velocity
+- Simulate axonal transport and degeneration

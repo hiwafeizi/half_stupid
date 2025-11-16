@@ -1,3 +1,22 @@
-# Pituitary Gland
+﻿# Pituitary Gland
 
-Notes and research on the pituitary gland.
+Functionality:
+- Produces and releases hormones that regulate other endocrine glands and control various physiological processes
+
+What affects it:
+- Hypothalamic releasing/inhibiting hormones
+- Feedback from target glands
+- Stress and circadian signals
+
+How it affects other parts:
+- Controls thyroid, adrenal, and gonadal function via tropic hormones
+- Regulates growth, metabolism, and water balance
+- Influences milk production and uterine contractions
+
+Explanation:
+- The pituitary gland, or hypophysis, is divided into anterior (adenohypophysis) and posterior (neurohypophysis) lobes. The anterior lobe produces ACTH, TSH, FSH, LH, GH, and prolactin, regulated by hypothalamic hormones via the portal system. The posterior lobe stores and releases oxytocin and ADH, synthesized in the hypothalamus. The pituitary acts as the "master gland," coordinating endocrine responses. Disorders include adenomas causing hormone excess, or deficiencies from hypothalamic/pituitary damage.
+
+Implementation suggestions (code):
+- Model as central regulator with hypothalamic inputs
+- Implement tropic hormone cascades
+- Simulate feedback control of endocrine axes

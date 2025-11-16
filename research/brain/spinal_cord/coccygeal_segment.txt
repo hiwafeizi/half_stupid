@@ -1,3 +1,26 @@
-# Coccygeal Segment
+﻿# Coccygeal Segment
 
 Notes and research on the coccygeal segment of the spinal cord.
+
+
+Functionality:
+The coccygeal segment is the lowest part of the spinal cord, involved in sensory and motor control of the tailbone area.
+
+
+What affects it:
+- Input from the brain and peripheral nerves
+- Sensory feedback from the coccyx region
+- Injury or disease (rare)
+
+
+How it affects other parts:
+- Influences sensation and movement in the tailbone area
+- Loss of function has minimal impact in humans
+
+
+Explanation:
+The coccygeal segment (Co1) is a small, vestigial part of the spinal cord. It serves the skin over the coccyx and has limited function in humans.
+
+
+Implementation suggestions (code):
+- Model as a minimal node for completeness.

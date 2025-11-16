@@ -1,3 +1,22 @@
-# Retina
+﻿# Retina
 
-Notes and research on the retina.
+Functionality:
+- Converts light into electrical signals for initial visual processing
+
+What affects it:
+- Light intensity and wavelength
+- Photoreceptor adaptation and bleaching
+- Retinal blood supply and metabolism
+
+How it affects other parts:
+- Sends processed visual signals to brain via optic nerve
+- Influences pupil size through intrinsic reflexes
+- Provides feedback to control eye movements
+
+Explanation:
+- The retina is a layered neural tissue lining the back of the eye, containing photoreceptors (rods and cones), bipolar cells, ganglion cells, and interneurons. Light passes through ganglion and bipolar layers to reach photoreceptors, where it triggers phototransduction: rhodopsin activation leads to hyperpolarization. Rods provide scotopic vision (night), cones photopic (day) with color vision. Horizontal and amacrine cells mediate lateral inhibition for contrast enhancement. Ganglion cells have center-surround receptive fields. The fovea has highest acuity with dense cones. Retinal processing extracts basic features before cortical analysis.
+
+Implementation suggestions (code):
+- Model phototransduction and adaptation
+- Implement center-surround receptive fields
+- Simulate lateral inhibition and contrast enhancement

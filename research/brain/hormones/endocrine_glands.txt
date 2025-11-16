@@ -1,3 +1,22 @@
-# Endocrine Glands
+﻿# Endocrine Glands
 
-Notes and research on endocrine glands.
+Functionality:
+- Produce and secrete hormones directly into the bloodstream for systemic regulation
+
+What affects it:
+- Neural stimulation from hypothalamus
+- Blood levels of regulated substances
+- Circadian rhythms and environmental cues
+
+How it affects other parts:
+- Release hormones that act on distant target tissues
+- Form integrated axes (e.g., hypothalamic-pituitary-target gland)
+- Coordinate physiological responses across the body
+
+Explanation:
+- Endocrine glands are ductless organs specialized for hormone production and secretion. Major glands include the pituitary (master gland), thyroid, parathyroid, adrenal, pancreas, and gonads. They receive regulatory input from the hypothalamus via releasing/inhibiting hormones and neural connections. Glands respond to feedback from target tissues to maintain homeostasis. The pituitary gland, divided into anterior and posterior lobes, controls many other endocrine glands through tropic hormones. Endocrine glands can also have exocrine functions (e.g., pancreas) or be dispersed as single cells (e.g., enteroendocrine cells).
+
+Implementation suggestions (code):
+- Model glands as hormone production units with regulatory inputs
+- Implement gland-target axes with feedback loops
+- Simulate secretion patterns and pulsatile release

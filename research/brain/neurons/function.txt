@@ -1,3 +1,22 @@
-# Neuron Function
+﻿# Neuron Function
 
-Notes and research on neuron function.
+Functionality:
+- Receive, integrate, and transmit electrical signals for neural communication
+
+What affects it:
+- Synaptic inputs and neurotransmitter binding
+- Ion gradients and channel activity
+- Metabolic energy for ion pumping
+
+How it affects other parts:
+- Generate action potentials to propagate signals
+- Release neurotransmitters to influence target cells
+- Contribute to neural circuits for behavior and cognition
+
+Explanation:
+- Neurons function through electrical excitability: resting membrane potential maintained by Na+/K+ pumps, depolarized by excitatory inputs, hyperpolarized by inhibitory inputs. When threshold reached, voltage-gated channels open, producing all-or-none action potential propagating down axon. At synapses, calcium influx triggers vesicle fusion and neurotransmitter release. Postsynaptic receptors convert chemical to electrical signals. This allows neurons to integrate multiple inputs, enabling complex computations like pattern recognition and decision-making.
+
+Implementation suggestions (code):
+- Model membrane potential dynamics and action potentials
+- Implement synaptic transmission mechanisms
+- Simulate neural integration and firing patterns

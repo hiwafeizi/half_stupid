@@ -1,3 +1,22 @@
-# Adrenal Gland
+﻿# Adrenal Gland
 
-Notes and research on the adrenal gland.
+Functionality:
+- Produces corticosteroids (cortisol) and catecholamines (epinephrine) for stress response and homeostasis
+
+What affects it:
+- ACTH from pituitary for cortisol
+- Sympathetic nervous system for catecholamines
+- Stress, circadian rhythms
+
+How it affects other parts:
+- Mobilizes energy stores and suppresses immune function
+- Increases heart rate, blood pressure, and alertness
+- Regulates electrolyte balance and blood sugar
+
+Explanation:
+- The adrenal glands, located atop the kidneys, have cortical (outer) and medullary (inner) regions. The cortex produces glucocorticoids (cortisol for metabolism and stress), mineralocorticoids (aldosterone for salt balance), and androgens. The medulla produces epinephrine and norepinephrine for fight-or-flight response. ACTH regulates cortisol, while catecholamine release is neurally controlled. Adrenal insufficiency (Addison's) causes fatigue and hypotension, while excess (Cushing's) leads to obesity and hypertension.
+
+Implementation suggestions (code):
+- Model stress response with HPA axis activation
+- Implement catecholamine effects on cardiovascular system
+- Simulate electrolyte and glucose regulation

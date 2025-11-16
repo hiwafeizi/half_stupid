@@ -1,3 +1,22 @@
-# Myelin Sheath
+﻿# Myelin Sheath
 
-Notes and research on the myelin sheath.
+Functionality:
+- Insulates axons to increase conduction velocity and efficiency
+
+What affects it:
+- Oligodendrocyte or Schwann cell wrapping
+- Lipid composition and compaction
+- Demyelinating diseases or toxins
+
+How it affects other parts:
+- Speeds neural transmission
+- Reduces energy expenditure for ion pumping
+- Enables precise timing in neural circuits
+
+Explanation:
+- Myelin is a fatty insulating layer produced by glial cells: oligodendrocytes in CNS (myelinate multiple axons), Schwann cells in PNS (myelinate single axons). It forms a multilamellar sheath with gaps (nodes of Ranvier) every 1-2 mm. Action potentials jump between nodes via saltatory conduction, increasing speed 10-100 fold. Myelin also prevents ion leakage, reducing metabolic cost. Demyelination in multiple sclerosis slows conduction, causing neurological symptoms. Myelin thickness correlates with axon diameter and conduction speed.
+
+Implementation suggestions (code):
+- Model saltatory conduction with discrete nodes
+- Implement myelination effects on propagation speed
+- Simulate demyelination and conduction failures

@@ -1,3 +1,20 @@
-# Deep Cerebellar Nuclei
+﻿# Deep Cerebellar Nuclei
 
-Notes and research on the deep cerebellar nuclei.
+Functionality:
+- Main output centers of the cerebellum, relaying processed information to other brain regions
+
+What affects it:
+- Inhibitory input from Purkinje cells
+- Excitatory input from mossy and climbing fibers
+- Neurotransmitter levels
+
+How it affects other parts:
+- Send output to motor cortex, brainstem, and spinal cord
+- Influence movement, balance, and coordination
+
+Explanation:
+- The deep cerebellar nuclei (dentate, emboliform, globose, and fastigial) are embedded within the white matter of the cerebellum and serve as the primary output structures. They receive inhibitory GABAergic projections from Purkinje cells and excitatory glutamatergic inputs from mossy and climbing fibers that bypass the cortex. This dual input allows the nuclei to integrate cortical processing with unprocessed sensory information. The nuclei transform cerebellar computations into actionable motor signals, projecting to the thalamus (for cortical influence), brainstem nuclei, and spinal cord. Each nucleus has specialized functions: dentate for skilled movements, emboliform and globose for limb control, and fastigial for posture and balance. Together, they ensure coordinated, adaptive motor behavior.
+
+Implementation suggestions (code):
+- Model as output nodes receiving and integrating multiple inputs
+- Simulate their effect on downstream motor systems

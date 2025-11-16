@@ -1,3 +1,25 @@
-# Limbic System
+﻿# Limbic System
 
-Notes and research on the limbic system.
+Functionality:
+- Regulates emotion, motivation, memory formation, and social behavior
+- Integrates sensory information with emotional valence
+
+What affects it:
+- Sensory inputs from environment and body
+- Hormonal signals (cortisol, oxytocin)
+- Neurotransmitter systems (serotonin, dopamine)
+- Stress and social interactions
+
+How it affects other parts:
+- Influences autonomic nervous system via hypothalamus
+- Modulates cortical activity for attention and decision-making
+- Affects reward processing and goal-directed behavior
+
+Explanation:
+- The limbic system is a network of interconnected structures including the hippocampus (memory), amygdala (emotion), cingulate gyrus (cognitive-emotional integration), mammillary bodies (memory relay), septum, and fornix. It forms a ring around the brainstem, hence "limbic" from Latin for "border." The system processes emotional significance of stimuli, forms emotional memories, and drives motivated behaviors. The amygdala rapidly assesses threat and triggers fear responses, while the hippocampus contextualizes memories with emotional tags. The limbic system interacts extensively with the prefrontal cortex for emotional regulation and with the hypothalamus for physiological responses. Dysfunction leads to disorders like anxiety, depression, and memory impairments.
+
+Implementation suggestions (code):
+- Model as interconnected modules: emotion detector, memory integrator, motivation generator
+- Implement reinforcement learning for emotional associations
+- Simulate stress responses and emotional regulation
+- Connect to decision-making systems for value-based choices

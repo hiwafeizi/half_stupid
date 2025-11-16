@@ -1,3 +1,22 @@
-# Soma (Cell Body)
+﻿# Soma (Cell Body)
 
-Notes and research on the soma (cell body).
+Functionality:
+- Contains nucleus and organelles for protein synthesis and metabolic support
+
+What affects it:
+- Gene expression and transcription factors
+- Metabolic state and nutrient availability
+- Toxic insults or neurodegenerative processes
+
+How it affects other parts:
+- Maintains axonal and dendritic integrity
+- Regulates synaptic function through protein trafficking
+- Influences neuronal survival and plasticity
+
+Explanation:
+- The soma, or cell body, houses the nucleus with genetic material, ribosomes for protein synthesis, mitochondria for energy, and Golgi apparatus for protein modification. It integrates dendritic inputs at the axon hillock, where action potentials are initiated if threshold is reached. The soma maintains the entire neuron through anterograde transport of materials to axon terminals and retrograde transport of signals from synapses. In motor neurons, the soma can be large (up to 100 μm) to support long axons. Somatic damage leads to neuronal death, as seen in neurodegenerative diseases.
+
+Implementation suggestions (code):
+- Model metabolic support and protein synthesis
+- Implement integration of dendritic inputs
+- Simulate neuronal maintenance and degeneration
