@@ -1,0 +1,56 @@
+ESSENTIAL COMMANDS (use these 95 percent of the time)
+
+Movement:
+move <value> # forward/backward, value between -1 and 1
+strafe <value> # right/left, value between -1 and 1
+turn <value> # rotate left/right, value between -1 and 1
+pitch <value> # look up/down, value between -1 and 1
+jump <0/1> # jump, 1 = start jumping, 0 = stop
+
+Interaction:
+attack <0/1> # left click (hit, break blocks)
+use <0/1> # right click (place blocks, open doors, eat items)
+
+Inventory (basic):
+hotbar.<n> 1 # select hotbar slot n (0–8)
+
+Communication:
+chat "message" # send a chat message
+
+Mission control:
+quit # end the mission
+
+EXTENDED COMMANDS (less common)
+
+Additional movement:
+crouch <0/1> # sneak/crouch
+moveVertical <value> # fly up/down (only works in flying modes)
+
+Advanced inventory:
+dropItem <slot> # drop item from the given slot
+discardCurrentItem # delete currently held item
+swapInventoryItems <a> <b> # swap items in inventory slots a and b
+
+Discrete movement mode (only if DiscreteMovementCommands is enabled):
+move 1 # move forward one block
+move -1 # move backward one block
+strafe 1 # step right
+strafe -1 # step left
+turn 1 # turn 90 degrees right
+turn -1 # turn 90 degrees left
+jump 1 # jump once
+look <degrees> # set camera pitch to a specific angle
+
+NOTES
+
+Continuous commands accept values between -1 and 1.
+
+Discrete commands accept only integers (0, 1, or -1).
+
+Commands only work after the mission has fully begun.
+
+Most commands require specific handlers in the mission XML.
+
+moveVertical only works in creative/flying agent modes.
+
+Commands are not persistent; you must send them again if needed.
