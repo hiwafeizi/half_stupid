@@ -34,16 +34,6 @@ agent_host = MalmoPython.AgentHost()
 agent_host.addOptionalIntArgument( "speed,s", "Length of tick, in ms.", 50)
 malmoutils.parse_command_line(agent_host)
 
-########################################
-# BASIC SERVER CONNECTIVITY TEST
-########################################
-print("Running ping test...")
-try:
-    agent_host.pingServers()
-    print("OK: Minecraft + Malmo reachable")
-except Exception as e:
-    print("ERROR: Minecraft not reachable:", e)
-    sys.exit(1)
 
 maze1 = '''
     <MazeDecorator>

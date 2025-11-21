@@ -1,2 +1,4 @@
 /env
 /MalmoPlatform
+scripts.txt
+*/__pycache__/*

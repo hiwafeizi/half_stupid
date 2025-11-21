@@ -4,9 +4,9 @@ This is a concrete checklist you can literally paste into a project TODO.
 
 ### Stage 0: Project setup
 
-* [ ] Decide platform
-  * [ ] Minecraft + Malmo or custom grid world
-* [ ] Create repo and base structure
+* [X] Decide platform
+  * [X] Minecraft + Malmo or custom grid world
+* [X] Create repo and base structure
 * [ ] Implement basic environment API
   * [ ] Step function
   * [ ] State representation
