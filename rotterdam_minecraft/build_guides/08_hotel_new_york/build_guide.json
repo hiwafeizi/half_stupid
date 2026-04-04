@@ -1,0 +1,466 @@
+{
+  "building": "Hotel New York",
+  "original_name": "Holland-Amerika Lijn Headquarters (Kantoorgebouw Holland-Amerika Lijn)",
+  "architect": "J. Muller & C.M. Droogleever Fortuyn (1901), expanded by J. Muller & C.B. van der Tak (1908, 1916, 1920)",
+  "style": "Jugendstil (Art Nouveau) / Dutch Transitional Architecture",
+  "rijksmonument": 513872,
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+  "real_world_note": "Building sits at the tip of Wilhelminapier, surrounded by water on three sides (Nieuwe Maas river). The main facade faces roughly west toward the water/Erasmus Bridge.",
+
+  "main_body": {
+    "footprint_blocks": "85 x 28 (length x width, oriented roughly east-west along the pier)",
+    "height_blocks": 17,
+    "floors": "3 + attic",
+    "floor_breakdown": {
+      "ground_floor_height_blocks": 5,
+      "upper_floors_height_blocks": 4,
+      "attic_height_blocks": 3,
+      "note": "Ground floor is taller (original grand offices), upper floors are uniform, attic has dormer windows"
+    },
+    "floor_height_blocks": 4,
+    "roof_shape": "Steep hipped mansard roof with slate/dark tiles, punctuated by dormer windows. The main ridgeline runs along the length of the building. Several gabled dormers break the roofline at regular intervals. The roof has a complex profile with multiple hips and valleys where wings meet.",
+    "roof_construction": {
+      "type": "Hipped mansard with dormers",
+      "ridge_height_above_walls_blocks": 4,
+      "material": "Deepslate tiles or dark prismarine slabs/stairs",
+      "dormers": {
+        "count_per_long_side": 8,
+        "shape": "Triangular pediment dormers with stone surrounds",
+        "width_blocks": 3,
+        "spacing_blocks": 7
+      }
+    },
+    "facade_per_side": {
+      "west_main": {
+        "description": "The primary facade facing the waterfront/Erasmus Bridge. This is the grand entrance side with the twin towers flanking it.",
+        "width_blocks": 28,
+        "windows": {
+          "ground_floor": "5 large arched windows (3 blocks wide x 3 high) flanking the central entrance. Windows have stone surrounds with Art Nouveau keystones.",
+          "first_floor": "7 tall rectangular windows (2 blocks wide x 3 high) with decorative stone lintels and mullions",
+          "second_floor": "7 slightly shorter rectangular windows (2 blocks wide x 2.5 high)",
+          "attic": "3 dormer windows in the roof"
+        },
+        "features": "Central entrance portico with stone surround, gilded 'Holland Amerika Lijn' lettering above second floor level spanning between the towers, stone coat-of-arms reliefs flanking the lettering, decorative stone cornice with dentils below roofline",
+        "lettering": {
+          "text": "Holland Amerika Lijn",
+          "position": "Centered on facade between towers, at cornice level between 2nd floor and roofline (approximately block height 13-14)",
+          "width_blocks": 20,
+          "minecraft_approach": "Gold blocks spelling out letters on brick background, or use oak signs with gold text, or yellow glazed terracotta blocks in letter shapes",
+          "height_blocks": 1
+        }
+      },
+      "east": {
+        "description": "Rear facade facing the pier interior. Simpler than the west facade but still detailed.",
+        "width_blocks": 28,
+        "windows": {
+          "ground_floor": "5 arched windows with simpler stone surrounds",
+          "first_floor": "7 rectangular windows",
+          "second_floor": "7 rectangular windows",
+          "attic": "3 dormer windows"
+        },
+        "features": "Secondary entrance with simpler stone portico, fewer decorative reliefs, similar cornice treatment, some bay windows at first floor level"
+      },
+      "north": {
+        "description": "Long facade facing the Nieuwe Maas river to the north. Visible from the water taxi and Erasmus Bridge.",
+        "width_blocks": 85,
+        "windows": {
+          "ground_floor": "Approximately 18-20 arched windows at regular 4-block intervals, with larger windows near the tower",
+          "first_floor": "20-22 rectangular windows at regular intervals, some grouped in pairs",
+          "second_floor": "20-22 rectangular windows matching first floor rhythm",
+          "attic": "8 dormer windows in the mansard roof"
+        },
+        "features": "Stone stringcourses (horizontal bands) at each floor level, bay windows projecting at 2 locations (near tower and at center), stone balconies with iron railings at first floor, ship-railing style balustrades, dragon relief panels between first and second floor windows near tower, natural stone baseboard course at ground level (2 blocks high)"
+      },
+      "south": {
+        "description": "Long facade facing the Rijnhaven harbor basin to the south. Mirror of north facade with slight variations.",
+        "width_blocks": 85,
+        "windows": {
+          "ground_floor": "18-20 arched windows matching north facade rhythm",
+          "first_floor": "20-22 rectangular windows",
+          "second_floor": "20-22 rectangular windows",
+          "attic": "8 dormer windows"
+        },
+        "features": "Similar to north facade: stringcourses, bay windows, balconies, dragon reliefs. The waterfront terrace extends along this side. Stone panels depicting male figures representing different continents (exotic destinations of the Holland Amerika Lijn) placed between windows at first floor level."
+      }
+    }
+  },
+
+  "twin_towers": {
+    "shape": "Octagonal (8-sided) in the upper portions, transitioning from a square base at building level. The lower shaft emerges from the rectangular building mass as roughly square, then transitions to octagonal at the cupola level via chamfered corners.",
+    "position": "Flanking the west (main) facade, one at the northwest corner and one at the southwest corner",
+    "base_width_blocks": 7,
+    "total_height_blocks": 38,
+    "shaft_height_blocks": 26,
+    "shaft_description": "Square shaft (7x7 blocks) rising from ground to transition zone. Red brick with stone quoin corners. Windows on all four visible sides at each floor level.",
+    "transition_zone": {
+      "height_blocks": 3,
+      "description": "The square shaft transitions to octagonal via chamfered/beveled corners. Use stair blocks at 45 degrees to clip the corners from square to octagonal shape."
+    },
+    "copper_roof": {
+      "shape": "Elongated pointed dome (lantern-style cupola) - NOT a simple pyramid and NOT an onion dome. It is a bell-curved dome that tapers to a sharp point, similar to a baroque lantern. The profile curves outward slightly at the base, then sweeps inward to a pointed finial.",
+      "height_blocks": 9,
+      "base_width_blocks": 7,
+      "layer_by_layer": [
+        "Layer 1 (base): Full octagon 7x7 - oxidized copper blocks forming the base ring, slightly flared outward using stairs facing out",
+        "Layer 2: Full octagon 7x7 - oxidized copper blocks, straight walls",
+        "Layer 3: Octagon 7x7 - copper blocks with stairs on top edges beginning the inward curve",
+        "Layer 4: Reduced to 5x5 octagon - copper blocks, the dome begins narrowing",
+        "Layer 5: 5x5 octagon - copper blocks continuing inward taper",
+        "Layer 6: Reduced to 3x3 octagon - copper blocks, distinct narrowing",
+        "Layer 7: 3x3 - copper blocks forming the neck of the spire",
+        "Layer 8: 1x1 column - single copper block or lightning rod",
+        "Layer 9: 1x1 - pointed tip using an end rod or lightning rod on top"
+      ],
+      "block_type": "Oxidized copper blocks for the green patina color. Use oxidized cut copper stairs for the curved transitions. Alternatively, warped planks or cyan terracotta for color variation.",
+      "finial": "Lightning rod or end rod at the very top. The south tower has a wind vane shaped like a sailing ship (use a banner on a stick or an armor stand with a boat-like banner)."
+    },
+    "north_tower": {
+      "name": "Clock Tower",
+      "has_clock": true,
+      "clock": {
+        "tower": "North tower (northwest corner)",
+        "faces": 4,
+        "position_height_blocks": 22,
+        "design": "White/cream clock face with dark numerals on all 4 sides of the octagonal upper shaft. In Minecraft: use white concrete or quartz blocks as background with item frames containing clocks, or paint clock faces using white and black wool/concrete in a 3x3 circular pattern on each visible face.",
+        "diameter_blocks": 3
+      },
+      "unique_features": "Clock faces on all four sides, copper cupola identical to south tower"
+    },
+    "south_tower": {
+      "name": "Wind Vane Tower",
+      "has_clock": false,
+      "unique_features": "Weather vanes on all 4 sides, sailing ship wind vane at apex. Use banners or armor stands to represent the vanes.",
+      "wind_vane": {
+        "shape": "Sailing ship silhouette",
+        "minecraft_approach": "Place a banner with a custom ship pattern on a fence post at the tower peak, or use an armor stand holding a boat-shaped arrangement"
+      }
+    },
+    "windows_per_floor": {
+      "ground_to_second": "1 tall arched window per visible face (2 blocks wide x 3 high) with stone surrounds",
+      "third_floor": "1 slightly smaller window per face (2x2)",
+      "upper_shaft": "1 narrow slit window per face (1 block wide x 2 high)",
+      "just_below_cupola": "Small round/oculus windows (single glass pane) on each octagonal face"
+    }
+  },
+
+  "art_nouveau_details": {
+    "overview": "The building is one of the finest examples of Jugendstil (Art Nouveau) architecture in the Netherlands. Every surface features organic, flowing decorative elements typical of the style. Translating these to Minecraft requires creative use of banners, glazed terracotta, armor stands, and careful block selection.",
+    "dragon_reliefs": {
+      "location": "Stone relief panels on the long facades (north and south), positioned between the first and second floor windows near each tower. Also found flanking the main entrance on the west facade.",
+      "count": "At least 4 major dragon/serpent relief panels",
+      "description": "Winged dragons/serpents in flowing Art Nouveau style, carved in natural stone against the brick facade",
+      "minecraft_approach": "Use carved pumpkins or custom heads with dragon textures, or create stylized dragon shapes using stair and slab combinations in smooth stone. Alternatively, place banners with dragon/skull-and-crossbones patterns in stone-colored wool. Glazed terracotta (purple or cyan) can suggest the flowing organic shapes."
+    },
+    "ship_railing_balconies": {
+      "location": "First floor level on all facades, particularly prominent on the north and south long sides. Also present on the towers.",
+      "description": "Balconies with iron railings designed to resemble ocean liner deck railings - horizontal bars with curved Art Nouveau brackets",
+      "blocks": "Stone slabs (smooth stone or cut sandstone) for the balcony floor, projecting 1 block from the facade. Iron bars for the railing. Chains hanging between iron bar posts for a nautical railing effect.",
+      "spacing": "Balconies appear at roughly every 8-10 blocks along the long facades, typically below paired or grouped windows",
+      "depth_blocks": 1,
+      "width_blocks": 4
+    },
+    "floral_motifs": {
+      "location": "Window lintels, door surrounds, cornice brackets, and frieze panels throughout all facades",
+      "description": "Flowing organic plant forms, stylized flowers, and whiplash curves typical of Art Nouveau, carved in natural stone",
+      "approach": "Use glazed terracotta blocks (particularly lime, yellow, cyan, or light blue glazed terracotta which have flowing organic patterns). Place these as accent blocks within the stone window surrounds and at cornice level. Banner patterns with flower/vine designs can also represent Art Nouveau floral motifs on a smaller scale."
+    },
+    "coat_of_arms_reliefs": {
+      "location": "West (main) facade: flanking the 'Holland Amerika Lijn' lettering at cornice level. Also above the main entrance and on the tower shafts.",
+      "cities_represented": ["Amsterdam", "Rotterdam", "Netherlands (national)", "New York", "Batavia (Jakarta)"],
+      "count": 5,
+      "approach": "Use banners with custom heraldic patterns for each coat of arms. Place them in item frames on the facade at the appropriate locations. Alternatively, use colored wool or concrete blocks to create simple shield shapes (3x3 blocks) with contrasting color patterns."
+    },
+    "bay_windows": {
+      "location": "North and south facades, typically 2 per long side. Positioned at first and second floor level, near the center of the facade sections between towers and building ends.",
+      "shape": "Rectangular projecting bay, 3 blocks wide x 2 floors high (8 blocks), projecting 1 block from facade",
+      "construction": "Build a 3-wide x 1-deep projection from the facade at first floor level, continuing up through second floor. Use glass panes on three sides. Top with a small decorative gable (pointed stone cap) using stairs and slabs. Stone brackets below the bay (use upside-down stairs).",
+      "count": "4 total (2 per long side)",
+      "decorative_gable": "Small triangular pediment above each bay window using stone stairs, decorated with floral relief (glazed terracotta block at center)"
+    },
+    "continental_figure_panels": {
+      "location": "South facade between first-floor windows, and flanking the main entrance on the west facade",
+      "description": "Four stone relief panels depicting male figures in Indian, Egyptian, Arabic, and Western attire - representing the exotic destinations served by Holland Amerika Lijn",
+      "minecraft_approach": "Use armor stands with leather armor dyed in appropriate colors, placed in wall niches (1-block recesses). Alternatively, use banners with human-figure patterns or paintings (the Minecraft painting items) placed in recessed panels."
+    },
+    "wrought_iron": {
+      "staircases": "Grand internal wrought-iron staircases visible through windows. External fire escape stairs on east facade also feature ornamental ironwork.",
+      "railings": "All balconies, terraces, and stairways feature elaborate Art Nouveau wrought-iron railings with organic flowing patterns",
+      "entrance_canopy": "The main entrance has a wrought-iron and glass canopy/awning projecting over the door",
+      "blocks": "Iron bars for all railings and fence-like elements. Chains for horizontal railing runs and nautical details. Iron trapdoors for decorative iron panels. Black-dyed banners behind iron bars can suggest ornamental ironwork patterns.",
+      "entrance_canopy_build": "Extend iron bars 2 blocks out from the facade above the entrance door, with glass panes on top as the canopy roof"
+    },
+    "stained_glass": {
+      "location": "Upper portions of the main entrance door, transom windows above ground floor, and select windows on the towers",
+      "minecraft_approach": "Use colored glass panes (mix of yellow, green, and white stained glass panes) in place of regular glass panes at specific window positions. The entrance transom can use orange and yellow stained glass."
+    },
+    "stone_stringcourses": {
+      "description": "Horizontal bands of cream/white natural stone running the full length of each facade at floor levels, creating visual separation between stories",
+      "blocks": "Smooth stone slabs or cut sandstone slabs placed as horizontal bands at block heights 5, 9, and 13 (at each floor transition)",
+      "count": 3
+    }
+  },
+
+  "main_entrance": {
+    "location": "Center of the west (waterfront) facade, between the twin towers",
+    "position_from_south_corner_blocks": 12,
+    "width_blocks": 5,
+    "height_blocks": 4,
+    "design": {
+      "door": "Double door 3 blocks wide (use dark oak doors), flanked by stone pilasters (smooth stone pillars)",
+      "surround": "Elaborate stone portal frame with Art Nouveau organic carving. Use cut sandstone or smooth stone for the frame, 1 block deep recess.",
+      "transom": "Arched transom window above the doors (use glass panes with colored glass accents)",
+      "canopy": "Wrought-iron and glass entrance canopy projecting 2 blocks. Iron bars as supports, glass panes as roof.",
+      "steps": "Stone steps leading up 1 block from ground level (use stone stairs). The entrance is slightly elevated.",
+      "flanking_elements": "Stone pedestals with decorative urns or lanterns on either side (use stone walls topped with sea lanterns or soul lanterns for period-appropriate gas lamp effect)"
+    }
+  },
+
+  "waterfront": {
+    "dock_area": {
+      "description": "Historic dock/quay area at the western tip of the pier in front of the main facade. Originally where emigrant ships departed for New York.",
+      "construction": "Build a stone quay wall using stone bricks and smooth stone, dropping 3-4 blocks to water level. Use stone slab steps down to the water. Place oak fence posts as mooring bollards along the quay edge at 5-block intervals.",
+      "width_blocks": 12,
+      "length_blocks": 30
+    },
+    "terrace": {
+      "description": "Large outdoor terrace on the south side of the building at ground level, now used as the hotel restaurant terrace. Also a terrace area on the west (waterfront) side.",
+      "south_terrace": {
+        "dimensions": "40 x 8 blocks",
+        "construction": "Stone brick or smooth stone floor, iron bar railings along the water edge, oak fence posts with chain links between them for the nautical railing style. Place crafting tables or note blocks as 'cafe tables'. Flower pots on the railing posts."
+      },
+      "west_terrace": {
+        "dimensions": "20 x 6 blocks",
+        "construction": "Same style as south terrace, facing the dock area and Erasmus Bridge view"
+      }
+    },
+    "water_on_three_sides": {
+      "description": "The building sits at the tip of the Wilhelminapier peninsula. Water (Nieuwe Maas river) is present on the north, west, and south sides. Only the east side connects to land (the rest of the pier).",
+      "minecraft_water": "Fill with water source blocks to a depth of 4-5 blocks around the north, west, and south sides. The quay wall should be 3-4 blocks above water level. Use kelp and seagrass in the water for realism.",
+      "boats": "Place oak boats in the water near the dock as decoration"
+    }
+  },
+
+  "block_palette": {
+    "main_walls": {
+      "primary": "Bricks (standard Minecraft brick blocks)",
+      "alternative": "Red terracotta for variation in large wall sections",
+      "note": "The real building uses a warm red-brown brick. Standard Minecraft bricks are the closest match."
+    },
+    "stone_details": {
+      "window_surrounds": "Smooth stone or cut sandstone",
+      "stringcourses": "Smooth stone slabs or cut sandstone slabs",
+      "cornices": "Smooth stone stairs (upside-down) for the projecting cornice profile",
+      "baseboards": "Cut sandstone (2 blocks high at ground level)",
+      "quoins": "Cut sandstone or smooth stone at tower and building corners"
+    },
+    "tower_roofs": {
+      "primary": "Oxidized copper blocks (green patina)",
+      "transitions": "Oxidized cut copper stairs for curved dome profile",
+      "alternative": "Warped planks (teal/green color) or cyan terracotta",
+      "weathering_note": "Use fully oxidized copper for the iconic green color. Apply wax to prevent further changes."
+    },
+    "main_roof": {
+      "primary": "Deepslate tile slabs and stairs",
+      "alternative": "Dark prismarine slabs and stairs",
+      "dormers": "Smooth stone for dormer window frames, same roof material for dormer roofs"
+    },
+    "windows": {
+      "standard": "Glass panes (clear)",
+      "stained_glass_accents": "Yellow and green stained glass panes for Art Nouveau windows",
+      "bay_windows": "Glass panes on 3 sides of projecting bay structure"
+    },
+    "gold_lettering": {
+      "primary": "Gold blocks for individual letter shapes",
+      "alternative_1": "Yellow glazed terracotta (has a decorative pattern that suggests gilded detail)",
+      "alternative_2": "Oak signs with gold/yellow text reading 'Holland Amerika Lijn'",
+      "alternative_3": "Item frames with gold ingots arranged to form letters",
+      "note": "At 1:1 scale, individual gold blocks can spell out the letters across 20 blocks width"
+    },
+    "iron_details": {
+      "railings": "Iron bars",
+      "chains": "Chain blocks (for nautical railing details)",
+      "trapdoors": "Iron trapdoors (for decorative iron panels)",
+      "lanterns": "Soul lanterns (dark iron frames, blue-white light like gas lamps)"
+    },
+    "doors": {
+      "main_entrance": "Dark oak doors",
+      "secondary": "Spruce doors"
+    },
+    "decorative": {
+      "art_nouveau_accents": "Glazed terracotta (lime, cyan, yellow, light blue - these have flowing organic patterns)",
+      "flower_pots": "Flower pots with various flowers on balcony railings and entrance",
+      "banners": "Custom banner patterns for coat of arms, dragon motifs, and wind vane",
+      "paintings": "Minecraft paintings in appropriate interior window positions"
+    },
+    "waterfront": {
+      "quay_walls": "Stone bricks",
+      "quay_surface": "Smooth stone or stone bricks",
+      "bollards": "Oak fence posts",
+      "water": "Water source blocks with kelp and seagrass"
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "name": "Foundation and Waterfront",
+      "description": "Mark out the 85x28 footprint on the pier. Build the quay walls on the north, west, and south sides, dropping 3-4 blocks to water level. Fill water around three sides. Lay the ground floor base in stone bricks/smooth stone."
+    },
+    {
+      "step": 2,
+      "name": "Ground Floor Walls",
+      "description": "Build the ground floor walls 5 blocks high in brick. Place the 2-block-high cut sandstone baseboard course at the base of all facades. Leave openings for the main entrance (west) and secondary entrance (east). Mark out window positions at regular intervals on all four sides. Place the ground floor arched windows (3 wide x 3 high with arch using stairs at top)."
+    },
+    {
+      "step": 3,
+      "name": "First Stringcourse and First Floor",
+      "description": "Place the first smooth stone stringcourse (horizontal band) at block height 5. Build the first floor walls 4 blocks high in brick. Place rectangular windows (2 wide x 3 high). Add stone window surrounds using smooth stone or cut sandstone. Begin placing balconies with stone slabs and iron bar railings."
+    },
+    {
+      "step": 4,
+      "name": "Second Stringcourse and Second Floor",
+      "description": "Place second stringcourse at block height 9. Build second floor walls 4 blocks high. Place windows (2 wide x 2.5 high). Add window surrounds. Build bay windows on north and south facades (3 wide, projecting 1 block, glass on 3 sides, decorative gable cap)."
+    },
+    {
+      "step": 5,
+      "name": "Cornice and Attic Level",
+      "description": "Build the decorative stone cornice at block height 13 using upside-down smooth stone stairs projecting 1 block. Place the 'Holland Amerika Lijn' gold lettering on the west facade at this level. Build the attic level (3 blocks) in brick, set slightly back from the facade."
+    },
+    {
+      "step": 6,
+      "name": "Main Roof",
+      "description": "Build the hipped mansard roof using deepslate tile stairs and slabs. Start with the eave line at block 17, slope inward. Build the ridge along the building length. Construct 8 dormer windows per long side (3 blocks wide, triangular pediment, glass pane window, same roof material). Total roof height approximately 4 blocks above wall top."
+    },
+    {
+      "step": 7,
+      "name": "Tower Shafts",
+      "description": "Build both tower shafts at the northwest and southwest corners. Square 7x7 footprint in brick, rising 26 blocks high. Place 1 window per face per floor level. Add cut sandstone quoin corners. Place stringcourses at the same heights as the main building floors, continuing the horizontal lines up the towers."
+    },
+    {
+      "step": 8,
+      "name": "Tower Transition and Copper Cupolas",
+      "description": "At block height 26, transition from square to octagonal using stair blocks at the four corners (chamfer). Build 3 blocks of octagonal transition. Then build the copper dome: follow the layer-by-layer guide (9 layers of oxidized copper blocks and stairs tapering from 7x7 to a point). Place end rod or lightning rod at the peak."
+    },
+    {
+      "step": 9,
+      "name": "Clock Faces and Wind Vanes",
+      "description": "On the north tower at height 22: build 3x3 white concrete circular clock faces on all 4 sides, with item frames containing clocks at center. On the south tower: place banners as weather vanes on all 4 upper faces, and the sailing ship wind vane banner at the apex."
+    },
+    {
+      "step": 10,
+      "name": "Art Nouveau Decorative Details",
+      "description": "Add all decorative elements: dragon relief panels (glazed terracotta or custom heads between windows), coat of arms banners (5 banners in item frames on west facade), continental figure panels (armor stands or paintings on south facade), floral motif glazed terracotta accents at window lintels and cornice brackets."
+    },
+    {
+      "step": 11,
+      "name": "Wrought Iron and Entrance Details",
+      "description": "Build the main entrance: dark oak doors, stone surround, arched transom with stained glass, iron bar and glass canopy projecting 2 blocks, stone steps. Add iron bar railings to all balconies. Place chains between fence posts for nautical railing effect along waterfront terraces."
+    },
+    {
+      "step": 12,
+      "name": "Waterfront Finishing",
+      "description": "Complete the terraces on south and west sides: stone floors, iron bar railings, cafe furniture (crafting tables/note blocks). Place bollards (oak fence posts) along quay. Add boats in the water. Place sea lanterns or soul lanterns for gas-lamp-style lighting along the quay and at the entrance."
+    },
+    {
+      "step": 13,
+      "name": "Lighting and Final Touches",
+      "description": "Add interior lighting with sea lanterns hidden in ceilings or behind walls. Place soul lanterns on exterior walls at entrance and along facades for period gas lamp effect. Add flower pots to balconies. Review all facades from multiple angles and adjust window spacing and decorative elements as needed."
+    }
+  ],
+
+  "unique_challenges": {
+    "art_nouveau_in_blocks": {
+      "challenge": "Translating the organic, flowing curves of Jugendstil ornament into the rigid block-based Minecraft medium",
+      "solutions": [
+        "Use glazed terracotta blocks which have built-in flowing/organic patterns",
+        "Combine stairs, slabs, and walls at different orientations to suggest curves",
+        "Use banners with custom patterns for detailed ornamental elements",
+        "Accept that some abstraction is necessary - suggest the spirit of Art Nouveau through material choices and proportions rather than exact replication",
+        "Iron bars and chains provide the best approximation of wrought-iron organic forms"
+      ]
+    },
+    "copper_roof_shape": {
+      "challenge": "The bell-curved dome tapering to a point is one of the most distinctive features. Getting the profile right is crucial for the silhouette.",
+      "solutions": [
+        "Follow the layer-by-layer guide precisely",
+        "Use oxidized cut copper stairs facing outward at the base for the flared effect",
+        "Use stairs facing inward for the narrowing upper sections",
+        "Test the profile from a distance - the silhouette matters more than close-up detail",
+        "The dome should be roughly 1/4 of total tower height (9 of 38 blocks)"
+      ]
+    },
+    "waterfront_setting": {
+      "challenge": "Building on/near water with quay walls and a peninsula setting",
+      "solutions": [
+        "Build the quay walls first as the foundation/reference",
+        "Use sponges to manage water if building in survival mode",
+        "The water level should be 3-4 blocks below the building ground floor",
+        "Consider the underwater portions - use stone bricks down to the seabed for realism"
+      ]
+    },
+    "window_variety": {
+      "challenge": "The building has different window sizes across floors (tall arched on ground floor, rectangular on upper floors, small on towers, dormers in roof) and the rhythm varies between facades",
+      "solutions": [
+        "Mark all window positions on each floor before filling in walls",
+        "Use stairs at window tops for arched effect on ground floor",
+        "Maintain consistent horizontal spacing even when window heights change",
+        "Stone surrounds (1 block frame of smooth stone/sandstone around each window) help unify different window sizes"
+      ]
+    },
+    "historic_accuracy": {
+      "challenge": "Balancing architectural detail with Minecraft's block limitations while maintaining the building's historic character",
+      "solutions": [
+        "Prioritize the silhouette: twin towers with copper domes are the most recognizable feature",
+        "The lettering 'Holland Amerika Lijn' is essential for identification",
+        "Brick + stone contrast is more important than individual ornamental details",
+        "The waterfront setting with water on three sides is key to the sense of place"
+      ]
+    },
+    "octagonal_tower_tops": {
+      "challenge": "Transitioning from a square shaft to an octagonal cupola is geometrically complex in Minecraft",
+      "solutions": [
+        "Use a 7x7 square base which allows cutting corners to form a rough octagon",
+        "Place stair blocks at 45 degrees at each corner to chamfer the square into an octagon",
+        "The transition zone (3 blocks high) gives enough vertical space to make this look natural",
+        "From a distance, even a simple chamfered square reads as octagonal"
+      ]
+    }
+  },
+
+  "views": {
+    "best_viewing_angles": {
+      "southwest_water": "The classic postcard view: both towers visible with copper domes, 'Holland Amerika Lijn' lettering visible, full waterfront facade, Erasmus Bridge in the background. View from the water taxi or south bank of the Nieuwe Maas.",
+      "north_from_erasmus_bridge": "Long north facade stretching along the waterfront, both towers visible, dramatic against the modern Kop van Zuid skyline behind (De Rotterdam, Montevideo tower).",
+      "west_from_water": "Head-on view of the main facade with twin towers symmetrically framing the entrance. The dock area in the foreground."
+    },
+    "important_silhouette_elements": [
+      "Twin towers with green copper domes are the defining skyline element",
+      "The towers should be clearly taller than the main building (38 vs 17 blocks)",
+      "The mansard roof with dormers creates a distinct roofline profile",
+      "The building should appear low and long compared to the towers (3:1 length-to-width ratio)"
+    ],
+    "context_buildings": {
+      "note": "Hotel New York sits at the base of Wilhelminapier. In the full Rotterdam Minecraft project, it should be visible from the Erasmus Bridge build and positioned near the De Rotterdam build.",
+      "relative_positions": {
+        "erasmus_bridge": "Northwest, across the water",
+        "de_rotterdam": "East/northeast along the pier",
+        "world_port_center": "Northeast",
+        "montevideo_tower": "East"
+      }
+    }
+  },
+
+  "interior_notes": {
+    "note": "Interior is optional but adds significant character if included",
+    "key_spaces": {
+      "grand_hall": "Original Holland Amerika Lijn grand booking hall on the ground floor - double height space with ornamental iron columns",
+      "staircase": "Wrought-iron spiral staircase visible through tower windows - use iron bars in a spiral pattern",
+      "restaurant": "Ground floor restaurant space with views to the waterfront terrace"
+    }
+  },
+
+  "historical_context": {
+    "significance": "This was the headquarters of the Holland-Amerika Lijn (Holland America Line), from which over a million emigrants departed by ship for a new life in America between 1873 and 1971. The building is both an architectural masterpiece and a monument to Dutch maritime and emigration history.",
+    "minecraft_storytelling": "Consider adding signs at the dock area with brief historical text about the emigrant departures, or place a larger ship build at the dock to evoke the transatlantic liner era."
+  }
+}

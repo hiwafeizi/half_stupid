@@ -1,0 +1,80 @@
+{
+  "name": "Euromast",
+  "dutch_name": "Euromast",
+  "architect": "Hugh Maaskant",
+  "year": 1960,
+  "space_tower_added": 1970,
+  "style": "Modernist",
+  "location": "Parkhaven 20, Rotterdam",
+
+  "dimensions": {
+    "total_height_m": 185,
+    "original_shaft_height_m": 101,
+    "space_tower_height_m": 85,
+    "shaft_outer_diameter_m": 9.6,
+    "shaft_inner_diameter_m": 9.0,
+    "shaft_wall_thickness_m": 0.3,
+    "crows_nest_diameter_m": 29,
+    "crows_nest_weight_tons": 240,
+    "space_tower_tube_diameter_m": 2.5,
+    "bridge_level_m": 30,
+    "crows_nest_level_m": 100,
+    "foundation_weight_kg": 1900000,
+    "foundation_piles": 131
+  },
+
+  "proportions": {
+    "crows_nest_to_shaft_diameter": "3:1",
+    "shaft_to_space_tower_split": "55:45",
+    "total_height_to_base_diameter": "19:1"
+  },
+
+  "architectural_features": {
+    "shaft": {
+      "shape": "Round reinforced concrete, slipform construction (built in 23 days)",
+      "design_concept": "Nautical theme"
+    },
+    "crows_nest": {
+      "shape": "Asymmetrical disc, 29m diameter",
+      "function": "Restaurant and observation platform",
+      "construction": "Slid up shaft over 131 hours (5 days)"
+    },
+    "space_tower": {
+      "shape": "Slender 2.5m metal tube atop concrete shaft",
+      "euroscoop": "Ring-shaped rotating cabin traveling along outside of tube to 185m"
+    },
+    "bridge_level": {
+      "height_m": 30,
+      "description": "Ship's bridge themed observation level"
+    }
+  },
+
+  "colors": {
+    "shaft": "Concrete grey",
+    "crows_nest": "Dark grey / charcoal",
+    "space_tower": "Steel grey / metallic"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "total_height_blocks": 185,
+      "shaft_diameter_blocks": 10,
+      "crows_nest_diameter_blocks": 29,
+      "space_tower_diameter_blocks": 3
+    },
+    "scale_1_to_2": {
+      "total_height_blocks": 93,
+      "shaft_diameter_blocks": 5,
+      "crows_nest_diameter_blocks": 15,
+      "space_tower_diameter_blocks": 2
+    },
+    "recommended_scale": "1:2",
+    "block_palette": {
+      "shaft": "Light grey concrete",
+      "crows_nest": "Dark grey concrete or deepslate",
+      "space_tower": "Iron bars or lightning rods",
+      "windows": "Glass panes"
+    },
+    "build_notes": "Key silhouette: thin cylinder, mushroom disc at 55% height, thin spike on top."
+  }
+}

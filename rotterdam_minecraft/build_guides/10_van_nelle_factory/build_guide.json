@@ -1,0 +1,473 @@
+{
+  "building": "Van Nelle Factory (Van Nellefabriek)",
+  "location": "Van Nelleweg 1, Rotterdam",
+  "architect": "Brinkman & Van der Vlugt, with Mart Stam and J.G. Wiebenga",
+  "year": "1925-1931",
+  "style": "Industrial Modernism / Nieuwe Bouwen",
+  "heritage": "UNESCO World Heritage Site (2014)",
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "overview": {
+    "description": "A massive stepped industrial complex of three connected factory blocks (tobacco, coffee, tea) descending in height from south to north, linked by conveyor bridges to a parallel dispatch hall. The building is celebrated for its glass curtain walls, mushroom columns, gravity-fed production flow, and the radical transparency of its architecture.",
+    "signature_features": [
+      "Stepped cascade silhouette: 8/5/3 floors descending",
+      "Full glass curtain wall facades with setback columns",
+      "Diagonal conveyor bridges crossing internal road",
+      "Mushroom (fungiform) columns supporting open floor plates",
+      "Curved crescent-shaped office building at entrance",
+      "Circular glass tearoom pavilion on tobacco building roof",
+      "Cylindrical glazed stair towers at section junctions"
+    ]
+  },
+
+  "tobacco_building": {
+    "real_dimensions": {
+      "floors": 8,
+      "length_m": 130,
+      "depth_m": 19,
+      "height_m": 32,
+      "floor_height_m": 4,
+      "column_grid_m": "6.5 x 6.5"
+    },
+    "minecraft_dimensions": {
+      "floors": 8,
+      "height_blocks": 32,
+      "length_blocks": 130,
+      "depth_blocks": 19,
+      "floor_height_blocks": 4,
+      "note": "Tallest section, southernmost position"
+    },
+    "facade_pattern": {
+      "glass_curtain_wall": "Full glass coverage with columns set 1 block behind the glass plane",
+      "column_spacing_blocks": 6,
+      "module_description": "Each bay is 6 blocks wide of glass panes between light grey concrete column lines. Columns are recessed 1 block inward so glass reads as a continuous skin.",
+      "floor_slab_visible": "Each floor marked by a single row of smooth stone slabs visible through the glass, creating thin horizontal bands dividing the glass wall into floor-height panels",
+      "horizontal_bands": "At 1:1 scale each floor is 4 blocks tall: 3 blocks of glass pane above a smooth stone slab floor line. The slab occupies the bottom row of each 4-block floor module, with 3 rows of glass above it.",
+      "south_facade": "Glass curtain wall, identical pattern",
+      "north_facade": "Glass curtain wall where exposed above coffee building roof",
+      "east_west_facades": "Glass curtain wall, same module pattern"
+    },
+    "rooftop_tearoom": {
+      "shape": "Circular pavilion on flat roof of tobacco building",
+      "real_diameter_m": 8,
+      "diameter_blocks": 8,
+      "height_blocks": 5,
+      "construction": "Build an 8-block diameter circle (use the standard Minecraft circle chart: a well-known 8-diameter pattern gives a smooth octagonal shape). Walls are glass panes all around on a light grey concrete base ring. Flat roof of light grey concrete. Interior is open with a single central column (optional).",
+      "position": "Centered on the tobacco building roof, slightly toward the canal (west) side"
+    },
+    "interior": {
+      "mushroom_columns": {
+        "spacing_blocks": 6,
+        "grid_pattern": "6-block grid across the 19-block depth gives 2 interior column lines (at blocks 6 and 13 from the east wall), spaced 6 blocks along the length",
+        "shape": "1-block pillar (light grey concrete) rising full floor height (4 blocks), topped with a mushroom capital: use stairs and slabs extending 2 blocks outward in all 4 directions to create a flared cone shape. The capital is a 5x5 slab platform with stairs on the outer ring tapering inward.",
+        "note": "At 1:1 scale the mushroom capitals can be built with proper flared detail using upside-down stairs and slabs to approximate the smooth fungiform cone."
+      },
+      "open_floor_plan": "No internal partition walls. Each floor is a single open space with only mushroom columns. This was revolutionary for factory design.",
+      "gravity_flow": "Raw tobacco entered at the top floor (8th) and descended through processing stages, one per floor, exiting at ground level for dispatch."
+    }
+  },
+
+  "coffee_building": {
+    "real_dimensions": {
+      "floors": 5,
+      "length_m": 65,
+      "depth_m": 19,
+      "height_m": 20,
+      "floor_height_m": 4,
+      "column_grid_m": "6.5 x 6.5"
+    },
+    "minecraft_dimensions": {
+      "floors": 5,
+      "height_blocks": 20,
+      "length_blocks": 65,
+      "depth_blocks": 19,
+      "floor_height_blocks": 4,
+      "note": "Middle section, north of tobacco building"
+    },
+    "facade_pattern": "Same glass curtain wall system as tobacco building: glass panes with 6-block column spacing, columns recessed 1 block behind glass, floor slabs as thin horizontal lines every 4 blocks",
+    "connection_to_tobacco": {
+      "alignment": "The coffee building shares the same east-west alignment (flush on the canal/west side and the road/east side). Its south wall butts directly against the north wall of the tobacco building.",
+      "step_down": "The roof of the coffee building is at block height 20, while the tobacco building continues up to block height 32. The upper 12 blocks of the tobacco building's north facade are exposed glass curtain wall rising above the coffee roof. Build a flat roof on the coffee section at height 20, and the tobacco building's glass wall continues upward behind it.",
+      "stair_tower_at_junction": "A cylindrical stair tower marks the junction between tobacco and coffee sections (see stair_towers section)"
+    }
+  },
+
+  "tea_building": {
+    "real_dimensions": {
+      "floors": 3,
+      "length_m": 35,
+      "depth_m": 19,
+      "height_m": 12,
+      "floor_height_m": 4,
+      "column_grid_m": "6.5 x 6.5"
+    },
+    "minecraft_dimensions": {
+      "floors": 3,
+      "height_blocks": 12,
+      "length_blocks": 35,
+      "depth_blocks": 19,
+      "floor_height_blocks": 4,
+      "note": "Shortest section, northernmost position"
+    },
+    "facade_pattern": "Same glass curtain wall system as tobacco and coffee buildings",
+    "connection_to_coffee": {
+      "alignment": "Flush on east and west sides with the coffee building. South wall of tea building butts against north wall of coffee building.",
+      "step_down": "The roof of the tea building is at block height 12, while the coffee building continues up to block height 20. The upper 8 blocks of the coffee building's north facade are exposed above the tea roof.",
+      "stair_tower_at_junction": "A cylindrical stair tower marks the junction between coffee and tea sections"
+    },
+    "north_end": "The tea building's north facade has a cylindrical stair tower at its northeast corner"
+  },
+
+  "conveyor_bridges": {
+    "count": 3,
+    "description": "Three enclosed glazed bridges span from the upper floors of each factory section (tobacco, coffee, tea) diagonally across the internal road to the dispatch/storage hall. They originally carried conveyor belts for moving processed goods.",
+    "real_dimensions": {
+      "width_m": "2.5-3",
+      "height_m": "2.5-3",
+      "span_m": "25-30 (crossing the internal road at an angle)",
+      "note": "The bridges slope downward from factory to dispatch hall, following the gravity-flow principle"
+    },
+    "minecraft_dimensions": {
+      "width_blocks": 3,
+      "height_blocks": 3,
+      "span_blocks": 28,
+      "elevation_at_factory_blocks": "Varies: tobacco bridge at ~24, coffee bridge at ~16, tea bridge at ~8",
+      "elevation_at_dispatch_blocks": "Each bridge arrives 4-5 blocks lower at the dispatch hall than it departs from the factory"
+    },
+    "construction": "Build a 3-wide, 3-tall enclosed tunnel using iron bars on the bottom/frame and glass panes on the sides and top. The bridge angles slightly downward (drop 4-5 blocks over the 28-block span). Use stairs or half-slabs to create the slope. Each bridge connects at a different floor level of its respective factory section.",
+    "angle": "Slightly diagonal in plan (bridges are not perpendicular to the buildings) AND slightly sloping downward from factory toward dispatch hall. The diagonal angle in plan is approximately 15-20 degrees from perpendicular.",
+    "placement": {
+      "tobacco_bridge": "Connects from approximately the 6th floor level (height ~24), near the center of the tobacco building's east facade",
+      "coffee_bridge": "Connects from approximately the 4th floor level (height ~16), near the center of the coffee building's east facade",
+      "tea_bridge": "Connects from approximately the 2nd floor level (height ~8), near the center of the tea building's east facade"
+    }
+  },
+
+  "curved_office_building": {
+    "description": "A low crescent-shaped building with a convex glass curtain wall facade, positioned at the south entrance to the complex. It housed the directors' offices and administrative functions.",
+    "real_dimensions": {
+      "shape": "Crescent/convex arc in plan",
+      "floors": 3,
+      "height_m": 12,
+      "length_along_curve_m": "approximately 50-60",
+      "depth_m": "8-10",
+      "curve_radius_m": "approximately 30-40"
+    },
+    "minecraft_dimensions": {
+      "shape": "Convex curved wall facing south/southwest",
+      "floors": 3,
+      "height_blocks": 12,
+      "length_blocks": 55,
+      "depth_blocks": 9,
+      "curve_radius_blocks": 35
+    },
+    "construction": {
+      "curve_method": "Use a Minecraft circle chart for radius 35. Build only the arc segment (roughly 90-100 degrees of the circle) to create the crescent shape. The convex side faces outward (south) and is all glass panes. The concave side faces the factory courtyard.",
+      "facade": "Glass curtain wall following the curve, same module pattern as factory (glass panes with recessed columns at 6-block spacing). The curve makes the glass wall shimmer and shift in perspective.",
+      "connection_to_factory": "Connected to the south end of the tobacco building via a short glazed link corridor at ground level, 3 blocks wide",
+      "roof": "Flat roof, light grey concrete"
+    }
+  },
+
+  "storage_dispatch_hall": {
+    "description": "A long, low rectangular building running parallel to the factory complex on the east side, across the internal service road. This is where finished products were stored and dispatched for shipping.",
+    "location": "East of the main factory, separated by an internal road 12-14 blocks wide",
+    "real_dimensions": {
+      "length_m": "approximately 160-180 (spans most of the factory length)",
+      "depth_m": "approximately 15-20",
+      "height_m": "approximately 8-10 (2 floors)",
+      "floors": 2
+    },
+    "minecraft_dimensions": {
+      "length_blocks": 170,
+      "depth_blocks": 17,
+      "height_blocks": 9,
+      "floors": 2,
+      "floor_height_blocks": 4
+    },
+    "construction": {
+      "structure": "Light grey concrete frame with glass pane facades (less glass than factory, more solid wall sections)",
+      "facade_pattern": "Alternating 4-block glass pane sections with 2-block concrete pier sections",
+      "roof": "Flat roof, light grey concrete",
+      "connection": "Connected to factory only via the 3 diagonal conveyor bridges overhead. Ground level access via the internal road."
+    }
+  },
+
+  "stair_towers": {
+    "count": 4,
+    "description": "Cylindrical glazed stair towers serve as vertical circulation and as architectural punctuation marks at the junctions between building sections and at the ends of the complex.",
+    "locations": [
+      {
+        "name": "Tobacco-Coffee junction tower",
+        "position": "At the junction where tobacco and coffee buildings meet, on the east (road-facing) side",
+        "minecraft_position": "East facade, at the boundary between tobacco and coffee sections"
+      },
+      {
+        "name": "Coffee-Tea junction tower",
+        "position": "At the junction where coffee and tea buildings meet, on the east side",
+        "minecraft_position": "East facade, at the boundary between coffee and tea sections"
+      },
+      {
+        "name": "Tea building north tower",
+        "position": "At the north end of the tea building, northeast corner",
+        "minecraft_position": "Northeast corner of the tea section"
+      },
+      {
+        "name": "Tobacco building south tower",
+        "position": "At the south end of the tobacco building, near connection to curved office",
+        "minecraft_position": "Southeast corner of the tobacco section"
+      }
+    ],
+    "real_dimensions": {
+      "shape": "Cylindrical",
+      "diameter_m": "approximately 6-7",
+      "height": "Rises to the full height of the taller adjacent section"
+    },
+    "minecraft_dimensions": {
+      "shape": "Cylindrical (use 7x7 circle approximation)",
+      "diameter_blocks": 7,
+      "construction": "7-block diameter cylinder: use the standard Minecraft circle chart for diameter 7 to lay out the base. Walls are glass panes around the perimeter with thin concrete floor bands every 4 blocks (matching floor levels). The tower is mostly glazed (glass panes) with concrete at floor slab lines. Rises to full height of the taller adjacent building section."
+    },
+    "construction_detail": {
+      "method": "For a 7-block diameter: lay out the circle pattern from the Minecraft circle chart (roughly a 7x7 area with clipped corners). Ring the outside with glass panes. Stack this pattern up to the required height. Add a smooth stone slab band every 4 blocks to mark floor levels. Cap with a flat light grey concrete roof.",
+      "visual_effect": "The cylindrical towers contrast with the rectangular factory blocks and break up the very long horizontal facade"
+    }
+  },
+
+  "site_layout": {
+    "total_footprint_blocks": "230 blocks (north-south) x 48 blocks (east-west, including dispatch hall and road)",
+    "orientation": "The factory complex runs north-south along the Schie canal. The stepped cascade descends from south (tallest, tobacco) to north (shortest, tea).",
+    "arrangement_west_to_east": [
+      "Schie canal (water, 6-10 blocks wide)",
+      "Canal-side facade of factory (glass curtain wall, west side)",
+      "Factory complex (19 blocks deep)",
+      "Road-side facade of factory (glass curtain wall, east side)",
+      "Internal service road (12-14 blocks wide)",
+      "Storage/dispatch hall (17 blocks deep)",
+      "External road/site boundary"
+    ],
+    "arrangement_south_to_north": [
+      "Curved office building (south entrance, connected to tobacco building)",
+      "Tobacco building (130 blocks long, 32 blocks tall) -- southernmost",
+      "Coffee building (65 blocks long, 20 blocks tall) -- middle",
+      "Tea building (35 blocks long, 12 blocks tall) -- northernmost"
+    ],
+    "internal_roads": "A service road runs north-south between the factory and the dispatch hall, approximately 12-14 blocks wide at 1:1 scale. The conveyor bridges cross overhead.",
+    "canal": "The Schie canal runs along the west side of the complex. Build 6-10 blocks of water west of the factory. The canal-side view is the iconic photograph angle showing the full stepped silhouette.",
+    "entrance": "The main entrance is at the south end, where the curved office building creates a welcoming gateway. A gatehouse and landscaped forecourt originally greeted visitors.",
+    "landscaping": "The original factory had green lawns and sports fields to the north of the tea building (progressive labor policy). Add grass blocks and open space north of the complex."
+  },
+
+  "block_palette": {
+    "glass_walls": {
+      "block": "Glass Panes",
+      "usage": "All curtain wall facades -- this is the dominant material. The factory should read as mostly glass from the outside.",
+      "placement": "Place on the outermost block line of each facade. Glass panes connect to adjacent panes and to solid blocks, creating the mullion pattern automatically."
+    },
+    "columns": {
+      "block": "Light Grey Concrete",
+      "usage": "Structural columns set 1 block behind (inward from) the glass facade plane. Also used for floor edges visible at the glass line.",
+      "note": "The setback of columns behind glass is critical to the Van Nelle aesthetic -- the glass skin wraps the building while structure is recessed."
+    },
+    "floor_slabs": {
+      "block": "Smooth Stone Slabs",
+      "usage": "Floor levels visible as thin horizontal bands in the glass facade. Place as bottom-slabs at every 4-block interval to mark floor lines.",
+      "alternative": "Stone Slabs or Light Grey Concrete Slabs"
+    },
+    "mushroom_capitals": {
+      "block": "Smooth Stone Slabs + Smooth Stone Stairs",
+      "usage": "The flared capital at the top of each mushroom column. At 1:1 scale, build a 5x5 platform of slabs at the column top with upside-down stairs on the outer ring to create the funnel/flare shape. The capital extends 2 blocks outward from the column in all 4 directions.",
+      "note": "At 1:1 scale the mushroom capitals can be properly detailed with stairs and slabs to approximate the smooth fungiform cone shape."
+    },
+    "conveyor_bridges": {
+      "block": "Glass Panes + Iron Bars",
+      "usage": "Iron bars form the structural frame (floor and edges), glass panes fill the sides and top. Creates a transparent elevated tunnel.",
+      "floor": "Iron Bars or Chain blocks for the bridge floor"
+    },
+    "rooftop_tearoom": {
+      "block": "Glass Panes + Light Grey Concrete",
+      "usage": "Concrete base ring and roof disc, glass pane walls all around"
+    },
+    "curved_office": {
+      "block": "Glass Panes + Light Grey Concrete",
+      "usage": "Glass panes following the curved plan line, with concrete columns and floor bands"
+    },
+    "roof": {
+      "block": "Light Grey Concrete",
+      "usage": "Flat roofs on all sections. Place as the top layer of each building section.",
+      "detail": "Add a 1-block parapet (light grey concrete wall or slab) around roof edges for realism"
+    },
+    "stair_towers": {
+      "block": "Light Grey Concrete + Glass Panes",
+      "usage": "Concrete at floor bands and base, glass panes for the cylindrical glazed walls between floors"
+    },
+    "dispatch_hall": {
+      "block": "Light Grey Concrete + Glass Panes",
+      "usage": "More concrete-to-glass ratio than the factory. Alternating solid and glazed bays."
+    },
+    "canal_water": {
+      "block": "Water source blocks",
+      "usage": "Schie canal along the west side"
+    },
+    "roads": {
+      "block": "Grey Concrete or Stone",
+      "usage": "Internal service road between factory and dispatch hall"
+    },
+    "ground": {
+      "block": "Grass Blocks / Light Grey Concrete (paved areas)",
+      "usage": "Landscaping around the complex"
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "action": "Lay out the site footprint",
+      "detail": "Mark out the full 230x48 block area. Place markers for the canal (west edge, 6-10 blocks wide), factory footprint (19 blocks deep), internal road (12-14 blocks), and dispatch hall (17 blocks deep). Mark the north-south extent: tea at north (35 blocks), coffee in middle (65 blocks), tobacco at south (130 blocks). Total factory length north-south is 230 blocks."
+    },
+    {
+      "step": 2,
+      "action": "Build the tobacco building shell",
+      "detail": "Start with the tallest section. Build a 130x19 footprint, 32 blocks tall. Place light grey concrete columns every 6 blocks along both long facades, set 1 block inward from the facade line. Fill the facade line entirely with glass panes. Mark floor levels every 4 blocks with smooth stone slabs. Add flat light grey concrete roof at height 32."
+    },
+    {
+      "step": 3,
+      "action": "Build the coffee building shell",
+      "detail": "Directly north of the tobacco building, build a 65x19 footprint, 20 blocks tall. Same column and glass pattern. The south wall of the coffee building shares the north wall of the tobacco building at ground through 20-block height. Above height 20, the tobacco building's north glass facade is exposed."
+    },
+    {
+      "step": 4,
+      "action": "Build the tea building shell",
+      "detail": "Directly north of the coffee building, build a 35x19 footprint, 12 blocks tall. Same column and glass pattern. The south wall shares with the coffee building up to height 12."
+    },
+    {
+      "step": 5,
+      "action": "Verify the stepped cascade",
+      "detail": "Stand to the west (canal side) and check the iconic stepped silhouette: 32 blocks (tobacco) stepping down to 20 blocks (coffee) stepping down to 12 blocks (tea). This is the signature view. Adjust roof levels if needed."
+    },
+    {
+      "step": 6,
+      "action": "Add stair towers",
+      "detail": "Build 4 cylindrical stair towers (7-block diameter, glazed) at: (1) tobacco-coffee junction east side, rising to height 32; (2) coffee-tea junction east side, rising to height 20; (3) tea north end northeast corner, rising to height 12; (4) tobacco south end southeast corner, rising to height 32. Each tower uses glass panes with concrete floor bands every 4 blocks."
+    },
+    {
+      "step": 7,
+      "action": "Build the storage/dispatch hall",
+      "detail": "East of the internal road, build a 170x17 footprint, 9 blocks tall. Use more concrete than the factory: alternate 4-block glass sections with 2-block concrete piers. Flat concrete roof."
+    },
+    {
+      "step": 8,
+      "action": "Build conveyor bridges",
+      "detail": "Connect factory to dispatch hall with 3 diagonal bridges. Each bridge is 3 blocks wide, 3 blocks tall, spanning 28 blocks across the road. Use iron bars for the frame/floor and glass panes for walls/ceiling. Each bridge slopes down 4-5 blocks from factory to dispatch hall. Tobacco bridge at height ~24, coffee bridge at height ~16, tea bridge at height ~8."
+    },
+    {
+      "step": 9,
+      "action": "Build the curved office building",
+      "detail": "At the south end, build a 3-story (12 block tall) crescent-shaped building. Use a circle chart for radius 35 to define the convex south facade arc (approximately 55 blocks along the curve). Depth is 9 blocks. All-glass convex facade, concrete on the concave (factory-facing) side. Connect to tobacco building with a 3-block wide glazed corridor."
+    },
+    {
+      "step": 10,
+      "action": "Add the rooftop tearoom",
+      "detail": "On top of the tobacco building roof (height 32), build a circular pavilion: 8-block diameter circle of glass panes on a concrete base, 5 blocks tall, with a flat concrete roof disc. Center it slightly toward the west (canal) side of the roof."
+    },
+    {
+      "step": 11,
+      "action": "Add interior mushroom columns",
+      "detail": "Inside each building section, place light grey concrete columns in a 6x6 grid pattern (2 rows across the 19-block depth at positions 6 and 13, spaced every 6 blocks along the length). Top each column with a mushroom capital: a 5x5 slab platform with upside-down stairs on the outer ring to create the flared cone shape, extending 2 blocks in each cardinal direction."
+    },
+    {
+      "step": 12,
+      "action": "Build the canal and site features",
+      "detail": "Place water source blocks for the Schie canal (6-10 blocks wide) along the full west side. Pave the internal road with grey concrete (12-14 blocks wide). Add grass blocks and open space north of the tea building. Optionally add a small gatehouse structure at the south entrance near the curved office building."
+    },
+    {
+      "step": 13,
+      "action": "Final detailing and review",
+      "detail": "Add roof parapets (1-block walls or slabs around all roof edges). Check glass pane connections are clean. Ensure floor slab bands are visible in the facades every 4 blocks. Add any interior detail (open floor plates, spiral stairs in stair towers using real stair blocks). Light the interior with hidden light sources (glowstone behind columns or light blocks in floors)."
+    }
+  ],
+
+  "unique_challenges": {
+    "length": {
+      "problem": "230 blocks long at 1:1 scale -- this is an enormous build and one of the longest single structures you will ever attempt in Minecraft",
+      "solution": "Build in sections (tobacco, then coffee, then tea). Use the stepped junctions as natural breaking points. Use /fill commands liberally for repetitive glass walls in creative mode. Consider using structure blocks or world edit for repeating bays."
+    },
+    "stepped_transition": {
+      "problem": "Smooth step-down between 32/20/12 block sections must look intentional, not accidental",
+      "solution": "Each section has a clean flat roof at its height. The exposed upper wall of the taller section behind reads as a continuation of the glass facade. The stair towers at each junction visually mark the transition points. Make sure the roof of each shorter section is clean and flat where it meets the taller building behind."
+    },
+    "all_glass_facades": {
+      "problem": "Glass curtain walls need structural contrast or the building looks like a flat glass box with no depth",
+      "solution": "The key is the recessed column line: columns sit 1 block behind the glass facade. This creates a shadow line and depth. Floor slab bands every 4 blocks also break up the glass vertically. The automatic mullion pattern of glass panes helps create the grid texture. At 1:1 scale the 4-block floor height gives more room for the glass to breathe."
+    },
+    "conveyor_bridges": {
+      "problem": "Building elevated diagonal glass tunnels across a 28-block span that look convincing",
+      "solution": "Use iron bars for the structural frame (bottom and edges) and glass panes for walls and top. Slope the bridge by stepping down 1 block every 6-7 blocks horizontally. The diagonal in plan can be approximated by offsetting 1 block sideways every 5-6 blocks along the span."
+    },
+    "curved_office": {
+      "problem": "Building a smooth curved wall in Minecraft's blocky world",
+      "solution": "Use a circle chart for radius 35 and only build the arc segment (about 90-100 degrees). At this radius, the curve will be very smooth and gentle, reading convincingly as a true curve rather than jagged steps. Place glass panes along the curved line -- they will automatically orient to create a faceted curve that reads beautifully from a distance."
+    },
+    "mushroom_columns": {
+      "problem": "Representing fungiform (flared mushroom-shaped) capitals at 1:1 scale",
+      "solution": "At 1:1 scale, each column is 1 block wide and the capital can be properly detailed. Use a 5x5 platform of slabs at the column top with upside-down stairs on the outer ring to create the flared funnel shape. This gives a convincing mushroom silhouette when viewed from below."
+    },
+    "gravity_flow": {
+      "problem": "The interior production flow (top to bottom) is invisible from outside but historically important",
+      "solution": "Optionally label floors with signs or use different subtle floor materials on each level to suggest the processing stages. The conveyor bridges exiting at different heights visually express the gravity-flow concept from the exterior."
+    },
+    "repetitive_facade": {
+      "problem": "The glass curtain wall pattern is extremely repetitive over 230 blocks",
+      "solution": "The stair towers, conveyor bridges, and stepped silhouette break up the repetition. On the canal side, the reflection in water adds visual interest. The floor-slab horizontal bands and column verticals create a subtle grid texture that prevents the glass from looking like a blank wall. At 1:1 scale the larger module size (6-block bays, 4-block floors) gives the grid more presence."
+    }
+  },
+
+  "views": {
+    "iconic_canal_view": {
+      "position": "Stand 40-60 blocks west of the factory, across the canal",
+      "direction": "Looking east",
+      "what_you_see": "The full stepped silhouette reflected in canal water: tobacco (32 blocks) stepping down to coffee (20) stepping down to tea (12). All-glass facades glowing with interior light. This is THE photograph angle for the Van Nelle Factory.",
+      "time": "Sunset or night (interior lighting visible through glass)"
+    },
+    "aerial_from_southwest": {
+      "position": "Above and southwest of the complex, 80-100 blocks up",
+      "direction": "Looking northeast",
+      "what_you_see": "The curved office building in foreground, the full length of the stepped factory receding northward, conveyor bridges crossing to the dispatch hall, stair tower cylinders punctuating the facade"
+    },
+    "road_view_with_bridges": {
+      "position": "Standing on the internal road between factory and dispatch hall",
+      "direction": "Looking north or south along the road",
+      "what_you_see": "The three conveyor bridges crossing overhead at different heights, creating a dramatic perspective. The glass factory facade on the left, dispatch hall on the right."
+    },
+    "rooftop_tearoom_view": {
+      "position": "On top of the tobacco building, inside or near the circular tearoom",
+      "direction": "Looking north",
+      "what_you_see": "The stepped rooftops descending away from you: coffee roof 12 blocks below, tea roof 20 blocks below. The canal and surrounding landscape visible in all directions."
+    },
+    "entrance_approach": {
+      "position": "South of the complex, 30-40 blocks from the curved office building",
+      "direction": "Looking north toward the entrance",
+      "what_you_see": "The crescent-shaped glass office building framing the entrance, with the massive 32-block tobacco building rising behind it. The cylindrical stair tower at the southeast corner of the tobacco building marks the transition from low office to tall factory."
+    }
+  },
+
+  "historical_context": {
+    "production_flow": "The factory processed tobacco (snuff), coffee, and tea. Raw materials were hoisted to the top floor, then gravity carried them down through processing stages: cleaning, sorting, roasting/curing, packaging, each on a descending floor. Finished products exited at ground level via conveyor bridges to the dispatch hall.",
+    "innovation": "The Van Nelle Factory pioneered the glass curtain wall (first prefabricated curtain wall in the world), the mushroom column open floor plate, and the concept of the 'ideal factory' where daylight, air, and worker welfare were design priorities.",
+    "unesco_citation": "Inscribed as 'an icon of 20th-century industrial architecture' and 'a factory that transcended its utilitarian purpose to become a masterwork of modern architecture.'",
+    "current_use": "Since 2000, the factory has been converted into a creative hub (Van Nelle Ontwerpfabriek / Van Nelle Design Factory) housing offices, studios, and event spaces. The building has been sensitively restored."
+  },
+
+  "tips": {
+    "lighting": "Use hidden light sources (light blocks, glowstone behind columns, or sea lanterns under floor slabs) to make the interior glow through the glass walls at night. The Van Nelle Factory is famous for its nighttime appearance when interior light turns the glass facades into glowing lanterns.",
+    "water_reflection": "If possible, make the canal at least 6 blocks wide and use source blocks for still water. The reflection of the stepped glass facade in still water doubles the visual impact.",
+    "scaffold_strategy": "Build from south to north (tobacco first, tallest). Each subsequent section is shorter, so you can use the completed taller section as a reference for the step-down height.",
+    "glass_pane_orientation": "Glass panes in Minecraft automatically connect to adjacent solid blocks and other panes. Place columns first, then fill between with glass panes -- they will form the correct grid pattern automatically.",
+    "world_edit_tip": "At 1:1 scale this build is enormous. Consider using WorldEdit or similar tools: build one 6-block bay module (columns + glass + floor slab) then //stack it along the length. This saves massive time on the repetitive facade sections.",
+    "simplification_options": {
+      "skip_dispatch_hall": "If the build area is limited, the dispatch hall can be omitted. The factory complex alone is impressive.",
+      "reduce_to_half_scale": "At 1:2 scale, the factory is about 115 blocks long (tobacco 65, coffee 33, tea 18) with heights of 16/10/6. Much more manageable.",
+      "skip_interior_columns": "Mushroom columns are optional if you want to use the interior for other purposes."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Rotterdam Centraal",
+  "dutch_name": "Rotterdam Centraal Station",
+  "architect": "Team CS (Benthem Crouwel, MVSA, West 8)",
+  "year": 2014,
+  "style": "Contemporary / High-tech",
+  "location": "Stationsplein 1, Rotterdam",
+
+  "dimensions": {
+    "entrance_canopy_peak_height_m": 30,
+    "platform_roof_length_m": 250,
+    "platform_roof_width_m": 150,
+    "platform_roof_height_m": 12,
+    "passenger_tunnel_width_m": 48,
+    "front_facade_width_m_estimated": "50-60",
+    "total_built_area_m2": 46000,
+    "total_roof_area_m2": 28000
+  },
+
+  "proportions": {
+    "facade_width_to_height": "~2:1",
+    "peak_position": "Off-center, ~1/3 from left",
+    "left_slope_angle_degrees": "70-75 (steep)",
+    "right_slope_angle_degrees": "20-25 (gentle, extends into platform roof)"
+  },
+
+  "architectural_features": {
+    "canopy": {
+      "material": "Stainless steel cladding",
+      "shape": "Asymmetric pointed triangle, tip pointing toward city center (southwest)",
+      "description": "Juts forward beyond the glass wall as overhanging canopy"
+    },
+    "glass_facade": {
+      "type": "Full-height glass curtain wall below steel canopy",
+      "description": "Floods entrance hall with natural light"
+    },
+    "historic_elements": {
+      "clock": "Preserved from 1957 station, centered above entrance",
+      "lettering": "Original 'CENTRAAL STATION' letters with LED lighting"
+    },
+    "interior_ceiling": {
+      "material": "Thousands of wooden slats of varying lengths, widths, heights",
+      "effect": "Organic, warm contrast to steel exterior"
+    },
+    "platform_roof": {
+      "solar_cells": "130,000+ cells covering ~10,000 m2",
+      "material": "Glass roof with integrated solar panels"
+    }
+  },
+
+  "colors": {
+    "canopy": "Stainless steel (silver/light grey)",
+    "glass_facade": "Clear glass",
+    "interior_ceiling": "Warm wood tones",
+    "floor": "Light grey stone",
+    "lettering": "White LED"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "facade_width_blocks": 55,
+      "peak_height_blocks": 30,
+      "platform_length_blocks": 250,
+      "platform_width_blocks": 150
+    },
+    "scale_1_to_2": {
+      "facade_width_blocks": 28,
+      "peak_height_blocks": 15,
+      "platform_length_blocks": 125,
+      "platform_width_blocks": 75
+    },
+    "recommended_scale": "1:2 (platform area is enormous)",
+    "block_palette": {
+      "steel_canopy": "Iron blocks or light grey concrete",
+      "glass_facade": "Glass panes",
+      "wooden_ceiling": "Stripped oak or birch logs/planks",
+      "floor": "Smooth stone or light grey concrete",
+      "clock": "3x3 or 5x5 circle of white concrete with black accents",
+      "lettering": "Signs or banners"
+    },
+    "build_notes": "Front profile is an asymmetric pointed triangle. Peak 1/3 from left, steep left slope, gentle right slope extending into platform roof."
+  }
+}

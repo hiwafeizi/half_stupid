@@ -1,0 +1,410 @@
+{
+  "building": "Witte Huis",
+  "english_name": "White House",
+  "architect": "Willem Molenbroek",
+  "year": "1897-1898",
+  "style": "Art Nouveau / Eclectic with American high-rise influence",
+  "real_world_height_m": 43,
+  "real_world_footprint_m": "20 x 20 (nearly square)",
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+  "total_height_blocks": 43,
+  "historic_note": "Tallest office building in Europe at completion (1898). Survived Rotterdam Blitz of 1940. Rijksmonument #334003.",
+
+  "overview": "The Witte Huis is a layered building with three distinct visual zones stacked vertically: a darker natural stone base (2 floors), a white glazed brick middle section (6 floors), and a steeply tapering mansard roof (3 floors inside). Two corner towers with fairytale turret caps rise above the roofline. The near-square plan and vertical stacking make it an ideal Minecraft build.",
+
+  "zone_1_stone_base": {
+    "floors": 2,
+    "height_blocks": 9,
+    "footprint_blocks": "20 x 20",
+    "description": "The ground floor and first floor are clad in natural hardstone (hardsteen), visually distinct from the white brick above. The ground floor features an open arcade with shops and cafe spaces. The first floor carries the sculptural program.",
+    "features": {
+      "columns": {
+        "count_per_face": 5,
+        "spacing_blocks": 3,
+        "block_type": "Quartz pillars or smooth stone walls",
+        "description": "Evenly spaced columns divide the ground floor arcade into bays. Each face has 5 columns creating 4 arched openings plus corner piers."
+      },
+      "arches": {
+        "type": "Segmental arches (slightly flattened semicircles, Art Nouveau style)",
+        "block_type": "Polished andesite stairs (inverted) for arch curve",
+        "height_blocks": 3,
+        "description": "Each bay between columns is topped by a segmental arch. Use upside-down stair blocks to create the gentle curve."
+      },
+      "ground_floor_arcade": "Open arcade at street level with 4 arched bays per face. Originally housed shops and a cafe. Build as open walkway with columns and arches, 4.5 blocks floor-to-ceiling.",
+      "material": "Polished andesite or smooth stone — must contrast clearly with white brick above"
+    },
+    "facade_pattern": {
+      "ground_floor": {
+        "height_blocks": 5,
+        "per_face": {
+          "columns": 5,
+          "arched_openings": 4,
+          "layout": "Corner pier (1 block) - arch bay (3 blocks wide) - column (1 block) - arch bay - column - arch bay - column - arch bay - corner pier (1 block)"
+        }
+      },
+      "first_floor": {
+        "height_blocks": 4,
+        "per_face": {
+          "windows": 5,
+          "window_size": "1 wide x 2 tall",
+          "layout": "5 evenly spaced windows with sculptural niches between them on the main facades",
+          "sculptures": "Placed between or above windows on the south and west facades (the two street-facing sides)"
+        }
+      }
+    },
+    "transition_to_zone_2": "A horizontal stone cornice/stringcourse 1 block tall marks the transition from the stone base to the white brick zone. Use polished andesite slabs or smooth stone slabs as a belt course running around all four faces."
+  },
+
+  "zone_2_white_brick": {
+    "floors": 6,
+    "floor_labels": "Floors 2 through 7",
+    "height_blocks": 21,
+    "floor_height_blocks": 3.5,
+    "footprint_blocks": "20 x 20 (same as base, no setback)",
+    "description": "The main body of the building, clad in 100,000 white glazed bricks in reality. This zone is a regular grid of windows on a bright white field with subtle colored brick accents and Art Nouveau decorative panels.",
+    "window_pattern": {
+      "per_face_per_floor": 6,
+      "window_size_blocks": "1 wide x 2 tall",
+      "spacing_blocks": 2,
+      "frame_details": "Each window has a stone sill (1 slab below) and a subtle lintel (1 slab above). At the top of each vertical window column, decorative arched panels crown the window rows.",
+      "layout_per_face": "2 blocks corner pier - [window 1w - 2 blocks wall] repeated 6 times - 2 blocks corner pier. Total: 2 + (1+2)*6 - 2 + 2 = 20 blocks.",
+      "corner_windows": "The corners nearest the towers feature rounded/angled corner windows. In Minecraft, place glass panes on both corner faces meeting at the edge."
+    },
+    "decorative_elements": {
+      "colored_brick_patterns": {
+        "colors": ["Yellow", "Red", "Blue"],
+        "description": "Geometric patterns in colored brick accent the white field, particularly around windows and at belt courses between floors. Use yellow, red, and blue terracotta blocks sparingly — 1 block accent per 2-3 floors at belt course lines.",
+        "minecraft_blocks": "Yellow terracotta, red terracotta, blue terracotta — used as single-block accents in horizontal bands"
+      },
+      "art_nouveau_tile_panels": {
+        "location": "Arched panels crowning the top of each vertical window column, at the cornice between zone 2 and zone 3",
+        "description": "Decorative tile panels with floral Art Nouveau motifs in colored glazed tiles sit in arched frames above the top-floor windows.",
+        "minecraft_approach": "Use glazed terracotta blocks (various colors) in the 1-block-tall cornice row at the top of zone 2. Place them in an alternating pattern."
+      },
+      "sculptures": {
+        "count": 5,
+        "artist": "Simon Miedema",
+        "subjects": ["Navigation (Scheepvaart)", "Progress (Vooruitgang)", "Agriculture (Landbouw)", "Industry (Nijverheid)", "Trade (Handel)"],
+        "locations": "First floor level (top of zone 1), positioned between windows on the south and west facades — the two public-facing street sides. Each sculpture sits in a shallow niche or on a corbel between window openings.",
+        "distribution": "3 sculptures on the south (long street) facade, 2 on the west facade",
+        "minecraft_approach": "Use armor stands with carved pumpkin heads positioned in 1-block niches at first floor level. Alternatively, use chiseled stone bricks or a player head with a custom skin. Banners with patterns can also suggest a figure. At this scale, a single chiseled quartz block or chiseled stone brick in a recessed niche is the most practical representation."
+      },
+      "floral_motifs": "Curved floral Art Nouveau patterns appear on iron lamp hooks and in tile panels. In Minecraft, represent with leaf blocks or vines placed at cornice level and near entrance arches.",
+      "iron_lamp_hooks": {
+        "location": "Projecting from the facade at first and second floor level, above the arcade",
+        "count_per_face": "2-3",
+        "minecraft_approach": "Use end rods angled outward from the facade with lanterns hanging from chains. Place at block layer 6-8 (first/second floor level)."
+      },
+      "name_text": {
+        "text": "Het Witte Huis",
+        "location": "East facade, at or above the first floor level",
+        "minecraft_approach": "Use signs with text, or build letter outlines with slabs/buttons on the east face"
+      }
+    },
+    "belt_courses": {
+      "description": "Thin horizontal bands run between floors, creating visual rhythm. Every 3-4 blocks of height, place a slab-course or use a slightly different white block (e.g., alternate between white concrete and smooth quartz) to break up the wall plane.",
+      "minecraft_approach": "Use white concrete slabs or smooth quartz slabs as belt courses at each floor division. Every other belt course can include a colored terracotta accent block."
+    }
+  },
+
+  "zone_3_mansard_roof": {
+    "floors_inside": 3,
+    "height_blocks": 13,
+    "description": "A steeply pitched mansard roof containing three habitable floors. The roof tapers inward as it rises, giving the building its distinctive wedding-cake silhouette. The lower slope of the mansard is very steep (near 70-75 degrees from horizontal), transitioning to a flatter top section. Dormer windows punctuate each face.",
+    "taper_profile": {
+      "description": "The mansard starts at the full 20x20 footprint and steps inward progressively. The lower portion of the mansard is nearly vertical (steep slope), then transitions to a gentler slope near the top. In Minecraft, approximate the steep curve with a step-in pattern.",
+      "layer_by_layer": [
+        { "height_block": 1, "footprint": "20x20", "note": "Cornice/gutter line — decorative cornice with wrought-iron rail" },
+        { "height_block": 2, "footprint": "20x20", "note": "First mansard floor lower wall — still full width" },
+        { "height_block": 3, "footprint": "20x20", "note": "First mansard floor — dormer windows at this level" },
+        { "height_block": 4, "footprint": "19x19", "note": "Step in 0.5 block each side (use stairs facing out)" },
+        { "height_block": 5, "footprint": "19x19", "note": "Second mansard floor lower wall" },
+        { "height_block": 6, "footprint": "18x18", "note": "Step in — second mansard floor dormer windows" },
+        { "height_block": 7, "footprint": "18x18", "note": "Second mansard floor upper wall" },
+        { "height_block": 8, "footprint": "17x17", "note": "Step in — transition to third mansard floor" },
+        { "height_block": 9, "footprint": "16x16", "note": "Third mansard floor — smaller dormers" },
+        { "height_block": 10, "footprint": "15x15", "note": "Third mansard floor upper" },
+        { "height_block": 11, "footprint": "14x14", "note": "Roof slope steepens toward ridge" },
+        { "height_block": 12, "footprint": "12x12", "note": "Near top — accelerated taper" },
+        { "height_block": 13, "footprint": "10x10", "note": "Flat roof cap / ridge level. Corner towers extend above this." }
+      ],
+      "slope_angle": "Lower mansard slope approximately 70-75 degrees from horizontal (very steep, nearly vertical first 3 blocks). Upper slope approximately 45-55 degrees (gentler taper from block 8 upward).",
+      "taper_technique": "Use stair blocks facing outward on the step-in layers to create a smoother diagonal. On layers where the footprint shrinks by 1 block per side, place stairs on the outermost ring with the step facing outward. This gives a half-block visual slope rather than a harsh step.",
+      "dormer_windows": {
+        "count_total": 12,
+        "per_face": 3,
+        "size_blocks": "2 wide x 2 tall each dormer",
+        "location": "Evenly spaced across each face at first and second mansard floor levels (blocks 3 and 6 of zone 3)",
+        "construction": "Build a 2-wide bump-out from the sloping roof face: 2 blocks deep, 2 blocks wide, 2 blocks tall, with a small peaked cap (stair blocks). Front face is glass pane. Side cheeks are roof material.",
+        "dormers_per_level": {
+          "first_mansard_floor": "3 per face (large dormers)",
+          "second_mansard_floor": "3 per face (medium dormers)",
+          "third_mansard_floor": "Smaller windows, may be flush with slope — use single glass panes recessed into the roof slope"
+        }
+      }
+    },
+    "material": "Dark slate grey — deepslate tiles or grey concrete. The real roof is slate. Use deepslate tile slabs and stairs for the smooth slope, with grey concrete for flat sections.",
+    "wrought_iron_roofline": {
+      "description": "Ornate wrought-iron cresting along the cornice and ridge of the roof",
+      "minecraft_approach": "Use iron bars placed along the top edge of the cornice (block 1 of zone 3) and along the ridge (block 13). This gives a delicate silhouette against the sky."
+    }
+  },
+
+  "corner_towers": {
+    "count": 2,
+    "which_corners": "The two corners on the main street-facing side (south-west and south-east corners — the front facade). These are the corners most visible from the Oudehaven harbor approach.",
+    "base_size_blocks": "3 x 3 (octagonal shape approximated as a 3x3 square with cut corners)",
+    "height_above_roof_blocks": 5,
+    "total_tower_height_description": "The towers rise from the full height of the building (integrated into the corner from zone 2 upward) and project 3-5 blocks above the mansard roof cap. Total visible tower projection above the main roofline: 5 blocks.",
+    "shape": "The towers have a fairytale turret silhouette. The shaft is roughly octagonal (square with cut corners in Minecraft). The cap is a conical/pointed spire.",
+    "tower_construction": {
+      "shaft": "3x3 base with corners cut using stair blocks to approximate octagonal shape. White concrete to match the facade in the lower portion, transitioning to stone/grey at the roof level.",
+      "layer_by_layer_cap": [
+        { "layer": 1, "description": "3x3 full platform at roofline level (grey stone)" },
+        { "layer": 2, "description": "3x3 with decorative cornice (use upside-down stairs)" },
+        { "layer": 3, "description": "2x2 center (stepped in, cone begins)" },
+        { "layer": 4, "description": "2x2 center (continuing cone)" },
+        { "layer": 5, "description": "1x1 single block pinnacle — use a stone wall or end rod for the finial" }
+      ]
+    },
+    "dragon_reliefs": {
+      "description": "Winged dragon reliefs are carved into the natural stone at the base of each corner tower, at the transition between the stone base (zone 1) and the white brick zone (zone 2). They appear on both outward-facing sides of each tower corner.",
+      "location": "Block layers 8-9 (top of zone 1 / base of zone 2), on the two exposed faces of each corner tower",
+      "count": "4 total (2 per tower, on the two street-facing faces of each corner)",
+      "minecraft_approach": "Use dragon head blocks if available (from End dimension), or use chiseled stone bricks with a custom banner pattern featuring a dragon/Mojang design. Alternatively, use a player head with a dragon skin texture. Place one on each outward face of the tower at layer 9."
+    },
+    "cap_shape": "Conical spire / pointed turret cap with a small finial at the apex. Use stair blocks stepping inward on each layer to form the cone. Crown with an end rod or lightning rod for the finial.",
+    "decorative_elements": "Small windows (single glass pane) on the tower shaft at each floor level. Wrought-iron weather vane at the very top (end rod + iron bar)."
+  },
+
+  "interior": {
+    "load_bearing_walls": {
+      "description": "Two thick internal load-bearing walls running north-south divide the interior into three bays. Walls are 40 to 140 cm thick (1-2 blocks in Minecraft).",
+      "minecraft_approach": "Place two parallel stone brick walls running the full height, dividing the 20-block width into thirds (roughly 6-7 blocks per bay). These walls should be 2 blocks thick on lower floors, 1 block thick on upper floors."
+    },
+    "iron_staircase": {
+      "description": "A prominent wrought-iron spiral staircase is a feature of the interior, running the full height.",
+      "minecraft_approach": "Build a spiral staircase using iron bars as railings and dark oak or spruce stairs for treads in one corner bay. The staircase shaft should be 3x3 blocks."
+    },
+    "elevator_shaft": {
+      "description": "One of the earliest elevator installations in the Netherlands (1898). The shaft runs through the center of the building.",
+      "minecraft_approach": "Leave a 2x2 shaft open through all floors near the center. Use iron bars as shaft walls. Optional: place a minecart with a piston-based elevator mechanism."
+    },
+    "floor_layout_typical": {
+      "description": "Each floor is divided into 2-3 office units by the load-bearing walls. The three bays created by the two internal walls each contain office space with windows on the exterior wall.",
+      "ceiling_height_blocks": 3,
+      "floor_material": "Dark oak planks or spruce planks",
+      "ceiling_material": "Smooth stone slabs (representing concrete ceilings)"
+    },
+    "stained_glass": {
+      "location": "Stairwell windows and select interior transom windows",
+      "minecraft_approach": "Use colored stained glass panes in the stairwell at every other floor"
+    }
+  },
+
+  "block_palette": {
+    "white_facade": {
+      "primary": "White concrete",
+      "alternative": "Smooth quartz blocks",
+      "note": "White concrete gives the cleanest, brightest white matching the glazed brick. Quartz has a slight texture that can add visual interest."
+    },
+    "stone_base": {
+      "primary": "Polished andesite",
+      "alternative": "Smooth stone",
+      "note": "Must be visibly darker and different from the white facade above. Polished andesite gives a good natural stone look."
+    },
+    "mansard_roof": {
+      "primary": "Deepslate tiles",
+      "stairs_and_slabs": "Deepslate tile stairs and slabs for slope",
+      "alternative": "Dark grey concrete with deepslate tile stairs",
+      "note": "Real building has dark slate roof. Deepslate tiles are the best match."
+    },
+    "dormer_frames": {
+      "primary": "Deepslate tile walls (sides) + white concrete (front face around window)",
+      "note": "Dormers have slate-covered cheeks but the window frame itself is lighter/white"
+    },
+    "windows": {
+      "primary": "Glass panes",
+      "note": "Use glass panes (not glass blocks) for the recessed window look. ~6 windows per face per floor = 180+ glass panes total."
+    },
+    "columns": {
+      "primary": "Quartz pillars",
+      "alternative": "Smooth stone walls",
+      "note": "Ground floor arcade columns. Quartz pillars give a classical column look."
+    },
+    "arches": {
+      "primary": "Polished andesite stairs (upside down)",
+      "note": "For the segmental arch curves above arcade bays"
+    },
+    "sculptures": {
+      "primary": "Chiseled stone bricks",
+      "alternative": "Player heads with custom skins, or armor stands",
+      "note": "At 1:1 scale, each sculpture is only 1-2 blocks. Chiseled stone bricks in recessed niches are the simplest approach."
+    },
+    "colored_accents": {
+      "yellow": "Yellow terracotta",
+      "red": "Red terracotta",
+      "blue": "Blue terracotta",
+      "glazed_panels": "Glazed terracotta (any color) for Art Nouveau decorative panels at zone 2 cornice"
+    },
+    "iron_details": {
+      "railings": "Iron bars",
+      "lamp_hooks": "End rods + chains + lanterns",
+      "roof_cresting": "Iron bars along cornice and ridge",
+      "staircase_interior": "Iron bars as railings"
+    },
+    "corner_towers": {
+      "shaft": "White concrete (matching facade)",
+      "cap": "Deepslate tile stairs (cone shape)",
+      "finial": "End rod or lightning rod",
+      "dragon_reliefs": "Chiseled stone bricks or dragon heads"
+    },
+    "cornices_and_belt_courses": {
+      "primary": "Smooth quartz slabs or polished andesite slabs",
+      "note": "Horizontal bands that separate floors and zones"
+    },
+    "interior_floors": "Dark oak planks",
+    "interior_ceilings": "Smooth stone slabs",
+    "interior_walls": "Stone bricks (load-bearing) or white concrete (partition)"
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "name": "Foundation and ground floor arcade",
+      "description": "Mark out the 20x20 footprint. Build the ground floor (5 blocks tall) using polished andesite. Place 5 columns per face with 4 arched openings between them. Leave the arcade open/walkable.",
+      "blocks_used": ["Polished andesite", "Quartz pillars", "Polished andesite stairs"],
+      "height_range": "Blocks 1-5"
+    },
+    {
+      "step": 2,
+      "name": "First floor (stone zone upper)",
+      "description": "Build the first floor (4 blocks tall) in polished andesite. Place 5 windows per face. Add sculpture niches between windows on south and west facades. Place the transition cornice (1 slab course) at the top.",
+      "blocks_used": ["Polished andesite", "Glass panes", "Chiseled stone bricks", "Polished andesite slabs"],
+      "height_range": "Blocks 6-9"
+    },
+    {
+      "step": 3,
+      "name": "Internal structure",
+      "description": "Before building the white zone walls, place the two internal load-bearing walls running north-south through the full building. Leave gaps for the staircase shaft (3x3) and elevator shaft (2x2). These walls will be built incrementally as you go up.",
+      "blocks_used": ["Stone bricks"],
+      "height_range": "Blocks 1-30 (built progressively)"
+    },
+    {
+      "step": 4,
+      "name": "White brick zone floors 2-4",
+      "description": "Switch to white concrete. Build 3 floors (about 10-11 blocks). Each floor: 3 blocks of wall with 6 windows per face (1w x 2h each), plus 0.5 block belt course (slab). Maintain consistent window spacing. Add colored terracotta accents at belt courses.",
+      "blocks_used": ["White concrete", "Glass panes", "White concrete slabs", "Yellow terracotta", "Red terracotta"],
+      "height_range": "Blocks 10-20"
+    },
+    {
+      "step": 5,
+      "name": "White brick zone floors 5-7",
+      "description": "Continue the same pattern for 3 more floors (about 10 blocks). On the top floor (floor 7), add the Art Nouveau glazed terracotta panels above the window row as the crowning cornice of zone 2.",
+      "blocks_used": ["White concrete", "Glass panes", "Glazed terracotta", "Blue terracotta"],
+      "height_range": "Blocks 21-30"
+    },
+    {
+      "step": 6,
+      "name": "Corner tower shafts",
+      "description": "At the south-west and south-east corners, build up the 3x3 tower shafts from zone 2 level through the roof zone. These should be white concrete matching the facade, with small single-pane windows at each floor level. Continue them to block 43+5 = block 48.",
+      "blocks_used": ["White concrete", "Glass panes", "Deepslate tiles"],
+      "height_range": "Blocks 10-48"
+    },
+    {
+      "step": 7,
+      "name": "Mansard roof — lower steep section",
+      "description": "Build the lower mansard slope (blocks 31-37). Start at full 20x20, step in every 2-3 blocks. Use deepslate tile stairs facing outward for the slope. Place dormer windows (3 per face) at the first and second mansard floor levels.",
+      "blocks_used": ["Deepslate tiles", "Deepslate tile stairs", "Deepslate tile slabs", "Glass panes", "White concrete"],
+      "height_range": "Blocks 31-37"
+    },
+    {
+      "step": 8,
+      "name": "Mansard roof — upper section and cap",
+      "description": "Continue the taper from 17x17 down to the 10x10 flat cap. The slope accelerates here. Place smaller dormers or flush windows at the third mansard floor. Cap with a flat roof surface.",
+      "blocks_used": ["Deepslate tiles", "Deepslate tile stairs", "Deepslate tile slabs", "Grey concrete"],
+      "height_range": "Blocks 38-43"
+    },
+    {
+      "step": 9,
+      "name": "Corner tower caps and finials",
+      "description": "Build the conical turret caps on both corner towers. Step from 3x3 down to 1x1 over 5 blocks. Place end rods as finials. Add dragon relief blocks at the base of each tower (block 9 level).",
+      "blocks_used": ["Deepslate tile stairs", "End rods", "Chiseled stone bricks", "Lightning rod"],
+      "height_range": "Blocks 44-48"
+    },
+    {
+      "step": 10,
+      "name": "Iron details and decorative finishing",
+      "description": "Add iron bars along the roofline cornice (block 31) and roof ridge (block 43). Place end rods with lanterns as lamp hooks on the facade. Add iron bar railings at key windows. Place wrought-iron weather vanes (end rods) on tower caps.",
+      "blocks_used": ["Iron bars", "Chains", "Lanterns", "End rods"],
+      "height_range": "Various"
+    },
+    {
+      "step": 11,
+      "name": "Interior finishing",
+      "description": "Add floor surfaces (dark oak planks), the spiral iron staircase, the elevator shaft, and stained glass windows in the stairwell. Furnish ground floor arcade as a cafe/shop space.",
+      "blocks_used": ["Dark oak planks", "Spruce stairs", "Iron bars", "Stained glass panes"],
+      "height_range": "All floors"
+    },
+    {
+      "step": 12,
+      "name": "Name sign and final details",
+      "description": "Place signs reading 'Het Witte Huis' on the east facade. Do a full walk-around check for window alignment and missing blocks. Verify the three zones read as distinct from a distance.",
+      "blocks_used": ["Oak signs"],
+      "height_range": "First floor level, east face"
+    }
+  ],
+
+  "unique_challenges": {
+    "mansard_taper": {
+      "problem": "Getting a smooth diagonal slope inward over 13 blocks of height while maintaining habitable dormer-windowed floors inside",
+      "solution": "Use stair blocks facing outward on every step-in layer. Keep the first 3 layers at full width (steep lower mansard is nearly vertical), then step in 1 block per side every 2 layers. Accelerate the taper in the last 3 layers. The stair trick gives a half-block slope that looks much smoother than full-block steps."
+    },
+    "three_zones": {
+      "problem": "Making the stone base, white middle, and grey roof clearly distinct when viewed from any distance",
+      "solution": "Use strongly contrasting blocks: polished andesite (dark grey-green) for base, white concrete (bright white) for middle, deepslate tiles (very dark grey) for roof. Add a visible cornice/slab belt at each zone transition. The color contrast alone will make the zones pop."
+    },
+    "window_rhythm": {
+      "problem": "Approximately 180 windows need consistent spacing across all four faces and all floors",
+      "solution": "Establish the pattern on one face of one floor first (6 windows, 1 wide, 2 tall, spaced 2 blocks apart). Copy this exact pattern to every face of every floor in zone 2. Use the clone command or structure blocks if available. Work floor-by-floor, not face-by-face, to maintain vertical alignment."
+    },
+    "sculptures": {
+      "problem": "Representing 5 allegorical figures at 1:1 block scale where each figure is only 1-2 blocks tall",
+      "solution": "Use chiseled stone bricks recessed into 1-block niches in the facade at first floor level. The recessed niche itself communicates 'sculpture' even without fine detail. For more ambition, use armor stands with stone heads or custom player heads."
+    },
+    "corner_towers": {
+      "problem": "Building small 3x3 octagonal turrets that look round and fairytale-like at this scale",
+      "solution": "Cut the corners of the 3x3 square using stair blocks to approximate an octagon. For the conical cap, step from 3x3 to 2x2 to 1x1 using stairs. The finial (end rod) adds crucial vertical emphasis that sells the turret silhouette."
+    },
+    "dragon_reliefs": {
+      "problem": "Representing carved dragon reliefs at a scale where each dragon would be 1-2 blocks",
+      "solution": "Place dragon heads (from the End) on the facade at block 9 level, or use chiseled stone bricks. If dragon heads are not available, a banner with a custom dragon pattern (Mojang banner pattern) placed on the wall works well."
+    },
+    "art_nouveau_details": {
+      "problem": "Art Nouveau floral motifs and colored geometric patterns are extremely fine-grained at 1:1",
+      "solution": "Use glazed terracotta blocks (which have swirling/floral patterns built in) for the decorative panels at the zone 2 cornice. Colored terracotta (yellow, red, blue) single blocks in belt courses suggest the geometric brick patterns without needing pixel-level detail."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "From the south-east, across the Oudehaven harbor. This shows both street-facing facades and both corner towers. In Minecraft, build a viewing platform 40 blocks south-east of the building.",
+    "harbor_context": "The Witte Huis sits at the edge of the Oudehaven (Old Harbor). If building in context, place water to the south and east of the building. Historic ships (Minecraft boats or custom builds) in the harbor add atmosphere.",
+    "skyline_silhouette": "From a distance, the three zones should stack clearly: dark base, bright white tower, dark tapering cap with two turret spikes. This silhouette is the building's most recognizable feature.",
+    "night_view": "Place glowstone or sea lanterns behind select windows (every other floor, every other window) to create a warm nighttime glow. Light the ground floor arcade fully. Place lanterns on the lamp hooks.",
+    "approach_view": "Walking toward the building from the south, the ground floor arcade should feel open and inviting with visible columns. The turrets should be visible against the sky from at least 30 blocks away."
+  },
+
+  "material_quantities_estimate": {
+    "white_concrete": "~1200 blocks (zone 2 exterior walls + tower shafts)",
+    "polished_andesite": "~350 blocks (zone 1 exterior)",
+    "deepslate_tiles_and_variants": "~600 blocks (roof slopes, slabs, stairs)",
+    "glass_panes": "~200 panes (all windows across all zones)",
+    "quartz_pillars": "~20 blocks (ground floor columns)",
+    "iron_bars": "~80 blocks (railings, roof cresting, interior)",
+    "terracotta_colored": "~30 blocks (accent decorations)",
+    "glazed_terracotta": "~20 blocks (Art Nouveau panels)",
+    "stone_bricks": "~300 blocks (interior load-bearing walls)",
+    "dark_oak_planks": "~400 blocks (interior floors)",
+    "total_estimate": "~3200 blocks"
+  }
+}

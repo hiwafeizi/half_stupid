@@ -1,0 +1,67 @@
+{
+  "name": "Cube Houses",
+  "dutch_name": "Kubuswoningen",
+  "architect": "Piet Blom",
+  "year": 1984,
+  "style": "Structuralism",
+  "location": "Overblaak Street, beside Blaak metro station, Rotterdam",
+
+  "dimensions": {
+    "individual_cube_side_m": 7.5,
+    "total_height_m": 22,
+    "pylon_height_m": 9.5,
+    "cube_diagonal_m": 10.6,
+    "interior_floor_area_per_unit_m2": 100,
+    "complex_small_cubes": 38,
+    "complex_super_cubes": 2
+  },
+
+  "proportions": {
+    "cube_to_pylon_height": "1.2:1",
+    "pylon_cross_section_m": "3-4 (hexagonal)"
+  },
+
+  "architectural_features": {
+    "tilt": {
+      "angle_degrees": 54.7,
+      "description": "Each cube rotated so one vertex points straight down into the pylon"
+    },
+    "pylon": {
+      "shape": "Hexagonal cross-section concrete column",
+      "height_stories": 3
+    },
+    "interior_levels": [
+      "Level 1: Entry + triangular living room / open kitchen",
+      "Level 2: Two bedrooms, living area, bathroom",
+      "Level 3: Pyramid-shaped room with 18 windows (panoramic)"
+    ],
+    "arrangement": "Linear cluster sharing walls, forming a continuous 'forest' of tilted cubes"
+  },
+
+  "colors": {
+    "cube_cladding": "Bright yellow wood panels",
+    "pylons": "Grey concrete",
+    "accents": "Dark grey panels"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "cube_side_blocks": 8,
+      "total_height_blocks": 22,
+      "pylon_height_blocks": 9
+    },
+    "scale_1_to_2": {
+      "cube_side_blocks": 4,
+      "total_height_blocks": 11,
+      "pylon_height_blocks": 5
+    },
+    "recommended_scale": "1:1 (small enough for full scale)",
+    "block_palette": {
+      "cubes": "Yellow concrete or yellow terracotta",
+      "pylons": "Grey concrete",
+      "windows": "Glass panes",
+      "interior": "Oak planks"
+    },
+    "build_notes": "Use diamond/45-degree rotation in plan view to approximate the tilt. An 8x8 block square rotated 45° gives ~11 block diagonal."
+  }
+}

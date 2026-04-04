@@ -1,0 +1,73 @@
+{
+  "name": "Erasmus Bridge",
+  "dutch_name": "Erasmusbrug",
+  "nickname": "The Swan (De Zwaan)",
+  "architect": "Ben van Berkel / UNStudio",
+  "year": 1996,
+  "style": "Modern / Deconstructivism",
+  "location": "Spanning the Nieuwe Maas river, Rotterdam",
+
+  "dimensions": {
+    "total_length_m": 802,
+    "cable_stayed_span_m": 410,
+    "bascule_span_m": 89,
+    "pylon_height_m": 139,
+    "deck_width_m": 33.8,
+    "deck_clearance_above_water_m": 17
+  },
+
+  "proportions": {
+    "pylon_to_total_length": "1:5.8",
+    "pylon_to_cable_span": "1:3",
+    "deck_width_to_length": "1:24"
+  },
+
+  "architectural_features": {
+    "pylon": {
+      "shape": "Single asymmetric steel pylon with bent-arm kink",
+      "tilt_degrees": 85,
+      "description": "Horizontal base ~20-25m, angles up at 40-45 degrees, then straightens near-vertical"
+    },
+    "cables": {
+      "total": 40,
+      "main_stays": 32,
+      "backstays": 8,
+      "arrangement": "Single center plane (all attach along deck centerline)"
+    },
+    "deck": {
+      "lanes": "4 car lanes, 2 tram tracks, 2 cycle paths, 2 pedestrian paths",
+      "box_girders": "Two spines, each 2.25m high x 1.25m wide"
+    },
+    "bascule_bridge": {
+      "length_m": 89,
+      "location": "Southern end",
+      "type": "Drawbridge that lifts for tall ships"
+    }
+  },
+
+  "colors": {
+    "pylon_and_steel": "Pale blue / sky blue",
+    "deck_surface": "Dark grey asphalt",
+    "cables": "Steel / light grey"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "pylon_blocks": 139,
+      "total_length_blocks": 802,
+      "deck_width_blocks": 34
+    },
+    "scale_1_to_10": {
+      "pylon_blocks": 14,
+      "total_length_blocks": 80,
+      "deck_width_blocks": 3
+    },
+    "recommended_scale": "1:10 (massive structure)",
+    "block_palette": {
+      "pylon": "Light blue concrete or light blue terracotta",
+      "deck": "Grey or dark grey concrete",
+      "cables": "String, chains, or light blue stained glass panes",
+      "bascule": "Iron blocks with redstone pistons for functionality"
+    }
+  }
+}

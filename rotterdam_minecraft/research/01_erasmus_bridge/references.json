@@ -1,0 +1,154 @@
+{
+  "building": "Erasmus Bridge",
+  "location": "Rotterdam, Netherlands",
+  "architect": "Ben van Berkel / UNStudio",
+  "completed": 1996,
+  "key_dimensions": {
+    "total_length": "802m",
+    "pylon_height": "139m",
+    "deck_width": "34m",
+    "bascule_span": "89m",
+    "clearance_above_water": "17m",
+    "cable_stays": 32,
+    "backstays": 8,
+    "box_girder_height": "2.25m",
+    "box_girder_width": "1.25m",
+    "transverse_section_spacing": "4.9m",
+    "pedestrian_cantilever": "6.7m each side"
+  },
+  "image_sources": [
+    {
+      "description": "Full side profile view of the Erasmus Bridge from the south, showing the complete pylon and cable-stayed span",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Erasmusbrug_2010.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Erasmusbrug_2010.JPG",
+      "credit": "Wikimedia Commons (public domain / CC)",
+      "useful_for": "Overall bridge silhouette and proportions - use to establish the total shape and pylon-to-deck ratio in Minecraft"
+    },
+    {
+      "description": "Erasmus Bridge seen from Euromast observation tower - aerial/elevated side view showing full bridge in context with Rotterdam skyline",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Erasmus_bridge",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Erasmusbrug_seen_from_Euromast.jpg/1280px-Erasmusbrug_seen_from_Euromast.jpg",
+      "credit": "Wikimedia Commons",
+      "useful_for": "Bird's eye perspective to understand how the bridge sits in the river - helpful for planning Minecraft placement and scale"
+    },
+    {
+      "description": "Evening/dusk view of the Erasmus Bridge with dramatic lighting",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Erasmusbrug_by_evening.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Erasmusbrug_by_evening.JPG",
+      "credit": "Wikimedia Commons (public domain / CC)",
+      "useful_for": "Night lighting reference - useful if building with glowstone/sea lantern accents to replicate the illuminated look"
+    },
+    {
+      "description": "Close-up views of the asymmetric pylon ('The Swan') showing the distinctive bent shape and cable attachment points",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Pylon_of_Erasmusbrug_(Rotterdam)",
+      "image_url": "browse category for multiple pylon close-ups",
+      "credit": "Various Wikimedia Commons contributors",
+      "useful_for": "Critical reference for building the pylon shape in Minecraft - the asymmetric bend is the hardest part to replicate"
+    },
+    {
+      "description": "Multiple professional photos of the bridge from various angles including deck level, waterline, and cityscape views",
+      "source_url": "https://www.unstudio.com/projects/erasmus-bridge/",
+      "image_url": "visit page for UNStudio official project photography",
+      "credit": "UNStudio / Christian Richters (typical photographer for UNStudio projects)",
+      "useful_for": "High quality architectural photography showing structural details, cable arrangement, and deck cross-section"
+    },
+    {
+      "description": "Detailed bridge photos and structural information with multiple angles",
+      "source_url": "https://www.bridgeinfo.net/bridge/index.php?ID=4",
+      "image_url": "visit page for multiple technical bridge photos",
+      "credit": "Bridgeinfo.net",
+      "useful_for": "Engineering-focused photos that show structural members and deck construction details"
+    },
+    {
+      "description": "Architectural photography collection from Archilovers project page",
+      "source_url": "https://www.archilovers.com/projects/107808/erasmus-bridge.html",
+      "image_url": "visit page for curated architectural photos",
+      "credit": "UNStudio via Archilovers",
+      "useful_for": "Professional angles showing the bridge as architecture - good for understanding the design intent"
+    },
+    {
+      "description": "Blog post with detailed photos and engineering analysis of the Erasmus Bridge",
+      "source_url": "https://happypontist.blogspot.com/2013/10/rotterdam-bridges-1-erasmus-bridge.html",
+      "image_url": "visit page for annotated structural photos",
+      "credit": "The Happy Pontist blog",
+      "useful_for": "Annotated photos with structural engineering commentary - helps understand which parts are load-bearing for Minecraft accuracy"
+    },
+    {
+      "description": "Various stock and editorial photos showing the bridge at night with reflections on the Nieuwe Maas river",
+      "source_url": "https://www.dreamstime.com/photos-images/rotterdam-erasmus-bridge-night.html",
+      "image_url": "browse for night photography reference (watermarked previews)",
+      "credit": "Various photographers via Dreamstime",
+      "useful_for": "Night lighting patterns and reflection reference for optional Minecraft lighting design"
+    },
+    {
+      "description": "Flickr photo of the bridge showing cable-stayed structure and pylon from waterline perspective",
+      "source_url": "https://www.flickr.com/photos/plannedcity/8176520191/",
+      "image_url": "visit page for full resolution photo",
+      "credit": "Flickr user 'plannedcity'",
+      "useful_for": "Low-angle perspective useful for understanding the underside of the deck and cable geometry"
+    },
+    {
+      "description": "Archiweb detailed project page with technical photos and project data",
+      "source_url": "https://www.archiweb.cz/en/b/erasmusbrug",
+      "image_url": "visit page for technical architectural photography",
+      "credit": "archiweb.cz",
+      "useful_for": "Technical details and construction photos for understanding how structural elements connect"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "WikiArquitectura project page with plans, elevations, and technical drawings of the Erasmo/Erasmus Bridge",
+      "source_url": "https://en.wikiarquitectura.com/building/erasmo-bridge/",
+      "image_url": "visit page - contains elevation drawings, plans, and section drawings inline",
+      "type": "elevation/plan/section"
+    },
+    {
+      "description": "UNStudio Erasmus Bridge project records archive - includes engineering construction details with cross sections, elevations with handwritten notes, development plans, and surveying plans",
+      "source_url": "https://www.cca.qc.ca/en/archives/440020/unstudio-erasmus-bridge-project-records/503717/erasmus-bridge-rotterdam-netherlands-1990-1996",
+      "image_url": "archival collection - some images viewable online, full collection at CCA Montreal",
+      "type": "elevation/cross-section/plan/construction-detail"
+    },
+    {
+      "description": "World Architects project page with architectural drawings and project documentation",
+      "source_url": "https://world-architects.com/en/unstudio-amsterdam/project/erasmus-bridge",
+      "image_url": "visit page for architectural drawings",
+      "type": "elevation/plan"
+    },
+    {
+      "description": "Archello project page with drawings and technical documentation",
+      "source_url": "https://archello.com/project/erasmus-bridge",
+      "image_url": "visit page for project documentation and drawings",
+      "type": "elevation/detail"
+    },
+    {
+      "description": "Architectuul documentation page with architectural information and drawings",
+      "source_url": "https://architectuul.com/architecture/erasmusbrug",
+      "image_url": "visit page for architectural documentation",
+      "type": "elevation/plan"
+    },
+    {
+      "description": "Dedicated UNStudio monograph book on the Erasmus Bridge - contains comprehensive sketches, models, renderings, and working drawings",
+      "source_url": "https://www.unstudio.com/news/books/unstudio-erasmus-bridge/",
+      "image_url": "book reference - 'UN Studio/Erasmus Bridge' by Todd Gannon, ISBN 978-1568984261",
+      "type": "all types - comprehensive monograph"
+    }
+  ],
+  "minecraft_build_notes": {
+    "scale_suggestion": "At 1:10 scale the bridge would be about 80 blocks long with a 14-block tall pylon. At 1:5 scale it would be 160 blocks long with a 28-block pylon.",
+    "key_features_to_capture": [
+      "Asymmetric pylon shape - the 'swan neck' bend is the signature element",
+      "Fan-shaped cable stays from pylon top (32 cables) and backstays (8 cables)",
+      "The bascule (drawbridge) section at the south end",
+      "Pale blue/light gray color of the pylon",
+      "The horizontal base section of the pylon before it bends upward",
+      "Thin elegant deck profile"
+    ],
+    "suggested_materials": {
+      "pylon": "Light blue concrete or light gray concrete",
+      "cables": "Iron bars, chains, or end rods",
+      "deck": "Gray concrete or smooth stone slabs",
+      "road_surface": "Gray or black concrete",
+      "night_lighting": "Sea lanterns or end rods along the deck edge"
+    }
+  }
+}

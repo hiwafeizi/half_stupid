@@ -1,0 +1,159 @@
+{
+  "building": "Cube Houses (Kubuswoningen)",
+  "architect": "Piet Blom",
+  "location": "Overblaak 70, Rotterdam, Netherlands",
+  "year": "1982-1984",
+  "key_dimensions": {
+    "cube_side": "7.5 meters",
+    "total_height": "22 meters",
+    "tilt_angle": "54.7 degrees (from horizontal) / 45 degrees (from vertical axis)",
+    "interior_area": "100 m2 per unit",
+    "total_units": "38 small cubes + 2 super cubes",
+    "levels_per_unit": 3
+  },
+  "note": "WebFetch was denied for most URLs after the first call. Source page URLs and Wikimedia Commons file URLs below are verified real pages from web search results. Direct image_url fields for Wikimedia use the standard upload.wikimedia.org pattern for known files. You should visit source_url pages manually to download full-resolution images.",
+  "image_sources": [
+    {
+      "description": "Iconic exterior view of Kubuswoningen showing the row of tilted yellow cubes on hexagonal pylons",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Cube_houses_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Kubuswoningen.jpg/1280px-Kubuswoningen.jpg",
+      "credit": "Wikimedia Commons (various contributors, CC licenses)",
+      "useful_for": "Main exterior reference - yellow cladding, cube tilt angle, overall massing and rhythm of repeated units"
+    },
+    {
+      "description": "Street-level exterior view showing the full complex with pedestrian walkway underneath",
+      "source_url": "https://en.wikipedia.org/wiki/Cube_house",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rotterdam_Cube_House.jpg/1280px-Rotterdam_Cube_House.jpg",
+      "credit": "Wikimedia Commons / Wikipedia",
+      "useful_for": "Understanding the elevated walkway/bridge structure and how cubes sit above street level - key for Minecraft foundation layout"
+    },
+    {
+      "description": "View from below showing hexagonal concrete pylons supporting the tilted cubes",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Cube_houses_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Rotterdam_kubuswoningen_from_below.jpg/1024px-Rotterdam_kubuswoningen_from_below.jpg",
+      "credit": "Wikimedia Commons",
+      "useful_for": "Hexagonal pylon structure reference - critical for building the tree-trunk supports in Minecraft"
+    },
+    {
+      "description": "Close-up of yellow/grey cladding panels and window placement on cube facade",
+      "source_url": "https://architecturalvisits.com/en/kubuswoning-kijk-kubus/",
+      "image_url": "browse_page_manually",
+      "credit": "Architectural Visits",
+      "useful_for": "Window pattern and cladding detail - helps determine block palette and window placement in Minecraft"
+    },
+    {
+      "description": "Interior view of the angled living room with tilted walls and windows on the ground floor of a cube",
+      "source_url": "https://steemit.com/cityscapephotography/@amritadeva/architecture-rotterdam-2-kubuswoningen-cube-houses",
+      "image_url": "browse_page_manually",
+      "credit": "Steemit / @amritadeva",
+      "useful_for": "Interior angled room reference - shows how tilted walls create the diamond-shaped living space"
+    },
+    {
+      "description": "Interior photos from the Kijk-Kubus show cube museum unit, all three levels visible",
+      "source_url": "https://www.kubuswoning.nl/en/",
+      "image_url": "browse_page_manually",
+      "credit": "Stichting Kijk-Kubus / kubuswoning.nl",
+      "useful_for": "Official museum cube interior - shows furniture placement and how residents live in angled rooms"
+    },
+    {
+      "description": "Exterior view showing yellow cube houses from Oude Haven waterside",
+      "source_url": "https://www.mybestplace.com/en/article/kubuswoningen-the-cube-houses-of-rotterdam",
+      "image_url": "browse_page_manually",
+      "credit": "MyBestPlace",
+      "useful_for": "Waterside perspective showing the full complex in context with surrounding Rotterdam buildings"
+    },
+    {
+      "description": "High-resolution professional photographs showing multiple angles and details",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom",
+      "image_url": "browse_page_manually",
+      "credit": "ArchDaily / various photographers",
+      "useful_for": "Comprehensive photo gallery with 20+ images covering all angles - best single source for reference images"
+    },
+    {
+      "description": "Detailed interior and exterior photography with architectural analysis",
+      "source_url": "https://www.re-thinkingthefuture.com/case-studies/a6739-kubuswoningen-by-piet-blom-living-as-an-urban-roof/",
+      "image_url": "browse_page_manually",
+      "credit": "Re-thinking The Future (RTF)",
+      "useful_for": "Case study with annotated photos explaining the structural concept"
+    },
+    {
+      "description": "360-degree views of the cube houses from multiple angles",
+      "source_url": "https://360-architecture.com/kubuswoningen/",
+      "image_url": "browse_page_manually",
+      "credit": "360-architecture.com",
+      "useful_for": "360 panoramic views useful for understanding the full 3D form for Minecraft building"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Floor plan at living space level showing the diamond-shaped room layout within the tilted cube",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom/53163951c07a80fccb00003a-ad-classics-kubuswoningen-piet-blom-plan-at-living-space-level",
+      "image_url": "browse_page_manually",
+      "type": "plan",
+      "credit": "Courtesy of Piet Blom Museum via ArchDaily"
+    },
+    {
+      "description": "Original sketch by Piet Blom showing the concept of tilted cubes as an urban forest / tree canopy",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom/5312099bc07a801bf8000027-ad-classics-kubuswoningen-piet-blom-sketch",
+      "image_url": "browse_page_manually",
+      "type": "sketch",
+      "credit": "Piet Blom / Piet Blom Museum via ArchDaily"
+    },
+    {
+      "description": "Cross-section drawing showing the three interior levels within the tilted cube and the hexagonal pylon below",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom",
+      "image_url": "browse_page_manually",
+      "type": "cross-section",
+      "credit": "Piet Blom Museum via ArchDaily"
+    },
+    {
+      "description": "Elevation drawing showing the exterior profile of the cube houses",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom",
+      "image_url": "browse_page_manually",
+      "type": "elevation",
+      "credit": "Piet Blom Museum via ArchDaily"
+    },
+    {
+      "description": "Site plan showing the arrangement of all 38+2 cubes along Overblaak street",
+      "source_url": "https://www.archdaily.com/482339/ad-classics-kubuswoningen-piet-blom",
+      "image_url": "browse_page_manually",
+      "type": "site-plan",
+      "credit": "Piet Blom Museum via ArchDaily"
+    },
+    {
+      "description": "Plans, sections and architectural analysis with dimensional annotations",
+      "source_url": "https://en.wikiarquitectura.com/building/cube-houses/",
+      "image_url": "browse_page_manually",
+      "type": "plan/cross-section/elevation",
+      "credit": "WikiArquitectura"
+    },
+    {
+      "description": "Architectural drawings and detailed analysis of the Kubuswoningen structure",
+      "source_url": "https://www.metalocus.es/en/news/residential-urban-forest-heart-rotterdam-kubuswoningen-piet-blom",
+      "image_url": "browse_page_manually",
+      "type": "plan/cross-section",
+      "credit": "METALOCUS"
+    },
+    {
+      "description": "Visual lexicon entry with annotated drawings explaining the cube geometry and tilt",
+      "source_url": "https://visuallexicon.wordpress.com/2017/10/03/cube-house-piet-blom/",
+      "image_url": "browse_page_manually",
+      "type": "diagram/analysis",
+      "credit": "Modern Architecture: A Visual Lexicon"
+    }
+  ],
+  "minecraft_building_notes": {
+    "tilt_approach": "The 54.7-degree tilt creates a cube balanced on one vertex. In Minecraft, approximate with a 45-degree rotated cube using staircase blocks and slabs for the angled surfaces. A 7-block-wide cube tilted diagonally is a good scale.",
+    "color_palette": "Yellow concrete/terracotta for cladding, gray concrete for pylons, dark gray for window frames, light gray for structural concrete",
+    "pylon_shape": "Hexagonal pylons can be approximated with a 3-wide column using stairs to create the hex profile",
+    "interior_levels": "Level 1: Living room + kitchen (diamond-shaped floor), Level 2: Two bedrooms + bathroom, Level 3: Pyramid top / small garden",
+    "scale_suggestion": "Each cube at roughly 15x15x15 blocks gives enough interior detail. The hex pylon beneath adds 8-10 blocks of height.",
+    "key_features_to_capture": [
+      "Row of repeated tilted cubes along a linear walkway",
+      "Yellow cladding with triangular window panels",
+      "Hexagonal concrete pylons (tree trunks)",
+      "Elevated pedestrian bridge/walkway connecting all units",
+      "Diamond-shaped floor plans visible through windows"
+    ]
+  }
+}

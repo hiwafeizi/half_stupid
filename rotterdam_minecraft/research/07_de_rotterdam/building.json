@@ -1,0 +1,95 @@
+{
+  "name": "De Rotterdam",
+  "dutch_name": "De Rotterdam",
+  "architect": "OMA / Rem Koolhaas",
+  "year": 2013,
+  "style": "Deconstructivism / Contemporary",
+  "location": "Wilhelminakade 139, Rotterdam",
+
+  "dimensions": {
+    "height_m": 150,
+    "floors_above_ground": 44,
+    "footprint_length_m": 107,
+    "footprint_depth_m": 36,
+    "footprint_area_m2": 3852,
+    "gross_floor_area_m2": 162000,
+    "facade_area_m2": 50000,
+    "weight_tons": 230000,
+    "concrete_volume_m3": 74000,
+    "gap_between_towers_m": 7,
+    "underground_parking_levels": 2,
+    "parking_spaces": 684
+  },
+
+  "proportions": {
+    "footprint_ratio": "3:1 (length:depth)",
+    "height_to_width": "1.5:1",
+    "each_tower_width_m": "30-35 (nearly square plan)",
+    "plinth_height_m": 30,
+    "plinth_fraction": "1/5 of total height",
+    "tower_shift_elevation_m": 90,
+    "tower_shift_offset_m": "2-5",
+    "floor_height_m": 3.4,
+    "facade_module_width_m": 1.8
+  },
+
+  "architectural_features": {
+    "towers": {
+      "count": 3,
+      "names": ["West Tower", "Mid Tower", "East Tower"],
+      "height_m": 150,
+      "description": "All rise to same height, offset/shift at ~90m elevation"
+    },
+    "plinth": {
+      "height_m": 30,
+      "floors": 6,
+      "ground_hall_height_m": 8.5,
+      "description": "Shared base connecting all three towers, two glass-clad lower layers"
+    },
+    "facade": {
+      "type": "Glass curtain wall with vertical aluminum mullions",
+      "module_width_m": 1.8,
+      "mullion_depth_mm": 150,
+      "grid_depth_mm": 900,
+      "panel_sizes_mm": ["600x600", "600x1200"],
+      "variation": "Mullion density varies by program (office vs residential vs hotel)"
+    },
+    "program": {
+      "offices_m2": 72000,
+      "apartments": 240,
+      "hotel_rooms": 285,
+      "retail_m2": 5000,
+      "fitness_m2": 1500
+    }
+  },
+
+  "colors": {
+    "facade": "Glass and aluminum (silver/grey tones)",
+    "plinth": "Glass with darker frames",
+    "structure": "Concrete grey"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "height_blocks": 150,
+      "footprint_blocks": "107 x 36",
+      "gap_blocks": 7,
+      "floor_height_blocks": 3
+    },
+    "scale_1_to_2": {
+      "height_blocks": 75,
+      "footprint_blocks": "54 x 18",
+      "gap_blocks": 4,
+      "floor_height_blocks": 2,
+      "plinth_height_blocks": 15
+    },
+    "recommended_scale": "1:2",
+    "block_palette": {
+      "glass_facade": "Glass panes with iron bars as mullions",
+      "aluminum_panels": "Light grey concrete",
+      "plinth": "Dark grey concrete or deepslate",
+      "interior": "White concrete, quartz"
+    },
+    "build_notes": "Key signature: three towers like stacked boxes that slide sideways at different heights. Build three rectangular towers on shared base, offset each by 2-5 blocks at the midpoint."
+  }
+}

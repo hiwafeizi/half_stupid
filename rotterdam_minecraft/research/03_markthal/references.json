@@ -1,0 +1,200 @@
+{
+  "building": "Markthal",
+  "architect": "MVRDV",
+  "location": "Binnenrotte, Rotterdam, Netherlands",
+  "completed": 2014,
+  "dimensions": {
+    "height_m": 40,
+    "length_m": 120,
+    "width_m": 70,
+    "total_area_sqm": 100000
+  },
+  "key_features_for_minecraft": {
+    "arch_shape": "Horseshoe/parabolic arch, 40m tall, 120m long, 70m wide",
+    "exterior_cladding": "Grey natural stone on the arch exterior, with apartment windows in a grid pattern",
+    "glass_end_walls": "Cable-net glass facades on both open ends, 42m wide x 35m tall, largest in Europe",
+    "interior_mural": "Horn of Plenty by Arno Coenen & Iris Roskam, 11000 sqm of colorful fruits/flowers/insects on perforated aluminum panels",
+    "apartments": "228 apartments built into the arch structure itself",
+    "market_floor": "96 fresh food stalls at ground level under the arch",
+    "underground": "1200 parking spaces in 4 basement levels"
+  },
+  "image_sources": [
+    {
+      "description": "Exterior view of Markthal arch with grey stone cladding and apartment windows",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Exterior_of_Markthal_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Markthal_in_Rotterdam.jpg/1280px-Markthal_in_Rotterdam.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Overall arch shape, exterior proportions, grey stone cladding texture, window grid pattern"
+    },
+    {
+      "description": "Markthal exterior street-level view showing arch profile and scale",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Exterior_of_Markthal_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rotterdam_markthal.jpg/1280px-Rotterdam_markthal.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Arch profile from street level, scale reference with surroundings"
+    },
+    {
+      "description": "Markthal exterior overview showing full arch and glass end-wall",
+      "source_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv",
+      "image_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b0acc07a80548f0005be-markthal-rotterdam-mvrdv-photo",
+      "credit": "Photo by Ossip van Duivenbode / Daria Scagliola+Stijn Brakkee via ArchDaily",
+      "useful_for": "Exterior arch shape, glass facade transparency, overall massing"
+    },
+    {
+      "description": "Glass cable-net facade end wall - largest in Europe (42m x 35m)",
+      "source_url": "https://www.octatube.nl/en_GB/project-item.html/projectitem/6-markthal",
+      "image_url": "https://www.octatube.nl/en_GB/project-item.html/projectitem/6-markthal",
+      "credit": "Octatube (facade engineers)",
+      "useful_for": "Glass end-wall detail, cable-net structure pattern, transparency effect"
+    },
+    {
+      "description": "Glass facade detail showing cable-net grid and glass panels",
+      "source_url": "https://www.scia.net/en/user-stories/markthal-rotterdam-netherlands",
+      "image_url": "https://www.scia.net/en/user-stories/markthal-rotterdam-netherlands",
+      "credit": "SCIA Engineering",
+      "useful_for": "Cable-net facade engineering detail, 26 vertical x 22 horizontal cables, 1485x1485mm glass panels"
+    },
+    {
+      "description": "Interior showing Horn of Plenty ceiling mural - massive colorful artwork of fruits, flowers, insects",
+      "source_url": "https://www.designboom.com/art/arno-coenen-rotterdam-markthal-digital-mega-mural-horn-of-plenty-05-29-2014/",
+      "image_url": "https://www.designboom.com/art/arno-coenen-rotterdam-markthal-digital-mega-mural-horn-of-plenty-05-29-2014/",
+      "credit": "Arno Coenen & Iris Roskam, via Designboom",
+      "useful_for": "Interior mural colors and patterns, ceiling curvature, market hall interior scale"
+    },
+    {
+      "description": "Horn of Plenty mural close-up - oversized fruits and flowers",
+      "source_url": "https://www.bkor.nl/en/beeld/hoorn-des-overvloeds/",
+      "image_url": "https://www.bkor.nl/en/beeld/hoorn-des-overvloeds/",
+      "credit": "BKOR (Bureau Kunst en Openbare Ruimte Rotterdam)",
+      "useful_for": "Mural detail for interior decoration in Minecraft, color palette reference"
+    },
+    {
+      "description": "Interior view looking up at mural with market stalls below",
+      "source_url": "https://www.boredpanda.com/horn-of-plenty-large-digital-mural-markthal-rotterdam-arno-coenen/",
+      "image_url": "https://www.boredpanda.com/horn-of-plenty-large-digital-mural-markthal-rotterdam-arno-coenen/",
+      "credit": "Arno Coenen via Bored Panda",
+      "useful_for": "Interior proportions, relationship between market floor and curved ceiling, apartment balconies visible"
+    },
+    {
+      "description": "Markthal interior panoramic view showing full arch interior",
+      "source_url": "https://divisare.com/projects/271122-mvrdv-ossip-van-duivenbode-markthal-rotterdam",
+      "image_url": "https://divisare.com/projects/271122-mvrdv-ossip-van-duivenbode-markthal-rotterdam",
+      "credit": "Photo by Ossip van Duivenbode via Divisare",
+      "useful_for": "Full interior view, arch curvature from inside, mural + glass wall visible together"
+    },
+    {
+      "description": "Multiple high-quality exterior and interior photos from WikiArquitectura",
+      "source_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/",
+      "image_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/",
+      "credit": "WikiArquitectura",
+      "useful_for": "Comprehensive photo gallery with exterior, interior, structure, and detail shots"
+    },
+    {
+      "description": "Evening/night exterior showing glass facade glowing with interior mural colors",
+      "source_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b0e1c07a80548f0005c0-markthal-rotterdam-mvrdv-photo",
+      "image_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b0e1c07a80548f0005c0-markthal-rotterdam-mvrdv-photo",
+      "credit": "ArchDaily / MVRDV",
+      "useful_for": "Glass facade at night showing transparency and interior mural visible from outside"
+    },
+    {
+      "description": "Flickr photo of Markthal Rotterdam exterior",
+      "source_url": "https://www.flickr.com/photos/m_strasser/46063235942/",
+      "image_url": "https://www.flickr.com/photos/m_strasser/46063235942/",
+      "credit": "m_strasser on Flickr",
+      "useful_for": "Street-level exterior perspective"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Floor plan - ground level showing market hall layout and stall positions",
+      "source_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b101c07a80c9ea000525-markthal-rotterdam-mvrdv-floor-plan",
+      "image_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b101c07a80c9ea000525-markthal-rotterdam-mvrdv-floor-plan",
+      "type": "plan"
+    },
+    {
+      "description": "Floor plan - upper level showing apartment layout within the arch",
+      "source_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b0d3c07a80c9ea000523-markthal-rotterdam-mvrdv-floor-plan",
+      "image_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b0d3c07a80c9ea000523-markthal-rotterdam-mvrdv-floor-plan",
+      "type": "plan"
+    },
+    {
+      "description": "Floor plan - additional level",
+      "source_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b156c07a809a0e000548-markthal-rotterdam-mvrdv-floor-plan",
+      "image_url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv/5431b156c07a809a0e000548-markthal-rotterdam-mvrdv-floor-plan",
+      "type": "plan"
+    },
+    {
+      "description": "Cross-section and elevations available on WikiArquitectura plans page",
+      "source_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/",
+      "image_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/",
+      "type": "cross-section"
+    },
+    {
+      "description": "Structural diagram showing arch construction and cable-net facade",
+      "source_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/markthal-rotterdam-structure-diagr-2/",
+      "image_url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/markthal-rotterdam-structure-diagr-2/",
+      "type": "detail"
+    },
+    {
+      "description": "Cross-section and elevation drawings from Arquitectura Viva",
+      "source_url": "https://arquitecturaviva.com/works/markthal-rotterdam-8",
+      "image_url": "https://arquitecturaviva.com/works/markthal-rotterdam-8",
+      "type": "cross-section"
+    },
+    {
+      "description": "Section and plans from The Plan magazine",
+      "source_url": "https://www.theplan.it/eng/architecture/en-markhal-rotterdam-1",
+      "image_url": "https://www.theplan.it/eng/architecture/en-markhal-rotterdam-1",
+      "type": "cross-section"
+    },
+    {
+      "description": "Detailed architectural drawings and building study with cross-sections",
+      "source_url": "https://www.fxdesign.co.uk/market-forces-4455805/",
+      "image_url": "https://www.fxdesign.co.uk/market-forces-4455805/",
+      "type": "cross-section"
+    }
+  ],
+  "best_sources_summary": {
+    "note": "WebFetch was blocked for most sites during compilation. Many image_url fields point to page URLs rather than direct image files. Visit these pages to download the actual images.",
+    "top_sources_to_visit": [
+      {
+        "source": "ArchDaily",
+        "url": "https://www.archdaily.com/553933/markthal-rotterdam-mvrdv",
+        "has": "35-image gallery including exterior photos, interior photos, floor plans, sections, elevations. Photos by Ossip van Duivenbode, Daria Scagliola+Stijn Brakkee, Nico Saieh"
+      },
+      {
+        "source": "WikiArquitectura",
+        "url": "https://en.wikiarquitectura.com/building/markthal-rotterdam/",
+        "has": "Extensive photo gallery with numbered images (01-28+), structural diagrams, plans and sections"
+      },
+      {
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/Category:Markthal_(Rotterdam)",
+        "has": "CC-licensed photos. Subcategories: Exterior_of_Markthal_(Rotterdam), Winkels_Markthal_(Rotterdam)"
+      },
+      {
+        "source": "MVRDV Official",
+        "url": "https://mvrdv.com/projects/115/markthal",
+        "has": "Official project photos and description"
+      },
+      {
+        "source": "Designboom - Horn of Plenty",
+        "url": "https://www.designboom.com/art/arno-coenen-rotterdam-markthal-digital-mega-mural-horn-of-plenty-05-29-2014/",
+        "has": "Detailed photos of the interior ceiling mural by Arno Coenen"
+      },
+      {
+        "source": "Octatube - Glass Facade",
+        "url": "https://www.octatube.nl/en_GB/project-item.html/projectitem/6-markthal",
+        "has": "Technical details and photos of the cable-net glass facade construction"
+      }
+    ]
+  },
+  "minecraft_build_notes": {
+    "scale_suggestion": "At 1:1 the arch is 40x120x70 blocks - very buildable. Consider 1:2 scale (20x60x35) for a smaller build.",
+    "arch_profile": "Horseshoe/parabolic arch - can be approximated with a semicircular or slightly pointed arch in Minecraft",
+    "exterior_blocks": "Light grey stone bricks or smooth stone for the natural stone cladding. Glass panes in a grid for apartment windows.",
+    "glass_end_walls": "Use glass panes or glass blocks for the cable-net facades. The cable grid is roughly 26x22 divisions.",
+    "interior_mural": "Use colored concrete, terracotta, or glazed terracotta for the Horn of Plenty ceiling art. Key colors: bright greens, oranges, reds, yellows on a lighter background.",
+    "ground_floor": "Open market hall with stalls - use slabs, stairs, and fence posts for market stall structures"
+  }
+}

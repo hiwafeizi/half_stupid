@@ -1,0 +1,472 @@
+{
+  "building": "De Rotterdam",
+  "architect": "OMA / Rem Koolhaas",
+  "year": 2013,
+  "real_dimensions": {
+    "height_m": 150,
+    "floors": 44,
+    "total_footprint_m": "107 x 36",
+    "gross_floor_area_m2": 162000
+  },
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "tower_layout": {
+    "description": "Three interconnected towers arranged east-west along the Wilhelminakade, sharing a 6-story plinth. Each tower is a stack of rectangular volumes that shift laterally at different heights, creating the signature 'vertical city' silhouette. The shifts occur along the north-south axis (depth direction), NOT east-west. When viewed from the river (south), the stacked blocks slide left and right.",
+
+    "west_tower": {
+      "program": "Primarily offices (lower) and residential apartments (upper)",
+      "real_width_m": 30,
+      "real_depth_m": 36,
+      "width_blocks": 31,
+      "depth_blocks": 36,
+      "shifts": [
+        {
+          "at_floor": "ground-6",
+          "at_height_blocks": "0-30",
+          "offset_x": 0,
+          "offset_z": 0,
+          "description": "Plinth zone - shared base, no offset, full 36-block depth"
+        },
+        {
+          "at_floor": "7-13",
+          "at_height_blocks": "30-44",
+          "offset_x": 0,
+          "offset_z": -4,
+          "description": "First tower block shifts 4 blocks north from plinth face. Office floors."
+        },
+        {
+          "at_floor": "14-25",
+          "at_height_blocks": "44-85",
+          "offset_x": 0,
+          "offset_z": 0,
+          "description": "Middle block returns to plinth alignment. Office floors transitioning to residential."
+        },
+        {
+          "at_floor": "26-44",
+          "at_height_blocks": "85-150",
+          "offset_x": 0,
+          "offset_z": 5,
+          "description": "Top block shifts 5 blocks south, cantilevering over the south facade. Residential apartments with river views."
+        }
+      ]
+    },
+
+    "mid_tower": {
+      "program": "Offices (lower), nhow Rotterdam hotel (upper)",
+      "real_width_m": 30,
+      "real_depth_m": 36,
+      "width_blocks": 31,
+      "depth_blocks": 36,
+      "shifts": [
+        {
+          "at_floor": "ground-6",
+          "at_height_blocks": "0-30",
+          "offset_x": 0,
+          "offset_z": 0,
+          "description": "Plinth zone - shared base, no offset"
+        },
+        {
+          "at_floor": "7-15",
+          "at_height_blocks": "30-51",
+          "offset_x": 0,
+          "offset_z": 4,
+          "description": "First tower block shifts 4 blocks south. Office floors."
+        },
+        {
+          "at_floor": "16-26",
+          "at_height_blocks": "51-88",
+          "offset_x": 0,
+          "offset_z": -5,
+          "description": "Middle block shifts 5 blocks north - the most dramatic offset in the building. Creates deep shadow gap on south side. Hotel floors begin."
+        },
+        {
+          "at_floor": "27-44",
+          "at_height_blocks": "88-150",
+          "offset_x": 0,
+          "offset_z": 2,
+          "description": "Top block shifts 2 blocks south from center. Hotel rooms (nhow Rotterdam)."
+        }
+      ]
+    },
+
+    "east_tower": {
+      "program": "Offices throughout, some residential at top",
+      "real_width_m": 30,
+      "real_depth_m": 36,
+      "width_blocks": 31,
+      "depth_blocks": 36,
+      "shifts": [
+        {
+          "at_floor": "ground-6",
+          "at_height_blocks": "0-30",
+          "offset_x": 0,
+          "offset_z": 0,
+          "description": "Plinth zone - shared base, no offset"
+        },
+        {
+          "at_floor": "7-17",
+          "at_height_blocks": "30-58",
+          "offset_x": 0,
+          "offset_z": 5,
+          "description": "First tower block shifts 5 blocks south. Office floors."
+        },
+        {
+          "at_floor": "18-28",
+          "at_height_blocks": "58-95",
+          "offset_x": 0,
+          "offset_z": -4,
+          "description": "Middle block shifts 4 blocks north, creating inverse rhythm to west tower. Office floors."
+        },
+        {
+          "at_floor": "29-44",
+          "at_height_blocks": "95-150",
+          "offset_x": 0,
+          "offset_z": 0,
+          "description": "Top block returns to plinth alignment. Upper office floors and some residential."
+        }
+      ]
+    },
+
+    "gap_between_towers_blocks": 7,
+    "total_footprint": "107 wide (31+7+31+7+31) x 36 deep",
+
+    "shift_design_intent": "OMA designed the shifts so that when viewed from the south (river side), each tower reads as a stack of 3-4 misaligned blocks. The shifts are all in the Z-axis (north-south / depth direction). No two adjacent blocks at the same height shift the same way - this creates the 'stacked boxes' effect. The building appears to be multiple smaller buildings jammed together vertically.",
+
+    "plan_coordinates": {
+      "west_tower_x_start": 0,
+      "west_tower_x_end": 30,
+      "gap_1_x": "31-37",
+      "mid_tower_x_start": 38,
+      "mid_tower_x_end": 68,
+      "gap_2_x": "69-75",
+      "east_tower_x_start": 76,
+      "east_tower_x_end": 106,
+      "total_x": 107,
+      "z_range": "0-35 (36 deep), shifts extend -5 to +5 from baseline"
+    }
+  },
+
+  "plinth_base": {
+    "height_blocks": 30,
+    "real_height_m": 30,
+    "floors": 6,
+    "footprint": "107 x 36 blocks - one continuous mass connecting all three towers",
+    "ground_hall": {
+      "height_blocks": 9,
+      "real_height_m": 8.5,
+      "features": "Double-height entrance hall running east-west through the plinth at ground level. Glass walls on north and south sides create a transparent passage. The hall connects to the Wilhelminakade waterfront promenade on the south and the city on the north.",
+      "minecraft_build": "Use 9-block-tall openings with glass panes on south and north faces at ground level. Leave interior hollow for the passage."
+    },
+    "facade_treatment": "Darker glass with heavier framing than the towers above. Use dark gray concrete or deepslate for the plinth mullion grid, with gray stained glass panels. The plinth reads as a solid base anchoring the shifting towers.",
+    "interior_program": "Ground floor: lobby, retail, restaurant entrances. Floors 2-3: congress/conference center. Floors 4-6: fitness center, parking access, mechanical.",
+    "roof_of_plinth": "At block height 30, the plinth roof becomes an outdoor terrace between the tower bases. In Minecraft, use smooth stone slabs for the terrace surface visible in the gaps between towers."
+  },
+
+  "facade_pattern": {
+    "real_module_width_m": 1.8,
+    "module_width_blocks": 2,
+    "mullion_representation": "Iron bars or lightning rods placed every 2 blocks as vertical mullions. The 1.8m real module rounds to 2 blocks at 1:1 scale. Each pair of facade columns is one module: glass pane block + iron bar block, repeating.",
+    "horizontal_spandrel": "At each floor line (every 3-4 blocks, matching floor height), place a strip of light gray concrete to represent the floor slab / horizontal spandrel panel. This creates the grid pattern: vertical mullions every 2 blocks, horizontal bands every 3-4 blocks.",
+
+    "office_zone": {
+      "floors": "7-25 (varies by tower)",
+      "pattern": "Standard curtain wall grid. Glass pane + iron bar alternating in 2-block modules. Clear/light blue stained glass. Mullions are regular and evenly spaced. Floor-to-ceiling glazing with narrow spandrel bands.",
+      "minecraft": "Row of [glass_pane, glass_pane, iron_bars, iron_bars] repeating in 2-block modules, with light_gray_concrete strip at floor level every 3-4 blocks."
+    },
+    "hotel_zone": {
+      "floors": "Mid tower floors 16-44",
+      "pattern": "Slightly different rhythm - some modules have opaque panels (for bathroom pods behind facade). Use occasional light gray concrete blocks mixed into the glass grid to represent solid panels. Creates a subtly denser, more closed appearance.",
+      "minecraft": "Same base grid as office but replace every 4th-5th glass module with light_gray_concrete to suggest hotel room bathroom walls."
+    },
+    "residential_zone": {
+      "floors": "West tower upper floors, east tower top floors",
+      "pattern": "Balcony indentations at some modules. Slightly recessed glass behind the mullion line. Some modules have operable windows (represented by open trapdoors or fence gates in Minecraft). Warmer appearance than office zones.",
+      "minecraft": "Base grid similar to office. Add occasional birch trapdoors (open) to suggest operable windows/balconies. Every 3rd-4th module, recess the glass pane by 1 block to create shadow depth."
+    },
+    "variation_approach": "At Minecraft scale, the three zones should be SUBTLY different - do not make them dramatically different colors. The real building reads as one unified glass volume. Differentiate by: (1) office = pure glass+iron grid, (2) hotel = same grid with occasional solid panels, (3) residential = same grid with occasional open trapdoors and recessed panels. The differences should only be noticeable on close inspection. At 1:1 scale the 2-block module width gives more room for detail within each bay."
+  },
+
+  "floor_by_floor": {
+    "floor_height_blocks": 3.4,
+    "floor_height_blocks_note": "Real floor-to-floor is ~3.4m. Alternate between 3 and 4 block floors to maintain correct cumulative height. Use 3 blocks for most floors, 4 blocks for every 3rd-4th floor.",
+    "total_floors": 44,
+    "total_height_blocks": 150,
+    "notable_floors": [
+      {
+        "floor": "ground",
+        "height_blocks": "0-9",
+        "description": "8.5m tall entrance hall. Build 9 blocks tall with glass walls on north and south. Continuous passage through plinth east-west. Use dark gray concrete frame with glass panes."
+      },
+      {
+        "floor": "2-3",
+        "height_blocks": "9-20",
+        "description": "Congress center / conference level within plinth. Solid plinth facade treatment continues."
+      },
+      {
+        "floor": "4-6",
+        "height_blocks": "20-30",
+        "description": "Upper plinth floors. Fitness, mechanical. Plinth facade ends at block 30."
+      },
+      {
+        "floor": "7 (plinth roof)",
+        "height_blocks": "30",
+        "description": "Critical transition: plinth ends, three separate towers begin. Terrace level visible between towers. Each tower shifts to its first offset position."
+      },
+      {
+        "floor": "13-17 (varies by tower)",
+        "height_blocks": "44-58",
+        "description": "First shift level. Each tower's second block begins. The tower volumes step in a different direction. This is the lower of the two dramatic shifts."
+      },
+      {
+        "floor": "25-29 (varies by tower)",
+        "height_blocks": "85-95",
+        "description": "Second shift level. Each tower's third block begins. The upper volumes shift again. Most dramatic visual moment of the building."
+      },
+      {
+        "floor": "44 (roof)",
+        "height_blocks": "150",
+        "description": "Flat roof. All three towers reach the same height. Use smooth stone slabs. Mechanical penthouses can be suggested with small 1-2 block-high structures on top."
+      }
+    ],
+    "shift_summary_table": {
+      "west_tower":  ["blocks 0-30: aligned", "blocks 30-44: Z-4", "blocks 44-85: aligned", "blocks 85-150: Z+5"],
+      "mid_tower":   ["blocks 0-30: aligned", "blocks 30-51: Z+4", "blocks 51-88: Z-5", "blocks 88-150: Z+2"],
+      "east_tower":  ["blocks 0-30: aligned", "blocks 30-58: Z+5", "blocks 58-95: Z-4", "blocks 95-150: aligned"]
+    }
+  },
+
+  "block_palette": {
+    "primary_facade": {
+      "glass": "Light Blue Stained Glass Panes - main glazing material",
+      "mullions": "Iron Bars - vertical mullion lines between glass modules (every 2 blocks)",
+      "spandrels": "Light Gray Concrete - horizontal floor bands every 3-4 blocks",
+      "alternative_glass": "Glass Panes (clear) - can mix with light blue for subtle variation"
+    },
+    "plinth_base": {
+      "frame": "Dark Gray Concrete or Polished Deepslate - heavier framing of plinth",
+      "glass": "Gray Stained Glass Panes - darker glass for plinth zone",
+      "ground_floor": "Smooth Stone - entrance hall floor",
+      "columns": "Polished Andesite or Dark Gray Concrete - structural columns in entrance hall"
+    },
+    "structural": {
+      "floor_slabs": "Smooth Stone Slabs - visible at shift points where floor plates are exposed",
+      "core_walls": "White Concrete - elevator/stair cores (visible through glass in some views)",
+      "terrace": "Smooth Stone Slabs - plinth roof terrace between towers"
+    },
+    "roof": {
+      "surface": "Smooth Stone Slabs - flat roof",
+      "mechanical": "Light Gray Concrete - rooftop mechanical units (small boxes)"
+    },
+    "accents": {
+      "residential_windows": "Birch Trapdoors (open) - operable window suggestion",
+      "hotel_solid_panels": "Light Gray Concrete - bathroom pod walls behind facade",
+      "entrance_canopy": "Stone Slabs - entrance overhang at ground level"
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "name": "Mark the footprint",
+      "description": "On a flat area, mark out the full 107x36 plinth footprint. Place markers at the three tower positions (blocks 0-30, 38-68, 76-106 on the X axis) and the two 7-block gaps between them. Use colored wool or concrete temporarily.",
+      "blocks_used": "Any markers (wool, concrete)",
+      "height_range": "ground level"
+    },
+    {
+      "step": 2,
+      "name": "Build the plinth (blocks 0-30)",
+      "description": "Build the continuous 107x36 plinth up to 30 blocks. At ground level, create the 9-block-tall entrance hall on the south face with glass walls. Use dark gray concrete framing with gray stained glass. Floors 2-6 of the plinth are more solid with smaller window openings. The plinth should read as one massive connected base.",
+      "blocks_used": "Dark gray concrete, gray stained glass panes, polished deepslate, smooth stone",
+      "height_range": "0-30"
+    },
+    {
+      "step": 3,
+      "name": "Mark tower shift positions",
+      "description": "Before building upward, mark where each tower's blocks will shift. On the plinth roof (block 30), outline each tower's first offset position. Refer to the shift table: West Z-4, Mid Z+4, East Z+5. Place colored markers at each shift point so you can build accurately.",
+      "blocks_used": "Colored wool markers (temporary)",
+      "height_range": "30"
+    },
+    {
+      "step": 4,
+      "name": "Build West Tower block 1 (blocks 30-44)",
+      "description": "Build the west tower (X: 0-30) from block 30 to block 44. This block is offset 4 blocks north (Z-4) from the plinth face. Width 31, depth 32 (slightly narrower than plinth depth due to offset). Apply office facade pattern: light blue glass panes + iron bars in 2-block modules, with light gray concrete spandrel every 3-4 blocks.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "30-44"
+    },
+    {
+      "step": 5,
+      "name": "Build Mid Tower block 1 (blocks 30-51)",
+      "description": "Build the mid tower (X: 38-68) from block 30 to block 51. This block shifts 4 blocks south (Z+4). Apply office facade pattern.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "30-51"
+    },
+    {
+      "step": 6,
+      "name": "Build East Tower block 1 (blocks 30-58)",
+      "description": "Build the east tower (X: 76-106) from block 30 to block 58. This block shifts 5 blocks south (Z+5). Apply office facade pattern.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "30-58"
+    },
+    {
+      "step": 7,
+      "name": "Build West Tower block 2 (blocks 44-85)",
+      "description": "Continue the west tower from block 44 to block 85. This block returns to the plinth alignment (Z offset 0). Transition from office to residential facade at approximately block 65: start adding occasional trapdoors and recessed panels.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete, birch trapdoors",
+      "height_range": "44-85"
+    },
+    {
+      "step": 8,
+      "name": "Build Mid Tower block 2 (blocks 51-88)",
+      "description": "Continue the mid tower from block 51 to block 88. This block shifts dramatically 5 blocks north (Z-5) - the most striking offset in the building. Apply hotel facade: same grid but with occasional solid light gray concrete panels replacing glass.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "51-88"
+    },
+    {
+      "step": 9,
+      "name": "Build East Tower block 2 (blocks 58-95)",
+      "description": "Continue the east tower from block 58 to block 95. This block shifts 4 blocks north (Z-4). Office facade pattern.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "58-95"
+    },
+    {
+      "step": 10,
+      "name": "Build West Tower block 3 (blocks 85-150)",
+      "description": "Build the west tower top block from 85 to 150. This block shifts 5 blocks south (Z+5) - creating the dramatic upper cantilever. Residential facade with trapdoors and recessed glass. This is the tallest single block section at 65 blocks.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete, birch trapdoors",
+      "height_range": "85-150"
+    },
+    {
+      "step": 11,
+      "name": "Build Mid Tower block 3 (blocks 88-150)",
+      "description": "Build the mid tower top block from 88 to 150. Shifts 2 blocks south (Z+2). Hotel facade continues to roof. Add occasional solid panels.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "88-150"
+    },
+    {
+      "step": 12,
+      "name": "Build East Tower block 3 (blocks 95-150)",
+      "description": "Build the east tower top block from 95 to 150. Returns to plinth alignment (Z offset 0). Office facade. Complete the three-tower silhouette.",
+      "blocks_used": "Light blue stained glass panes, iron bars, light gray concrete",
+      "height_range": "95-150"
+    },
+    {
+      "step": 13,
+      "name": "Flat roofs",
+      "description": "Cap all three towers at block 150 with smooth stone slabs. Add small 1-2 block-high mechanical penthouse boxes (3x3 or 5x5 light gray concrete) on each tower roof.",
+      "blocks_used": "Smooth stone slabs, light gray concrete",
+      "height_range": "150-152"
+    },
+    {
+      "step": 14,
+      "name": "Detail the shift transitions",
+      "description": "At each shift point, the exposed floor slab is visible as a horizontal ledge. Use smooth stone slabs to fill the gap where one block overhangs the one below. These ledges are critical to selling the shifted-block effect. Also fill in the underside of cantilevers with smooth stone. At 1:1 scale the ledges are 4-5 blocks deep, making them very visible.",
+      "blocks_used": "Smooth stone slabs, smooth stone",
+      "height_range": "various shift points"
+    },
+    {
+      "step": 15,
+      "name": "Fill gaps and terrace",
+      "description": "At the plinth roof level (block 30), the gaps between towers are visible as terraces. Place smooth stone slabs in these 7-block-wide gaps between the tower bases. Below the plinth roof, the gaps should be filled as the plinth is continuous.",
+      "blocks_used": "Smooth stone slabs",
+      "height_range": "30"
+    },
+    {
+      "step": 16,
+      "name": "Interior cores (optional)",
+      "description": "If you want the glass facade to look less empty from outside, place white concrete elevator/stair cores at the center of each tower (roughly 5x5 or 6x6 blocks). These are visible through the glass as light-colored columns. Adds realism. At 1:1 scale, the cores can include more detail such as elevator lobbies.",
+      "blocks_used": "White concrete",
+      "height_range": "0-150"
+    },
+    {
+      "step": 17,
+      "name": "Ground level finishing",
+      "description": "Complete the ground floor entrance hall. Ensure the 9-block-tall glass openings on the south face are clear and inviting. Add smooth stone floor, polished andesite columns spaced every 6-8 blocks. Place glowstone or sea lanterns in the ceiling of the entrance hall for illumination.",
+      "blocks_used": "Smooth stone, polished andesite, glowstone/sea lanterns, glass panes",
+      "height_range": "0-9"
+    },
+    {
+      "step": 18,
+      "name": "Surroundings",
+      "description": "Place water (representing the Nieuwe Maas river) along the south side. Add a flat quay/promenade 6-8 blocks wide between the building and the water using smooth stone. Optionally place the Erasmus Bridge visible to the west.",
+      "blocks_used": "Water, smooth stone, stone slabs",
+      "height_range": "ground level"
+    }
+  ],
+
+  "unique_challenges": {
+    "tower_shifts": {
+      "problem": "Making the offset look intentional at block scale, not like a build error",
+      "solution": "The shifts are 4-5 blocks at 1:1 scale, which are clearly visible and dramatic. Mark shift points with smooth stone slab ledges to make the step deliberate. The exposed floor plates at transitions are key - they show the shift was designed, not accidental. Build one tower fully before starting the next so you can see the rhythm."
+    },
+    "three_towers_alignment": {
+      "problem": "Keeping towers parallel with consistent 7-block gaps between them through 150 blocks of height",
+      "solution": "Use scaffolding pillars (temporary dirt or cobblestone columns) at the corners of each tower, rising to full height before building the facades. Mark the X-axis boundaries clearly at ground level. The gaps between towers should remain constant (7 blocks) at all heights - only the Z-axis shifts change."
+    },
+    "facade_monotony": {
+      "problem": "Breaking up a massive glass facade - 150 blocks tall of repetitive glass grid",
+      "solution": "Use the three-zone variation (office/hotel/residential) to create subtle differences. The shift points break the facade naturally. Alternate between clear glass panes and light blue stained glass panes in adjacent towers. The horizontal spandrel bands every 3-4 blocks create essential rhythm. Consider placing occasional glowstone behind glass for nighttime glow variation. At 1:1 scale the 2-block module width allows more detail per bay."
+    },
+    "plinth_transition": {
+      "problem": "Where the continuous base meets the three separate towers",
+      "solution": "The plinth roof (block 30) is the critical transition. Make the plinth facade darker and heavier than the towers. At block 30, place a clear horizontal line (slab or full block) before the towers begin. The 7-block gaps between towers should suddenly appear at this level, with terrace slabs visible in the gaps."
+    },
+    "height": {
+      "problem": "150 blocks is extremely tall - reaching close to Minecraft's build limit and difficult to build and check proportions",
+      "solution": "Build scaffolding/elevator columns first. Use ladders or water columns inside tower cores for access during construction. Build in stages (plinth, then each tower block from bottom up). Periodically fly up and check the profile from a distance - the shifted silhouette must read clearly from 200+ blocks away. Consider starting at Y=0 or a low Y level to ensure the 150-block height fits within the world height limit."
+    },
+    "cantilevers": {
+      "problem": "Shifted blocks that overhang create unsupported sections that look floating",
+      "solution": "In Minecraft blocks float, which actually helps here. Fill the underside of overhanging sections with smooth stone slabs to show the floor plate. The real building uses massive steel transfer structures at shift points - in Minecraft, the visible floor slab ledge at each transition sells this. At 1:1 scale the 4-5 block cantilevers are more dramatic and benefit from 2-3 rows of slab detailing underneath."
+    }
+  },
+
+  "views": {
+    "south_river_view": {
+      "description": "The iconic view from across the Nieuwe Maas river. Stand 150-200 blocks south on the water. All three towers should be visible with their shifts creating an irregular skyline. The plinth reads as a dark base, towers as lighter glass volumes above.",
+      "what_to_check": "Each tower should show 3-4 distinct blocks offset from each other. No two adjacent blocks (at the same height across different towers) should have the same Z-offset."
+    },
+    "west_elevation": {
+      "description": "Looking from the west (toward Erasmus Bridge direction), you see one tower in profile. The Z-axis shifts are most dramatic here - the stacked blocks slide north and south.",
+      "what_to_check": "The west tower's profile should show clear steps: aligned base, north shift, return to center, then south cantilever at top."
+    },
+    "east_elevation": {
+      "description": "Mirror of west view but showing the east tower profile. The shift pattern is different from the west tower.",
+      "what_to_check": "East tower profile: aligned base, south shift, north shift, return to center."
+    },
+    "north_city_view": {
+      "description": "From the city side (north), the building presents a more complex facade because all three towers and their shifts are visible in perspective. The gaps between towers create vertical shadow lines.",
+      "what_to_check": "The three 7-block gaps between towers should create clear vertical separations. Tower shifts should create an irregular, dynamic silhouette."
+    },
+    "aerial_top_down": {
+      "description": "Looking straight down, you see three rectangular towers (each 31x36 blocks) separated by 7-block gaps. At the plinth level, it is one continuous mass.",
+      "what_to_check": "The footprint should be cleanly rectangular at plinth level. Tower gaps should be consistent."
+    },
+    "detail_shift_point": {
+      "description": "Close up at any shift transition (e.g., block height 44 on west tower). The lower block should end, a smooth stone slab ledge should be visible, and the upper block should begin offset by 4-5 blocks in the Z direction.",
+      "what_to_check": "The shift must look deliberate. The exposed floor slab at the transition is essential. Without it, the shift looks like a mistake."
+    }
+  },
+
+  "dimensions_summary": {
+    "total_width_blocks": 107,
+    "total_depth_blocks": 36,
+    "total_height_blocks": 150,
+    "plinth_height_blocks": 30,
+    "tower_width_each_blocks": 31,
+    "tower_depth_each_blocks": 36,
+    "gap_width_blocks": 7,
+    "floor_height_blocks": 3.4,
+    "floor_height_blocks_note": "Alternate 3 and 4 block floors to average 3.4",
+    "max_shift_blocks": 5,
+    "facade_module_width_blocks": 2,
+    "ground_hall_height_blocks": 9,
+    "total_block_count_estimate": "Approximately 200,000-240,000 blocks for the full exterior shell"
+  },
+
+  "historical_context": {
+    "design_period": "1997-2013 (16 years from concept to completion)",
+    "concept": "Koolhaas conceived De Rotterdam as a 'vertical city' - a single building containing the program of an entire urban block. The three towers represent the density and mixed-use character of Rotterdam itself. The shifting blocks express the idea that different urban functions (living, working, leisure) occupy different volumes that stack and overlap but do not align perfectly.",
+    "name_origin": "Named after the SS Rotterdam, the famous Holland America Line ocean liner that was once the pride of Rotterdam's port. The building sits on the Wilhelminapier where the transatlantic liners once departed.",
+    "significance": "Largest building in the Netherlands by floor area (162,000 m2). A key piece of the Kop van Zuid redevelopment that transformed Rotterdam's former port area."
+  }
+}

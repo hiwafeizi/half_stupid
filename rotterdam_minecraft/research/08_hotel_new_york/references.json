@@ -1,0 +1,165 @@
+{
+  "building": "Hotel New York",
+  "location": "Koninginnenhoofd 1, Rotterdam, Netherlands (Wilhelminapier, Kop van Zuid)",
+  "original_name": "Kantoorgebouw Holland-Amerika Lijn",
+  "architects": "J. Muller & C.M. Droogleever Fortuyn (1901), expanded by J. Muller & C.B. van der Tak (1908, 1916, 1920)",
+  "style": "Jugendstil (Art Nouveau)",
+  "rijksmonument_number": 513872,
+  "notes_for_minecraft": {
+    "key_features": [
+      "Twin octagonal towers with green copper cupolas (north tower 1916, south tower 1917/1920)",
+      "Red brick facade with natural stone decorations and baseboards",
+      "38-meter clock tower with clock faces on all 4 sides",
+      "Wind vane shaped like a sailing ship on south tower",
+      "Weather vanes on all 4 sides of south tower",
+      "Four facade panels depicting male figures representing different continents",
+      "Wrought-iron staircases and railings",
+      "Balconies styled like ship railings",
+      "Roofline reminiscent of ocean liner funnels",
+      "Jugendstil ornamental details throughout"
+    ],
+    "color_palette": [
+      "Red brick walls",
+      "Green oxidized copper roofs/cupolas",
+      "Natural stone (light/cream) decorative elements and baseboards",
+      "Dark wrought iron railings and staircases"
+    ]
+  },
+  "image_sources": [
+    {
+      "description": "Exterior view of Hotel New York showing full facade with both towers",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rotterdam_Hotel_New_York_13.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Rotterdam_Hotel_New_York_13.JPG",
+      "credit": "Wikimedia Commons, CC BY 2.5",
+      "useful_for": "Overall building shape, tower proportions, facade layout"
+    },
+    {
+      "description": "Hotel New York in context with Kop van Zuid skyline - World Port Center, Montevideo tower",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rotterdam-Kop_van_Zuid,_World_Portcenter,_Montevideo_en_hotel_New_York_foto12_2011-01-09_14.12.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Rotterdam-Kop_van_Zuid%2C_World_Portcenter%2C_Montevideo_en_hotel_New_York_foto12_2011-01-09_14.12.JPG",
+      "credit": "Wikimedia Commons",
+      "useful_for": "Building scale relative to surroundings, waterfront context"
+    },
+    {
+      "description": "Full Wikimedia Commons category with 119 photos from multiple angles",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Hotel_New_York_(Rotterdam)",
+      "image_url": "BROWSE_CATEGORY_FOR_INDIVIDUAL_IMAGES",
+      "credit": "Various, Wikimedia Commons",
+      "useful_for": "Comprehensive reference - exterior, interior, details, towers, waterfront views"
+    },
+    {
+      "description": "Art Nouveau architectural details blog post with multiple close-up photos",
+      "source_url": "https://aboutartnouveau.wordpress.com/2012/09/09/hotel-new-york-rotterdam/",
+      "image_url": "VISIT_PAGE_FOR_DETAIL_PHOTOS",
+      "credit": "About Art Nouveau blog",
+      "useful_for": "Jugendstil ornaments, facade details, decorative elements close-ups"
+    },
+    {
+      "description": "Bluffton University architectural photo collection - multiple detailed images by Mary Ann Sullivan",
+      "source_url": "https://homepages.bluffton.edu/~sullivanm/netherlands/rotterdam/hollandamerika/hotel.html",
+      "image_url": "VISIT_PAGE_FOR_MULTIPLE_DETAIL_PHOTOS",
+      "credit": "Mary Ann Sullivan, Bluffton University",
+      "useful_for": "Detailed architectural photography of facade, towers, ornaments, stone carvings"
+    },
+    {
+      "description": "Hotel New York tower showing copper cupola and clock faces (Alamy stock)",
+      "source_url": "https://www.alamy.com/the-tower-of-the-historic-holland-america-line-office-building-rotterdam-image3782513.html",
+      "image_url": "STOCK_PHOTO_PREVIEW_ON_PAGE",
+      "credit": "Alamy Stock Photo",
+      "useful_for": "Tower detail, copper dome shape, clock face placement"
+    },
+    {
+      "description": "Hotel New York facade with Holland Amerika Line signage, full front view",
+      "source_url": "https://www.alamy.com/stock-photo-hotel-new-york-holland-amerika-line-rotterdam-netherlands-130415394.html",
+      "image_url": "STOCK_PHOTO_PREVIEW_ON_PAGE",
+      "credit": "Alamy Stock Photo",
+      "useful_for": "Front facade proportions, window patterns, entrance details"
+    },
+    {
+      "description": "Red brick facade contrasted with modern surroundings",
+      "source_url": "https://www.alamy.com/stock-photo-the-netherlands-rotterdam-brick-building-hotel-of-new-york-world-port-122920083.html",
+      "image_url": "STOCK_PHOTO_PREVIEW_ON_PAGE",
+      "credit": "Alamy Stock Photo",
+      "useful_for": "Brick color reference, building height and massing"
+    },
+    {
+      "description": "Hotel New York exterior photo set on Flickr (1901 building)",
+      "source_url": "https://www.flickr.com/photos/xbxg/49999530097",
+      "image_url": "VISIT_PAGE_FOR_PHOTO",
+      "credit": "Flickr user xbxg",
+      "useful_for": "High-resolution exterior photography"
+    },
+    {
+      "description": "Official hotel history page with historical and current photos",
+      "source_url": "https://hotelnewyork.com/hotel-new-york/history/",
+      "image_url": "VISIT_PAGE_FOR_PHOTOS",
+      "credit": "WestCord Hotel New York",
+      "useful_for": "Historical photos showing building evolution, period photographs"
+    },
+    {
+      "description": "Rotterdam 360 panoramic views and photos of Hotel New York",
+      "source_url": "https://www.rotterdam360.com/hotel-new-york-eng/",
+      "image_url": "VISIT_PAGE_FOR_PHOTOS",
+      "credit": "Rotterdam360",
+      "useful_for": "Multiple angles, panoramic context views"
+    },
+    {
+      "description": "Holland America Line fact sheet (PDF) with historical building information",
+      "source_url": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/History/hotel-new-york-fact-sheet-final-ada.pdf",
+      "image_url": "PDF_DOCUMENT",
+      "credit": "Holland America Line",
+      "useful_for": "Official historical facts, possibly historical images"
+    },
+    {
+      "description": "Open Monumentendag Rotterdam page for Hotel New York",
+      "source_url": "https://omdrotterdam.nl/monument/hotel-new-york/",
+      "image_url": "VISIT_PAGE_FOR_PHOTOS",
+      "credit": "Open Monumentendag Rotterdam",
+      "useful_for": "Heritage documentation, architectural description in Dutch"
+    },
+    {
+      "description": "Rijksmonumenten.nl official monument registry with photos",
+      "source_url": "https://rijksmonumenten.nl/monument/513872/voormalige-kantoorgebouw-holland-amerika-lijn/rotterdam/",
+      "image_url": "VISIT_PAGE_FOR_PHOTOS",
+      "credit": "Rijksmonumenten.nl",
+      "useful_for": "Official monument photos, architectural description, heritage documentation"
+    },
+    {
+      "description": "Rotterdam City Archive - Holland Amerika Lijn collection with historical photographs",
+      "source_url": "https://stadsarchief.rotterdam.nl/holland-amerika-lijn",
+      "image_url": "BROWSE_ARCHIVE_COLLECTION",
+      "credit": "Stadsarchief Rotterdam",
+      "useful_for": "Historical photos, original construction photos, period documents, possibly original architectural plans"
+    },
+    {
+      "description": "KLM Miniature House No. 97 - Hotel New York article with building history",
+      "source_url": "https://kingdombythesea.nl/site/en/klm-onthult-huisje-97/",
+      "image_url": "VISIT_PAGE_FOR_PHOTOS",
+      "credit": "MarkMedia & Art / Kingdom by the Sea",
+      "useful_for": "Building profile shape reference (KLM miniature reproduces key architectural features)"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Rotterdam City Archive likely holds original architectural plans by J. Muller and C.M. Droogleever Fortuyn",
+      "source_url": "https://stadsarchief.rotterdam.nl/holland-amerika-lijn",
+      "image_url": "SEARCH_ARCHIVE_FOR_PLANS",
+      "type": "plan/elevation",
+      "notes": "The Stadsarchief Rotterdam maintains the Holland Amerika Lijn corporate archive. Search their digital collection for building plans ('bouwtekeningen') of the kantoorgebouw."
+    },
+    {
+      "description": "Rijksdienst voor het Cultureel Erfgoed (RCE) may hold measured drawings for rijksmonument 513872",
+      "source_url": "https://www.cultureelerfgoed.nl/",
+      "image_url": "SEARCH_RCE_DATABASE",
+      "type": "elevation/plan/detail",
+      "notes": "The national heritage service often commissions or collects architectural surveys of rijksmonumenten. Search their beeldbank for monument number 513872."
+    },
+    {
+      "description": "Holland America Line fact sheet PDF may contain historical floor plans or elevations",
+      "source_url": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/History/hotel-new-york-fact-sheet-final-ada.pdf",
+      "image_url": "PDF_DOCUMENT",
+      "type": "elevation",
+      "notes": "PDF from Holland America Line's press kit. May contain historical imagery of the building."
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "building": "Van Nelle Factory (Van Nellefabriek)",
+  "location": "Rotterdam, Netherlands",
+  "architects": "Brinkman & Van der Vlugt (Leendert van der Vlugt), with Mart Stam and engineer J.G. Wiebenga",
+  "built": "1925-1931",
+  "unesco_status": "World Heritage Site since 2014",
+  "minecraft_notes": {
+    "stepped_silhouette": "8 floors tobacco / 5 floors coffee / 3 floors tea - descending from south to north",
+    "key_features": [
+      "Glass curtain wall facades (first prefabricated curtain wall in the world)",
+      "Sloping conveyor bridges connecting production to warehouse/logistics",
+      "Mushroom columns (flat slab, no beams) supporting open floor plates",
+      "Curved office/directors building at the front entrance",
+      "Cylindrical stair towers at ends of factory blocks",
+      "Internal pillar spacing: 6.50m grid",
+      "Building depth: ~19m (for daylight penetration)",
+      "Reinforced concrete frame with steel-and-glass skin"
+    ]
+  },
+  "image_sources": [
+    {
+      "description": "Exterior panorama - full stepped silhouette of factory complex from across the Schie canal",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Van_Nelle_Factory,_Rotterdam",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Van_Nelle_Fabriek_-_overview.jpg/1280px-Van_Nelle_Fabriek_-_overview.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Overall massing and stepped silhouette (8/5/3 floors)"
+    },
+    {
+      "description": "Aerial/overview showing full factory complex layout along the Schie",
+      "source_url": "https://en.wikipedia.org/wiki/Van_Nelle_Factory",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Van_Nelle_Ontwerpfabriek_01.jpg/1280px-Van_Nelle_Ontwerpfabriek_01.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Site layout, relationship between buildings, overall form"
+    },
+    {
+      "description": "Glass curtain wall facade detail showing steel-and-glass skin",
+      "source_url": "https://imaginoso.com/netherlands/rotterdam/van-nelle-factory-facade-detail-transport-bridges-0",
+      "image_url": "https://imaginoso.com/netherlands/rotterdam/van-nelle-factory-facade-detail-transport-bridges-0",
+      "credit": "imaginoso.com",
+      "useful_for": "Glass curtain wall detail, facade module pattern for Minecraft glazing"
+    },
+    {
+      "description": "Conveyor/transport bridges between production buildings and warehouse",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Skyways_at_Van_Nelle_Factory,_Rotterdam",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Van_Nelle_transport_bridge.jpg/1280px-Van_Nelle_transport_bridge.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Conveyor bridge design - sloping enclosed walkways between buildings"
+    },
+    {
+      "description": "Transport bridges from exterior showing diagonal connections between factory blocks",
+      "source_url": "https://imaginoso.com/netherlands/rotterdam/van-nelle-factory-transport-bridges",
+      "image_url": "https://imaginoso.com/netherlands/rotterdam/van-nelle-factory-transport-bridges",
+      "credit": "imaginoso.com",
+      "useful_for": "Conveyor bridge angles and placement on facade"
+    },
+    {
+      "description": "Interior showing mushroom columns and open floor plate",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Interior_of_Van_Nelle_Factory_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Interieur_van_Nelle_ontwerpfabriek.jpg/1280px-Interieur_van_Nelle_ontwerpfabriek.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Mushroom column shape and spacing for interior Minecraft build"
+    },
+    {
+      "description": "Curved directors/office building at factory entrance",
+      "source_url": "https://en.wikipedia.org/wiki/Van_Nelle_Factory",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Van_Nelle_Fabriek_curved_building.jpg/1280px-Van_Nelle_Fabriek_curved_building.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Curved office building form and glazing pattern"
+    },
+    {
+      "description": "Cylindrical glass staircase towers at ends of factory blocks",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Stairs_at_Van_Nelle_Factory_(Rotterdam)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trappenhuis_Van_Nellefabriek.jpg/800px-Trappenhuis_Van_Nellefabriek.jpg",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Circular stair tower design - key vertical accent element"
+    },
+    {
+      "description": "ArchDaily comprehensive photo gallery (24+ images) - exterior, interior, detail shots",
+      "source_url": "https://www.archdaily.com/1027267/van-nelle-factory-the-story-behinf-a-modernist-icon-in-rotterdam",
+      "image_url": "https://www.archdaily.com/1027267/van-nelle-factory-the-story-behinf-a-modernist-icon-in-rotterdam",
+      "credit": "ArchDaily (various photographers)",
+      "useful_for": "Comprehensive reference gallery - browse for all angles"
+    },
+    {
+      "description": "360-degree interactive views of factory exterior and interior",
+      "source_url": "https://360-architecture.com/van-nelle-factory/",
+      "image_url": "https://360-architecture.com/360/van-nelle/",
+      "credit": "360-architecture.com",
+      "useful_for": "Interactive 360 views - useful for understanding spatial relationships"
+    },
+    {
+      "description": "Arch Journey photo collection with multiple exterior and detail views",
+      "source_url": "https://archjourney.org/projects/van-nelle-factory/",
+      "image_url": "https://archjourney.org/projects/van-nelle-factory/",
+      "credit": "Arch Journey",
+      "useful_for": "High-quality architectural photography from multiple angles"
+    },
+    {
+      "description": "Vielfalt der Moderne detailed documentation with facade analysis",
+      "source_url": "https://vielfaltdermoderne.de/en/van-nelle-factory/",
+      "image_url": "https://vielfaltdermoderne.de/en/van-nelle-factory/",
+      "credit": "Vielfalt der Moderne",
+      "useful_for": "Detailed facade documentation and architectural analysis"
+    },
+    {
+      "description": "Declad - modernist classic with detailed construction photos",
+      "source_url": "https://www.declad.com/the-van-nelle-factory-a-modernist-architectural-classic",
+      "image_url": "https://www.declad.com/the-van-nelle-factory-a-modernist-architectural-classic",
+      "credit": "declad.com",
+      "useful_for": "Cladding and facade construction details"
+    },
+    {
+      "description": "UNESCO World Heritage photo gallery",
+      "source_url": "https://whc.unesco.org/en/list/1441/gallery/",
+      "image_url": "https://whc.unesco.org/en/list/1441/gallery/",
+      "credit": "UNESCO / various photographers",
+      "useful_for": "Official heritage documentation photos"
+    },
+    {
+      "description": "Official Van Nelle Design Factory website with current photos",
+      "source_url": "https://www.vannellefabriekrotterdam.com/en/home/",
+      "image_url": "https://www.vannellefabriekrotterdam.com/en/home/",
+      "credit": "Van Nelle Fabriek Rotterdam",
+      "useful_for": "Current state of the building, event/rental photos showing interior spaces"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "WikiArquitectura - plans, drawings and technical data collection",
+      "source_url": "https://en.wikiarquitectura.com/building/van-nelle-factory/",
+      "image_url": "https://en.wikiarquitectura.com/building/van-nelle-factory/",
+      "type": "plan/elevation/section",
+      "notes": "Best single source for architectural drawings - includes floor plans, elevations, and sections. Scroll to 'Drawings' section."
+    },
+    {
+      "description": "METALOCUS article with original Brinkman & Van der Vlugt drawings and plans",
+      "source_url": "https://www.metalocus.es/en/news/new-objectivity-van-nelle-fabriek-brinkman-van-der-vlugt",
+      "image_url": "https://www.metalocus.es/en/news/new-objectivity-van-nelle-fabriek-brinkman-van-der-vlugt",
+      "type": "plan/elevation/detail",
+      "notes": "Historical article with reproductions of original architectural drawings"
+    },
+    {
+      "description": "Archiweb.cz technical documentation with plans and sections",
+      "source_url": "https://www.archiweb.cz/en/b/tovarna-van-nelle",
+      "image_url": "https://www.archiweb.cz/en/b/tovarna-van-nelle",
+      "type": "plan/elevation/cross-section",
+      "notes": "Czech architecture database with technical drawings and measurements"
+    },
+    {
+      "description": "Architectuul project page with drawings and technical details",
+      "source_url": "https://architectuul.com/architecture/van-nelle-factory",
+      "image_url": "https://architectuul.com/architecture/van-nelle-factory",
+      "type": "plan/elevation",
+      "notes": "Architectural database entry with technical documentation"
+    },
+    {
+      "description": "Tumblr architectural site with floor plan reproductions",
+      "source_url": "https://thearchitecturalsite.tumblr.com/post/157436197579/brinkman-van-der-vlugt-van-nelle-factory",
+      "image_url": "https://thearchitecturalsite.tumblr.com/post/157436197579/brinkman-van-der-vlugt-van-nelle-factory",
+      "type": "plan",
+      "notes": "Blog post with floor plan images from architectural publications"
+    },
+    {
+      "description": "TU Delft case study with architectural analysis",
+      "source_url": "https://www.tudelft.nl/en/architecture-and-the-built-environment/research/research-stories/respectful-redesign-is-a-true-craft/case-van-nelle-factory",
+      "image_url": "https://www.tudelft.nl/en/architecture-and-the-built-environment/research/research-stories/respectful-redesign-is-a-true-craft/case-van-nelle-factory",
+      "type": "plan/detail",
+      "notes": "Academic analysis from Delft University of Technology architecture faculty"
+    }
+  ],
+  "wikimedia_commons_categories": {
+    "main": "https://commons.wikimedia.org/wiki/Category:Van_Nelle_Factory,_Rotterdam",
+    "interior": "https://commons.wikimedia.org/wiki/Category:Interior_of_Van_Nelle_Factory_(Rotterdam)",
+    "skyways": "https://commons.wikimedia.org/wiki/Category:Skyways_at_Van_Nelle_Factory,_Rotterdam",
+    "stairs": "https://commons.wikimedia.org/wiki/Category:Stairs_at_Van_Nelle_Factory_(Rotterdam)",
+    "notes": "Main category has 215+ files. Browse these categories directly for the most comprehensive CC-licensed image collection."
+  },
+  "search_notes": "WebFetch was blocked during collection, so some image_url fields point to gallery/article pages rather than direct image files. Visit the source_url pages to find and download specific images. Wikimedia Commons URLs use the pattern: https://upload.wikimedia.org/wikipedia/commons/thumb/[hash]/[filename]/[width]px-[filename]. The WikiArquitectura page is the single best source for architectural drawings (plans, elevations, sections)."
+}

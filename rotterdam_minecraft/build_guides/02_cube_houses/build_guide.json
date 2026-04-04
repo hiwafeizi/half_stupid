@@ -1,0 +1,293 @@
+{
+  "building": "Cube Houses (Kubuswoningen)",
+  "architect": "Piet Blom",
+  "year": "1982-1984",
+  "location": "Overblaak 70, Rotterdam",
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "single_cube_construction": {
+    "description": "How to build ONE tilted cube on its hexagonal pylon. The real cube is 7.5m per side, tilted 54.7 degrees so one vertex points straight down into the pylon. At 1:1 scale the cube portion is 12 blocks tall (from bottom vertex to top vertex, matching the real 12.5m cube height when tilted, which with the 10-block pylon gives the real 22m total height) and 11 blocks wide at the widest diagonal.",
+    "tilt_approach": {
+      "real_angle_degrees": 54.7,
+      "minecraft_approximation": "Diamond orientation: rotate the cube 45 degrees in plan view so it sits on a corner like a diamond. In Minecraft you cannot do a true 54.7-degree tilt, so we approximate by building the cube as a diamond shape in the XZ plane (rotated 45 degrees) and stepping the walls vertically to suggest the vertical tilt. The result looks like a square rotated 45 degrees when viewed from above, with the bottom tapering to a point and the top forming an inverted pyramid peak.",
+      "block_by_block_method": "Build layer by layer from bottom vertex upward. Each layer is a diamond (square rotated 45 degrees). Start with a single block at the bottom vertex, expand by 1 block on each side per layer for the lower half, hold width constant through the middle floors, then contract by 1 block per side for the upper pyramid. Use stairs and slabs on the outer edges to soften the staircase effect and better approximate the angled surfaces."
+    },
+    "layer_by_layer": [
+      {
+        "layer": 1,
+        "y_offset": 0,
+        "description": "Bottom vertex - single point where cube meets pylon top",
+        "footprint": "1x1 (single yellow concrete block centered on pylon)",
+        "notes": "This is the lowest point of the tilted cube, sitting directly on top of the hexagonal pylon"
+      },
+      {
+        "layer": 2,
+        "y_offset": 1,
+        "description": "First expansion ring",
+        "footprint": "3x3 diamond (rotated square): 1 block at each cardinal direction from center = 5 blocks total in a plus/cross shape",
+        "notes": "Use yellow concrete. Add yellow concrete stairs on the 4 diagonal corners facing outward to smooth the expansion"
+      },
+      {
+        "layer": 3,
+        "y_offset": 2,
+        "description": "Second expansion - Level 1 floor begins",
+        "footprint": "5x5 diamond: 13 blocks total forming a filled diamond",
+        "notes": "This is the FLOOR of Level 1 (entry/living room). Use oak planks for the interior floor, yellow concrete for the outer ring. Place glass panes for lower windows starting here"
+      },
+      {
+        "layer": 4,
+        "y_offset": 3,
+        "description": "Level 1 upper wall - approaching full width",
+        "footprint": "7x7 diamond: 25 blocks. The diamond is 7 blocks from point to point on each axis",
+        "notes": "Yellow concrete walls on perimeter, oak planks interior. Windows (glass panes) on all 4 diamond faces - 2 windows per face. Kitchen in one corner (furnace, crafting table, cauldron), living area open plan"
+      },
+      {
+        "layer": 5,
+        "y_offset": 4,
+        "description": "Maximum width reached - Level 2 floor (bedrooms)",
+        "footprint": "9x9 diamond: 41 blocks. 9 blocks from point to point",
+        "notes": "Oak plank floor for Level 2. Place oak plank ceiling for Level 1 below. Interior partitioned: 2 bedrooms (beds, chests), bathroom (cauldron, soul sand for dark floor), small living nook"
+      },
+      {
+        "layer": 6,
+        "y_offset": 5,
+        "description": "Level 2 mid wall - widest band",
+        "footprint": "11x11 diamond: 61 blocks across. 11 blocks point to point. Maximum width.",
+        "notes": "Yellow concrete walls on perimeter (2-block-thick shell). Windows on all 4 faces - 3 windows per face (these face partly skyward giving the distinctive angled-window look). Interior bedroom walls using oak planks or stripped oak"
+      },
+      {
+        "layer": 7,
+        "y_offset": 6,
+        "description": "Level 2 upper wall - equator of the cube",
+        "footprint": "11x11 diamond: maximum width maintained",
+        "notes": "Yellow concrete perimeter. This is the widest part of the cube - the 'equator'. Windows continue - 2 per face. Place oak plank ceiling slab for Level 2 / floor for Level 3"
+      },
+      {
+        "layer": 8,
+        "y_offset": 7,
+        "description": "Level 3 floor - pyramid room begins contracting",
+        "footprint": "9x9 diamond: beginning to contract inward. 41 blocks",
+        "notes": "Level 3 pyramid room floor (oak planks). The walls start angling inward. This is the panoramic room with 18 windows total. Place 4-5 glass pane windows per face on this layer"
+      },
+      {
+        "layer": 9,
+        "y_offset": 8,
+        "description": "Level 3 mid - pyramid narrows",
+        "footprint": "7x7 diamond: 25 blocks",
+        "notes": "Yellow concrete walls contracting. Windows continue - 4 glass panes per face (angled skyward). Interior is a single open room - solarium / bedroom / garden"
+      },
+      {
+        "layer": 10,
+        "y_offset": 9,
+        "description": "Level 3 upper - pyramid narrows further",
+        "footprint": "5x5 diamond: 13 blocks",
+        "notes": "Yellow concrete. Final windows near the peak - 1 glass pane per face. Use stairs on diagonal edges"
+      },
+      {
+        "layer": 11,
+        "y_offset": 10,
+        "description": "Near-peak",
+        "footprint": "3x3 diamond: 5 blocks in cross/plus shape",
+        "notes": "Yellow concrete with stairs on edges to taper smoothly to the peak"
+      },
+      {
+        "layer": 12,
+        "y_offset": 11,
+        "description": "Top vertex - peak of the cube",
+        "footprint": "1x1 (single yellow concrete block)",
+        "notes": "The apex. Optionally use a lightning rod or end rod for a sharp point"
+      }
+    ],
+
+    "interior_levels": {
+      "level_1_entry": {
+        "height_blocks": 2,
+        "layout": "Diamond-shaped open plan. The floor is triangular/diamond when viewed from above. Kitchen in one corner (south-east): furnace, crafting table, barrel for storage, cauldron as sink. Living room takes the remaining open space. Narrow wooden staircase (oak stairs) in the pylon-side corner leading up from the entry below and continuing to Level 2. Small toilet/WC tucked under the stair (trapdoor entrance).",
+        "function": "Entry level, living room, open kitchen, WC",
+        "blocks": "Floor: oak_planks. Walls interior: stripped_oak_wood. Kitchen: furnace, crafting_table, barrel, cauldron. Stairs: oak_stairs"
+      },
+      "level_2_bedrooms": {
+        "height_blocks": 3,
+        "layout": "Diamond floor plan divided into rooms by interior oak plank walls. Two bedrooms occupy the two wider corners (each fits a bed and a chest). A small bathroom occupies one narrow corner (cauldron, tripwire hook as towel rack). A small sitting area / landing in the remaining corner with the staircase continuing up. Windows on all 4 faces angle partly toward the sky - distinctive feature.",
+        "function": "Two bedrooms, bathroom, small living area",
+        "blocks": "Floor: oak_planks. Partition walls: oak_planks or stripped_oak_log. Beds: white_bed. Storage: chest, barrel. Bathroom: cauldron, tripwire_hook, stone_button (tap)"
+      },
+      "level_3_pyramid": {
+        "height_blocks": 4,
+        "layout": "Single open pyramidal room tapering to the peak. The walls angle inward on all sides creating a three-sided pyramid shape. 18 windows (glass panes) wrap around all faces giving panoramic views in every direction including skyward. Used as a sun room, children's bedroom, or rooftop garden. Place flower pots with flowers, a daybed (bed + carpet), or a small desk (oak stairs + trapdoor).",
+        "function": "Panoramic solarium / spare bedroom / rooftop garden",
+        "windows": 18,
+        "blocks": "Floor: oak_planks. Walls: yellow_concrete (exterior visible through windows). Windows: glass_pane (18 total, distributed 4-5 per diamond face across multiple layers). Decoration: flower_pot, potted plants, carpet, daylight_detector on top",
+        "notes": "The 18 windows are spread across the 3-4 contracting layers of the pyramid. Each of the 4 diamond faces gets approximately 4-5 windows (some faces share edges with adjacent cubes and have fewer windows there)"
+      }
+    },
+
+    "windows": {
+      "per_face_count": "6-8 windows per exposed face, distributed across all 3 interior levels",
+      "placement_pattern": "Windows are placed in the yellow concrete wall shell at regular intervals. Level 1 has 2 windows per face (lower, angled toward street). Level 2 has 2-3 windows per face (mid-height, angled partly skyward). Level 3 pyramid has 4-5 windows per face across contracting layers (angled skyward, panoramic). All windows are glass_pane set into the yellow concrete wall.",
+      "top_pyramid_windows": 18,
+      "total_per_cube_approximate": 28,
+      "shared_wall_note": "Faces shared with adjacent cubes have NO windows - only exposed outer faces get glazing",
+      "minecraft_block": "glass_pane (clear) or light_gray_stained_glass_pane for a slight tint"
+    }
+  },
+
+  "hexagonal_pylon": {
+    "description": "Each cube sits atop a hexagonal concrete pylon (the 'tree trunk'). Real pylons are approximately 3-4m across and 9.5m tall (10 blocks at 1:1 scale), constructed from three concrete pillars joined by six cellular brick walls forming a hexagonal cross-section. The pylon contains the entrance door at ground level and the internal staircase leading up to Level 1.",
+    "cross_section_pattern": [
+      "A hexagon in Minecraft is approximated as a 5-wide shape. Cross-section pattern (top-down, one layer):",
+      "Row 1:  . X X X .  (3 blocks centered)",
+      "Row 2:  X X X X X  (5 blocks full width)",
+      "Row 3:  X X . X X  (hollow center for staircase - or solid if preferred)",
+      "Row 4:  X X X X X  (5 blocks full width)",
+      "Row 5:  . X X X .  (3 blocks centered)",
+      "This gives a rough hexagonal profile at 5 blocks wide."
+    ],
+    "height_blocks": 10,
+    "width_blocks": 5,
+    "layers": [
+      {
+        "layer_range": "Ground level (Y+0)",
+        "pattern": "Same hexagonal cross-section as above. One face has a 1x2 opening for the entrance door (use oak_door). Interior has the start of a spiral stair (oak_stairs).",
+        "block": "light_gray_concrete"
+      },
+      {
+        "layer_range": "Y+1 through Y+8 (8 layers)",
+        "pattern": "Repeat the hexagonal cross-section. Interior contains the spiral staircase (oak_stairs winding upward). Each layer rotates the stair position by 90 degrees to spiral up.",
+        "block": "light_gray_concrete walls, oak_stairs interior"
+      },
+      {
+        "layer_range": "Y+9 (top of pylon, transition to cube)",
+        "pattern": "Hexagonal cross-section transitions to the cube bottom vertex. The center block becomes the anchor for the cube's bottom vertex (layer 1 of cube). Surround with light_gray_concrete slab cap.",
+        "block": "light_gray_concrete with light_gray_concrete_slab cap"
+      }
+    ],
+    "ground_floor_use": "The pylon ground floor contains only the entrance door and narrow staircase. The open space BETWEEN pylons forms the pedestrian walkway area. The pylons are spaced apart with open air between them, creating a covered ground-level public space.",
+    "materials": "Reinforced concrete in reality. In Minecraft: light_gray_concrete for the pylon shell, oak_stairs for the interior spiral staircase, oak_door for the entrance."
+  },
+
+  "complex_layout": {
+    "total_cubes": 40,
+    "small_cubes": 38,
+    "super_cubes": 2,
+    "arrangement": "The 38 small cubes are arranged in a continuous linear string along Overblaak Street, forming an elongated zigzag/staggered row. The cubes are rotated 45 degrees in plan, so adjacent cubes touch at their diamond edges, creating a continuous chain. Two super-cubes anchor the ends of the main string. The complex spans across the Blaak road, functioning as a pedestrian bridge.",
+    "row_description": "In plan view (top-down), the cubes form a gentle S-curve or zigzag along Overblaak. Since each cube is a diamond in plan, they tessellate by sharing edges: cube A's east point touches cube B's west point. This creates a chain of diamonds. The string bends at several points, forming clusters of 6-10 cubes in short rows connected at angles. There are roughly 3-4 row segments connected by bends.",
+    "spacing_between_cubes_blocks": 0,
+    "shared_walls_detail": "Adjacent cubes share one diamond edge (the wall where their 45-degree-rotated squares meet). In Minecraft, this means two adjacent cubes share a 1-block-thick wall along one diagonal edge. The shared wall has NO windows. Build the shared wall once using yellow_concrete - it serves as the interior partition between two dwelling units.",
+    "super_cubes": {
+      "count": 2,
+      "location": "At each end of the main linear string of small cubes",
+      "size": "Approximately 1.5x the dimensions of a regular cube. In Minecraft: 17x17 diamond footprint at widest vs 11x11 for regular cubes, and approximately 18 blocks tall for the cube portion",
+      "current_use": "One super-cube is the Stayokay youth hostel (formerly school of architecture). The other was commercial space, later converted to transitional social housing.",
+      "build_note": "Follow the same diamond-orientation layer-by-layer approach but scale up. Bottom vertex 1x1, expand by 1 per layer but continue expanding for more layers before reaching maximum width, then contract. Interior has more rooms and higher ceilings."
+    },
+    "pedestrian_area_below": {
+      "description": "The ground level beneath the elevated cubes is an open public space. The pylons support the cubes above while the area between pylons is open-air, forming a covered pedestrian promenade. The Overblaak walkway at the base contains four small squares and retail spaces for small businesses. The concept was inspired by the Ponte Vecchio in Florence - a pedestrian bridge with shops.",
+      "minecraft_build": "Build a flat platform of smooth_stone or stone_brick_slab at ground level (Y=0 to Y=1). Place the hexagonal pylons rising from this platform. The space between pylons is open. Add market stalls using oak_fence + oak_slab awnings, barrel storage, item_frame displays, and lantern lighting. Place flower pots and benches (oak_stairs) for atmosphere.",
+      "dimensions": "The walkway platform is approximately 8-10 blocks wide running the full length of the complex (roughly 200 blocks long for all 38+2 cubes)"
+    },
+    "connection_to_blaak": {
+      "description": "Blaak metro/train station sits directly beneath and beside the cube house complex. The complex spans across the Blaak road as a pedestrian overpass, connecting the Oude Haven (Old Port) to the city center. The Markthal (market hall) is immediately adjacent to the south-west. Blaak station entrance is less than 1 minute walk.",
+      "minecraft_build": "If building the full Rotterdam scene, place the cube house complex as an elevated structure with a road (gray_concrete) passing underneath at ground level. The Blaak station can be represented as a sunken rail line (powered_rail + rail) running perpendicular beneath the complex. Connect to the Markthal build (building 03) via a ground-level path to the south-west."
+    }
+  },
+
+  "block_palette": {
+    "cube_walls_primary": "yellow_concrete",
+    "cube_walls_accent": "yellow_terracotta (for subtle variation on some panels)",
+    "cube_trim": "gray_concrete (thin trim lines between panels - use gray_concrete buttons or gray_concrete on edges)",
+    "cube_edge_smoothing": "yellow_concrete_stairs and yellow_concrete_slab (to soften the staircase edges of the diamond shape)",
+    "pylon": "light_gray_concrete",
+    "pylon_cap": "light_gray_concrete_slab",
+    "windows": "glass_pane (clear)",
+    "window_frames": "light_gray_stained_glass_pane (optional subtle frame effect)",
+    "walkway_floor": "smooth_stone_slab or stone_brick_slab",
+    "walkway_accents": "polished_andesite",
+    "interior_floors": "oak_planks",
+    "interior_walls": "stripped_oak_log or oak_planks",
+    "interior_stairs": "oak_stairs",
+    "roof_top_vertex": "yellow_concrete (single block) topped with lightning_rod or end_rod for a sharp point",
+    "bottom_vertex": "yellow_concrete (single block) sitting on the pylon cap",
+    "market_stalls": "oak_fence, oak_slab, barrel, lantern, item_frame",
+    "entrance_door": "oak_door",
+    "interior_doors": "oak_door or oak_trapdoor"
+  },
+
+  "build_order": [
+    "Step 1: Plan the layout on the ground. Mark out the positions of all 40 pylons in a chain. In plan view each cube center is spaced ~11 blocks apart (diamond-point to diamond-point). Use wool or concrete markers to lay out the S-curve / zigzag arrangement. The total chain runs approximately 200+ blocks in length.",
+    "Step 2: Build the ground-level pedestrian platform. Lay smooth_stone_slab across the full footprint at Y=63 (or your chosen ground level). Make it 10 blocks wide and the full length of the complex. Leave the road gap if building the Blaak road beneath.",
+    "Step 3: Build the first hexagonal pylon. At the first marked position, build the 5-wide hexagonal cross-section column from Y=63 up 10 blocks to Y=73. Include the entrance door and interior spiral staircase (oak_stairs). Cap with light_gray_concrete_slab.",
+    "Step 4: Build the first tilted cube. Starting at Y=73 (top of pylon), place the bottom vertex (1x1 yellow_concrete). Build upward layer by layer following the 12-layer diamond expansion/contraction pattern. Place glass_pane windows in the walls at the levels specified. Use yellow_concrete_stairs on diagonal edges to smooth the profile.",
+    "Step 5: Furnish the first cube interior. Add oak_plank floors at Level 1 (Y+2 to Y+3), Level 2 (Y+4 to Y+6), and Level 3 (Y+7 to Y+10). Place interior partition walls, furniture (beds, crafting tables, furnaces, cauldrons, chests), and the connecting stairs between levels.",
+    "Step 6: Duplicate the cube+pylon unit. Once you have perfected one cube, use structure blocks (/structure save) to save the template. Then paste it at each marked pylon position along the chain. Alternatively, use WorldEdit //copy and //paste with rotation adjustments for bends in the chain.",
+    "Step 7: Adjust shared walls. Where adjacent cubes touch (diamond edge to diamond edge), remove duplicate wall blocks so they share a single 1-block-thick wall. Remove windows from shared walls.",
+    "Step 8: Build the two super-cubes at each end. Follow the same diamond approach but scale up to 17x17 diamond maximum width and approximately 18 layers. Pylon is proportionally wider (7-block hexagon). Interior has additional rooms.",
+    "Step 9: Build the pedestrian market area. Between the pylons at ground level, add market stalls (oak_fence posts with oak_slab roofs, barrels, item_frames with items, lanterns). Add benches (oak_stairs), flower_pots, and path lighting.",
+    "Step 10: Add the road beneath (optional). If modeling the Blaak road, build a gray_concrete road at Y=60 (3 blocks below the walkway platform), 7 blocks wide, running perpendicular to the complex. The cube complex bridges over it.",
+    "Step 11: Finishing details. Add the Blaaktoren (Pencil Tower) nearby as a hexagonal 13-story tower if desired. Add connecting paths to adjacent builds (Markthal, Oude Haven waterfront). Place lighting (lanterns, sea_lanterns recessed in ceilings) throughout the complex."
+  ],
+
+  "unique_challenges": {
+    "tilt_approximation": {
+      "problem": "The real cubes are tilted 54.7 degrees from horizontal (one vertex pointing straight down). Minecraft's block grid only allows 90-degree and 45-degree angles natively.",
+      "solution": "Use the 45-degree plan rotation (diamond orientation) as the primary approximation. This captures the most recognizable visual feature: the row of yellow diamonds on stilts. The vertical tilt is approximated by the expanding/contracting layer pattern (bottom vertex -> wide middle -> top vertex). Use stairs and slabs on diagonal edges to soften the staircase stepping. From a distance, this reads convincingly as tilted cubes.",
+      "alternative": "For a more literal interpretation, you could build the cubes axis-aligned (normal squares) and rely on the yellow color + pylon supports to convey the design. However, the diamond orientation is strongly recommended as it captures the iconic silhouette."
+    },
+    "repeating_pattern": {
+      "problem": "Building 38 identical cubes by hand is extremely tedious.",
+      "solution": "Build one perfect cube+pylon unit, then use structure blocks (vanilla Minecraft, max 48x48x48) or WorldEdit (//copy, //paste) to replicate it. Save the template with /structure save minecraft:cube_house ~ ~ ~ ~15 ~22 ~15. For bends in the chain, you may need to //rotate the pasted structure. Mark all 40 positions first, then paste systematically."
+    },
+    "shared_walls": {
+      "problem": "Adjacent diamond-oriented cubes overlap at their touching edges. Building them independently creates double-thick walls.",
+      "solution": "After pasting two adjacent cubes, remove one layer of wall blocks along the shared edge. The shared wall should be exactly 1 block thick of yellow_concrete with no windows. Interior doors (oak_door) can connect units if desired for the museum/hostel sections."
+    },
+    "interior_usability": {
+      "problem": "The angled walls (expanding/contracting diamond) make interior space irregular. Corners of the diamond are very narrow and hard to furnish.",
+      "solution": "Place functional blocks (beds, chests, crafting tables) in the wider center of each level. Use the narrow diamond corners for small utility items (flower pots, single chests, redstone components). The Level 2 bedroom level works best with beds placed along the wider mid-section. Accept that ~25% of floor area is unusable narrow corners, just like the real building."
+    },
+    "super_cubes": {
+      "problem": "The 2 super-cubes are larger but follow the same geometry. Scaling up the diamond pattern while maintaining proportions.",
+      "solution": "Use a 17-block maximum diamond width instead of 11. Expand for more layers (7-8 expanding layers instead of 4-5) before reaching max width. The pylon should be a 7-block-wide hexagon instead of 5. Interior can have 4 levels instead of 3 due to the extra height. The super-cubes serve as public/commercial spaces so furnish with more open floor plans."
+    },
+    "chain_bending": {
+      "problem": "The real complex follows a gentle S-curve along Overblaak. Rotated diamond cubes need to chain at varying angles.",
+      "solution": "At bend points, rotate the diamond orientation by 45 degrees so the next segment of the chain runs in a different cardinal direction. The connecting cube at the bend shares edges with cubes from both directions. Plan the bends carefully in the initial layout phase (Step 1)."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "Stand at ground level about 30-40 blocks away, looking along the length of the chain from one end. This gives the iconic perspective of a row of yellow diamonds receding into the distance on their grey stilts. The Oude Haven (old harbor) side gives the best real-world view.",
+    "key_silhouette": "Row of bright yellow diamond shapes perched on slender grey hexagonal columns, with open pedestrian space beneath. The top vertices create a jagged skyline of upward-pointing peaks. The bottom vertices taper down to meet the pylons.",
+    "night_view": "Place sea_lantern or glowstone behind some windows (recessed 1 block into the wall) and lanterns in the market area below. At night, the cubes glow warmly from within, which is a signature look of the real Kubuswoningen.",
+    "aerial_view": "From above, the complex appears as a chain of rotated squares (diamonds) linked edge to edge, forming a sinuous line across the landscape. Each diamond's top vertex (single block + lightning rod) creates a dotted line of peaks."
+  },
+
+  "dimensions_summary": {
+    "single_cube_height_blocks": 12,
+    "single_pylon_height_blocks": 10,
+    "total_single_unit_height_blocks": 22,
+    "cube_max_width_blocks": 11,
+    "pylon_width_blocks": 5,
+    "super_cube_max_width_blocks": 17,
+    "super_cube_height_blocks": 18,
+    "complex_total_length_blocks": "approximately 220 (all 40 units chained)",
+    "walkway_width_blocks": 10,
+    "blocks_per_cube_approximate": 380,
+    "blocks_per_pylon_approximate": 175,
+    "total_blocks_all_40_units_approximate": 22200
+  },
+
+  "material_shopping_list": {
+    "yellow_concrete": "approximately 12000 blocks (cube walls for 38 small + 2 super cubes)",
+    "yellow_concrete_stairs": "approximately 2000 (edge smoothing)",
+    "yellow_concrete_slab": "approximately 500 (edge details)",
+    "light_gray_concrete": "approximately 7000 (40 pylons at ~175 each)",
+    "light_gray_concrete_slab": "approximately 200 (pylon caps)",
+    "glass_pane": "approximately 800 (windows across all cubes, ~20 per exposed cube face)",
+    "oak_planks": "approximately 4000 (interior floors and walls)",
+    "oak_stairs": "approximately 1200 (interior staircases and furniture)",
+    "oak_door": "approximately 80 (entrance doors and interior doors)",
+    "smooth_stone_slab": "approximately 2200 (walkway platform)",
+    "miscellaneous_furnishing": "beds, crafting_tables, furnaces, barrels, chests, cauldrons, flower_pots, lanterns, item_frames, lightning_rods"
+  }
+}

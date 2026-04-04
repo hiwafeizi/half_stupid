@@ -1,0 +1,611 @@
+{
+  "building": "Depot Boijmans Van Beuningen",
+  "architect": "MVRDV",
+  "year": 2021,
+  "location": "Museumpark, Rotterdam",
+  "description": "The world's first publicly accessible art storage facility. A bowl-shaped mirrored cylinder that widens from 40m at the base to 60m at the rooftop, clad in 1,664 reflective mirror panels. The rooftop hosts a birch forest garden at 35m height. A dramatic central atrium with criss-crossing Piranesi-style staircases cuts through the full height of the building.",
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "bowl_shape_construction": {
+    "curve_type": "concave outward expansion (parabolic bowl profile)",
+    "curve_description": "The Depot's profile is inspired by an IKEA Blanda Blank salad bowl. The curve is concave — meaning the walls are nearly vertical at the base and flare outward more aggressively toward the top. This is NOT a linear taper. The diameter increases slowly at first, then accelerates. Mathematically modeled as: diameter(h) = 40 + 20 * (h/40)^1.6, where h is height in blocks.",
+    "floor_by_floor_diameters": [
+      {
+        "floor": 0,
+        "label": "Ground / Entrance",
+        "height_block": 0,
+        "diameter_blocks": 40,
+        "radius_blocks": 20,
+        "notes": "Ground level. Entrance foyer on south side. Narrowest point of the building."
+      },
+      {
+        "floor": 1,
+        "label": "Storage Level 1",
+        "height_block": 6,
+        "diameter_blocks": 41,
+        "radius_blocks": 20.5,
+        "notes": "Atrium begins. First storage depot ring. Walls still nearly vertical here — only 1 block wider than base."
+      },
+      {
+        "floor": 2,
+        "label": "Education Centre",
+        "height_block": 12,
+        "diameter_blocks": 44,
+        "radius_blocks": 22,
+        "notes": "Education centre. Curve starting to become visible. 4 blocks wider than base."
+      },
+      {
+        "floor": 3,
+        "label": "Gallery / Storage",
+        "height_block": 18,
+        "diameter_blocks": 47,
+        "radius_blocks": 23.5,
+        "notes": "Gallery level. The widening is now clearly noticeable."
+      },
+      {
+        "floor": 4,
+        "label": "Gallery / Storage",
+        "height_block": 24,
+        "diameter_blocks": 51,
+        "radius_blocks": 25.5,
+        "notes": "Upper gallery. Building is now 11 blocks wider than base."
+      },
+      {
+        "floor": 5,
+        "label": "Suite / Storage",
+        "height_block": 30,
+        "diameter_blocks": 55,
+        "radius_blocks": 27.5,
+        "notes": "Suite level. Curve accelerating noticeably."
+      },
+      {
+        "floor": 6,
+        "label": "Mechanical / Rooftop Transition",
+        "height_block": 35,
+        "diameter_blocks": 58,
+        "radius_blocks": 29,
+        "notes": "Transition to rooftop. Near maximum width."
+      },
+      {
+        "floor": "roof",
+        "label": "Rooftop Garden",
+        "height_block": 40,
+        "diameter_blocks": 60,
+        "radius_blocks": 30,
+        "notes": "Rooftop forest garden. Maximum diameter. The rim has a glass railing."
+      }
+    ],
+    "wall_thickness_blocks": 2,
+    "interpolation_method": "Between each floor level, increase diameter by 1 block every N layers. Use the following per-layer guide: Heights 0-6 (6 layers, +1 diameter): add 1 block at height 3. Heights 6-12 (6 layers, +3 diameter): add 1 block at heights 8, 10, 12. Heights 12-18 (6 layers, +3 diameter): add 1 block at heights 14, 16, 18. Heights 18-24 (6 layers, +4 diameter): add 1 block at heights 19, 21, 22, 24. Heights 24-30 (6 layers, +4 diameter): add 1 block at heights 25, 27, 28, 30. Heights 30-35 (5 layers, +3 diameter): add 1 block at heights 32, 34, 35. Heights 35-40 (5 layers, +2 diameter): add 1 block at heights 37, 40. This produces the smooth concave bowl profile.",
+    "construction_tip": "Build each layer as a hollow circle (ring). Start at the bottom with diameter 40 and work upward. At each height where the diameter increases, shift to the next larger circle template. The outer edge steps out by 1 block — place the new blocks so the expansion is distributed evenly around the circumference."
+  },
+
+  "mirrored_facade": {
+    "real_building": "1,664 flat mirrored glass panels covering 6,609 m2. Panels are roughly 1.5m x 3m rectangles arranged in a grid that follows the curvature. Each panel is individually angled to create a faceted surface that fragments reflections of the sky, park, and city.",
+    "panel_arrangement": "Panels are arranged in horizontal bands around the circumference, with vertical joints staggered between bands (like a stretcher bond in brickwork). The slight angle differences between adjacent panels create a shimmering, pixelated reflection effect.",
+    "minecraft_representation": {
+      "primary_block": "iron_block",
+      "variation_blocks": [
+        "light_gray_concrete",
+        "white_concrete",
+        "light_blue_stained_glass",
+        "cyan_stained_glass"
+      ],
+      "pattern": "Use iron_block as the primary facade material (80%). Randomly intersperse light_gray_concrete (10%) and light_blue_stained_glass (5%) and white_concrete (5%) to create the faceted mirror look. The stained glass blocks simulate sky reflections. Alternate the mix per horizontal band to suggest the panel rows. Every 3 blocks of height represents one panel row.",
+      "detail_technique": "For extra realism: on the south-facing side, use more light_blue_stained_glass (simulating sky reflection). On the north side, use more light_gray_concrete (darker reflection). This mimics how the real panels reflect different parts of the environment depending on orientation."
+    }
+  },
+
+  "rooftop_garden": {
+    "diameter_blocks": 60,
+    "real_description": "A publicly accessible rooftop forest at 35m height, designed by MTD landscape architects. Contains 75 multi-stemmed birch trees (Betula pubescens), approximately 20 pine/fir trees, wildflower meadows, grasses, and a restaurant pavilion. The trees can grow up to 10m tall. A circular walking path follows the perimeter with glass railings offering panoramic views of Rotterdam.",
+    "layout": {
+      "birch_trees": {
+        "count": 75,
+        "placement": "Distributed in organic clusters across the rooftop. Denser toward the center and north side. Plant in groups of 3-5 with 2-3 block spacing within groups and 4-6 block spacing between groups. Use birch_log (1-4 blocks tall) topped with birch_leaves (2-3 block canopy). Vary heights between 3 and 6 blocks for natural look.",
+        "minecraft_tree_template": "Small birch: 1 birch_log + 3x3x2 birch_leaves cap. Medium birch: 2 birch_log + 3x3x3 birch_leaves. Tall birch: 3-4 birch_log + 5x5x2 birch_leaves top with 3x3x1 below."
+      },
+      "pine_trees": {
+        "count": 20,
+        "placement": "Scattered among birch groups, mostly along the east and west edges. Use spruce_log (3-5 blocks tall) with spruce_leaves in tapered cone shape. These are accent trees, taller than the birches.",
+        "minecraft_tree_template": "Small pine: 3 spruce_log, 3x3 leaves at top two layers, 1x1 leaf cap. Tall pine: 5 spruce_log, tiered 5x5 base leaves, 3x3 mid, 1x1 top."
+      },
+      "ground_cover": "Fill spaces between trees with grass_block as the base. Add fern, tall_grass, and poppy/cornflower scattered between tree clusters for meadow effect.",
+      "paths": "A circular path 2 blocks wide runs around the perimeter, 3 blocks in from the edge. Use smooth_stone_slab or light_gray_concrete. A cross-path runs north-south and east-west through the center, creating 4 quadrants.",
+      "restaurant_area": "A 6x8 block rectangular area on the south-southeast side with a flat roof (gray_concrete slab) supported by 4 iron_bar pillars. Place crafting_table and smoker inside to suggest kitchen. Surround with glass_pane walls.",
+      "railing_edge": "Glass_pane railing around the entire perimeter, 1 block high, placed on the outermost ring of the roof. Support with iron_bar posts every 4 blocks."
+    },
+    "block_types": {
+      "surface": "grass_block",
+      "paths": "smooth_stone_slab",
+      "trees_birch": "birch_log, birch_leaves",
+      "trees_pine": "spruce_log, spruce_leaves",
+      "ground_plants": "fern, tall_grass, poppy, cornflower, allium",
+      "railing": "glass_pane, iron_bars",
+      "restaurant": "gray_concrete, glass_pane, iron_bars"
+    }
+  },
+
+  "central_atrium": {
+    "real_description": "A dramatic full-height void cutting through the center of the building. The atrium is 40m tall, 28m wide (the full internal width), and approximately 6m deep (north-south). Five zigzagging staircases in the style of Piranesi's 'Imaginary Prisons' criss-cross the space. Two glass elevator shafts and one large art freight elevator also occupy the atrium. Artist Marieke van Diemen created floating glass display cases visible from the staircases. The roof is a glass skylight flooding the atrium with natural light.",
+    "width_blocks": 28,
+    "depth_blocks": 6,
+    "height_blocks": 40,
+    "position": "The atrium runs east-west through the center of the cylinder, dividing it into a north half and south half. It spans the full internal width of the building.",
+    "staircases": {
+      "count": 5,
+      "pattern": "Criss-crossing zigzag staircases spanning the 28-block width of the atrium. Each staircase connects two consecutive floors. They alternate direction: staircase 1 goes left-to-right (floors 0-1), staircase 2 goes right-to-left (floors 1-2), etc. This creates the dramatic X-pattern when viewed from below.",
+      "construction": "Each staircase is 3 blocks wide. Use quartz_stairs for the treads and quartz_slab for landings. Build as a straight diagonal run across the 28-block span, rising 6 blocks per flight. At each end, place a 3x3 landing platform that connects to the floor slab. Alternate the direction of each flight.",
+      "staircase_layout": [
+        { "staircase": 1, "from_floor": 0, "to_floor": 1, "direction": "west_to_east", "height_range": "0-6" },
+        { "staircase": 2, "from_floor": 1, "to_floor": 2, "direction": "east_to_west", "height_range": "6-12" },
+        { "staircase": 3, "from_floor": 2, "to_floor": 3, "direction": "west_to_east", "height_range": "12-18" },
+        { "staircase": 4, "from_floor": 3, "to_floor": 4, "direction": "east_to_west", "height_range": "18-24" },
+        { "staircase": 5, "from_floor": 4, "to_floor": 5, "direction": "west_to_east", "height_range": "24-30" }
+      ],
+      "material": "quartz_stairs, quartz_slab, iron_bars (railings)"
+    },
+    "elevators": {
+      "count": 2,
+      "position": "Two 2x2 glass elevator shafts at the east and west ends of the atrium. Build as vertical columns of glass_block from ground to roof.",
+      "art_elevator": "One larger 4x4 freight elevator shaft on the west side for moving large artworks. Use iron_block frame with glass_pane walls."
+    },
+    "glass_roof": "The top of the atrium is a glass skylight. Place glass_block or glass_pane across the full 28x6 atrium opening at height 40. Support with iron_bar beams every 4 blocks.",
+    "display_cases": "Hang glass_pane boxes (3x2x2) from chains (chain block) at various heights throughout the atrium to represent the floating display cases by Marieke van Diemen."
+  },
+
+  "entrance": {
+    "location": "South side of the building at ground level, facing Museumpark.",
+    "design": "The entrance is a rectangular void cut into the base of the curved facade. It is approximately 8 blocks wide and 5 blocks tall — a simple rectangular opening in the mirrored wall. The entrance is recessed 2 blocks deep, with the actual doors set back from the facade line.",
+    "construction": "Cut an 8-wide x 5-tall opening in the south face of the ground floor circle. Line the interior of the recess with white_concrete. Place dark_oak_door (double doors) at the back of the recess. Add glowstone or sea_lantern in the ceiling of the recess for entrance lighting.",
+    "canopy": "A subtle overhang extends 2 blocks out from the facade above the entrance. Use smooth_stone_slab.",
+    "ground_treatment": "Extend a 12x8 block plaza of smooth_stone in front of the entrance, transitioning to grass_block for the park."
+  },
+
+  "circle_templates": {
+    "how_to_read": "Each template shows one quadrant of the circle. The pattern shows which blocks to place (X) and which to leave empty (.) in the first quadrant (northeast). Mirror this pattern for all four quadrants. The center of the circle is at position (0,0). Coordinates are (x, z) from center.",
+    "diameter_40": {
+      "radius": 20,
+      "circumference_blocks": 126,
+      "quadrant_template": [
+        "Row z=20 (top):    ......XXXXXXXX",
+        "Row z=19:          ...XXXXXXXXXXX",
+        "Row z=18:          ..XXXXXXXXXXXX",
+        "Row z=17:          .XXXXXXXXXXXXX",
+        "Row z=16:          .XXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXX"
+      ],
+      "ring_only_template": "For walls, place blocks only on the OUTLINE of the circle. A block is on the outline if it is inside the circle but at least one of its 4 neighbors (N/S/E/W) is outside. Wall thickness of 2: also include blocks where the second neighbor outward is outside.",
+      "outline_key_points": "The outline of a diameter-40 circle passes through approximately these x-coordinates at each z-row (measuring from center, one quadrant): z=0: x=19-20. z=5: x=19-20. z=10: x=17-20. z=14: x=14-20. z=17: x=10-20. z=19: x=6-20. z=20: x=0-5 (top cap)."
+    },
+    "diameter_41": {
+      "radius": 20.5,
+      "notes": "Nearly identical to diameter 40. Add 1 extra block on the east and west extremes (z=0 row extends to x=20). Use diameter_40 template and extend 1 block on two opposite sides."
+    },
+    "diameter_44": {
+      "radius": 22,
+      "circumference_blocks": 138,
+      "outline_key_points": "z=0: x=21-22. z=5: x=21-22. z=10: x=19-22. z=15: x=16-22. z=18: x=12-22. z=20: x=9-22. z=21: x=5-22. z=22: x=0-4 (top cap).",
+      "quadrant_template": [
+        "Row z=22 (top):    ....XXXXXXXXXX",
+        "Row z=21:          ..XXXXXXXXXXXX",
+        "Row z=20:          .XXXXXXXXXXXXX",
+        "Row z=19:          .XXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "diameter_47": {
+      "radius": 23.5,
+      "circumference_blocks": 148,
+      "outline_key_points": "z=0: x=23-24. z=5: x=23-24. z=10: x=21-24. z=15: x=18-24. z=19: x=14-24. z=21: x=11-24. z=23: x=5-24. z=24: x=0-4 (top cap).",
+      "quadrant_template": [
+        "Row z=24 (top):    ....XXXXXXXXXXX",
+        "Row z=23:          ..XXXXXXXXXXXXX",
+        "Row z=22:          .XXXXXXXXXXXXXX",
+        "Row z=21:          .XXXXXXXXXXXXXXX",
+        "Row z=20:          XXXXXXXXXXXXXXXX",
+        "Row z=19:          XXXXXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "diameter_51": {
+      "radius": 25.5,
+      "circumference_blocks": 160,
+      "outline_key_points": "z=0: x=25-26. z=5: x=25-26. z=10: x=23-26. z=15: x=20-26. z=20: x=16-26. z=23: x=11-26. z=25: x=6-26. z=26: x=0-5 (top cap).",
+      "quadrant_template": [
+        "Row z=26 (top):    .....XXXXXXXXXXXX",
+        "Row z=25:          ...XXXXXXXXXXXXXX",
+        "Row z=24:          ..XXXXXXXXXXXXXXX",
+        "Row z=23:          .XXXXXXXXXXXXXXXX",
+        "Row z=22:          .XXXXXXXXXXXXXXXXX",
+        "Row z=21:          XXXXXXXXXXXXXXXXXX",
+        "Row z=20:          XXXXXXXXXXXXXXXXXX",
+        "Row z=19:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "diameter_55": {
+      "radius": 27.5,
+      "circumference_blocks": 173,
+      "outline_key_points": "z=0: x=27-28. z=5: x=27-28. z=10: x=25-28. z=15: x=23-28. z=20: x=19-28. z=24: x=13-28. z=26: x=9-28. z=27: x=5-28. z=28: x=0-4 (top cap).",
+      "quadrant_template": [
+        "Row z=28 (top):    ....XXXXXXXXXXXXX",
+        "Row z=27:          ..XXXXXXXXXXXXXXX",
+        "Row z=26:          .XXXXXXXXXXXXXXXX",
+        "Row z=25:          .XXXXXXXXXXXXXXXXX",
+        "Row z=24:          XXXXXXXXXXXXXXXXXX",
+        "Row z=23:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=22:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=21:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=20:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=19:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "diameter_58": {
+      "radius": 29,
+      "circumference_blocks": 182,
+      "outline_key_points": "z=0: x=28-29. z=5: x=28-29. z=10: x=27-29. z=15: x=24-29. z=20: x=21-29. z=24: x=16-29. z=27: x=10-29. z=28: x=6-29. z=29: x=0-5 (top cap).",
+      "quadrant_template": [
+        "Row z=29 (top):    .....XXXXXXXXXXXXX",
+        "Row z=28:          ...XXXXXXXXXXXXXXX",
+        "Row z=27:          ..XXXXXXXXXXXXXXXX",
+        "Row z=26:          .XXXXXXXXXXXXXXXXX",
+        "Row z=25:          .XXXXXXXXXXXXXXXXXX",
+        "Row z=24:          XXXXXXXXXXXXXXXXXXX",
+        "Row z=23:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=22:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=21:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=20:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=19:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "diameter_60": {
+      "radius": 30,
+      "circumference_blocks": 188,
+      "outline_key_points": "z=0: x=29-30. z=5: x=29-30. z=10: x=28-30. z=15: x=26-30. z=20: x=22-30. z=25: x=17-30. z=27: x=13-30. z=29: x=7-30. z=30: x=0-6 (top cap).",
+      "quadrant_template": [
+        "Row z=30 (top):    ......XXXXXXXXXXXXX",
+        "Row z=29:          ...XXXXXXXXXXXXXXXX",
+        "Row z=28:          ..XXXXXXXXXXXXXXXXX",
+        "Row z=27:          .XXXXXXXXXXXXXXXXXX",
+        "Row z=26:          .XXXXXXXXXXXXXXXXXXX",
+        "Row z=25:          XXXXXXXXXXXXXXXXXXXX",
+        "Row z=24:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=23:          XXXXXXXXXXXXXXXXXXXXX",
+        "Row z=22:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=21:          XXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=20:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=19:          XXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=18:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=17:          XXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=16:          XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=15:          XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=14:          XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=13:          XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=12:          XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=11:          XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=10:          XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=9:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=8:           XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=7:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=6:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=5:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=4:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=3:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=2:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=1:           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "Row z=0 (center):  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      ]
+    },
+    "programmatic_circle_formula": "To generate any circle of radius R: for each row z from 0 to R, the row extends from x=0 to x=floor(sqrt(R^2 - z^2)). For the OUTLINE only (ring wall), a block at (x,z) is on the outline if x^2+z^2 <= R^2 AND ((x+1)^2+z^2 > R^2 OR x^2+(z+1)^2 > R^2). For 2-thick walls, also include blocks where (x-1)^2+z^2 > R^2 or x^2+(z-1)^2 > R^2 after shifting inward."
+  },
+
+  "per_layer_diameter_schedule": {
+    "description": "Exact diameter to use at every single block height from 0 to 40. This is the master build reference. The curve follows diameter(h) = 40 + 20*(h/40)^1.6, rounded to nearest integer.",
+    "schedule": [
+      { "y": 0,  "diameter": 40 },
+      { "y": 1,  "diameter": 40 },
+      { "y": 2,  "diameter": 40 },
+      { "y": 3,  "diameter": 41 },
+      { "y": 4,  "diameter": 41 },
+      { "y": 5,  "diameter": 41 },
+      { "y": 6,  "diameter": 41 },
+      { "y": 7,  "diameter": 42 },
+      { "y": 8,  "diameter": 42 },
+      { "y": 9,  "diameter": 42 },
+      { "y": 10, "diameter": 43 },
+      { "y": 11, "diameter": 43 },
+      { "y": 12, "diameter": 44 },
+      { "y": 13, "diameter": 44 },
+      { "y": 14, "diameter": 45 },
+      { "y": 15, "diameter": 45 },
+      { "y": 16, "diameter": 46 },
+      { "y": 17, "diameter": 46 },
+      { "y": 18, "diameter": 47 },
+      { "y": 19, "diameter": 48 },
+      { "y": 20, "diameter": 48 },
+      { "y": 21, "diameter": 49 },
+      { "y": 22, "diameter": 50 },
+      { "y": 23, "diameter": 50 },
+      { "y": 24, "diameter": 51 },
+      { "y": 25, "diameter": 52 },
+      { "y": 26, "diameter": 53 },
+      { "y": 27, "diameter": 53 },
+      { "y": 28, "diameter": 54 },
+      { "y": 29, "diameter": 55 },
+      { "y": 30, "diameter": 55 },
+      { "y": 31, "diameter": 56 },
+      { "y": 32, "diameter": 57 },
+      { "y": 33, "diameter": 57 },
+      { "y": 34, "diameter": 58 },
+      { "y": 35, "diameter": 58 },
+      { "y": 36, "diameter": 59 },
+      { "y": 37, "diameter": 59 },
+      { "y": 38, "diameter": 60 },
+      { "y": 39, "diameter": 60 },
+      { "y": 40, "diameter": 60 }
+    ]
+  },
+
+  "block_palette": {
+    "exterior_facade": {
+      "iron_block": "Primary mirror panel material (80% of facade)",
+      "light_gray_concrete": "Darker reflection variation (10%)",
+      "white_concrete": "Bright reflection variation (5%)",
+      "light_blue_stained_glass": "Sky reflection accent (5%)"
+    },
+    "interior_walls": {
+      "white_concrete": "Primary interior wall material",
+      "smooth_quartz": "Accent walls and trim",
+      "light_gray_concrete": "Exposed concrete areas"
+    },
+    "floors": {
+      "smooth_stone": "Main floor surface",
+      "polished_andesite": "Gallery floors",
+      "white_concrete": "Atrium floor"
+    },
+    "atrium": {
+      "quartz_stairs": "Zigzag staircases",
+      "quartz_slab": "Staircase landings",
+      "iron_bars": "Staircase and balcony railings",
+      "glass_block": "Elevator shafts",
+      "chain": "Display case suspension",
+      "glass_pane": "Display cases and skylight"
+    },
+    "rooftop": {
+      "grass_block": "Rooftop garden surface",
+      "birch_log": "Birch tree trunks",
+      "birch_leaves": "Birch tree canopy",
+      "spruce_log": "Pine tree trunks",
+      "spruce_leaves": "Pine tree canopy",
+      "fern": "Ground cover",
+      "tall_grass": "Meadow effect",
+      "smooth_stone_slab": "Walking paths",
+      "glass_pane": "Perimeter railing"
+    },
+    "entrance": {
+      "dark_oak_door": "Main entrance doors",
+      "white_concrete": "Entrance recess lining",
+      "sea_lantern": "Entrance lighting",
+      "smooth_stone": "Entrance plaza"
+    },
+    "structural": {
+      "white_concrete": "Floor slabs (2 blocks thick)",
+      "iron_block": "Structural columns where needed"
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "title": "Mark the center and ground circle",
+      "instructions": "Place a marker block at the exact center of your build site. This will be the center of all circles. Build the ground floor circle outline (diameter 40) using iron_block. Use the diameter_40 circle template. The center point is the origin for all measurements."
+    },
+    {
+      "step": 2,
+      "title": "Build the exterior walls layer by layer",
+      "instructions": "Working upward from y=0, build a 2-block-thick ring wall at each height using the per_layer_diameter_schedule. Each ring is centered on the same center point. Use iron_block as primary material with the variation pattern described in mirrored_facade. At each height where the diameter increases, the ring shifts outward — ensure the expansion is distributed symmetrically around the circumference."
+    },
+    {
+      "step": 3,
+      "title": "Cut the atrium void",
+      "instructions": "Before filling in floors, cut the central atrium void. The atrium runs east-west through the center, 28 blocks wide and 6 blocks deep (north-south). Remove wall blocks in this zone from y=0 to y=40. The atrium slot divides the cylinder into two C-shaped halves."
+    },
+    {
+      "step": 4,
+      "title": "Build floor slabs",
+      "instructions": "At each floor level (y=0, 6, 12, 18, 24, 30, 35), fill the interior of the ring with smooth_stone or polished_andesite floor blocks — EXCEPT within the 28x6 atrium void zone, which remains open. Each floor slab is 1 block thick. The floor area is a circle (matching that height's diameter) with a rectangular hole cut out for the atrium."
+    },
+    {
+      "step": 5,
+      "title": "Build the atrium staircases",
+      "instructions": "Inside the atrium void, build 5 zigzag staircases crossing from one side to the other. Each staircase is 3 blocks wide, rises 6 blocks over the 28-block span, and alternates direction floor to floor. Use quartz_stairs with iron_bar railings on both sides. Place landings where stairs meet floors."
+    },
+    {
+      "step": 6,
+      "title": "Build elevator shafts",
+      "instructions": "Place two 2x2 glass_block vertical shafts at the east and west ends of the atrium, running from y=0 to y=40. Add one 4x4 iron_block-framed shaft (art elevator) on the west side."
+    },
+    {
+      "step": 7,
+      "title": "Build the entrance",
+      "instructions": "On the south face at ground level, cut an 8-wide x 5-tall opening. Recess it 2 blocks deep. Line with white_concrete. Place double dark_oak_doors. Add sea_lantern lighting in the recess ceiling. Build the entrance plaza in front."
+    },
+    {
+      "step": 8,
+      "title": "Build the rooftop",
+      "instructions": "At y=40, fill the full diameter-60 circle with grass_block (this is the rooftop garden surface). Leave the atrium skylight area open and cover it with glass_pane. Build the glass_pane perimeter railing with iron_bar posts every 4 blocks."
+    },
+    {
+      "step": 9,
+      "title": "Plant the rooftop garden",
+      "instructions": "Place 75 birch trees and 20 pine trees in organic clusters across the rooftop. Build the circular walking path 3 blocks in from the edge using smooth_stone_slab. Build the cross-paths. Add the restaurant pavilion on the south-southeast. Scatter fern and tall_grass between trees."
+    },
+    {
+      "step": 10,
+      "title": "Interior detailing",
+      "instructions": "Add interior walls with white_concrete. Hang display cases (glass_pane boxes on chains) in the atrium. Add lighting (sea_lantern embedded in floors and ceilings every 6 blocks). Furnish the ground floor entrance foyer."
+    },
+    {
+      "step": 11,
+      "title": "Final facade detailing",
+      "instructions": "Review the exterior and adjust the iron_block / variation block pattern. Ensure the facade reads as a unified mirrored surface with subtle variation. Add any final touches to the bowl profile — check that the curve looks smooth from a distance."
+    }
+  ],
+
+  "unique_challenges": {
+    "smooth_curve": {
+      "challenge": "Making the bowl shape look smooth despite Minecraft's block grid",
+      "solution": "The per_layer_diameter_schedule provides exact diameters at every height. Because the curve is concave (slow growth at bottom, fast at top), the lower half of the building will look nearly cylindrical while the top flares out more dramatically. At 1:1 scale, the diameter changes by 1 block every 1-2 layers, which produces a very smooth bowl shape. Use the circle templates to ensure each ring is properly round."
+    },
+    "circular_floors": {
+      "challenge": "Building accurate circles at 7+ different diameters (40 through 60)",
+      "solution": "Circle templates are provided for every key diameter. For intermediate diameters (42, 43, 45, 46, 48, 49, 50, 52, 53, 54, 56, 57, 59), use the programmatic formula: at row z from center, the circle extends to x = floor(sqrt(R^2 - z^2)). Or use an online Minecraft circle generator (plotz.co.uk) for any diameter."
+    },
+    "mirror_effect": {
+      "challenge": "Representing the reflective mirrored facade in Minecraft",
+      "solution": "Iron blocks have a subtle sheen that reads as metallic. Mix in 10% light_gray_concrete and 5% light_blue_stained_glass randomly across the facade to create visual texture that suggests faceted mirror panels reflecting different parts of the sky. Vary the mix by cardinal direction for realism."
+    },
+    "rooftop_garden": {
+      "challenge": "Placing 95 trees on a circular roof at the correct density",
+      "solution": "The diameter-60 circle has roughly 2,827 blocks of surface area. With 95 trees, that is one tree per ~30 blocks. Place trees in clusters of 3-5 with gaps between clusters. Start at the center and work outward, leaving the path areas clear. The restaurant takes up ~48 blocks on the southeast."
+    },
+    "atrium_void": {
+      "challenge": "Cutting a rectangular void through a circular floor plan",
+      "solution": "The 28x6 atrium void runs east-west through center. At each floor, the floor slab is a circle with this rectangle removed. The resulting floor shape resembles two crescent-shaped halves connected at the east and west ends. Build the floor circle first, then remove the atrium rectangle."
+    },
+    "diameter_transitions": {
+      "challenge": "Smoothly stepping the wall outward as diameter increases",
+      "solution": "When the diameter increases by 1, the radius increases by 0.5 blocks. In practice, this means alternating which side gets the extra block. At even diameters the circle is symmetric; at odd diameters one axis is 1 block longer. The key is to ensure each ring is centered on the same point, so the expansion distributes naturally around the circumference."
+    }
+  },
+
+  "views": {
+    "south_elevation": "A smooth concave bowl profile: nearly vertical walls at the bottom that curve outward increasingly toward the top. The entrance opening is visible at the base center. The entire surface is mirror/iron blocks. The rooftop edge has a glass railing with trees visible above.",
+    "north_elevation": "Same bowl profile as south but without the entrance opening. The mirrored facade reflects the park and sky.",
+    "east_west_elevation": "The bowl profile with the atrium slot visible as a narrow 6-block-deep cut running from ground to roof. The zigzag staircases are visible through this slot.",
+    "aerial_top_down": "A circle of diameter 60 blocks filled with a birch forest. A glass skylight strip runs east-west through the center (the atrium below). Walking paths create a cross pattern. The restaurant pavilion sits in the southeast quadrant.",
+    "cross_section_north_south": "The bowl-shaped walls curve outward from 40-block base to 60-block top. The central atrium is a 28-wide void with 5 criss-crossing staircases. Floor slabs extend from the walls inward, stopping at the atrium edges. The glass roof covers the top. Trees grow on the rooftop garden.",
+    "interior_atrium_view": "Looking up from ground level: five white staircases zigzag back and forth across the 28-block-wide space. Glass elevator shafts stand at east and west ends. Small glass display cases hang from chains at various heights. Daylight streams through the glass roof at the top."
+  },
+
+  "minecraft_commands_helper": {
+    "circle_fill_command": "/fill ~-R ~ ~-R ~R ~ ~R minecraft:iron_block hollow — then manually correct to circular shape. Note: this creates a square; you must remove corner blocks to form the circle.",
+    "recommended_approach": "For best results, use WorldEdit mod with //cyl and //hcyl commands: //hcyl iron_block R 1 creates a hollow cylinder ring of radius R and height 1. Stack these with increasing R values to create the bowl.",
+    "worldedit_bowl_sequence": [
+      "Stand at center, y=0: //hcyl iron_block 20 1",
+      "Move to y=1: //hcyl iron_block 20 1",
+      "Move to y=2: //hcyl iron_block 20 1",
+      "Move to y=3: //hcyl iron_block 20.5 1",
+      "Continue following per_layer_diameter_schedule, using radius = diameter/2",
+      "At y=40: //hcyl iron_block 30 1"
+    ]
+  }
+}

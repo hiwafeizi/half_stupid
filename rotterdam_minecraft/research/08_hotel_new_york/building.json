@@ -1,0 +1,88 @@
+{
+  "name": "Hotel New York",
+  "dutch_name": "Hotel New York",
+  "original_name": "Holland-Amerika Lijn Headquarters",
+  "architect": "J. Muller & C.M. Droogleever Fortuyn",
+  "year_built": "1901-1920 (phases)",
+  "year_converted_to_hotel": 1993,
+  "style": "Jugendstil (Art Nouveau) / Overgangsarchitectuur",
+  "location": "Koninginnenhoofd 1, Wilhelminapier, Kop van Zuid, Rotterdam",
+  "heritage": "Rijksmonument #513872 (2000)",
+
+  "dimensions": {
+    "main_building_height_m": "15-18",
+    "twin_tower_height_m": 38,
+    "footprint_length_m_estimated": "80-90",
+    "footprint_width_m_estimated": "25-30",
+    "floors": "3 + attic",
+    "floor_height_m_estimated": "4-4.5",
+    "ground_floor_height_m_estimated": 5,
+    "tower_base_width_m_estimated": "6-8"
+  },
+
+  "proportions": {
+    "tower_to_main_building_height": "2-2.5:1",
+    "footprint_ratio": "~3:1 (length:width)",
+    "tower_width_to_height": "1:5 to 1:6"
+  },
+
+  "architectural_features": {
+    "twin_towers": {
+      "height_m": 38,
+      "roof": "Green copper-clad pointed/domed roofs",
+      "clock": "Integrated into one tower",
+      "position": "Symmetrical, flanking main facade"
+    },
+    "facade": {
+      "material": "Red/brown brick with stone detailing",
+      "lettering": "Gilded 'Holland Amerika Lijn'",
+      "reliefs": "Coats of arms of Amsterdam, Rotterdam, Netherlands, New York, Batavia"
+    },
+    "maritime_motifs": {
+      "balconies": "Styled like ship railings",
+      "roofline": "Elements resembling ocean liner funnels",
+      "wall_carvings": "Figures in Indian, Egyptian, Arabic attire (exotic destinations)"
+    },
+    "decorative_elements": [
+      "Winged dragon stone reliefs",
+      "Wrought-iron staircases and railings",
+      "Bay windows with decorative gables",
+      "Stained glass"
+    ],
+    "location_note": "Sits at tip of Wilhelminapier, surrounded by water on three sides"
+  },
+
+  "colors": {
+    "walls": "Red/brown brick",
+    "stone_details": "Cream/white stone",
+    "tower_roofs": "Green (oxidized copper)",
+    "lettering": "Gold",
+    "iron_details": "Dark iron/black"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "length_blocks": 85,
+      "width_blocks": 28,
+      "main_height_blocks": 17,
+      "tower_height_blocks": 38,
+      "floor_height_blocks": 4
+    },
+    "scale_1_to_2": {
+      "length_blocks": 43,
+      "width_blocks": 14,
+      "main_height_blocks": 9,
+      "tower_height_blocks": 19
+    },
+    "recommended_scale": "1:1",
+    "block_palette": {
+      "walls": "Brick blocks or red terracotta",
+      "stone_details": "Smooth stone or sandstone for window surrounds and cornices",
+      "tower_roofs": "Oxidized copper blocks or cyan/green terracotta",
+      "windows": "Glass panes with stone mullions",
+      "iron_details": "Iron bars for railings",
+      "roof": "Dark prismarine or deepslate tiles",
+      "gold_lettering": "Gold blocks or signs"
+    }
+  }
+}

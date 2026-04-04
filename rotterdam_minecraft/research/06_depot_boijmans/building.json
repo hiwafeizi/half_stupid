@@ -1,0 +1,76 @@
+{
+  "name": "Depot Boijmans Van Beuningen",
+  "dutch_name": "Depot Boijmans Van Beuningen",
+  "architect": "MVRDV",
+  "year": 2021,
+  "style": "Contemporary",
+  "location": "Museumpark, Rotterdam",
+
+  "dimensions": {
+    "height_m": 39.5,
+    "base_diameter_m": 40,
+    "top_diameter_m": 60,
+    "floors": 7,
+    "interior_floor_area_m2": 15000,
+    "facade_area_m2": 6609,
+    "mirror_panels": 1664,
+    "rooftop_garden_height_m": 35
+  },
+
+  "proportions": {
+    "height_to_base_diameter": "1:1",
+    "base_to_top_diameter": "1:1.5",
+    "per_floor_height_m": 5.6,
+    "atrium_width_m": 6,
+    "atrium_length_m": 18,
+    "atrium_height_m": 30,
+    "atrium_ratio": "1:3:5"
+  },
+
+  "architectural_features": {
+    "shape": "Bowl/vase — narrow at base, widens toward top",
+    "facade": {
+      "material": "Flat mirrored glass panels",
+      "panels": 1664,
+      "area_m2": 6609,
+      "description": "Faceted reflective surface reflecting Museumpark, sky, and city"
+    },
+    "rooftop_garden": {
+      "height_m": 35,
+      "birch_trees": 75,
+      "pine_trees": 20,
+      "description": "Publicly accessible birch forest at top of building"
+    },
+    "central_atrium": {
+      "dimensions": "6m wide x 18m long x 30m tall",
+      "features": "Criss-crossing staircases, glass roof for natural light"
+    }
+  },
+
+  "colors": {
+    "facade": "Mirror / reflective silver",
+    "rooftop": "Green (birch forest)",
+    "interior": "White with exposed concrete"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "height_blocks": 40,
+      "base_diameter_blocks": 40,
+      "top_diameter_blocks": 60
+    },
+    "scale_1_to_2": {
+      "height_blocks": 20,
+      "base_diameter_blocks": 20,
+      "top_diameter_blocks": 30
+    },
+    "recommended_scale": "1:1 (manageable size, striking shape)",
+    "block_palette": {
+      "facade": "Iron blocks or light grey glazed terracotta for mirror effect",
+      "rooftop": "Birch leaves, grass blocks, birch logs",
+      "interior": "White concrete, quartz",
+      "atrium_stairs": "Quartz stairs"
+    },
+    "build_notes": "Circular plan at each floor level, widening from 40 to 60 blocks. Build as concentric circles growing larger every ~5-6 blocks of height."
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "building": "Rotterdam Centraal",
+  "architects": "Team CS (Benthem Crouwel Architects + MVSA + West 8)",
+  "year_completed": 2014,
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "front_facade": {
+    "description": "The defining element: an asymmetric pointed stainless-steel canopy jutting forward over a full-height glass curtain wall. The peak is offset to the left (southwest), pointing toward the city center. The steep left slope and gentle right slope create the signature silhouette.",
+
+    "roof_profile": {
+      "peak_position": "1/3 from left edge (block 18 of 55 at 1:1 scale)",
+      "total_width_blocks": 55,
+      "peak_height_blocks": 30,
+      "left_slope": {
+        "angle_degrees": "70-75 (very steep)",
+        "run_blocks": 18,
+        "rise_blocks": 30,
+        "ratio": "roughly 5 up for every 3 across",
+        "technique": "Near-vertical staircase: place 1 block out, then 2 blocks up repeatedly. Occasionally step 1 out and 1 up to smooth the curve."
+      },
+      "right_slope": {
+        "angle_degrees": "20-25 (gentle, long slope extending into platform roof)",
+        "run_blocks": 37,
+        "rise_blocks": 30,
+        "ratio": "roughly 1 down for every 1.2 across",
+        "technique": "Gradual staircase: alternate between 1 block out + 1 block down and 2 blocks out + 1 block down"
+      },
+      "layer_by_layer": [
+        { "row": 1,  "left_edge": 1,  "right_edge": 55, "width": 55, "notes": "Ground level / base of canopy overhang — full width" },
+        { "row": 2,  "left_edge": 2,  "right_edge": 55, "width": 54, "notes": "Left slope begins climbing steeply" },
+        { "row": 3,  "left_edge": 2,  "right_edge": 54, "width": 53, "notes": "Right slope begins descending gently" },
+        { "row": 4,  "left_edge": 3,  "right_edge": 53, "width": 51, "notes": "Both slopes active" },
+        { "row": 5,  "left_edge": 3,  "right_edge": 52, "width": 50, "notes": "Left near-vertical, right shallow" },
+        { "row": 6,  "left_edge": 4,  "right_edge": 51, "width": 48, "notes": "Shape clearly asymmetric" },
+        { "row": 7,  "left_edge": 4,  "right_edge": 50, "width": 47, "notes": "Slopes converging steadily" },
+        { "row": 8,  "left_edge": 5,  "right_edge": 49, "width": 45, "notes": "Left slope steep, right gentle descent" },
+        { "row": 9,  "left_edge": 5,  "right_edge": 48, "width": 44, "notes": "Continuing convergence" },
+        { "row": 10, "left_edge": 6,  "right_edge": 47, "width": 42, "notes": "Approaching one-third height" },
+        { "row": 11, "left_edge": 6,  "right_edge": 46, "width": 41, "notes": "Left slope still very steep" },
+        { "row": 12, "left_edge": 7,  "right_edge": 45, "width": 39, "notes": "Right slope stays gradual" },
+        { "row": 13, "left_edge": 7,  "right_edge": 44, "width": 38, "notes": "Silhouette clearly pointed" },
+        { "row": 14, "left_edge": 8,  "right_edge": 43, "width": 36, "notes": "Mid-height zone" },
+        { "row": 15, "left_edge": 8,  "right_edge": 42, "width": 35, "notes": "Half height reached" },
+        { "row": 16, "left_edge": 9,  "right_edge": 41, "width": 33, "notes": "Upper half begins narrowing faster" },
+        { "row": 17, "left_edge": 9,  "right_edge": 40, "width": 32, "notes": "Converging toward peak zone" },
+        { "row": 18, "left_edge": 10, "right_edge": 39, "width": 30, "notes": "Two-thirds height" },
+        { "row": 19, "left_edge": 10, "right_edge": 38, "width": 29, "notes": "Left slope maintains steep angle" },
+        { "row": 20, "left_edge": 11, "right_edge": 37, "width": 27, "notes": "Right slope continues gentle descent" },
+        { "row": 21, "left_edge": 12, "right_edge": 35, "width": 24, "notes": "Narrowing accelerates" },
+        { "row": 22, "left_edge": 12, "right_edge": 34, "width": 23, "notes": "Upper quarter of canopy" },
+        { "row": 23, "left_edge": 13, "right_edge": 32, "width": 20, "notes": "Approaching apex zone" },
+        { "row": 24, "left_edge": 14, "right_edge": 30, "width": 17, "notes": "Right slope steepens slightly near top" },
+        { "row": 25, "left_edge": 14, "right_edge": 28, "width": 15, "notes": "Narrowing rapidly toward peak" },
+        { "row": 26, "left_edge": 15, "right_edge": 26, "width": 12, "notes": "Near peak, strongly tapered" },
+        { "row": 27, "left_edge": 16, "right_edge": 24, "width": 9,  "notes": "Very narrow — final taper" },
+        { "row": 28, "left_edge": 16, "right_edge": 22, "width": 7,  "notes": "Almost at tip" },
+        { "row": 29, "left_edge": 17, "right_edge": 20, "width": 4,  "notes": "Penultimate row — sharp point emerging" },
+        { "row": 30, "left_edge": 18, "right_edge": 19, "width": 2,  "notes": "Peak — 2-block-wide tip, placed at 1/3 from left" }
+      ],
+      "material": "Iron blocks or light grey concrete (stainless steel cladding)",
+      "overhang_depth_blocks": 8,
+      "overhang_note": "The canopy juts FORWARD from the glass wall by 8 blocks at ground level, tapering to flush at the peak. Build the canopy as a separate layer in front of the glass facade."
+    },
+
+    "glass_wall": {
+      "height_blocks": 22,
+      "width_blocks": 50,
+      "set_back_from_canopy_blocks": 8,
+      "pattern": "Full-height glass panes with thin iron bar or end-rod mullions every 3 blocks. The glass sits behind and below the steel canopy overhang.",
+      "mullion_spacing_blocks": 3,
+      "mullion_material": "Iron bars or end rods (vertical)",
+      "notes": "The glass wall does not extend the full width of the canopy — it is slightly narrower, with solid steel corners. Leave 2-3 blocks of iron/concrete at each side."
+    },
+
+    "clock": {
+      "position": "Centered horizontally on glass facade, at row 16-20 height (upper third of glass wall)",
+      "size_blocks": "8x8 circle",
+      "design": "White concrete or quartz background, item frame with clock item in center. Surround with black concrete or dark grey for the rim. At this scale the clock face is large enough for Roman numeral detail using signs or banners.",
+      "historical_note": "Preserved from the original 1957 Sybold van Ravesteyn station. Round clock with Roman numerals.",
+      "construction": [
+        "Row 1 (bottom):    air, air, black, black, black, black, air, air",
+        "Row 2:             air, black, white, white, white, white, black, air",
+        "Row 3:             black, white, white, white, white, white, white, black",
+        "Row 4:             black, white, white, white, white, white, white, black",
+        "Row 5 (center):    black, white, white, [clock], [clock], white, white, black",
+        "Row 6:             black, white, white, white, white, white, white, black",
+        "Row 7:             air, black, white, white, white, white, black, air",
+        "Row 8 (top):       air, air, black, black, black, black, air, air"
+      ]
+    },
+
+    "lettering": {
+      "text": "CENTRAAL STATION",
+      "position": "Across the upper portion of the glass facade, centered, at approximately row 18-20 height (just above or around the clock)",
+      "method": "Banner letters for large-scale text — white banners with black letter patterns. At 1:1 scale each letter can be 3 blocks tall and 2 blocks wide for readability.",
+      "block_count": "32-40 banners (16 characters including space, each letter 2 blocks wide)",
+      "alternative": "Oak signs with white text on dark background using glow ink for illumination",
+      "historical_note": "The original 1957 lettering was retained. In reality the letters are individual stainless-steel capitals with LED backlighting, mounted on the glass."
+    },
+
+    "entrance_openings": {
+      "count": 5,
+      "width_per_opening_blocks": 8,
+      "height_blocks": 10,
+      "separator_width_blocks": 2,
+      "notes": "Five wide entrance bays at ground level, separated by thin steel columns. Use iron bars or chains for column effect. Total opening span: (5 x 8) + (4 x 2) = 48 blocks."
+    }
+  },
+
+  "entrance_hall": {
+    "depth_blocks": 35,
+    "width_blocks": 50,
+    "height_blocks": 22,
+    "description": "A vast, light-filled concourse behind the glass facade. The ceiling is clad in thousands of western red cedar wooden slats of varying widths and lengths, creating a warm organic contrast to the steel exterior. The floor is light-colored stone. Escalators and stairs lead down to the underground passenger tunnel that connects all platforms.",
+
+    "ceiling": {
+      "material": "Western red cedar wooden slats — thousands of slats at varying widths and heights creating a flowing, organic surface",
+      "minecraft_approach": "Alternate rows of stripped oak logs (placed horizontally, east-west orientation) and oak planks. Mix in occasional stripped birch logs for color variation. Place logs at slightly varying Y-levels where possible using slabs to create an undulating effect. At 1:1 scale the ceiling is large enough for a convincing wave-like pattern across its full 50-block width.",
+      "block_types": ["stripped_oak_log", "oak_planks", "stripped_birch_log", "oak_slab", "spruce_planks"],
+      "pattern": "Lay stripped oak logs running east-west (perpendicular to the direction of travel). Every 3rd row, substitute oak planks. Every 5th row, use stripped birch. Every 7th row, use spruce planks for deeper color variation. Use top-half oak slabs to create a 2-block-high undulating wave across the ceiling, rising and dipping over a 10-block wavelength.",
+      "wave_pattern": {
+        "description": "The real ceiling has a flowing, wave-like quality. At 1:1 scale, create gentle waves by varying Y-level across the 50-block width.",
+        "y_offsets_across_width": "Blocks 1-8: Y+0, Blocks 9-15: Y+1 (use slabs), Blocks 16-22: Y+0, Blocks 23-30: Y+1, Blocks 31-38: Y+0, Blocks 39-45: Y+1, Blocks 46-50: Y+0",
+        "technique": "Place bottom-half slabs at the transition points to smooth the wave. This creates a subtle but visible undulation across the ceiling span."
+      },
+      "notes": "At full scale the ceiling is enormous — 50 blocks wide by 35 blocks deep. Work in sections. The key is avoiding uniformity — vary the block types in a semi-random but rhythmic pattern."
+    },
+
+    "floor": {
+      "material": "Light grey stone with reddish stone accents",
+      "minecraft_blocks": ["smooth_stone", "polished_andesite", "red_sandstone", "polished_granite"],
+      "pattern": "Primarily smooth stone or polished andesite. Use red sandstone for accent strips running parallel to the tracks (north-south) every 6 blocks. Use polished granite for decorative borders around escalator openings."
+    },
+
+    "escalators": {
+      "count": 8,
+      "position": "Center of hall, leading down to underground passenger tunnel, arranged in 4 pairs (up/down)",
+      "minecraft_approach": "Use stone brick stairs descending into the floor. Place chains or iron bars as handrails on both sides. 3 blocks wide each, paired in up/down configuration. Space pairs 6 blocks apart across the hall width.",
+      "depth_to_tunnel_blocks": 8
+    },
+
+    "shops_and_services": {
+      "position": "Along side walls of entrance hall",
+      "width_blocks": 6,
+      "depth_blocks": 5,
+      "count_per_side": 4,
+      "minecraft_approach": "Use trapdoors or signs to suggest shopfronts along the east and west walls. Glass panes for display windows. At 1:1 scale each shop unit is 6 blocks wide and 5 blocks deep, with a 3-block-wide glass storefront."
+    }
+  },
+
+  "underground_passenger_tunnel": {
+    "width_blocks": 48,
+    "height_blocks": 5,
+    "length_blocks": 150,
+    "description": "A wide underground passage running perpendicular to the tracks (east-west), connecting the entrance hall to all platforms via stairs and escalators. In reality this is 48m wide — at 1:1 that is 48 blocks. The tunnel runs the full 150-block width of the platform area.",
+    "material": "Smooth stone walls, polished andesite floor, sea lanterns in ceiling every 3 blocks for even lighting. Ceiling height of 5 blocks for a spacious feel.",
+    "depth_below_platform_blocks": 6,
+    "stairways_to_platforms": {
+      "count": "One pair (up-escalator + stairs) per platform island — 7 pairs total",
+      "width_blocks": 5,
+      "stair_length_blocks": 8,
+      "notes": "Stairs emerge on each platform island between tracks. Each stairway is 5 blocks wide with chain handrails on both sides."
+    }
+  },
+
+  "platform_area": {
+    "description": "The vast platform area stretches behind the entrance hall, covered by a 250m-long roof with integrated solar panels. At 1:1 scale this is the full real-world size.",
+
+    "length_blocks": 250,
+    "width_blocks": 150,
+
+    "tracks": {
+      "count": 12,
+      "layout_note": "Rotterdam Centraal has 12 tracks numbered 1-12 (tracks 1-6 for intercity/Thalys on the west side, tracks 7-12 for Randstadrail/metro/sprinter on the east side). Some tracks are through-tracks, some are terminal.",
+      "width_per_track_blocks": 5,
+      "rail_material": "Powered rails on dark oak planks or grey concrete. Place powered rails every 8 blocks with redstone torches for functional trains. Use regular rails between powered rails. Two parallel rail lines per track (blocks 2 and 4 of the 5-block width) with dark oak planks as sleepers.",
+      "platform_width_blocks": 6,
+      "platform_material": "Smooth stone slab surface with yellow concrete powder or yellow concrete edge strip (safety line)",
+      "platform_edge": "Stone brick wall (1 block high) at track level with a 1-block drop to rail level",
+      "full_layout_at_scale": {
+        "note": "At 1:1 scale, all 12 tracks are built with realistic platform widths. Total track+platform width: 12 tracks x 5 blocks + 7 island platforms x 6 blocks + 2 side platforms x 6 blocks = 60 + 42 + 12 = 114 blocks. Remaining 36 blocks for roof supports, service areas, and edge zones.",
+        "tracks_built": 12,
+        "arrangement": [
+          { "element": "side_platform_1",  "width": 6,  "position": "west edge", "notes": "Side platform with wall on west side" },
+          { "element": "track_1",          "width": 5 },
+          { "element": "track_2",          "width": 5 },
+          { "element": "island_platform_1","width": 6,  "notes": "Island platform between tracks 2 and 3" },
+          { "element": "track_3",          "width": 5 },
+          { "element": "track_4",          "width": 5 },
+          { "element": "island_platform_2","width": 6,  "notes": "Island platform between tracks 4 and 5" },
+          { "element": "track_5",          "width": 5 },
+          { "element": "track_6",          "width": 5 },
+          { "element": "island_platform_3","width": 6,  "notes": "Island platform — main intercity/high-speed division" },
+          { "element": "track_7",          "width": 5 },
+          { "element": "track_8",          "width": 5 },
+          { "element": "island_platform_4","width": 6,  "notes": "Island platform between tracks 8 and 9" },
+          { "element": "track_9",          "width": 5 },
+          { "element": "track_10",         "width": 5 },
+          { "element": "island_platform_5","width": 6,  "notes": "Island platform between tracks 10 and 11" },
+          { "element": "track_11",         "width": 5 },
+          { "element": "track_12",         "width": 5 },
+          { "element": "side_platform_2",  "width": 6,  "position": "east edge", "notes": "Side platform with wall on east side" }
+        ],
+        "total_track_platform_width_blocks": 114,
+        "remaining_width_blocks": 36,
+        "remaining_note": "Use remaining 18 blocks per side for roof support columns, service corridors, and edge buffer areas"
+      }
+    },
+
+    "roof": {
+      "height_blocks": 12,
+      "height_above_platform_blocks": 12,
+      "description": "Long, relatively flat roof spanning the full platform width at 12 blocks above platform level. Supported by Y-shaped steel columns. The roof is glass with integrated solar cells. Spans 250 blocks long and 150 blocks wide.",
+      "solar_panel_pattern": {
+        "description": "The real roof has 130,000+ solar cells integrated into glass panels covering ~10,000 m2. The cells create a semi-transparent checkerboard/stripe pattern — alternating bands of opaque dark blue-black solar cells and clear glass.",
+        "minecraft_approach": "Alternate between blue/cyan stained glass and regular glass panes in a striped pattern running east-west (perpendicular to tracks). Pattern: 2 rows glass pane, 2 rows blue stained glass pane, repeat. This creates the solar panel stripe effect at a visible scale.",
+        "block_types": ["glass_pane", "blue_stained_glass_pane", "cyan_stained_glass_pane"],
+        "total_roof_area_blocks": 37500,
+        "solar_coverage_blocks": 18750
+      },
+      "support_columns": {
+        "spacing_along_length_blocks": 20,
+        "spacing_across_width_blocks": 25,
+        "column_count_lengthwise": 13,
+        "column_count_widthwise": 7,
+        "total_columns": 91,
+        "shape": "Y-shaped: single iron bar column rising 9 blocks, then splitting into 2 diagonal supports (use stairs or slabs) spanning 3 blocks to hold up the roof",
+        "material": "Iron bars for the stem, iron trapdoors or stone brick stairs for the Y-branches",
+        "minecraft_approach": "Place 9 iron bars vertically, then at the top place stone brick stairs facing outward (east and west) in a 3-block fan pattern to form the Y-fork. Place the roof glass/slab on top of the stairs. The Y-split at 1:1 scale is 3 blocks wide on each branch."
+      }
+    },
+
+    "platform_furniture": {
+      "benches": "Oak stairs placed as seats every 15 blocks along platforms, in groups of 3 (back-to-back configuration)",
+      "info_boards": "Dark oak signs with white text showing track numbers, placed at each stairway exit and every 30 blocks along platforms",
+      "overhead_displays": "Use dark oak planks as departure boards mounted from ceiling at 4-block height, every 30 blocks. Place signs on the board faces.",
+      "lighting": "Sea lanterns or glowstone embedded in platform ceiling every 5 blocks in a grid pattern",
+      "yellow_safety_line": "Yellow concrete strip along platform edges, 1 block from the edge, running the full 250-block platform length",
+      "shelters": "Glass pane wind shelters every 40 blocks along platforms, 5 blocks wide x 3 blocks deep x 3 blocks tall"
+    }
+  },
+
+  "block_palette": {
+    "structural": {
+      "steel_canopy": { "primary": "iron_block", "alternative": "light_gray_concrete" },
+      "glass_facade": { "primary": "glass_pane", "alternative": "glass" },
+      "structural_steel": { "primary": "iron_bars", "alternative": "chain" },
+      "concrete_base": { "primary": "smooth_stone", "alternative": "stone_bricks" }
+    },
+    "interior": {
+      "wooden_ceiling_primary": { "block": "stripped_oak_log", "orientation": "east-west" },
+      "wooden_ceiling_secondary": { "block": "oak_planks" },
+      "wooden_ceiling_accent": { "block": "stripped_birch_log", "orientation": "east-west" },
+      "wooden_ceiling_warm": { "block": "spruce_planks" },
+      "wooden_ceiling_depth": { "block": "oak_slab", "placement": "top-half for raised sections, bottom-half for transitions" },
+      "floor_primary": { "block": "smooth_stone" },
+      "floor_secondary": { "block": "polished_andesite" },
+      "floor_accent": { "block": "red_sandstone" },
+      "floor_border": { "block": "polished_granite" }
+    },
+    "platform_and_tracks": {
+      "platform_surface": { "block": "smooth_stone_slab" },
+      "platform_edge_line": { "block": "yellow_concrete" },
+      "rail_base": { "block": "dark_oak_planks", "alternative": "gray_concrete" },
+      "rails": { "block": "rail", "alternative": "powered_rail" },
+      "rail_sleepers": { "block": "dark_oak_planks", "spacing": "every 2 blocks along track" },
+      "roof_glass": { "block": "glass_pane" },
+      "roof_solar": { "block": "blue_stained_glass_pane", "alternative": "cyan_stained_glass_pane" }
+    },
+    "details": {
+      "clock_face": { "block": "white_concrete" },
+      "clock_rim": { "block": "black_concrete" },
+      "clock_hands": { "block": "item_frame_with_clock" },
+      "lettering_signs": { "block": "white_banner", "text_method": "banner patterns for individual letters" },
+      "column_stem": { "block": "iron_bars" },
+      "column_y_branch": { "block": "stone_brick_stairs" },
+      "escalator_steps": { "block": "stone_brick_stairs" },
+      "escalator_rails": { "block": "chain" },
+      "lighting": { "block": "sea_lantern", "alternative": "glowstone" },
+      "wind_shelter": { "block": "glass_pane" }
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "name": "Foundation and floor plan",
+      "description": "Mark out the full footprint: 55 blocks wide for the facade, 250 blocks deep for the platform area, 150 blocks wide for the platform roof. Lay the ground floor in smooth stone. Mark track positions with dark oak planks across the 150-block width. Dig the underground passenger tunnel (6 blocks below grade, 48 blocks wide, running the full 150-block width perpendicular to tracks)."
+    },
+    {
+      "step": 2,
+      "name": "Underground tunnel and connections",
+      "description": "Build the passenger tunnel walls (smooth stone), floor (polished andesite), and ceiling (smooth stone with embedded sea lanterns every 3 blocks). The tunnel is 48 blocks wide, 5 blocks tall, and 150 blocks long. Add 7 stairway openings (5 blocks wide, 8 blocks long) rising to each platform island."
+    },
+    {
+      "step": 3,
+      "name": "Platform islands and tracks",
+      "description": "Build the 7 island platforms and 2 side platforms (6 blocks wide each, smooth stone slabs, 250 blocks long). Lay 12 rail tracks between platforms (5 blocks wide per track with dual rail lines). Add yellow concrete safety lines along all platform edges. Place platform furniture (benches every 15 blocks, signs every 30 blocks, wind shelters every 40 blocks)."
+    },
+    {
+      "step": 4,
+      "name": "Platform roof structure",
+      "description": "Build 91 Y-shaped support columns (9 blocks tall stem + 3-block Y-branches) in a grid: every 20 blocks along the 250-block length, every 25 blocks across the 150-block width. Lay the roof at 12 blocks above platform level using alternating glass panes and blue stained glass panes (2 rows each) for the solar panel effect. Total roof area: 250 x 150 = 37,500 blocks."
+    },
+    {
+      "step": 5,
+      "name": "Entrance hall walls and floor",
+      "description": "Build the entrance hall (50 blocks wide x 35 blocks deep x 22 blocks high). Use smooth stone for side walls. Leave the front open for the glass facade. Lay smooth stone floor with red sandstone accent strips every 6 blocks. Add 8 escalators in 4 pairs (3 blocks wide each, stone brick stairs with chain handrails) descending 8 blocks to the underground tunnel."
+    },
+    {
+      "step": 6,
+      "name": "Wooden slat ceiling",
+      "description": "Clad the entrance hall ceiling (50 x 35 blocks) with the wooden slat pattern: rows of stripped oak logs (east-west), every 3rd row oak planks, every 5th row stripped birch logs, every 7th row spruce planks. Create the wave effect by varying Y-level across the 50-block width using top-half and bottom-half oak slabs in a 10-block wavelength undulation pattern."
+    },
+    {
+      "step": 7,
+      "name": "Glass curtain wall",
+      "description": "Build the full-height glass facade (50 blocks wide x 22 blocks high), set back 8 blocks from the front canopy edge. Place glass panes with iron bar mullions every 3 blocks. Leave 5 entrance openings at ground level (8 blocks wide, 10 blocks tall each, separated by 2-block steel columns)."
+    },
+    {
+      "step": 8,
+      "name": "Asymmetric steel canopy (THE KEY STEP)",
+      "description": "Build the signature pointed canopy following the 30-row layer-by-layer profile. Start from row 1 (full 55-block width) and work up to row 30 (2-block peak at position 18-19). Use iron blocks or light grey concrete. The canopy overhangs the glass wall by 8 blocks at ground level, tapering to flush at the peak. Build in 2D first (the front face), then extend depth by 8 blocks to give the canopy its full forward-jutting overhang."
+    },
+    {
+      "step": 9,
+      "name": "Clock and lettering",
+      "description": "Build the 8x8 circular clock on the glass facade (centered, upper third at row 16-20). Use white concrete for the face, black concrete for the rim, and item frames with clock items in the center. Mount the CENTRAAL STATION banner letters across the facade at row 18-20 height — 32-40 banners total, each letter 3 blocks tall and 2 blocks wide."
+    },
+    {
+      "step": 10,
+      "name": "Side walls and rear transition",
+      "description": "Close in the side walls of the entrance hall and connect the hall to the platform roof. The canopy's right slope should visually flow into the platform roof — use a gradual transition from iron blocks to glass panes over 12-15 blocks. At 1:1 scale this transition is substantial and should be carefully blended."
+    },
+    {
+      "step": 11,
+      "name": "Lighting and finishing touches",
+      "description": "Add sea lanterns throughout: ceiling of tunnel (every 3 blocks), platform roof (every 5 blocks in a grid), entrance hall (integrated into wooden ceiling every 6 blocks). Place item frames and signs for wayfinding. Add redstone lamps or glowstone behind the CENTRAAL STATION lettering for the LED backlight effect. Add departure board signs on overhead dark oak plank displays."
+    },
+    {
+      "step": 12,
+      "name": "Exterior surroundings",
+      "description": "Build Stationsplein (station square) in front: 80 x 60 blocks of smooth stone/andesite with decorative patterns. Add the tram stop area with rails (3 parallel tram tracks, 40 blocks long). Landscaping with oak and birch trees. Build the bicycle parking entrance on the west side (ramp descending 4 blocks with iron bar railings). Consider adding the Groot Handelsgebouw office building to the east for context."
+    }
+  ],
+
+  "unique_challenges": {
+    "asymmetric_roof": {
+      "challenge": "Getting the unequal slopes right at full scale — the left side rises steeply (70-75 degrees) over 18 blocks while the right descends gently (20-25 degrees) over 37 blocks, with the peak at 1/3 from the left. At 30 blocks tall and 55 blocks wide, any error is very visible.",
+      "solution": "Follow the 30-row layer-by-layer profile exactly. Build a 2D template first (front face only), stand back 30+ blocks and check the silhouette from multiple angles, then extend to full depth. The left slope uses a near-5:3 step pattern (5 up for every 3 across); the right slope uses roughly 1:1.2 stepping."
+    },
+    "roof_to_platform_transition": {
+      "challenge": "The pointed canopy's gentle right slope flows seamlessly into the flat platform roof — they are one continuous structure spanning over 250 blocks",
+      "solution": "At the bottom of the right slope (row 1), the canopy is at the same height as the platform roof (12 blocks). Extend the platform roof glass directly from where the right slope ends. Use a 12-15 block transition zone where iron blocks gradually give way to glass panes."
+    },
+    "wooden_ceiling": {
+      "challenge": "Creating the organic, flowing western red cedar ceiling across a 50x35 block area with convincing wave patterns",
+      "solution": "Use stripped oak logs as the primary material in east-west orientation. Mix in birch, spruce, and regular planks for variation. Use top-half and bottom-half slabs to create the wave undulation with a 10-block wavelength. Work in 10x10 block sections to maintain consistency. The key is avoiding uniformity — vary the block types in a semi-random but rhythmic pattern."
+    },
+    "glass_wall_scale": {
+      "challenge": "The 50-block-wide by 22-block-tall glass curtain wall must feel grand and transparent while being structurally supported",
+      "solution": "Use glass panes (not blocks) for transparency. Iron bar mullions every 3 blocks provide visual structure without blocking the view. Set the glass 8 blocks behind the canopy overhang to create the deep recessed effect that defines the real building."
+    },
+    "tracks_and_platforms": {
+      "challenge": "Laying out 12 realistic train tracks with proper 5-block widths, 6-block platforms, safety lines, and platform access across a 150-block width",
+      "solution": "At 1:1 scale, build all 12 tracks with proper widths. Use 5-block-wide tracks with dual rail lines on blocks 2 and 4. Build 6-block-wide island platforms with yellow concrete edge lines. Connect all 7 island platforms and 2 side platforms to the underground tunnel via 5-block-wide stairways."
+    },
+    "sheer_scale": {
+      "challenge": "The platform roof alone is 250 x 150 = 37,500 blocks. The entire build footprint is enormous at 1:1 scale.",
+      "solution": "Use WorldEdit or similar tools for repetitive sections (roof panels, track laying, tunnel walls). Build one 20-block section of platform + track + roof as a template, then copy-paste along the 250-block length. Build the unique entrance hall and canopy by hand."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "Stand 50-60 blocks southwest of the facade at ground level to see the full asymmetric silhouette. The peak should appear to point toward you (toward the city center). The 30-block height is impressive from this distance.",
+    "front_elevation": "The signature view: the pointed steel canopy rising 30 blocks from a 55-block-wide base to an off-center peak, with the 22-block-tall glass wall visible behind. The 8x8 clock and CENTRAAL STATION lettering should be clearly legible.",
+    "interior_view": "Enter through one of the five entrance bays. Look up to see the wooden slat ceiling with its wave pattern 22 blocks overhead. The warm wood tones contrasting with the steel and glass is the key interior experience. The 50x35 block hall feels properly cavernous.",
+    "platform_view": "Walk through the hall and descend 8 blocks to the platforms. Looking along the 250-block platform length, the solar-panel roof stretches into the distance at 12 blocks overhead with Y-columns receding in perspective. All 12 tracks are visible.",
+    "aerial_view": "From above, the asymmetric V of the canopy is clearly visible, with the 250x150 block platform roof stretching behind it. The blue-tinted solar stripes on the platform roof create a distinctive pattern visible from high altitude.",
+    "rear_track_view": "From behind the station (track side), the 150-block-wide platform roof dominates — a vast glass-and-steel canopy. The entrance canopy's 30-block peak is visible rising above the 12-block rear roofline."
+  },
+
+  "real_world_reference": {
+    "tracks": "12 tracks total (numbered 1-12). Tracks 1-8 serve NS intercity and sprinter services; tracks 9-12 serve RET metro lines. Some platforms are island platforms shared between two tracks.",
+    "platforms": "7 island platforms plus 2 side platforms. The main intercity platforms (tracks 1-8) are wider. Metro platforms (9-12) are on the east side.",
+    "station_usage": "~110,000 passengers per day, making it the third-busiest station in the Netherlands.",
+    "roof_area": "28,000 m2 total roof, of which 10,000 m2 is glass with 130,000+ solar cells producing roughly 320 MWh annually.",
+    "entrance_hall_height": "The entrance hall rises the full height of the canopy — approximately 26-30m at the peak in reality. At 1:1 scale this is the 30-block peak height.",
+    "entrance_hall_dimensions": "Approximately 50m wide by 35m deep — at 1:1 scale this is 50 x 35 blocks.",
+    "platform_roof_dimensions": "Approximately 250m long by 150m wide, at 12m height — at 1:1 scale: 250 x 150 blocks, 12 blocks tall.",
+    "passenger_tunnel_width": "48m wide in reality — 48 blocks at 1:1 scale.",
+    "clock_origin": "The clock was salvaged from the demolished 1957 Sybold van Ravesteyn station and reinstalled as a heritage element in the new design.",
+    "lettering_origin": "The CENTRAAL STATION letters were also retained from the 1957 station, now backlit with LED lighting."
+  }
+}

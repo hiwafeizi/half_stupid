@@ -1,0 +1,169 @@
+{
+  "building": "Euromast",
+  "architect": "Hugh (Huig) Maaskant",
+  "built": "1958-1960 (Space Tower added 1970)",
+  "location": "Parkhaven 20, Rotterdam, Netherlands",
+  "architectural_notes": {
+    "total_height_m": 185,
+    "original_height_m": 101,
+    "shaft_internal_diameter_m": 9,
+    "shaft_wall_thickness_cm": 30,
+    "crows_nest_height_m": 96,
+    "crows_nest_diameter_m": 29,
+    "space_tower_tube_diameter_m": 2.5,
+    "space_tower_added_height_m": 85,
+    "euroscoop_range_m": "112-185",
+    "foundation": "Concrete block 1,900,000 kg, center of gravity below ground",
+    "construction_method": "Slipform construction, shaft completed in 23 days at 15-20 cm/hour",
+    "design_inspiration": "Ship's mast with crow's nest"
+  },
+  "image_sources": [
+    {
+      "description": "Full tower view of Euromast from ground level, showing shaft, crow's nest disc, and space tower",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rotterdam,_Euromast_foto3_2009-08-23_09.49.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Rotterdam%2C_Euromast_foto3_2009-08-23_09.49.JPG",
+      "credit": "Michielverbeek, CC BY-SA 3.0, via Wikimedia Commons",
+      "useful_for": "Overall tower proportions, shaft-to-disc ratio, space tower tube on top"
+    },
+    {
+      "description": "Euromast with abseiling activity, showing full tower and crow's nest platform detail",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Abseilen_vanaf_de_Euromast_in_Rotterdam_(01).JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Abseilen_vanaf_de_Euromast_in_Rotterdam_%2801%29.JPG",
+      "credit": "FaceMePLS, CC BY 2.0, via Wikimedia Commons",
+      "useful_for": "Crow's nest disc shape and proportions relative to shaft, structural details"
+    },
+    {
+      "description": "Euromast close-up showing abseiling and crow's nest platform from different angle",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Abseilen_vanaf_de_Euromast_in_Rotterdam_(02).JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Abseilen_vanaf_de_Euromast_in_Rotterdam_%2802%29.JPG",
+      "credit": "FaceMePLS, CC BY 2.0, via Wikimedia Commons",
+      "useful_for": "Crow's nest detail, space tower tube above the disc, glass cabin shape"
+    },
+    {
+      "description": "Euromast as part of Rotterdam skyline, showing relative scale and full silhouette",
+      "source_url": "https://en.wikipedia.org/wiki/Euromast",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Rotterdam%2C_Euromast_foto3_2009-08-23_09.49.JPG/800px-Rotterdam%2C_Euromast_foto3_2009-08-23_09.49.JPG",
+      "credit": "Wikimedia Commons, CC BY-SA 3.0",
+      "useful_for": "Tower silhouette and overall shape reference for Minecraft build outline"
+    },
+    {
+      "description": "Euromast tower detail from wederopbouw Rotterdam, historical and architectural context",
+      "source_url": "https://wederopbouwrotterdam.nl/en/articles/euromast",
+      "image_url": "Browse page directly for historical construction and detail photos",
+      "credit": "Wederopbouw Rotterdam / Post-war reconstruction Community",
+      "useful_for": "Historical photos, construction details, crow's nest interior and exterior"
+    },
+    {
+      "description": "Euromast official history page with photos of tower, space tower, and Euroscoop cabin",
+      "source_url": "https://euromast.nl/en/history/",
+      "image_url": "Browse page directly for official photos",
+      "credit": "Euromast Rotterdam (official)",
+      "useful_for": "Space tower rotating cabin (Euroscoop), restaurant platform, modern photos"
+    },
+    {
+      "description": "Euromast tower information with specifications and photos",
+      "source_url": "https://www.great-towers.com/tower/euromast",
+      "image_url": "Browse page directly",
+      "credit": "World Federation of Great Towers",
+      "useful_for": "Technical specifications, comparison to other towers, profile view"
+    },
+    {
+      "description": "Euromast miniature model in Madurodam - useful for seeing the full structure as a scale model",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Euromast_in_Madurodam",
+      "image_url": "Browse category for scale model photos",
+      "credit": "Various photographers, Wikimedia Commons",
+      "useful_for": "Scale model showing all components clearly - great reference for Minecraft proportions"
+    },
+    {
+      "description": "View from inside the Space Tower observation deck showing glass cabin interior",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Euromast",
+      "image_url": "Look for files titled 'In the Space Tower @ Observation Deck @ Euromast @ Rotterdam'",
+      "credit": "Various photographers, Wikimedia Commons, 5472x3648 resolution available",
+      "useful_for": "Euroscoop cabin interior detail, glass walls and rotating mechanism"
+    },
+    {
+      "description": "Euromast detailed travel photos showing crow's nest restaurant and space tower",
+      "source_url": "https://fromplacetoplace.travel/netherlands/rotterdam/euromast-rotterdam/",
+      "image_url": "Browse page for detailed exterior and interior photos",
+      "credit": "From Place to Place Travel",
+      "useful_for": "Close-up photos of crow's nest restaurant platform, Euroscoop cabin exterior"
+    },
+    {
+      "description": "Flickr photo of Euromast tower with detailed view",
+      "source_url": "https://www.flickr.com/photos/hhs/48780017323/",
+      "image_url": "Browse for high-res download",
+      "credit": "Flickr user hhs",
+      "useful_for": "High-resolution detail shot of tower structure"
+    },
+    {
+      "description": "3D printable model of Euromast with reference dimensions",
+      "source_url": "https://www.printables.com/model/798211-euromast-rotterdam-netherlands",
+      "image_url": "Browse page for 3D model renders",
+      "credit": "MiniWorld3D on Printables",
+      "useful_for": "3D model reference showing simplified geometry - excellent for Minecraft block planning"
+    },
+    {
+      "description": "Rotterdam360 detailed Euromast page with architectural context",
+      "source_url": "https://www.rotterdam360.com/euromast-eng/",
+      "image_url": "Browse page directly",
+      "credit": "Rotterdam360",
+      "useful_for": "Architectural context, detail photos of all tower sections"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Original drawing of Euromast by Hugh Maaskant (pinned reference)",
+      "source_url": "https://www.pinterest.com/pin/original-drawing-of-euromast--514254851179690657/",
+      "image_url": "Browse pin for original architectural drawing image",
+      "type": "elevation"
+    },
+    {
+      "description": "J. Bakema alternative design for Euromast (1957) - Collection Het Nieuwe Instituut BROX 1191t1672",
+      "source_url": "https://www.pinterest.com/pin/j-bakema-design-for-the-euromast-rotterdam-1957-collection-het-nieuwe-instituut-brox-1191t1672--428686458279403079/",
+      "image_url": "Browse pin for architectural drawing",
+      "type": "elevation"
+    },
+    {
+      "description": "Observation tower Euromast - Treasures of the NAI (Het Nieuwe Instituut archive)",
+      "source_url": "http://schatkamer.nai.nl/en/projects/uitkijktoren-euromast",
+      "image_url": "Browse page for archival drawings and models",
+      "type": "elevation/plan"
+    },
+    {
+      "description": "Euromast on Architectuurgids.nl - Dutch architecture guide with technical details",
+      "source_url": "https://www.architectuur.org/bouwwerk/321/Euromast.html",
+      "image_url": "Browse page for architectural documentation",
+      "type": "detail"
+    },
+    {
+      "description": "Euromast entry on architectureguide.nl with project details by Maaskant",
+      "source_url": "http://www.architectureguide.nl/project/list_projects_of_tag/tag_id/15/prj_id/209",
+      "image_url": "Browse page for architectural reference",
+      "type": "detail"
+    },
+    {
+      "description": "Maaskant Drawings exhibition at Kunsthal - archive of original drawings",
+      "source_url": "https://www.kunsthal.nl/en/plan-your-visit/exhibitions/Maaskantdrawings/",
+      "image_url": "Browse for exhibition images of original Maaskant drawings",
+      "type": "elevation/cross-section"
+    }
+  ],
+  "minecraft_build_notes": {
+    "key_proportions": "Shaft is 9m diameter, 96m to crow's nest. Crow's nest disc is 29m diameter (asymmetric). Space tower tube is 2.5m on top adding 85m more.",
+    "suggested_scale": "At 1:1 scale the shaft would be 9 blocks wide and 96 blocks to the crow's nest, 185 blocks total. Consider 1:2 scale for a manageable 93-block build.",
+    "main_sections": [
+      "1. Concrete foundation base (wider than shaft)",
+      "2. Cylindrical concrete shaft (9m diameter, ~96m tall) - use light gray concrete",
+      "3. Crow's nest disc (29m diameter, asymmetric, at 96m) - wider on one side, contains restaurant",
+      "4. Space Tower tube (2.5m diameter metal tube, ~85m, sits on top of crow's nest disc)",
+      "5. Euroscoop rotating cabin (glass ring around Space Tower tube, near top)"
+    ],
+    "material_suggestions": {
+      "shaft": "Light gray concrete, smooth quartz",
+      "crows_nest_disc": "Gray concrete, iron blocks for structural ring",
+      "space_tower_tube": "Iron bars, gray stained glass",
+      "euroscoop_cabin": "Light blue stained glass, white concrete trim",
+      "base_landscaping": "Park setting with trees (Het Park surroundings)"
+    }
+  }
+}

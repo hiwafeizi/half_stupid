@@ -1,0 +1,166 @@
+{
+  "building": "Witte Huis",
+  "alternate_names": ["Het Witte Huis", "White House Rotterdam"],
+  "location": "Wijnhaven 3, Rotterdam, Netherlands",
+  "architect": "Willem Molenbroek",
+  "year": "1897-1898",
+  "style": "Art Nouveau / Eclectic with American high-rise influence",
+  "dimensions": {
+    "height_m": 43,
+    "floors": 10,
+    "ground_plan": "almost square",
+    "foundation_piles": 1000,
+    "glazed_white_bricks": 100000,
+    "hard_stone_m2": 300
+  },
+  "rijksmonument_number": 334003,
+  "key_features_for_minecraft": {
+    "ground_floor": "Natural stone (hardstone) arcade base with shops/cafe spaces, columns, floral motifs, winged dragon reliefs at base of corner towers",
+    "first_floor": "Also natural stone cladding, 6 sculptures by Simon Miedema (Navigation, Progress, Agriculture, Industry, Trade, and one more)",
+    "floors_2_to_7": "White glazed brick facade with geometric decorations in yellow, red, and blue brick; colorful tile panels with Art Nouveau floral motifs in arches crowning window rows",
+    "corner_towers": "Two corner towers with fairytale turret silhouettes",
+    "roof": "Flat slate pitched roof with ornate roofline, wrought-iron elements",
+    "east_facade": "Name 'Het Witte Huis' displayed",
+    "windows": "Rounded corner windows with stone reliefs",
+    "other": "Wrought-iron lamp hooks with floral motifs"
+  },
+  "image_sources": [
+    {
+      "description": "Full exterior view of Witte Huis from street level, showing complete facade and corner towers",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Het_witte_huis_in_Rotterdam.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Het_witte_huis_in_Rotterdam.JPG",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Overall building shape, proportions, tower placement, white facade color"
+    },
+    {
+      "description": "Witte Huis exterior view showing full building with surrounding context at Oudehaven",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Witte_Huis_Rotterdam_10.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Witte_Huis_Rotterdam_10.JPG",
+      "credit": "Wikimedia Commons - Wiki Loves Monuments 2013 (CC license)",
+      "useful_for": "Building proportions relative to surroundings, roof profile, overall massing"
+    },
+    {
+      "description": "Another angle of Witte Huis exterior",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Witte_Huis_Rotterdam_11.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Witte_Huis_Rotterdam_11.JPG",
+      "credit": "Wikimedia Commons - Wiki Loves Monuments 2013 (CC license)",
+      "useful_for": "Alternative angle showing facade details and corner tower profile"
+    },
+    {
+      "description": "Detail of 'Handel' (Trade) sculpture on the Witte Huis facade by Simon Miedema",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rotterdam_Het_witte_huis_Handel.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Rotterdam_Het_witte_huis_Handel.JPG",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Art Nouveau sculptural detail at first floor level, decorative elements"
+    },
+    {
+      "description": "Witte Huis full view from across the harbor, showing the building in its waterfront context (2010 photo)",
+      "source_url": "https://en.wikipedia.org/wiki/Witte_Huis",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Rotterdam%2C_het_Witte_Huis_foto6_2010-11-28_13.51.JPG",
+      "credit": "Wikimedia Commons (CC license)",
+      "useful_for": "Full building view from distance showing complete silhouette including mansard roof and turrets"
+    },
+    {
+      "description": "Witte Huis on Google Arts & Culture - high quality archival/artistic image by Willem Molenbroek",
+      "source_url": "https://artsandculture.google.com/asset/the-witte-huis-white-house-in-rotterdam-netherlands-willem-molenbroek/BgHp3rYZSYY1mg",
+      "image_url": "https://artsandculture.google.com/asset/the-witte-huis-white-house-in-rotterdam-netherlands-willem-molenbroek/BgHp3rYZSYY1mg",
+      "credit": "Google Arts & Culture",
+      "useful_for": "High quality reference image, possibly historical photograph or rendering by the architect"
+    },
+    {
+      "description": "Bluffton University architectural photography page - multiple detailed views by Mary Ann Sullivan",
+      "source_url": "https://homepages.bluffton.edu/~sullivanm/netherlands/rotterdam/whitehouse/whitehouse.html",
+      "image_url": "https://homepages.bluffton.edu/~sullivanm/netherlands/rotterdam/whitehouse/whitehouse.html",
+      "credit": "Mary Ann Sullivan, Bluffton University",
+      "useful_for": "Multiple detailed architectural photos: facade details, ground floor arcade, decorative elements, corner towers"
+    },
+    {
+      "description": "Francis Frith historic photograph of Witte Huis c.1930",
+      "source_url": "https://www.francisfrith.com/us/rotterdam,holland/rotterdam-witte-huis-c1930_r144009",
+      "image_url": "https://www.francisfrith.com/us/rotterdam,holland/rotterdam-witte-huis-c1930_r144009",
+      "credit": "Francis Frith Collection",
+      "useful_for": "Historic view of the building c.1930, shows original context before WWII bombing of surrounding area"
+    },
+    {
+      "description": "Accidentally Wes Anderson feature on Witte Huis - stylized architectural photograph",
+      "source_url": "https://accidentallywesanderson.com/places/witte-huis/",
+      "image_url": "https://accidentallywesanderson.com/places/witte-huis/",
+      "credit": "Accidentally Wes Anderson",
+      "useful_for": "Clean, well-composed exterior photo emphasizing symmetry and color palette"
+    },
+    {
+      "description": "Alamy stock photo showing Art Nouveau facade details",
+      "source_url": "https://www.alamy.com/white-house-rotterdam-or-witte-huis-is-a-building-in-art-nouveau-style-in-central-rotterdam-architect-willem-molenbroek-opened-1898-image222123052.html",
+      "image_url": "https://www.alamy.com/white-house-rotterdam-or-witte-huis-is-a-building-in-art-nouveau-style-in-central-rotterdam-architect-willem-molenbroek-opened-1898-image222123052.html",
+      "credit": "Alamy Stock Photo",
+      "useful_for": "Professional architectural photography showing Art Nouveau style details"
+    },
+    {
+      "description": "Rotterdam360 comprehensive photo gallery of Witte Huis",
+      "source_url": "https://www.rotterdam360.com/witte-huis-eng/",
+      "image_url": "https://www.rotterdam360.com/witte-huis-eng/",
+      "credit": "Rotterdam360",
+      "useful_for": "Multiple views and details of the building, local Rotterdam perspective"
+    },
+    {
+      "description": "Structurae engineering database entry with technical building data",
+      "source_url": "https://structurae.net/en/structures/witte-huis",
+      "image_url": "https://structurae.net/en/structures/witte-huis",
+      "credit": "Structurae",
+      "useful_for": "Technical/engineering perspective, structural details useful for understanding construction"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Historic design/architectural rendering by architect Willem Molenbroek (photographer Van den Ende, Stadsarchief Collectie 4202, nummer 1167)",
+      "source_url": "https://stadsarchief.rotterdam.nl/het-witte-huis",
+      "image_url": "https://stadsarchief.rotterdam.nl/het-witte-huis",
+      "type": "elevation",
+      "notes": "Rotterdam City Archive holds the original architectural design photos. Search their image bank for Collectie 4202, nummer 1167."
+    },
+    {
+      "description": "Construction photograph from 1897-1898 (Stadsarchief Collectie 4100, nummer 3592)",
+      "source_url": "https://stadsarchief.rotterdam.nl/het-witte-huis",
+      "image_url": "https://stadsarchief.rotterdam.nl/het-witte-huis",
+      "type": "detail",
+      "notes": "Shows building under construction, useful for understanding structural layers. Search Stadsarchief image bank."
+    },
+    {
+      "description": "Rijksmonumenten.nl monument description with facade details breakdown",
+      "source_url": "https://rijksmonumenten.nl/monument/334003/witte-huis/rotterdam/",
+      "image_url": "https://rijksmonumenten.nl/monument/334003/witte-huis/rotterdam/",
+      "type": "detail",
+      "notes": "Official Dutch heritage listing. Contains detailed written description of all facade elements floor by floor, useful as a textual blueprint."
+    },
+    {
+      "description": "Monumenten.nl entry with heritage documentation",
+      "source_url": "https://www.monumenten.nl/monument/334003",
+      "image_url": "https://www.monumenten.nl/monument/334003",
+      "type": "detail",
+      "notes": "Additional heritage documentation and images of the monument."
+    }
+  ],
+  "minecraft_build_notes": {
+    "scale_suggestion": "At 43m tall with 10 floors, consider 1:1 scale (43 blocks tall) or 2:1 (86 blocks) for detail",
+    "palette_suggestions": {
+      "white_glazed_facade": "White concrete, white terracotta, or quartz blocks",
+      "ground_floor_stone": "Stone bricks or polished andesite for natural stone arcade",
+      "colored_decorations": "Yellow terracotta, blue terracotta, red terracotta for geometric accents",
+      "roof_slate": "Dark gray or cyan terracotta, deepslate tiles",
+      "art_nouveau_panels": "Glazed terracotta blocks in various colors for decorative panels",
+      "corner_tower_tops": "Use stairs and slabs for turret silhouettes"
+    },
+    "key_proportions": "Almost square ground plan, 10 floors, two prominent corner towers, flat pitched roof",
+    "distinctive_elements": [
+      "White glazed brick exterior (100,000 bricks in reality)",
+      "Two corner towers with fairytale turret tops",
+      "Natural stone ground floor with arcade columns",
+      "6 sculptures at first floor level",
+      "Winged dragon reliefs at base of corner towers",
+      "Art Nouveau mosaic panels in window arches",
+      "Wrought-iron roofline details",
+      "Text 'Het Witte Huis' on east facade",
+      "Geometric colored brick patterns (yellow, red, blue) on white field"
+    ]
+  }
+}

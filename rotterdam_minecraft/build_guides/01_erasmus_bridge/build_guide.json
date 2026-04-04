@@ -1,0 +1,283 @@
+{
+  "building": "Erasmus Bridge (Erasmusbrug)",
+  "nickname": "The Swan (De Zwaan)",
+  "architect": "Ben van Berkel / UNStudio",
+  "year": 1996,
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "real_world_reference": {
+    "total_length_m": 802,
+    "cable_stayed_span_m": 410,
+    "main_span_m": 284,
+    "bascule_span_m": 89,
+    "pylon_height_m": 139,
+    "deck_width_m": 33.8,
+    "deck_clearance_above_water_m": 17,
+    "bascule_leaf_dimensions_m": "52.3 x 35.8",
+    "bascule_weight_tonnes": 2700
+  },
+
+  "scale_conversion_notes": {
+    "scale": "1:1",
+    "1_block_equals": "1 meter",
+    "why_1_to_1": "At 1:1 scale, every real-world meter maps to one Minecraft block. This gives full resolution for the swan-neck pylon shape, accurate lane widths on the deck, realistic cable spacing, and true-to-life proportions throughout. The build is 802 blocks long and 139 blocks tall at the pylon -- a massive project best suited for creative mode with WorldEdit or similar tools."
+  },
+
+  "pylon_construction": {
+    "description": "The single asymmetric steel pylon shaped like a swan's neck. This is THE signature element of the bridge. The pylon has a horizontal base section, a dramatic kink/bend where it transitions upward, and a near-vertical upper section. The overall tilt is 85 degrees from horizontal. All cables attach at the top.",
+    "total_height_blocks": 139,
+    "cross_section": "The pylon is roughly rectangular in cross-section, approximately 10x10 blocks at the base tapering to 4x4 at the tip. Use stairs and slabs to create the tapered faceted surfaces that catch light.",
+
+    "base_section": {
+      "height_blocks": 20,
+      "length_blocks": 25,
+      "width_blocks": 10,
+      "description": "Horizontal portion sitting on the deck pier. This runs roughly horizontal (parallel to the deck) for about 20-25m in reality. Build a 25-block-long horizontal beam, 10 blocks wide, 10 blocks tall. This is the base of the swan's body. Place it centered on the deck at the pylon pier location.",
+      "block_by_block": "Layers 1-10: Place 25 blocks of light blue concrete in a row at deck level, 10 wide. Layers 11-20: Same but start tapering by using light blue concrete stairs on the outer edges to narrow the profile toward the kink."
+    },
+
+    "kink_section": {
+      "height_blocks": 30,
+      "angle_description": "The kink transitions from horizontal (~0 degrees) to roughly 40-45 degrees from horizontal over about 30 blocks. This is the bend of the swan's neck. The real bridge has a sharp but smooth cranked bend here, not a gradual curve.",
+      "block_by_block_approach": "This is the hardest part. Build a diagonal line stepping up 1 block for every 1 block forward for the first 15 blocks (45 degrees), then shift to stepping up 2 blocks for every 1 block forward for the next 15 blocks (steepening toward vertical). Use stairs facing different directions to smooth the transition. Place light blue concrete stairs with their backs facing outward to create the illusion of a curved surface. At 1:1 scale you have 30 blocks to work with, giving excellent resolution for the curve.",
+      "stair_trick": "At each step of the diagonal, place a light blue concrete stair block facing the direction of the bend. This fills in the jagged step pattern and creates a smoother-looking curve. Use bottom-stairs for the lower kink and top-stairs as it straightens out. With 30 blocks of height, you can create a very convincing smooth crank."
+    },
+
+    "vertical_section": {
+      "height_blocks": 80,
+      "width_blocks": 10,
+      "description": "Near-vertical upper mast. Not perfectly vertical -- it leans back at about 85 degrees from horizontal (5 degrees off true vertical, leaning toward the backstay side). Over 80 blocks, offset 7-8 blocks from true vertical. Build as a 10-wide column that shifts 1 block horizontally every 10 blocks.",
+      "cable_attachment_zone": "The top 40 blocks of this section are where all 40 cables converge. In reality they cluster at the pylon head. In Minecraft, you will radiate cables outward from the top 20-30 blocks of the pylon."
+    },
+
+    "tip": {
+      "height_blocks": 9,
+      "description": "Tapered tip of the pylon. Narrow from the full cross-section down to a single block column over the last 9 blocks. Use stairs and slabs at each layer to smoothly reduce the width. Cap with a light blue concrete slab or lightning rod for a pointed finish."
+    }
+  },
+
+  "deck_construction": {
+    "description": "The deck is a thin, elegant steel structure carrying 4 car lanes, 2 tram tracks, 2 cycle paths, and 2 pedestrian walkways. Two box-girder spines run along the center (where cables attach) with the road between them and cantilevered pedestrian/cycle paths on either side.",
+    "cross_section": {
+      "total_width_blocks": 34,
+      "layers": [
+        {
+          "name": "pedestrian path (north side)",
+          "blocks": "smooth stone slab",
+          "position": "outermost blocks, positions 1-3 of 34",
+          "width_blocks": 3,
+          "notes": "Cantilevered 2.5-3m out from the spine in reality. Use slabs to keep it visually thinner than the road. Place iron bar railings along the outermost edge."
+        },
+        {
+          "name": "cycle path (north side)",
+          "blocks": "red concrete or red terracotta",
+          "position": "positions 4-6 of 34",
+          "width_blocks": 3,
+          "notes": "Dutch cycle paths are typically red/brick colored, approximately 2.5m wide. Red terracotta gives a good contrast against the gray road."
+        },
+        {
+          "name": "road surface (2 northbound lanes + tram track)",
+          "blocks": "gray concrete",
+          "position": "positions 7-16 of 34",
+          "width_blocks": 10,
+          "notes": "Represents 2 car lanes (~3.5m each = 7 blocks) and 1 tram track (~3m = 3 blocks). At 1:1 scale, you can differentiate lanes using gray concrete for roads and iron trapdoors or rails for the tram track within this 10-block span."
+        },
+        {
+          "name": "center median / cable attachment spine",
+          "blocks": "light gray concrete or smooth stone",
+          "position": "positions 17-18 of 34 (center)",
+          "width_blocks": 2,
+          "notes": "This is where the two box-girder spines run and where cables attach along the deck centerline. Use a slightly different shade to distinguish it. Place end rods or chains vertically here where cables connect."
+        },
+        {
+          "name": "road surface (2 southbound lanes + tram track)",
+          "blocks": "gray concrete",
+          "position": "positions 19-28 of 34",
+          "width_blocks": 10,
+          "notes": "Mirrors the north road surface. 2 car lanes + tram track."
+        },
+        {
+          "name": "cycle path (south side)",
+          "blocks": "red concrete or red terracotta",
+          "position": "positions 29-31 of 34",
+          "width_blocks": 3,
+          "notes": "Mirrors north cycle path."
+        },
+        {
+          "name": "pedestrian path (south side)",
+          "blocks": "smooth stone slab",
+          "position": "positions 32-34 of 34 (outermost)",
+          "width_blocks": 3,
+          "notes": "Mirrors north pedestrian path."
+        }
+      ],
+      "depth_blocks": 2,
+      "depth_notes": "The deck is 2 blocks thick to represent the steel box-girder depth (~2m in reality). Use full blocks for the road surface layer and a second layer of light blue concrete or iron bars underneath for the box-girder structure. The pedestrian cantilevers use slabs on top to keep them visually thinner."
+    },
+    "total_length_blocks": 802,
+    "cable_stayed_section_length_blocks": 410,
+    "approach_spans_length_blocks": 303,
+    "bascule_section_length_blocks": 89,
+
+    "support_piers": {
+      "count": 6,
+      "spacing_blocks": "approximately 125 blocks apart in the approach spans",
+      "shape": "Rectangular columns, 10 blocks wide x 5 blocks deep, made of stone bricks or gray concrete. They rise from the water/riverbed to the underside of the deck. Height varies: about 17 blocks above water level (representing the 17m clearance at 1:1 scale).",
+      "pylon_pier": "The main pylon pier is larger: 15 blocks wide x 10 blocks deep, and forms the foundation for the pylon base section."
+    }
+  },
+
+  "cable_system": {
+    "description": "40 cables total in a semi-fan arrangement. All attach in a single vertical plane along the deck centerline. 32 main-span cables fan forward from the pylon top to the deck. 8 backstay cables angle backward to anchor points behind the pylon.",
+    "arrangement_type": "Semi-fan (cables cluster at the pylon top but spread along the deck)",
+
+    "main_span_cables": {
+      "count": 32,
+      "attachment_on_pylon": "All 32 cables attach within the top 20-30 blocks of the pylon, clustered close together. In Minecraft, anchor them at the top 20 blocks of the vertical section.",
+      "attachment_on_deck": "Cables attach along the center line of the deck (positions 17-18 of 34) at regular intervals along the main span.",
+      "fan_pattern": "The cables fan out from the pylon top: the nearest cable drops almost vertically, while the farthest cable stretches at a shallow angle to the far end of the main span. At 1:1 scale with 410 blocks of main span, place a cable every 12-13 blocks along the deck for 32 cables.",
+      "spacing_on_deck_blocks": 12.8,
+      "practical_spacing": "Alternate between every 12 blocks and every 13 blocks to distribute 32 cables over 410 blocks. Pattern: 13, 13, 13, 12, 13, 13, 12... (average 12.8 blocks apart).",
+      "block_type": "End rods are the best choice -- they are thin, light-colored, and can be placed at angles. Alternatively, use chains (darker, more visible) or lightning rods (thinner). For very long cable runs (up to 200+ blocks), you will need to use scaffolding or string with tripwire hooks as invisible supports.",
+      "how_to_angle_cables": "Minecraft cannot do true diagonal lines thinner than 1 block. For each cable, plot a line from the pylon attachment point to the deck attachment point. Step the cable diagonally: move 1 block horizontally for every N blocks vertically (where N depends on the angle). Use end rods oriented along the axis of travel for the thinnest look. For steep near-pylon cables, stack end rods vertically. For shallow far-from-pylon cables, alternate horizontal and vertical end rod segments. At 1:1 scale the long cable runs give much better angular resolution than smaller scales."
+    },
+
+    "backstay_cables": {
+      "count": 8,
+      "description": "8 cables angle backward from the pylon top to anchor points on the south bank behind the pylon. These balance the forward pull of the 32 main-span cables.",
+      "attachment_on_pylon": "Same top cluster as the main cables, but angling in the opposite direction.",
+      "length_blocks": "Approximately 75-100 blocks from pylon top to the south bank anchor.",
+      "anchor_point": "Terminate in a solid concrete block structure on the south bank, represented by a 15x15 block of stone bricks at ground level.",
+      "spacing": "Space the 8 backstays about 10 blocks apart at the deck anchor end. They converge toward the pylon top."
+    }
+  },
+
+  "bascule_section": {
+    "description": "At the southern end of the bridge, a 89m bascule (drawbridge) section allows tall ships to pass. This is the largest bascule bridge in Europe. The leaf is 52.3m x 35.8m and weighs 2700 tonnes. It opens hydraulically in about 2 minutes.",
+    "length_blocks": 89,
+    "width_blocks": 34,
+    "leaf_blocks": 52,
+    "counterweight_blocks": 37,
+
+    "mechanism_description": "The bascule is a single-leaf design. The deck pivots upward on a massive hinge at the south end. A counterweight beneath the hinge balances the leaf. Four hydraulic cylinders (6.8m stroke each) drive the opening. The leaf rotates approximately 60-70 degrees when fully open.",
+
+    "minecraft_decorative_version": {
+      "description": "For a static decorative build, simply build the bascule section as a continuation of the deck with a visible gap/hinge line (2-3 block gap) between the main deck and the bascule leaf. Add a stone brick housing block beneath the hinge to represent the machinery room.",
+      "hinge_detail": "Place a 10-block-tall stone brick structure below deck level at the pivot point. Add iron blocks to represent the hydraulic machinery."
+    },
+
+    "redstone_functional": {
+      "description": "To make a working drawbridge using redstone:",
+      "steps": [
+        "Build the bascule leaf from blocks that can be moved by pistons (not tile entities -- use concrete, planks, etc.)",
+        "Option A - Piston drawbridge: Place sticky pistons beneath the leaf. Use a multi-stage piston setup: bottom pistons push the deck up, then retract, creating a gap. Limited to small sections due to piston push limit of 12 blocks. At 34 blocks wide, you need at least 3 rows of piston arrays.",
+        "Option B - Slime block launcher: Use slime blocks and pistons to fling a section upward. Dramatic but not realistic.",
+        "Option C - Armor stand trick: Use command blocks to rotate armor stands wearing the bridge as a hat. Most realistic rotation but requires commands.",
+        "Recommended: Use Option A with a redstone lever or button on each side. Wire pistons in sequence with repeater delays to create a slow-opening effect. The 34-block-wide deck far exceeds piston limits, so split into multiple 12-block piston arrays (requires at least 3 rows of pistons). Alternatively, use command blocks for the most realistic result at this scale."
+      ],
+      "trigger": "Place a lever on a light blue concrete block near the bascule housing. Run redstone dust along the underside of the deck to the piston array."
+    }
+  },
+
+  "block_palette": {
+    "pylon": {
+      "primary": "light_blue_concrete",
+      "accent": "light_blue_concrete_stairs (for the kink curve shaping)",
+      "tip": "lightning_rod or light_blue_concrete_slab",
+      "notes": "The real bridge is painted a pale sky blue that can appear almost white in bright sunlight. Light blue concrete is the best Minecraft match. Light blue terracotta is slightly more muted if you prefer a weathered look."
+    },
+    "deck_surface": "gray_concrete",
+    "deck_underside": "light_blue_concrete (the real bridge has light blue painted steel underneath too)",
+    "deck_sides": "light_blue_concrete or iron_block (for the box girder edges visible from the side)",
+    "cables": {
+      "primary": "end_rod (best thin cable look, pale white/cream matches steel cables)",
+      "alternative_1": "chain (darker, more visible from distance, good for builds viewed from far away)",
+      "alternative_2": "lightning_rod (very thin, copper-toned, good for close-up builds)",
+      "alternative_3": "light_gray_stained_glass_pane (flat, good for 2D side-view representation)",
+      "notes": "End rods are recommended because they are the thinnest full-block-length element and their pale color matches steel cables. They can be oriented in any axis. At 1:1 scale, cable runs can exceed 200 blocks -- consider using chains for visibility at distance."
+    },
+    "railings": "iron_bars (along both outer edges of the pedestrian paths)",
+    "cycle_paths": "red_concrete or red_terracotta (Dutch cycle path color)",
+    "pedestrian_paths": "smooth_stone_slab",
+    "center_median": "light_gray_concrete or smooth_stone",
+    "piers": "stone_bricks or gray_concrete",
+    "water": "water (natural) or blue_stained_glass over sea_lantern for glowing water effect at night",
+    "tram_tracks": "rail or powered_rail (place on top of the gray concrete road surface at positions 10-11 and 24-25 for visible tram tracks within each road section, or use iron_trapdoor strips for a subtle track indication)",
+    "backstay_anchor": "stone_bricks",
+    "bascule_machinery": "iron_block with stone_brick housing",
+    "night_lighting": {
+      "deck_edge": "sea_lantern every 8-10 blocks under slabs along the pedestrian paths",
+      "pylon": "end_rod or sea_lantern embedded in the pylon every 10 blocks for uplighting effect",
+      "water_reflection": "place sea_lanterns in the riverbed below the bridge for a glow-through-water reflection effect"
+    }
+  },
+
+  "build_order": [
+    "Step 1: PLAN THE FOOTPRINT - Mark out the 802-block length on the water surface using temporary wool blocks. Mark the pylon location at approximately block 284 from the north end (the pylon divides the bridge asymmetrically: 284m main span north, rest south). Mark pier locations every 125 blocks in the approach spans. Mark the bascule section at the south end (last 89 blocks).",
+    "Step 2: BUILD THE PIERS - Start from the riverbed and build the 6 support piers up to deck level (17 blocks above water). Use stone bricks, 10 wide x 5 deep. Build the main pylon pier larger: 15 wide x 10 deep.",
+    "Step 3: LAY THE DECK - Build the 34-block-wide deck across all piers. Start with the center median (2 blocks of light gray concrete), then add 10 blocks of gray concrete road lanes on either side, 3 blocks of red concrete cycle paths, and 3 blocks of smooth stone slabs for pedestrian paths on each side. Place iron bars as railings on both outer edges. Work in sections of 50-100 blocks at a time. Use WorldEdit //stack for efficiency.",
+    "Step 4: BUILD THE PYLON BASE - On the main pylon pier, begin the horizontal base section: 25 blocks long, 10 wide, 20 tall (10 blocks on each side tapering), using light blue concrete. Orient it along the deck.",
+    "Step 5: BUILD THE PYLON KINK - This is the critical architectural feature. Starting from the end of the base, build the diagonal transition upward over 30 blocks. Use light blue concrete blocks for the core and light blue concrete stairs to smooth the bend. Step pattern over 30 blocks: the first 15 blocks step at 45 degrees (1 up per 1 forward), then the next 15 blocks steepen to 2 up per 1 forward. With 30 blocks of resolution, you can create a very convincing smooth crank -- this creates the characteristic swan-neck bend from horizontal to near-vertical.",
+    "Step 6: BUILD THE PYLON VERTICAL SECTION - Continue upward for 80 blocks, nearly vertical but offset 7-8 blocks toward the main span over the full height. Keep it 10 blocks wide for the first 50 blocks, then taper to 5 blocks wide for the next 20 blocks, then to 3 blocks wide for the top 10 blocks. Use stairs on each tapering transition.",
+    "Step 7: ADD THE PYLON TIP - Cap with 9 blocks narrowing progressively to a lightning rod or slab at the very top. Total pylon should now be 139 blocks from deck to tip.",
+    "Step 8: STRING THE MAIN CABLES (32) - Working from the pylon top, place cables one at a time. Start with the nearest (steepest) cable and work outward. For each cable: plot the diagonal from pylon top to deck center, then place end rods stepping diagonally. Space them every 12-13 blocks along the deck. This is the most time-consuming step. TIP: Build scaffolding towers at intervals to work from, then remove them. At 1:1 scale, the longest cables will be 200+ blocks -- use WorldEdit line commands if available.",
+    "Step 9: STRING THE BACKSTAY CABLES (8) - From the same pylon top cluster, angle 8 cables backward to the south bank anchor point. These are 75-100 blocks long. Terminate in a 15x15 stone brick anchor block on the south bank. Space them 10 blocks apart at the deck anchor end.",
+    "Step 10: BUILD THE BASCULE SECTION - At the south end, build the last 89 blocks of deck. Leave a 2-3 block gap at the hinge point to suggest the movable joint. Build a 15x10x10 stone brick + iron block machinery housing beneath the hinge. Optionally add redstone pistons or command blocks for a functional drawbridge.",
+    "Step 11: ADD DETAILS AND LIGHTING - Place tram track indicators (iron trapdoors or actual rails) on the road surface at positions 10-11 and 24-25. Add sea lanterns under slabs every 8-10 blocks along the pedestrian paths for night lighting. Add end rods on the pylon face every 10 blocks for uplighting. At 1:1 scale, add lane markings using white concrete or white carpet on the road surface.",
+    "Step 12: WATER AND SURROUNDINGS - Ensure the river beneath is at least 40-50 blocks wide and 20-25 blocks deep. Optionally place sea lanterns on the riverbed for a nighttime reflection effect. Add the south bank and north bank terrain, connecting to the approach roads."
+  ],
+
+  "unique_challenges": {
+    "pylon_curve": {
+      "problem": "The swan-neck kink is a smooth curve in reality but Minecraft only has right angles.",
+      "solution": "Use stairs and slabs to approximate the curve. The key insight: the kink is NOT a gradual arc -- it is a relatively sharp cranked bend (the engineer's term is 'crank'). This actually helps in Minecraft because a sharp direction change over a few blocks looks more accurate than trying to build a smooth curve. At 1:1 scale you have 30 blocks for the kink, giving excellent resolution. Place diagonal steps with stairs filling the gaps. View from 100+ blocks away to check the silhouette.",
+      "test_first": "Build a test pylon in creative mode before committing to the final build. Try 3 different stair arrangements and pick the one that looks best from a distance."
+    },
+    "cable_angles": {
+      "problem": "Cables in reality are thin steel wires at precise angles. In Minecraft, the thinnest element is 1 block and diagonal lines are stepped.",
+      "solution": "End rods are the thinnest available element. For cable angles: steep cables (near pylon) just stack end rods vertically with a 1-block horizontal offset every 3-4 blocks. Shallow cables (far from pylon) alternate 1 block horizontal, 1 block vertical. Very shallow cables: 2-3 blocks horizontal per 1 block vertical. The fan pattern will naturally emerge. At 1:1 scale, the long cable runs produce much smoother diagonals than at smaller scales.",
+      "important_note": "At 1:1 scale, the 32 cables spaced every 12-13 blocks will not look cluttered. You can place all 32 cables and they will read cleanly as a cable fan. The longer cable runs actually produce better-looking diagonals due to higher block resolution."
+    },
+    "scale_vs_detail": {
+      "tradeoffs": "At 1:1 scale, the deck is 34 blocks wide which allows full lane differentiation with realistic widths. The pylon at 139 blocks gives superb resolution for the kink detail. The length at 802 blocks is a massive build requiring significant time and resources. The main challenge is build size, not detail resolution -- every architectural element can be faithfully represented.",
+      "what_to_prioritize": "1) Pylon silhouette (the swan shape), 2) Cable fan pattern, 3) Deck thinness, 4) Bascule gap. These four elements make it recognizable. At 1:1 scale, you also have room for lane markings, tram tracks, and other fine details."
+    },
+    "bascule_bridge": {
+      "decorative": "A 2-3 block gap in the deck with a 15x10x10 iron block + stone brick housing below is enough to suggest the bascule.",
+      "functional": "A true opening bridge requires pistons and is limited by the 12-block push limit. At 34 blocks wide, you need at least 3 parallel rows of piston arrays. Use sticky pistons pushing upward in sequence with repeater delays. Not architecturally accurate (pistons push straight up, not rotate) but gives the visual effect of a bridge opening. At this scale, command blocks are strongly recommended for realistic operation.",
+      "creative_alternative": "Use barrier blocks or trapdoors for the bascule leaf. Iron trapdoors can be opened/closed with redstone and lie flat when closed (matching the deck) and hang vertically when open (suggesting the raised bridge leaf). Place 34 iron trapdoors across the deck width at the hinge point. At 1:1 scale the 52-block leaf length exceeds piston limits, so command blocks or mods are the most practical solution."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "Side profile view from the east or west, standing at water level about 200-250 blocks away from the bridge. This is the classic postcard angle that shows the full swan silhouette: the horizontal base, the kink, the vertical mast, and the cable fan spreading across the deck. In Minecraft, build a viewing platform at water level (Y = water surface level) about 200 blocks perpendicular to the bridge.",
+    "key_silhouette": "The Erasmus Bridge is recognizable from its asymmetric pylon with the bent-arm kink. From a distance, the shape reads as: flat deck line, then a hockey-stick shape rising from it (horizontal base bending to vertical). The cable fan creates a harp-like triangular fill between pylon and deck. The bascule section is a subtle break at the south end. If your build has the correct pylon bend angle and the cable fan, it will be immediately identifiable.",
+    "aerial_view": "From above (looking down in Minecraft), the bridge reads as a thin 34-block-wide line crossing the river with a 2-block row of cable attachment points down the center. The pylon base extends perpendicular to the deck line.",
+    "night_view": "The real Erasmus Bridge is dramatically lit at night with white/blue lights along the cables and deck edges. In Minecraft, sea lanterns under slabs along the deck edges and end rods on the pylon create a convincing night-lit effect. The bridge becomes one of the most photogenic builds at night with shaders. At 1:1 scale, the massive structure is especially dramatic when lit."
+  },
+
+  "advanced_tips": {
+    "shader_compatibility": "If using shaders (Optifine/Iris), end rods will glow slightly, making cables visible at night without additional lighting. Sea lanterns under slabs create a realistic deck-edge lighting strip.",
+    "worldedit_speedup": "For the 802-block deck, WorldEdit is strongly recommended. Use //stack command to repeat a cross-section module. Build one 10-block segment of the 34-wide deck, then //stack 80 times. Add cable attachment points afterward. For cables, use //line to draw diagonal end-rod lines from pylon to deck.",
+    "structural_accuracy": "The real bridge has the pylon positioned asymmetrically -- the main span (north, toward the city center) is 284m while the back span is shorter. At 1:1 scale, place the pylon at block 284 from the north end and 429 blocks from the south end (including the 89-block bascule section). This asymmetry is part of the design language.",
+    "color_note": "The real Erasmus Bridge is painted a very pale sky blue that shifts between appearing white and light blue depending on weather and light. Ben van Berkel chose this color so the bridge would blend with the sky. In Minecraft, light_blue_concrete is slightly more saturated than the real color, but it is the closest standard option. If using resource packs, a custom pale blue (roughly RGB 180, 210, 230) would be more accurate.",
+    "render_distance": "At 1:1 scale, the 802-block bridge exceeds the default render distance of most Minecraft clients (typically 16-32 chunks = 256-512 blocks). Increase render distance to 50+ chunks to see the full bridge, or use mods like Bobby or Distant Horizons for extended render distances."
+  },
+
+  "material_shopping_list": {
+    "light_blue_concrete": "~5000 blocks (pylon + deck underside + deck edges)",
+    "light_blue_concrete_stairs": "~500 blocks (pylon kink shaping)",
+    "gray_concrete": "~16000 blocks (road surface, 20 blocks wide x 802 long)",
+    "light_gray_concrete": "~1604 blocks (center median, 2 blocks wide x 802 long)",
+    "smooth_stone_slab": "~4812 slabs (pedestrian paths, 6 blocks wide x 802 long)",
+    "red_concrete": "~4812 blocks (cycle paths, 6 blocks wide x 802 long)",
+    "stone_bricks": "~2000 blocks (piers, backstay anchor, bascule housing)",
+    "iron_bars": "~1604 bars (railings on both sides, 802 long x 2)",
+    "end_rods": "~3000-5000 rods (cables -- varies depending on cable count and length; longest cables exceed 200 blocks)",
+    "iron_blocks": "~200 blocks (bascule machinery)",
+    "sea_lanterns": "~200-250 (deck lighting every 8-10 blocks on each side over 802 blocks)",
+    "lightning_rod": "1-2 (pylon tip)",
+    "water_buckets": "as needed for river",
+    "total_approximate_blocks": "~40000-50000 blocks"
+  }
+}

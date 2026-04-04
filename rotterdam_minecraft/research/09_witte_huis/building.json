@@ -1,0 +1,95 @@
+{
+  "name": "Witte Huis",
+  "english_name": "White House",
+  "architect": "Willem Molenbroek",
+  "year": 1898,
+  "style": "Art Nouveau",
+  "location": "Geldersekade 1, Rotterdam",
+  "historic_note": "Europe's tallest office building at time of completion",
+
+  "dimensions": {
+    "height_m": 43,
+    "footprint_m": "20 x 20",
+    "floors_total": 11,
+    "floors_full": 8,
+    "floors_in_mansard_roof": 3,
+    "corner_towers_above_roofline_m": "3-5",
+    "average_floor_height_m": 3.9,
+    "ground_floor_height_m_estimated": 4.5,
+    "upper_floor_height_m_estimated": 3.5,
+    "foundation_piles": 1000
+  },
+
+  "proportions": {
+    "height_to_width": "2.15:1",
+    "stone_base_floors": 2,
+    "stone_base_height_m_estimated": 9,
+    "white_brick_middle_floors": "5-6",
+    "white_brick_height_m_estimated": 21,
+    "mansard_roof_floors": 3,
+    "mansard_roof_height_m_estimated": 13,
+    "windows_per_face_per_floor": "5-6"
+  },
+
+  "architectural_features": {
+    "facade": {
+      "material": "White glazed brick (entire exterior)",
+      "base": "Two-storey hard stone facade with columns (different from white brick above)"
+    },
+    "sculptures": {
+      "count": 5,
+      "artist": "Simon Miedema",
+      "subjects": ["Navigation", "Progress", "Agriculture", "Industry", "Trade"]
+    },
+    "corner_towers": {
+      "count": 2,
+      "description": "Small turrets at corners rising above main roofline",
+      "decorations": "Winged dragon reliefs at base"
+    },
+    "mansard_roof": {
+      "description": "Steeply sloping roof containing top 3 floors, building narrows toward top"
+    },
+    "decorative_elements": [
+      "Floral motifs and curved lines on facade",
+      "Wrought-iron lamp hooks with floral motifs",
+      "Rounded corner windows with dragon reliefs",
+      "Wrought-iron railings and decorative window frames",
+      "Interior iron staircase",
+      "Stained-glass windows",
+      "Early elevator (rare for 1898)"
+    ],
+    "interior_walls": {
+      "description": "Two thick load-bearing walls (40 to 140 cm thick)",
+      "construction": "Iron/steel and concrete"
+    }
+  },
+
+  "colors": {
+    "main_facade": "White (glazed brick)",
+    "stone_base": "Darker stone / cream",
+    "roof": "Dark slate/grey",
+    "decorations": "Stone grey with iron black accents"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "footprint_blocks": "20 x 20",
+      "height_blocks": 43,
+      "stone_base_blocks": 9,
+      "white_middle_blocks": 21,
+      "mansard_roof_blocks": 13,
+      "tower_extension_blocks": "3-5"
+    },
+    "recommended_scale": "1:1 (perfect size for full scale)",
+    "block_palette": {
+      "white_facade": "White concrete or quartz blocks",
+      "stone_base": "Smooth stone or polished andesite",
+      "mansard_roof": "Dark grey concrete or deepslate tiles",
+      "windows": "Glass panes (5-6 per face per floor)",
+      "corner_towers": "White concrete with stone caps",
+      "iron_details": "Iron bars, chains",
+      "sculptures": "Stone brick or chiseled stone"
+    },
+    "build_notes": "Three visual zones bottom-to-top: stone base (2 floors) → white brick (5-6 floors) → tapering mansard roof (3 floors) → corner turrets."
+  }
+}

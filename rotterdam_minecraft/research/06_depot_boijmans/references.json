@@ -1,0 +1,183 @@
+{
+  "building": "Depot Boijmans Van Beuningen",
+  "architect": "MVRDV",
+  "location": "Museumpark, Rotterdam, The Netherlands",
+  "completed": 2021,
+  "key_dimensions": {
+    "height_m": 39.5,
+    "base_diameter_m": 40,
+    "top_diameter_m": 60,
+    "atrium_height_m": 40,
+    "atrium_width_m": 28,
+    "floors": 7,
+    "facade_mirror_panels": 1664,
+    "facade_glass_sqm": 6609,
+    "rooftop_birch_trees": 75
+  },
+  "notes_for_minecraft": {
+    "shape": "Bowl/vase shape - circular footprint that widens from base to top. Base ~40m diameter, top ~60m diameter, 39.5m tall. In Minecraft at 1:1 scale that is roughly 40 blocks wide at base, 60 at top, 40 blocks tall.",
+    "facade": "Fully mirrored reflective glass panels. In Minecraft consider using light_blue_stained_glass or ice blocks for the reflective effect.",
+    "rooftop": "Rooftop forest garden with 75 multi-stemmed birch trees (Betula pubescens), fir trees, grasses, and a restaurant. Birch trees grow to max 10m tall.",
+    "atrium": "Central atrium is 40m high, 28m wide, 6m deep. Five zigzagging staircases (Piranesi-style) cross the space, plus two glass elevator shafts and one large art elevator. Artist Marieke van Diemen's floating display cases fill the atrium.",
+    "floor_program": "Ground floor: entrance foyer. Floor 1: atrium floor. Floor 2: education centre. Floors 3-4: galleries. Floor 5: suite. Floors 1-5: storage depots around the perimeter."
+  },
+  "image_sources": [
+    {
+      "description": "Exterior view - mirrored bowl shape reflecting surroundings and sky",
+      "source_url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv/61b356b41385fc549c5abcc1-depot-boijmans-van-beuningen-mvrdv-photo",
+      "image_url": "https://images.adsttc.com/media/images/61b3/56b4/1385/fc54/9c5a/bcc1/large_jpg/depot-boijmans-van-beuningen-mvrdv_10.jpg",
+      "credit": "Ossip van Duivenbode / ArchDaily",
+      "useful_for": "Overall shape reference - bowl/vase form, mirrored facade panels, proportions"
+    },
+    {
+      "description": "Exterior view - alternative angle showing widening form",
+      "source_url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv/61b356b21385fc549c5abcbe-depot-boijmans-van-beuningen-mvrdv-photo",
+      "image_url": "https://images.adsttc.com/media/images/61b3/56b2/1385/fc54/9c5a/bcbe/large_jpg/depot-boijmans-van-beuningen-mvrdv_5.jpg",
+      "credit": "Ossip van Duivenbode / ArchDaily",
+      "useful_for": "Exterior proportions, park context, base-to-top widening ratio"
+    },
+    {
+      "description": "Exterior from Museumpark showing full height and reflections",
+      "source_url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv/61b356b31385fc549c5abcbf-depot-boijmans-van-beuningen-mvrdv-photo",
+      "image_url": "https://images.adsttc.com/media/images/61b3/56b3/1385/fc54/9c5a/bcbf/large_jpg/depot-boijmans-van-beuningen-mvrdv_20.jpg",
+      "credit": "Ossip van Duivenbode / ArchDaily",
+      "useful_for": "Scale reference with surrounding park and buildings"
+    },
+    {
+      "description": "Rooftop garden with birch trees and city views",
+      "source_url": "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen?photo=20868",
+      "image_url": "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen?photo=20868",
+      "credit": "MVRDV / Ossip van Duivenbode",
+      "useful_for": "Rooftop forest layout - birch tree placement, paths, restaurant area"
+    },
+    {
+      "description": "Rooftop forest - birch trees being planted at 35m height",
+      "source_url": "https://www.boijmans.nl/en/news/Tree-planting-begins-on-Depot-rooftop-garden",
+      "image_url": "https://www.boijmans.nl/en/news/Tree-planting-begins-on-Depot-rooftop-garden",
+      "credit": "Museum Boijmans Van Beuningen",
+      "useful_for": "Rooftop tree arrangement, planting detail, roof edge treatment"
+    },
+    {
+      "description": "Interior atrium with zigzag staircases (Piranesi-style) and floating display cases",
+      "source_url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv/61b35b601385fc30fb500790-depot-boijmans-van-beuningen-mvrdv-photo",
+      "image_url": "https://images.adsttc.com/media/images/61b3/5b60/1385/fc30/fb50/0790/large_jpg/depot-boijmans-van-beuningen-mvrdv_43.jpg",
+      "credit": "Ossip van Duivenbode / ArchDaily",
+      "useful_for": "Atrium layout, staircase angles and positions, elevator shafts, display cases"
+    },
+    {
+      "description": "Interior atrium looking up - full height of criss-crossing staircases",
+      "source_url": "https://www.dezeen.com/2021/11/08/depot-boijmans-van-beuningen-rotterdam-mvrdv/",
+      "image_url": "https://www.dezeen.com/2021/11/08/depot-boijmans-van-beuningen-rotterdam-mvrdv/",
+      "credit": "Ossip van Duivenbode / Dezeen",
+      "useful_for": "Staircase geometry, atrium proportions (40m high, 28m wide, 6m deep)"
+    },
+    {
+      "description": "Exterior at dusk with Pipilotti Rist light installation",
+      "source_url": "https://www.designboom.com/architecture/mvrdv-depot-boijmans-van-beuningen-rotterdam-11-08-2021/",
+      "image_url": "https://www.designboom.com/architecture/mvrdv-depot-boijmans-van-beuningen-rotterdam-11-08-2021/",
+      "credit": "designboom",
+      "useful_for": "Night lighting effect reference, colored light on mirrored surface"
+    },
+    {
+      "description": "Detailed view of mirrored facade panels",
+      "source_url": "https://www.mvrdv.com/news/2720/final-mirrored-panels-installed-on-the-depot-boijmans-van-beuningen",
+      "image_url": "https://www.mvrdv.com/news/2720/final-mirrored-panels-installed-on-the-depot-boijmans-van-beuningen",
+      "credit": "MVRDV",
+      "useful_for": "Facade panel grid pattern and scale - useful for deciding Minecraft block texture"
+    },
+    {
+      "description": "Wikipedia article with overview image",
+      "source_url": "https://en.wikipedia.org/wiki/Depot_Museum_Boijmans_Van_Beuningen",
+      "image_url": "https://en.wikipedia.org/wiki/Depot_Museum_Boijmans_Van_Beuningen",
+      "credit": "Wikipedia (CC licensed)",
+      "useful_for": "General reference, freely licensed images"
+    },
+    {
+      "description": "Wikimedia Commons category - 58 freely licensed images",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Depot_Boijmans_Van_Beuningen",
+      "image_url": "https://commons.wikimedia.org/wiki/Category:Depot_Boijmans_Van_Beuningen",
+      "credit": "Various (CC licensed)",
+      "useful_for": "Multiple angles, construction phases, freely usable images"
+    },
+    {
+      "description": "Divisare gallery - comprehensive photo set by Ossip van Duivenbode",
+      "source_url": "https://divisare.com/projects/449835-mvrdv-ossip-van-duivenbode-depot-boijmans-van-beuningen",
+      "image_url": "https://divisare.com/projects/449835-mvrdv-ossip-van-duivenbode-depot-boijmans-van-beuningen",
+      "credit": "Ossip van Duivenbode / Divisare",
+      "useful_for": "High quality architectural photography, multiple interior and exterior views"
+    },
+    {
+      "description": "Landscape architecture of the rooftop forest",
+      "source_url": "https://landezine.com/depot-boijmans-van-beuningen-by-mtd/",
+      "image_url": "https://landezine.com/depot-boijmans-van-beuningen-by-mtd/",
+      "credit": "MTD landscape architects / Landezine",
+      "useful_for": "Rooftop garden plan, planting layout, paths and outdoor spaces"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Cross-section showing bowl shape, atrium with zigzag staircases, floor levels, and rooftop garden",
+      "source_url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv/61b356b21385fc549c5abcbc-depot-boijmans-van-beuningen-mvrdv-photo",
+      "image_url": "https://images.adsttc.com/media/images/61b3/56b2/1385/fc54/9c5a/bcbc/large_jpg/depot-boijmans-van-beuningen-mvrdv_36.jpg",
+      "type": "cross-section",
+      "notes": "ArchDaily gallery image 36 - likely a section drawing. Browse the full gallery at archdaily.com/948370 (images 36-43 typically contain drawings)."
+    },
+    {
+      "description": "Architectural drawings and sections from MVRDV",
+      "source_url": "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen",
+      "image_url": "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen",
+      "type": "cross-section/elevation/plan",
+      "notes": "MVRDV official project page contains section drawings, floor plans, and elevations. Scroll through the full image gallery."
+    },
+    {
+      "description": "Design evolution in 9 steps - includes early sketches and diagrams",
+      "source_url": "https://www.boijmans.nl/en/the-design-in-9-steps",
+      "image_url": "https://www.boijmans.nl/en/the-design-in-9-steps",
+      "type": "elevation/cross-section/diagram",
+      "notes": "Official museum page showing how the bowl shape was developed. Includes the famous IKEA Blanda Blank bowl that inspired the form."
+    },
+    {
+      "description": "Archilovers project page with technical drawings",
+      "source_url": "https://www.archilovers.com/projects/171272/depot-boijmans-van-beuningen.html",
+      "image_url": "https://www.archilovers.com/projects/171272/depot-boijmans-van-beuningen.html",
+      "type": "plan/elevation/cross-section",
+      "notes": "Archilovers typically includes floor plans and sections submitted by the architect."
+    },
+    {
+      "description": "Arquitectura Viva documentation with drawings",
+      "source_url": "https://arquitecturaviva.com/works/mvrdv-museo-boijmans-van-beuningen-en-rotterdam-paises-bajos-pzsvv",
+      "image_url": "https://arquitecturaviva.com/works/mvrdv-museo-boijmans-van-beuningen-en-rotterdam-paises-bajos-pzsvv",
+      "type": "cross-section/elevation",
+      "notes": "Spanish architecture journal - typically publishes floor plans and sections."
+    },
+    {
+      "description": "Detail magazine technical documentation",
+      "source_url": "https://www.detail.de/de_en/schaudepot-des-museum-boijmans-van-beuningen-in-rotterdam-von-mvrdv",
+      "image_url": "https://www.detail.de/de_en/schaudepot-des-museum-boijmans-van-beuningen-in-rotterdam-von-mvrdv",
+      "type": "detail/cross-section",
+      "notes": "Detail magazine specializes in construction details - likely has facade sections and structural details."
+    }
+  ],
+  "best_pages_to_browse_manually": [
+    {
+      "url": "https://www.archdaily.com/948370/depot-boijmans-van-beuningen-mvrdv",
+      "why": "43-image gallery with photos AND architectural drawings (sections, plans, elevations). The most complete single source."
+    },
+    {
+      "url": "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen",
+      "why": "Official MVRDV page with high-res photos and drawings from the architect."
+    },
+    {
+      "url": "https://www.boijmans.nl/en/the-design-in-9-steps",
+      "why": "Shows the design process and shape development - great for understanding the geometry."
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Category:Depot_Boijmans_Van_Beuningen",
+      "why": "58 freely licensed images - various angles and construction stages."
+    },
+    {
+      "url": "https://www.designboom.com/architecture/mvrdv-depot-boijmans-van-beuningen-rotterdam-11-08-2021/",
+      "why": "Excellent interior photos showing atrium, staircases, and storage areas."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "building": "De Rotterdam",
+  "architect": "OMA / Rem Koolhaas",
+  "year": "2009-2013",
+  "location": "Wilhelminapier, Rotterdam, Netherlands",
+  "dimensions": {
+    "height_m": 150,
+    "floors": 44,
+    "width_m": 100,
+    "total_area_m2": 162000
+  },
+  "key_features_for_minecraft": {
+    "three_towers": "West Tower, Mid Tower, East Tower - share a 6-story plinth then separate and shift",
+    "tower_shift": "At ~90m above ground the towers shift a few meters in different directions",
+    "plinth_height": "30m shared base with 8.5m high entrance hall",
+    "facade": "50,000m2 glass with vertical aluminum mullions, floor-to-ceiling windows",
+    "programs": "Offices (72,000m2), 240 apartments, 278-room hotel, congress hall, restaurants, 650-car parking"
+  },
+  "image_sources": [
+    {
+      "description": "Exterior view of De Rotterdam from across the Maas river, showing the three shifted towers",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DeRotterdam.JPG",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/DeRotterdam.JPG",
+      "credit": "Wikimedia Commons (CC BY-SA 3.0)",
+      "useful_for": "Overall massing and proportions of the three towers, understanding the stacking concept"
+    },
+    {
+      "description": "De Rotterdam south side view showing tower arrangement and facade grid",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:De_Rotterdam",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/De_Rotterdam_south_side.jpg/800px-De_Rotterdam_south_side.jpg",
+      "credit": "Wikimedia Commons (CC BY-SA)",
+      "useful_for": "South elevation - good for understanding tower offset pattern from the side"
+    },
+    {
+      "description": "De Rotterdam at night showing illuminated glass facade and tower silhouettes",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:De_Rotterdam",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/De_Rotterdam_by_night_2014.JPG/800px-De_Rotterdam_by_night_2014.JPG",
+      "credit": "Wikimedia Commons (CC BY-SA)",
+      "useful_for": "Night lighting reference, shows how the three towers read as separate volumes"
+    },
+    {
+      "description": "Video of Rem Koolhaas speaking about De Rotterdam tower design",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rem_Koolhaas_speaks_about_his_De_Rotterdam_tower.webm",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Rem_Koolhaas_speaks_about_his_De_Rotterdam_tower.webm",
+      "credit": "Wikimedia Commons",
+      "useful_for": "Background on design intent and tower shifting concept"
+    },
+    {
+      "description": "Professional exterior photography by Philippe Ruault, Ossip van Duivenbode, and others - multiple angles",
+      "source_url": "https://divisare.com/projects/244831-oma-michael-moser-inigo-bujedo-aguirre-ossip-van-duivenbode-philippe-ruault-de-rotterdam",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Philippe Ruault, Ossip van Duivenbode, Inigo Bujedo Aguirre, Michael Moser via Divisare",
+      "useful_for": "High-quality professional photos from multiple angles showing tower offsets and facade detail"
+    },
+    {
+      "description": "ArchDaily gallery - extensive photo set with exterior, interior, and detail shots",
+      "source_url": "https://www.archdaily.com/451377/de-rotterdam-oma",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Various photographers via ArchDaily",
+      "useful_for": "Comprehensive reference set - exterior views, facade close-ups, interior spaces"
+    },
+    {
+      "description": "Bluffton University architectural photo essay - multiple annotated exterior views",
+      "source_url": "https://homepages.bluffton.edu/~sullivanm/netherlands/rotterdam/koolhaas/derotterdam.html",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Mary Ann Sullivan, Bluffton University",
+      "useful_for": "Multiple angles with educational annotations, good for understanding form"
+    },
+    {
+      "description": "Permasteelisa Group project page - facade engineering details and close-ups of curtain wall system",
+      "source_url": "https://www.permasteelisagroup.com/historic-project/de-rotterdam/",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Permasteelisa Group",
+      "useful_for": "Facade detail - aluminum post-and-beam curtain wall construction, mullion patterns"
+    },
+    {
+      "description": "OMA official project page with curated imagery",
+      "source_url": "https://www.oma.com/projects/de-rotterdam",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "OMA",
+      "useful_for": "Official project photos and concept imagery from the architects"
+    },
+    {
+      "description": "Declad feature article with facade and exterior analysis",
+      "source_url": "https://www.declad.com/de-rotterdam-by-oma",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Declad",
+      "useful_for": "Facade cladding analysis, exterior views emphasizing the aluminum/glass envelope"
+    },
+    {
+      "description": "Architectural Record feature with professional photography",
+      "source_url": "https://www.architecturalrecord.com/articles/7970-de-rotterdam",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "credit": "Architectural Record",
+      "useful_for": "Publication-quality photos with architectural commentary"
+    }
+  ],
+  "architectural_drawings": [
+    {
+      "description": "Floor plans, cross-sections, and elevations - ArchDaily gallery includes architectural drawings",
+      "source_url": "https://www.archdaily.com/451377/de-rotterdam-oma",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "type": "elevation/cross-section/plan",
+      "notes": "Scroll through full gallery - drawings are interspersed with photos"
+    },
+    {
+      "description": "WikiArquitectura plans and data - includes floor plans and building sections",
+      "source_url": "https://en.wikiarquitectura.com/building/de-rotterdam/",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "type": "plan/elevation",
+      "notes": "Contains dimensioned plans and section information"
+    },
+    {
+      "description": "Archello project page with technical drawings and diagrams",
+      "source_url": "https://archello.com/project/de-rotterdam",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "type": "elevation/plan/detail",
+      "notes": "Technical documentation and project data"
+    },
+    {
+      "description": "Arquitectura Viva project page with drawings and technical data",
+      "source_url": "https://arquitecturaviva.com/works/edficio-de-rotterdam-1",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "type": "elevation/cross-section",
+      "notes": "Spanish architecture publication with technical documentation"
+    },
+    {
+      "description": "OMA Drawing Matter archive - original OMA architectural drawings",
+      "source_url": "https://drawingmatter.org/architect/oma/",
+      "image_url": "VISIT_PAGE_TO_VIEW",
+      "type": "plan/elevation/detail",
+      "notes": "Archive of OMA drawings - may include De Rotterdam studies"
+    }
+  ],
+  "minecraft_build_notes": {
+    "scale_suggestion": "At 1:2 scale the building would be ~75 blocks tall, 50 blocks wide. At 1:4 it would be ~37 blocks tall, 25 wide.",
+    "key_challenge": "The three towers share a base then shift at the midpoint - this offset is the defining feature",
+    "facade_pattern": "Vertical aluminum mullions with floor-to-ceiling glass - use light gray concrete or iron bars for mullions, light blue/cyan glass for windows",
+    "tower_shift_detail": "At approximately floor 22-25 (of 44), each tower shifts a few blocks in a different direction",
+    "color_palette": "Silver/light gray aluminum framing + blue-tinted glass. The plinth base is slightly different treatment.",
+    "recommended_blocks": "Light gray concrete, iron bars, light blue stained glass, cyan stained glass, smooth stone"
+  }
+}

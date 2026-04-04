@@ -1,0 +1,524 @@
+{
+  "building": "Euromast",
+  "architect": "Hugh Maaskant (1960), Space Tower by Willy Bühler A.G. (1970)",
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+  "real_world_height_m": 185,
+  "design_theme": "Nautical — ship's mast with crow's nest, bridge at 30m, seaward-pointing platform",
+
+  "shaft_construction": {
+    "circle_template": {
+      "outer_diameter_blocks": 10,
+      "inner_diameter_blocks": 8,
+      "wall_thickness": 1,
+      "circle_pattern_10x10": [
+        "   XXXX   ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "   XXXX   "
+      ],
+      "hollow_pattern_10x10": [
+        "   XXXX   ",
+        " XX....XX ",
+        " X......X ",
+        "X........X",
+        "X........X",
+        "X........X",
+        "X........X",
+        " X......X ",
+        " XX....XX ",
+        "   XXXX   "
+      ],
+      "note": "X = wall block, . = air/interior. The 10-wide circle uses the standard Minecraft circle chart for diameter 10. The hollow interior is roughly 8 blocks across, giving ample room for elevator and stairs."
+    },
+    "total_shaft_height_blocks": 101,
+    "shaft_explanation": "Real shaft is ~101m to top of crow's nest. At 1:1 scale = 101 blocks. The shaft runs from Y=0 (ground) to Y=100.",
+    "sections": [
+      {
+        "name": "base_entrance_pavilion",
+        "y_range": "Y0 to Y4",
+        "height_blocks": 5,
+        "outer_diameter_blocks": 14,
+        "features": "Wider circular base tapering into the shaft. Use 14-diameter circle for Y0-Y3, then transition to 10-diameter at Y4. Place doors (dark oak or iron) on the south face. Interior: lobby with ticket counter (use signs/item frames). Surround with slabs for a low entrance canopy.",
+        "circle_pattern_14x14": [
+          "    XXXXXX    ",
+          "  XXXXXXXXXX  ",
+          " XXXXXXXXXXXX ",
+          " XXXXXXXXXXXX ",
+          "XXXXXXXXXXXXXX",
+          "XXXXXXXXXXXXXX",
+          "XXXXXXXXXXXXXX",
+          "XXXXXXXXXXXXXX",
+          "XXXXXXXXXXXXXX",
+          "XXXXXXXXXXXXXX",
+          " XXXXXXXXXXXX ",
+          " XXXXXXXXXXXX ",
+          "  XXXXXXXXXX  ",
+          "    XXXXXX    "
+        ]
+      },
+      {
+        "name": "lower_shaft",
+        "y_range": "Y5 to Y29",
+        "height_blocks": 25,
+        "features": "Plain cylindrical shaft using 10-diameter hollow circle. Place occasional glass pane strips (every 6 blocks) as narrow vertical windows. Real tower has minimal fenestration here."
+      },
+      {
+        "name": "ships_bridge_level",
+        "y_range": "Y28 to Y32",
+        "height_blocks": 5,
+        "features": "At 30m real height (Y30 at 1:1). Small protruding observation platform on one side. Extend 3 blocks outward from the shaft on the south face using slabs and stairs. Add iron bars as railing. Interior: place a cartography table or map item frames (ship's chart room). Maaskant installed a replica ship's bridge here with navigation equipment.",
+        "construction_note": "Add a 2-block-wide balcony ring or partial ring around the shaft at this level using bottom slabs supported by trapdoors underneath."
+      },
+      {
+        "name": "upper_shaft",
+        "y_range": "Y33 to Y96",
+        "height_blocks": 64,
+        "features": "Plain cylinder continuation. Use the same 10-diameter hollow pattern. Add window strips (glass panes) at Y40, Y50, Y60, Y70, Y80, Y90 — one or two panes on each cardinal face for subtle detail. This is the longest monotone section."
+      },
+      {
+        "name": "crows_nest_attachment_zone",
+        "y_range": "Y97 to Y100",
+        "height_blocks": 4,
+        "features": "Transition zone where shaft meets the crow's nest disc. The shaft passes through the center of the disc. At Y97, begin placing the crow's nest underside supports — extend deepslate slabs outward from the shaft in a ring. The shaft continues through the disc."
+      }
+    ],
+    "interior": {
+      "elevator_shaft": "Leave a 2x2 or 2x3 air column inside the hollow shaft for the elevator. Place a chain or iron bars column on one side to represent the elevator cable. At the base, place a piston or iron door as elevator entrance.",
+      "staircase": "The 8-block interior is large enough for a functional spiral staircase. Use stairs blocks in a spiral pattern, rotating 90 degrees every 3 blocks of height. Alternatively, use a combination of ladders and small landings.",
+      "interior_note": "The real Euromast has both an elevator and emergency stairs inside the 9.6m shaft. At 1:1 scale the 8-block interior comfortably fits both — dedicate one half to the elevator and one half to stairs."
+    }
+  },
+
+  "crows_nest": {
+    "shape": "Asymmetric disc — circular but the shaft is NOT centered. The disc extends further toward the southwest (seaward) side, giving it a lollipop-leaning-off-center look.",
+    "real_diameter_m": 29,
+    "diameter_blocks": 29,
+    "thickness_blocks": 6,
+    "y_range": "Y97 to Y105 (underside supports at Y97-Y98, main floors Y99-Y103, roof/railing Y104-Y105)",
+    "circle_template_29x29": [
+      "         XXXXXXXXXXX         ",
+      "       XXXXXXXXXXXXXXX       ",
+      "     XXXXXXXXXXXXXXXXXXX     ",
+      "    XXXXXXXXXXXXXXXXXXXXX    ",
+      "   XXXXXXXXXXXXXXXXXXXXXXX   ",
+      "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+      "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+      " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+      " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+      " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+      "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+      "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+      "   XXXXXXXXXXXXXXXXXXXXXXX   ",
+      "    XXXXXXXXXXXXXXXXXXXXX    ",
+      "     XXXXXXXXXXXXXXXXXXX     ",
+      "       XXXXXXXXXXXXXXX       ",
+      "         XXXXXXXXXXX         "
+    ],
+    "asymmetric_placement": {
+      "description": "The shaft (10x10) does NOT sit at the center of the 29x29 disc. Offset the disc so the shaft sits in the north-east quadrant of the disc. Specifically, place the shaft center at position (18, 18) within the 29x29 grid (counting from 1), so the disc extends about 19 blocks to the south-west but only about 10 blocks to the north-east.",
+      "offset_from_center": "Shift the disc 4 blocks south and 4 blocks west relative to the shaft center. The shaft pierces through the disc at roughly the 60/40 split point.",
+      "visual_explanation": "Looking down from above: the shaft is a circle near the upper-right of the big disc. The larger lobe of the disc hangs out to the lower-left (seaward). This asymmetry is the Euromast's most distinctive feature."
+    },
+    "attachment_to_shaft": "The crow's nest is cantilevered off the shaft. The real structure was welded together at ground level and hoisted up in 131 hours (5 days). In Minecraft, build the disc layer by layer at the correct Y level. The shaft passes through — no gap needed, the disc simply surrounds and extends from the shaft.",
+    "levels": {
+      "underside_Y97_Y98": "Deepslate slab or smooth stone slab — the structural underside. Use bottom slabs on the outer 3 rings to give a tapered look underneath.",
+      "lower_floor_Y99_Y100": {
+        "name": "Restaurant level (Brasserie Euromast)",
+        "layout": "The restaurant occupies the larger (seaward) lobe. Place tables (fence posts + pressure plates), chairs (stairs), and a bar counter (polished andesite slabs). Use glass panes for the panoramic windows around the entire perimeter. Interior designer Jan des Bouvrie designed the modern bright interior — use white concrete and light grey floor.",
+        "windows": "Full ring of glass panes at the disc perimeter on this level."
+      },
+      "upper_floor_Y101_Y103": {
+        "name": "Observation deck and hotel suites",
+        "layout": "Open observation area with iron bar railings on the outer edge. The tower has 2 luxury hotel suites at this level (use beds, trapdoor nightstands). Place a glass floor section (glass blocks instead of solid floor) in one quadrant for the transparent floor experience.",
+        "outdoor_terrace": "Part of Y103 is an open-air terrace. Leave some sections without a roof, add iron bar railings."
+      },
+      "roof_Y104_Y105": "Flat roof using slabs. The Space Tower tube emerges from the center of the disc here, continuing upward."
+    },
+    "features": {
+      "restaurant": "Brasserie Euromast on lower level — modern international menu, bright decor, panoramic glass walls",
+      "observation_deck": "Upper level — 360-degree views, outdoor terrace section",
+      "glass_floor_section": "Transparent floor panels — use glass blocks in a 5x5 area",
+      "hotel_suites": "2 suites designed by Jan des Bouvrie — place beds and furnishings in small partitioned areas",
+      "abseiling_platform": "The Euromast offers abseiling from the crow's nest. Add a fence gate opening on one edge with ladder blocks going down the outside of the shaft"
+    }
+  },
+
+  "space_tower": {
+    "real_height_m": 85,
+    "tube_diameter_blocks": 3,
+    "height_blocks": 85,
+    "y_range": "Y105 to Y185",
+    "construction": "A thin 3x3 column rising from the center of the crow's nest roof. The real Space Tower is a 2.5m steel tube added in 1970 by Swiss firm Willy Bühler A.G. At 1:1 scale it becomes a 3-block-wide column.",
+    "column_pattern_3x3": [
+      "XXX",
+      "X.X",
+      "XXX"
+    ],
+    "material_strategy": "Use iron bars for most of the height — they connect vertically and look thin/metallic. A 3x3 of iron bars will have a lattice appearance that reads as a steel tube. Use end rods for the very top section.",
+    "construction_tip": "For variety, alternate between iron bars (lower section Y105-Y155) and lightning rods (upper section Y156-Y180) to suggest the slight taper of the real tube. Place a 3x3 of light grey glass every 12 blocks to break up the monotony and suggest maintenance platforms.",
+    "euroscoop_cabin": {
+      "shape": "Ring-shaped rotating glass cabin that wraps around the Space Tower tube",
+      "real_capacity": "30 visitors seated in a ring, all facing outward",
+      "real_range_m": "112m to 185m (travels the full length of the Space Tower)",
+      "size_blocks": "9x9 outer ring, 3x3 hole in center for the tower tube, 2 block thick walls, 4 blocks tall",
+      "cabin_circle_template_9x9": [
+        "  XXXXX  ",
+        " XXXXXXX ",
+        "XXXXXXXXX",
+        "XXXXXXXXX",
+        "XXXXXXXXX",
+        "XXXXXXXXX",
+        "XXXXXXXXX",
+        " XXXXXXX ",
+        "  XXXXX  "
+      ],
+      "cabin_hollow_template_9x9": [
+        "  XXXXX  ",
+        " X.....X ",
+        "X..   ..X",
+        "X.. T ..X",
+        "X..   ..X",
+        "X.. T ..X",
+        "X..   ..X",
+        " X.....X ",
+        "  XXXXX  "
+      ],
+      "position": "Place at Y158-Y161 (roughly 2/3 up the Space Tower) as a static decoration. The real cabin moves, but pick one photogenic position.",
+      "materials": "Light blue stained glass for walls, white concrete for floor/ceiling ring. The glass floor was upgraded in 2023 with adjustable opacity.",
+      "construction": "Build the 9x9 hollow ring around the 3x3 tower tube. Bottom ring = white concrete or quartz slab. Walls = light blue stained glass panes (2 blocks tall). Top ring = white concrete slab."
+    },
+    "tip": {
+      "y_position": "Y183-Y185",
+      "block": "End rod on top of a lightning rod. The end rod gives a beacon/antenna appearance. Place 2 end rods stacked at the very top center for the antenna tip.",
+      "optional": "Add a redstone lamp at Y182 to simulate the aircraft warning light."
+    }
+  },
+
+  "base_area": {
+    "entrance": {
+      "description": "Round entrance pavilion at ground level. The real entrance has a modern glass revolving door and ticket desk inside. Use dark oak doors or iron doors. Place a sign reading 'EUROMAST' above the entrance.",
+      "ground_floor": "The ground floor houses the Deli cafe (no entrance fee required in reality). Place a crafting table and barrel as a cafe counter."
+    },
+    "surrounding_park": {
+      "description": "The Euromast sits in Het Park, a 19th-century English landscape park along the Maas river. Surround the base with oak and birch trees, grass blocks, flower patches (poppies, dandelions), and 2-block-wide gravel paths.",
+      "park_radius_blocks": "Clear at least 20 blocks radius around the tower base for the park setting.",
+      "water_feature": "The Maas river is nearby to the south. If your city layout includes water, orient the seaward side of the crow's nest toward it."
+    },
+    "foundation_visible": "The foundation is mostly underground (131 concrete piles + massive concrete block). Show a slight raised platform of 2-block height using smooth stone around the base, extending 3 blocks beyond the entrance pavilion, to suggest the buried foundation mass."
+  },
+
+  "block_palette": {
+    "shaft_exterior": "Light grey concrete — the main material for the entire 101-block shaft",
+    "shaft_interior": "Smooth stone or polished andesite for the inner walls, chain blocks for elevator cable",
+    "shaft_windows": "Light grey glass panes — narrow vertical strips every 6-10 blocks",
+    "base_entrance": "Light grey concrete (walls) + dark oak door + smooth stone slabs (canopy/porch)",
+    "crows_nest_top": "Grey concrete + smooth stone slabs for the roof/terrace",
+    "crows_nest_underside": "Deepslate slabs — gives a darker structural underside look",
+    "crows_nest_floor": "Smooth quartz block or white concrete — bright modern interior",
+    "crows_nest_windows": "Glass panes (clear) — full perimeter ring for panoramic views",
+    "crows_nest_railing": "Iron bars — for observation deck terrace edges",
+    "glass_floor": "Glass blocks (clear) — 5x5 section for the transparent floor experience",
+    "space_tower_lower": "Iron bars (3x3 column) — lattice/metallic look for the steel tube",
+    "space_tower_upper": "Lightning rods — thinner appearance for upper portion",
+    "space_tower_tip": "End rods (stacked) — antenna/beacon appearance",
+    "euroscoop_walls": "Light blue stained glass panes — glass cabin walls",
+    "euroscoop_floor_ceiling": "White concrete slabs or quartz slabs",
+    "aircraft_light": "Redstone lamp at Y182 — optional blinking with redstone clock",
+    "park_ground": "Grass blocks, coarse dirt for paths, gravel for walkways",
+    "park_trees": "Oak and birch saplings grown around the base"
+  },
+
+  "circle_templates": {
+    "diameter_3_space_tower": {
+      "size": "3x3",
+      "solid_pattern": [
+        "XXX",
+        "XXX",
+        "XXX"
+      ],
+      "hollow_pattern": [
+        "XXX",
+        "X.X",
+        "XXX"
+      ],
+      "use": "Space Tower tube cross-section, repeated for 85 blocks of height. Hollow version has 1x1 interior air column."
+    },
+    "diameter_10_shaft": {
+      "size": "10x10",
+      "solid_pattern": [
+        "   XXXX   ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "   XXXX   "
+      ],
+      "hollow_pattern": [
+        "   XXXX   ",
+        " XX....XX ",
+        " X......X ",
+        "X........X",
+        "X........X",
+        "X........X",
+        "X........X",
+        " X......X ",
+        " XX....XX ",
+        "   XXXX   "
+      ],
+      "note": "The 10-diameter Minecraft circle. Corners are rounded. Hollow version has ~8x8 interior air space. '.' = air, 'X' = block. This is the primary shaft cross-section used for ~97 layers."
+    },
+    "diameter_9_euroscoop_ring": {
+      "size": "9x9",
+      "ring_around_3x3_core": [
+        "  XXXXX  ",
+        " X.....X ",
+        "X..   ..X",
+        "X.. T ..X",
+        "X..   ..X",
+        "X.. T ..X",
+        "X..   ..X",
+        " X.....X ",
+        "  XXXXX  "
+      ],
+      "note": "'T' = tower tube (3x3 in center), 'X' = cabin wall (glass), '.' = cabin interior air, ' ' = cabin interior air. The Euroscoop ring wraps around the tower tube."
+    },
+    "diameter_14_base": {
+      "size": "14x14",
+      "solid_pattern": [
+        "    XXXXXX    ",
+        "  XXXXXXXXXX  ",
+        " XXXXXXXXXXXX ",
+        " XXXXXXXXXXXX ",
+        "XXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXX",
+        " XXXXXXXXXXXX ",
+        " XXXXXXXXXXXX ",
+        "  XXXXXXXXXX  ",
+        "    XXXXXX    "
+      ],
+      "use": "Wider base/entrance pavilion, used for Y0-Y3 only"
+    },
+    "diameter_29_crows_nest": {
+      "size": "29x29",
+      "solid_pattern": [
+        "         XXXXXXXXXXX         ",
+        "       XXXXXXXXXXXXXXX       ",
+        "     XXXXXXXXXXXXXXXXXXX     ",
+        "    XXXXXXXXXXXXXXXXXXXXX    ",
+        "   XXXXXXXXXXXXXXXXXXXXXXX   ",
+        "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+        "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+        " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+        " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+        " XXXXXXXXXXXXXXXXXXXXXXXXXXX ",
+        "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+        "  XXXXXXXXXXXXXXXXXXXXXXXXX  ",
+        "   XXXXXXXXXXXXXXXXXXXXXXX   ",
+        "    XXXXXXXXXXXXXXXXXXXXX    ",
+        "     XXXXXXXXXXXXXXXXXXX     ",
+        "       XXXXXXXXXXXXXXX       ",
+        "         XXXXXXXXXXX         "
+      ],
+      "hollow_pattern_with_shaft": [
+        "         XXXXXXXXXXX         ",
+        "       XX.........XX         ",
+        "     XX.............XX       ",
+        "    X.................X      ",
+        "   X...................X     ",
+        "  X.....................X    ",
+        "  X.....................X    ",
+        " X.......................X   ",
+        " X.......................X   ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X.........................X  ",
+        "X..........SSSSSSSSSS....X  ",
+        "X..........S........S....X  ",
+        "X..........S........S....X  ",
+        "X..........SSSSSSSSSS....X  ",
+        " X.......................X   ",
+        " X.......................X   ",
+        "  X.....................X    ",
+        "  X.....................X    ",
+        "   X...................X     ",
+        "    X.................X      ",
+        "     XX.............XX       ",
+        "       XX.........XX         ",
+        "         XXXXXXXXXXX         "
+      ],
+      "shaft_position_note": "S marks the 10x10 shaft outline passing through the disc. The shaft is offset toward the northeast — rows 17-20, columns 12-21 in this grid.",
+      "asymmetric_note": "In this layout the shaft (S) is offset toward the northeast. The larger lobe extends to the southwest (seaward direction). About 18 blocks of disc extend southwest of the shaft vs about 8 blocks northeast. This means the shaft is clearly off-center, matching the real Euromast's most distinctive feature.",
+      "use": "Crow's nest disc — build this pattern at Y99 (floor), Y100-Y103 (walls with glass panes at perimeter), Y104-Y105 (roof/terrace). Use the solid pattern for floor layers, hollow for wall layers."
+    }
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "name": "Mark the footprint",
+      "description": "Place the 14x14 base circle on the ground using light grey concrete. Mark the shaft center point. Orient north so you know which direction is 'seaward' (south-west) for the asymmetric crow's nest later."
+    },
+    {
+      "step": 2,
+      "name": "Build the base pavilion",
+      "description": "Build Y0-Y4: four layers of the 14-diameter circle, then transition to the 10-diameter circle at Y4. Place entrance doors on the south face. Add smooth stone slab canopy around the entrance."
+    },
+    {
+      "step": 3,
+      "name": "Build the lower shaft (Y5-Y29)",
+      "description": "Stack 25 layers of the 10-diameter hollow circle pattern. Use light grey concrete. Add glass pane window strips at Y10, Y16, Y22, Y28 on alternating faces. Place ladders or spiral stairs on the interior wall."
+    },
+    {
+      "step": 4,
+      "name": "Build the ship's bridge level (Y28-Y32)",
+      "description": "Continue the shaft but add a protruding balcony on the south face: extend 3 blocks out using bottom slabs, add iron bar railings. Interior: place a cartography table for the chart room. This is the 30m ship's bridge themed level."
+    },
+    {
+      "step": 5,
+      "name": "Build the upper shaft (Y33-Y96)",
+      "description": "Stack 64 layers of the 10-diameter hollow circle. This is the longest repetitive section. Add glass pane windows at Y40, Y50, Y60, Y70, Y80, Y90. Consider using scaffolding blocks inside temporarily to help you build, removing them later. TIP: build in sections of 10, checking vertical alignment frequently."
+    },
+    {
+      "step": 6,
+      "name": "Build the crow's nest underside (Y97-Y98)",
+      "description": "At Y97, switch to the 29-diameter disc pattern. Place deepslate slabs in the full disc shape. Remember the ASYMMETRIC offset: the shaft should be in the northeast quadrant of the disc, not the center. Use bottom slabs on the outer rings for a tapered underside look."
+    },
+    {
+      "step": 7,
+      "name": "Build the crow's nest floors (Y99-Y103)",
+      "description": "Y99-Y100: Restaurant floor — solid 29-diameter disc in white concrete/quartz. Glass panes around full perimeter. Furnish the larger (SW) lobe with tables and chairs. Y101-Y103: Upper observation floor — same disc, add glass block section (5x5) for transparent floor. Iron bar railings at perimeter. Y103: Partial roof and open terrace — place slabs over the restaurant section, leave the observation deck section open to sky with railings."
+    },
+    {
+      "step": 8,
+      "name": "Build the crow's nest roof (Y104-Y105)",
+      "description": "Place grey concrete slabs across the disc top. Leave an opening around the shaft center where the Space Tower will emerge. The shaft interior transitions to the Space Tower tube here."
+    },
+    {
+      "step": 9,
+      "name": "Build the Space Tower (Y105-Y180)",
+      "description": "From Y105, switch to the 3x3 iron bars column. Stack upward for ~75 blocks. At Y158-Y161, build the Euroscoop cabin: a 9-diameter hollow ring of light blue glass panes around the 3x3 tower tube, with white concrete slab floor (Y158) and ceiling (Y161). Continue the 3x3 column above the cabin."
+    },
+    {
+      "step": 10,
+      "name": "Build the Space Tower tip (Y182-Y185)",
+      "description": "Y182: Place a redstone lamp (aircraft warning light). Y183: Lightning rod. Y184-Y185: End rods on top. This creates the antenna tip silhouette."
+    },
+    {
+      "step": 11,
+      "name": "Landscaping",
+      "description": "Surround the base with grass, paths (gravel/coarse dirt), oak and birch trees, and flower beds. Clear a 20-block radius park area. Add park benches (signs on stairs) and lampposts (fence + lantern)."
+    },
+    {
+      "step": 12,
+      "name": "Final details and inspection",
+      "description": "Fly around the build checking the silhouette from all angles. The key profile is: thin stick → mushroom disc at 55% height → thin spike on top. Adjust any blocks that break the circular curves. Add any interior furnishing details."
+    }
+  ],
+
+  "unique_challenges": {
+    "circular_cross_sections": {
+      "problem": "Building smooth circles at 3, 10, 14, and 29 block diameters",
+      "solution": "Use the pixel-art circle templates provided above. Place one layer, verify the pattern, then copy upward. For the 29-diameter disc, lay it out at ground level first as a test, then rebuild at Y97+."
+    },
+    "height": {
+      "problem": "185 blocks is extremely tall — well above comfortable scaffolding range, and easy to lose track of your position",
+      "solution": "Build a temporary scaffolding column inside the shaft as you go (scaffolding blocks stack easily). Mark every 10th level with a different block temporarily. Consider building near a mountain or tall structure for easy access while constructing. Water elevator inside the shaft can help during construction. At 1:1 scale this tower reaches into the upper build limit territory — verify your world height limit before starting."
+    },
+    "asymmetric_disc": {
+      "problem": "The crow's nest is NOT centered on the shaft — it extends further to one side",
+      "solution": "Offset the 29-diameter disc so the 10-diameter shaft sits in the NE quadrant. The disc extends ~18 blocks SW of the shaft but only ~8 blocks NE. Test the layout at ground level first. This asymmetry is THE defining visual feature of the Euromast."
+    },
+    "thin_space_tower": {
+      "problem": "A 3x3 column for 85 blocks looks monotonous and fragile",
+      "solution": "Use iron bars (which have a thin lattice appearance). Add glass block 'maintenance platforms' every 12 blocks. The Euroscoop cabin at Y158 breaks up the column visually. End rods at the tip add a finial detail."
+    },
+    "proportions": {
+      "problem": "Getting the mushroom/lollipop silhouette right — the disc must look dramatically wider than the shaft",
+      "solution": "The 29:10 ratio (~3:1) matches the real 29m:9.6m ratio. This contrast is what makes the Euromast recognizable. Do not make the shaft wider or the disc smaller — the 3:1 ratio is essential. View the build from 100+ blocks away to check the silhouette."
+    },
+    "interior_spacious": {
+      "problem": "At 1:1 scale the shaft interior is 8x8 — large enough to feel empty if not furnished",
+      "solution": "Fill the interior purposefully: dedicate one half for the elevator (chain column, iron doors) and the other half for a spiral staircase. Add landings with furnishings every 20 blocks. The crow's nest interior (29-block disc) has enormous room for detailed restaurant and hotel furnishing."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "Southwest, from across the Maas river — this shows the asymmetric disc extending toward you with the shaft behind it, and the Space Tower rising above. At 100-150 blocks distance the full silhouette is visible.",
+    "key_silhouette": "Thin vertical line (shaft) → wide horizontal disc (crow's nest at 55% height) → thin vertical spike (Space Tower) → tiny bump (Euroscoop cabin near top) → antenna tip. The profile resembles a mushroom or a nail.",
+    "minecraft_viewing_tip": "Build a small viewing platform 120 blocks to the southwest at Y=100 (roughly crow's nest height) for the most dramatic perspective. The tower should be silhouetted against the sky.",
+    "night_view": "Place glowstone or sea lanterns behind the glass panes in the crow's nest for a warm glow. The redstone lamp at Y182 adds realism. Consider hidden lighting inside the Euroscoop cabin."
+  },
+
+  "height_breakdown_summary": {
+    "Y0_Y4": "Base entrance pavilion (5 blocks, 14-diameter tapering to 10)",
+    "Y5_Y29": "Lower shaft (25 blocks, 10-diameter cylinder)",
+    "Y28_Y32": "Ship's bridge level (5 blocks, 10-diameter + balcony)",
+    "Y33_Y96": "Upper shaft (64 blocks, 10-diameter cylinder)",
+    "Y97_Y105": "Crow's nest disc (9 blocks, 29-diameter asymmetric disc)",
+    "Y105_Y155": "Space Tower lower (51 blocks, 3x3 iron bars)",
+    "Y158_Y161": "Euroscoop cabin (4 blocks, 9-diameter glass ring)",
+    "Y156_Y180": "Space Tower upper (25 blocks, 3x3 lightning rods)",
+    "Y182": "Aircraft warning light (redstone lamp)",
+    "Y183_Y185": "Antenna tip (lightning rod + end rods)",
+    "total": "185 blocks from base to tip"
+  },
+
+  "block_shopping_list_estimate": {
+    "light_grey_concrete": "~2800 blocks (shaft walls: ~28 blocks per layer x 101 layers)",
+    "glass_panes_clear": "~350 blocks (crow's nest perimeter + shaft windows)",
+    "grey_concrete": "~250 blocks (crow's nest roof, details)",
+    "deepslate_slabs": "~400 blocks (crow's nest underside — 29-diameter disc x 2 layers)",
+    "white_concrete_or_quartz": "~1300 blocks (crow's nest floors — 29-diameter disc x 2 layers ~660 per layer)",
+    "iron_bars": "~480 blocks (Space Tower tube + railings: 8 per layer x 51 layers + railings)",
+    "lightning_rods": "~200 blocks (upper Space Tower: 8 per layer x 25 layers)",
+    "light_blue_stained_glass_panes": "~96 blocks (Euroscoop cabin walls — 9-diameter ring x 4 layers)",
+    "end_rods": "~4 blocks (antenna tip)",
+    "redstone_lamp": "1 block (aircraft light)",
+    "glass_blocks": "~25 blocks (transparent floor section 5x5)",
+    "dark_oak_doors": "2 (entrance)",
+    "smooth_stone_slabs": "~100 blocks (base canopy, foundation platform)",
+    "misc_furnishing": "Signs, item frames, beds, stairs, fence posts, pressure plates, cartography table, lanterns, spiral staircase blocks"
+  }
+}

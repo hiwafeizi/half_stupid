@@ -1,0 +1,79 @@
+{
+  "name": "Markthal",
+  "dutch_name": "Markthal",
+  "architect": "MVRDV",
+  "year": 2014,
+  "style": "Contemporary / Dutch Modern",
+  "location": "Dominee Jan Scharpstraat 298, Rotterdam",
+
+  "dimensions": {
+    "height_m": 40,
+    "length_m": 120,
+    "width_m": 70,
+    "glass_end_wall_height_m": 34,
+    "glass_end_wall_width_m": 42,
+    "total_floor_area_m2": 100000,
+    "apartments": 228,
+    "underground_parking_levels": 4,
+    "parking_spaces": 1200
+  },
+
+  "proportions": {
+    "height_width_length_ratio": "4:7:12",
+    "arch_wall_thickness_m": "10-12",
+    "interior_span_width_m": 46,
+    "interior_height_m": 40
+  },
+
+  "architectural_features": {
+    "shape": "Massive horseshoe/parabolic arch, open at both short ends",
+    "exterior_cladding": "Grey natural stone",
+    "glass_facades": {
+      "type": "Cable-net glass facade (largest in Europe)",
+      "glass_pane_width_mm": 1485,
+      "description": "Pre-stressed steel cables form net from which glass panes hang"
+    },
+    "interior_mural": {
+      "name": "Horn of Plenty (Hoorn des Overvloeds)",
+      "artists": "Arno Coenen and Iris Roskam",
+      "area_m2": 11000,
+      "description": "Enlarged flowers, fruits, vegetables, fish, insects on perforated aluminium panels",
+      "style": "References Dutch Golden Age still-life paintings"
+    },
+    "apartments": {
+      "count": 228,
+      "location": "Floors 3-11, wrapping inside the arch",
+      "living_rooms": "Face outward (exterior)",
+      "kitchens": "Face inward (toward market)"
+    }
+  },
+
+  "colors": {
+    "exterior": "Grey natural stone",
+    "glass_ends": "Clear glass with steel cable grid",
+    "interior_ceiling": "Colorful mural (fruits, flowers)",
+    "structure": "Concrete grey"
+  },
+
+  "minecraft_suggestions": {
+    "scale_1_to_1": {
+      "height_blocks": 40,
+      "length_blocks": 120,
+      "width_blocks": 70
+    },
+    "scale_1_to_2": {
+      "height_blocks": 20,
+      "length_blocks": 60,
+      "width_blocks": 35
+    },
+    "recommended_scale": "1:2",
+    "block_palette": {
+      "exterior": "Light grey concrete or stone",
+      "glass_ends": "Glass panes with iron bars for cable net",
+      "interior_mural": "Colored terracotta, glazed terracotta for artwork",
+      "market_floor": "Smooth stone or polished andesite",
+      "apartments": "White concrete interior"
+    },
+    "build_notes": "Semicircular arch cross-section: radius ~20 blocks (height) spanning ~46 blocks (interior width) at 1:1 scale."
+  }
+}

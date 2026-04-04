@@ -1,0 +1,564 @@
+{
+  "building": "Markthal",
+  "architect": "MVRDV",
+  "year": 2014,
+  "real_dimensions": {
+    "height_m": 40,
+    "length_m": 120,
+    "width_m": 70,
+    "interior_span_m": 46,
+    "arch_wall_thickness_m": "10-12",
+    "glass_end_wall_height_m": 34,
+    "glass_end_wall_width_m": 42
+  },
+  "recommended_scale": "1:1 (1 meter = 1 block)",
+
+  "arch_construction": {
+    "curve_type": "horseshoe/parabolic hybrid - the Markthal arch is structurally a reinforced concrete horseshoe arch. Cross-section photos show it is NOT a pure semicircle; the sides rise nearly vertical for the first few floors then curve inward in a flattened parabolic profile to meet at the top. In Minecraft, model this as vertical walls for the lower portion transitioning to a parabolic curve at the top.",
+    "curve_rationale": "The arch is wider than it is tall in cross-section (70m wide vs 40m tall), making it a flattened/depressed arch. The interior span is 46m at ground level with 40m interior height. The sides are thick (10-12m) with apartments embedded in them.",
+    "cross_section_profile": {
+      "description": "The arch viewed end-on: two thick legs rising from ground, curving inward to meet at the peak. The exterior is wider at the base than the interior. At 1:1 scale the full width is 70 blocks and height is 40 blocks.",
+      "interior_span_blocks": 46,
+      "exterior_width_blocks": 70,
+      "peak_height_blocks": 40,
+      "wall_thickness_blocks": 12,
+      "notes": "Wall thickness varies: about 12 blocks at base, tapering to 9-10 blocks at the crown. The interior opening is a horseshoe shape - nearly vertical sides for the lower half, then curving over.",
+      "layer_by_layer": [
+        {
+          "height": 1,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Ground level - widest point. Interior is open market hall floor. Walls are 12 blocks thick on each side containing apartment structure."
+        },
+        {
+          "height": 2,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Ground floor continued. Walls still vertical."
+        },
+        {
+          "height": 3,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Ground floor upper / mezzanine retail level. Walls still vertical."
+        },
+        {
+          "height": 4,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Mezzanine retail level continued. Walls still vertical."
+        },
+        {
+          "height": 5,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 5 - first apartment level. Walls still vertical, exterior still at full 70 width."
+        },
+        {
+          "height": 6,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 6 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 7,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 6 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 8,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 7 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 9,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 7 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 10,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 8 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 11,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 8 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 12,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 9 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 13,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 9 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 14,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 10 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 15,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 10 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 16,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 11 apartments lower. Walls still vertical."
+        },
+        {
+          "height": 17,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 11 apartments upper. Walls still vertical."
+        },
+        {
+          "height": 18,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 12 apartments. Last fully vertical layer before curve begins."
+        },
+        {
+          "height": 19,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 12 apartments upper. Halfway up the arch. Exterior still vertical."
+        },
+        {
+          "height": 20,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 13 apartments. Midpoint of arch height. Walls still vertical."
+        },
+        {
+          "height": 21,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Floor 13 apartments upper. Exterior just beginning to transition."
+        },
+        {
+          "height": 22,
+          "interior_width": 46,
+          "exterior_width": 70,
+          "wall_left": 12,
+          "wall_right": 12,
+          "description": "Upper apartments. Last vertical layer on exterior."
+        },
+        {
+          "height": 23,
+          "interior_width": 46,
+          "exterior_width": 68,
+          "wall_left": 11,
+          "wall_right": 11,
+          "description": "Curve begins noticeably. Exterior narrows by 1 block each side. Interior stays constant. Upper penthouse level."
+        },
+        {
+          "height": 24,
+          "interior_width": 46,
+          "exterior_width": 66,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Curve continues. Exterior narrows further. Penthouse apartments."
+        },
+        {
+          "height": 25,
+          "interior_width": 46,
+          "exterior_width": 66,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Curve continues. Penthouse apartments upper."
+        },
+        {
+          "height": 26,
+          "interior_width": 44,
+          "exterior_width": 64,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Both interior and exterior begin narrowing. Interior closes by 1 block each side."
+        },
+        {
+          "height": 27,
+          "interior_width": 42,
+          "exterior_width": 62,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Arch curve steepens. Both sides narrowing by 1 block each side per layer."
+        },
+        {
+          "height": 28,
+          "interior_width": 40,
+          "exterior_width": 60,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Arch curve continues. Narrowing steadily."
+        },
+        {
+          "height": 29,
+          "interior_width": 38,
+          "exterior_width": 58,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Upper arch curve. Narrowing continues."
+        },
+        {
+          "height": 30,
+          "interior_width": 36,
+          "exterior_width": 56,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Upper arch. Significant narrowing now."
+        },
+        {
+          "height": 31,
+          "interior_width": 32,
+          "exterior_width": 52,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Upper arch. Narrowing accelerates - 2 blocks per side."
+        },
+        {
+          "height": 32,
+          "interior_width": 28,
+          "exterior_width": 48,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Approaching crown. Rapid narrowing - 2 blocks per side."
+        },
+        {
+          "height": 33,
+          "interior_width": 24,
+          "exterior_width": 44,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Near crown. Rapid narrowing continues."
+        },
+        {
+          "height": 34,
+          "interior_width": 20,
+          "exterior_width": 40,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Near top of arch. Interior opening shrinking rapidly."
+        },
+        {
+          "height": 35,
+          "interior_width": 16,
+          "exterior_width": 36,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Near top. Interior getting small."
+        },
+        {
+          "height": 36,
+          "interior_width": 12,
+          "exterior_width": 32,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Near top. Interior narrowing fast."
+        },
+        {
+          "height": 37,
+          "interior_width": 8,
+          "exterior_width": 28,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Almost at crown. Interior opening small."
+        },
+        {
+          "height": 38,
+          "interior_width": 4,
+          "exterior_width": 24,
+          "wall_left": 10,
+          "wall_right": 10,
+          "description": "Penultimate layers. Interior nearly closed."
+        },
+        {
+          "height": 39,
+          "interior_width": 0,
+          "exterior_width": 20,
+          "wall_left": "solid",
+          "wall_right": "solid",
+          "description": "Interior closed. Solid arch mass 20 blocks wide."
+        },
+        {
+          "height": 40,
+          "interior_width": 0,
+          "exterior_width": 14,
+          "wall_left": "solid",
+          "wall_right": "solid",
+          "description": "Crown of arch - solid block cap. 14 blocks wide solid roof ridge."
+        }
+      ]
+    },
+    "arch_building_method": "Step 1: Build two parallel walls (the arch legs) 120 blocks long, 70 blocks apart, rising 22 blocks vertically. Step 2: From height 23 upward, begin curving inward following the layer-by-layer profile. Step 3: Work symmetrically from both sides simultaneously. Step 4: Use scaffolding (dirt/sand pillars) inside to support yourself while building the upper curve. Step 5: The arch is 120 blocks long (north-south), and EVERY slice along the length uses the SAME cross-section profile. Step 6: After the shell is complete, hollow out the interior wall to create apartment floor divisions.",
+    "symmetry_note": "The cross-section is perfectly symmetrical left-to-right. Build one half, then mirror it."
+  },
+
+  "exterior_cladding": {
+    "material_description": "The real building is clad in grey natural stone, the same stone as the surrounding pavement, deliberately muted to emphasize the colorful interior. The exterior is a uniform grey with a regular grid of apartment windows.",
+    "material_pattern": "Uniform grey stone panels with a subtle grid of horizontal and vertical joints. In Minecraft, use a mix of light_gray_concrete and stone for the flat panels, with occasional stone_bricks for panel edge detailing.",
+    "window_pattern": {
+      "apartment_windows": "Regular grid of rectangular windows on the exterior face of the arch. Windows are recessed slightly into the stone facade. Apartments occupy floors 5-22 (at 1:1 scale), so windows appear from height 5 to height 22.",
+      "spacing": "Windows are spaced every 3-4 blocks horizontally with 1-2 block gaps between them. Each floor has a row of windows. On the curved upper portion, windows follow the curve and get closer together.",
+      "window_size": "Each window is 1 block wide by 2 blocks tall at 1:1 scale",
+      "block_types": "Use light_gray_stained_glass_pane or cyan_stained_glass_pane for windows set into light_gray_concrete walls",
+      "pattern_detail": "Along each 120-block-long side wall, place windows every 4 blocks (1 window, 3 solid, repeat). Stack this pattern vertically for each apartment floor. On the curved top portion, continue the window grid but follow the curvature."
+    },
+    "ground_floor_exterior": "The ground floor base (heights 1-4) has retail shopfronts facing outward. Use glass_pane strips with stone framing."
+  },
+
+  "glass_end_walls": {
+    "description": "Two enormous cable-net glass facades seal the open ends of the horseshoe arch. Each is 42m wide x 34m tall (42 x 34 blocks at 1:1 scale). They are the largest cable-net glass facades in Europe, engineered by Octatube.",
+    "height_blocks": 34,
+    "width_blocks": 42,
+    "real_cable_grid": "26 vertical cables x 22 horizontal cables holding 1485x1485mm glass panels. Cables are 31mm galvanized steel pre-stressed to 300kN.",
+    "cable_net_pattern": "At 1:1 scale, represent the cable grid with iron_bars every 4-5 blocks vertically and every 4-5 blocks horizontally within the glass wall. This creates a visible grid pattern suggesting the cable-net structure.",
+    "block_approach": "Fill the arch opening with glass_pane as the primary material. Overlay a grid of iron_bars at regular intervals (every 5 blocks in both directions) to represent the steel cable net. The glass wall follows the arch profile shape - it is NOT rectangular but follows the horseshoe curve at the top.",
+    "construction_steps": [
+      "1. At each open end of the arch, outline the arch opening profile",
+      "2. Fill the opening with glass_pane blocks",
+      "3. Replace every 5th vertical column with iron_bars from bottom to top",
+      "4. Replace every 5th horizontal row with iron_bars from left to right",
+      "5. Where iron_bars cross, leave as iron_bars (creates the cable intersection nodes)",
+      "6. Result: a glass wall with a visible steel grid pattern"
+    ],
+    "transparency_note": "The real glass walls are highly transparent - at night the colorful interior mural is visible from outside. In Minecraft, glass_pane achieves this transparency effect well."
+  },
+
+  "interior": {
+    "market_floor": {
+      "layout": "The ground floor is a massive open market hall, 120 x 70 blocks at 1:1. At real scale it has 96 fresh food stalls arranged in rows with walkways between them. A supermarket (Albert Heijn) is on basement level -1.",
+      "stall_arrangement": "At 1:1 scale: Create 5-6 rows of market stalls running the length of the building (north-south). Each row is separated by 3-4 block-wide walkways. Individual stalls are 5-6 blocks long, 3-4 blocks wide, separated by 1-2 block gaps.",
+      "stalls": "Use stripped_oak_log as stall counters (place horizontally), oak_fence as stall posts, oak_slab as canopy/awning pieces. Place item_frames with food items on the counters. Use colored_wool or banners above each stall for variety.",
+      "blocks": "Floor: polished_andesite or smooth_stone for the grey stone floor (matching the exterior stone). Stalls: oak_planks, stripped_oak_log, oak_fence, oak_slab. Decorations: lanterns, item_frames, flower_pots.",
+      "shops_and_restaurants": "20 shops and 8 restaurants line the perimeter walls at ground level and first floor (4,600 m2 retail). Represent these as recessed alcoves in the arch walls with glass_pane shopfronts, each alcove 4-6 blocks wide and 10-12 blocks deep.",
+      "central_walkway": "A main central walkway runs the full 120-block length with stalls on either side and shop alcoves along the walls."
+    },
+    "mural_ceiling": {
+      "name": "Horn of Plenty (Hoorn des Overvloeds)",
+      "artists": "Arno Coenen and Iris Roskam",
+      "description": "An 11,000 m2 digital artwork printed on 4,500 perforated aluminum panels covering the entire interior concave ceiling surface. It depicts massively enlarged fruits, vegetables, grains, fish, flowers, insects, and seeds against a sky-like background. It references Dutch Golden Age still-life paintings. The Sint Laurenskerk church is visible in the background imagery. Nicknamed the 'Sistine Chapel of Rotterdam'.",
+      "approach": "The mural covers the entire interior surface of the arch - both side walls and the curved ceiling. In Minecraft, use colored blocks on the interior surface to create an impressionistic representation. Focus on large-scale color zones rather than individual objects, as the real artwork features enormous enlarged items.",
+      "block_types": [
+        "orange_glazed_terracotta - for oranges, peaches, warm fruits",
+        "red_glazed_terracotta - for strawberries, tomatoes, red flowers",
+        "yellow_glazed_terracotta - for lemons, wheat, sunflowers",
+        "lime_glazed_terracotta - for green vegetables, leaves, stems",
+        "green_glazed_terracotta - for dark foliage, cucumbers",
+        "light_blue_glazed_terracotta - for sky background areas",
+        "cyan_glazed_terracotta - for water/fish areas",
+        "magenta_glazed_terracotta - for flowers, purple fruits",
+        "white_glazed_terracotta - for light background, petals",
+        "brown_glazed_terracotta - for earth tones, seeds, grains",
+        "orange_concrete - for large fruit masses",
+        "red_concrete - for berry clusters",
+        "yellow_concrete - for grain/wheat fields",
+        "lime_concrete - for large leaf areas",
+        "light_blue_concrete - for sky patches"
+      ],
+      "sections": {
+        "overview": "The mural composition radiates outward from a central vanishing point at the crown of the arch. Major elements are distributed across the ceiling in a roughly symmetrical, explosive composition - as if a cornucopia has burst open.",
+        "crown_center": "The very top center of the arch interior features lighter sky-blue tones with scattered flower petals and wheat stalks. Use light_blue_glazed_terracotta and white_glazed_terracotta.",
+        "upper_sides": "Large sunflowers, oranges, and pears dominate. Use yellow_glazed_terracotta and orange_glazed_terracotta in 5-8 block clusters.",
+        "mid_section": "The richest area: giant strawberries, peppers, tulips, roses, and fish. Use red_glazed_terracotta, magenta_glazed_terracotta, orange_concrete, and cyan_glazed_terracotta in bold patches.",
+        "lower_walls": "Vegetables (corn, peas, beans), insects (butterflies, beetles), and seeds/grains closer to the apartment windows. Use green_glazed_terracotta, lime_concrete, yellow_concrete, and brown_glazed_terracotta.",
+        "background_throughout": "Light sky-blue fills gaps between the enlarged objects. The Sint Laurenskerk church silhouette appears subtly in the background. Use light_blue_concrete for sky areas.",
+        "color_intensity": "Colors are most vivid and warm at the center and become slightly cooler toward the ends near the glass walls."
+      },
+      "simplified_minecraft_approach": "At 1:1 scale, you have enough resolution to suggest individual large objects. Create COLOR ZONES: warm oranges and reds in the center, transitioning to greens on the lower sides, with light blue background throughout. Use glazed terracotta for its swirling patterns which suggest organic forms. Place blocks in irregular 3-8 block clusters of the same color to depict the enlarged fruits and flowers. Individual objects like a giant sunflower (8-10 blocks across) or a massive strawberry (6-8 blocks) are feasible at this scale."
+    },
+    "apartment_cross_section": {
+      "description": "228 apartments are embedded within the arch walls. Living rooms and bedrooms face outward (exterior), kitchens and dining rooms face inward (toward the market) with triple-glazed windows. Apartments span floors 5-22 at 1:1 scale.",
+      "depth_blocks": 12,
+      "floors_per_side": "9 apartment floors per side at 1:1 scale (representing real floors 5-22, with each floor 2 blocks tall)",
+      "apartment_size_blocks": "Each apartment unit is roughly 6-8 blocks wide x 12 blocks deep x 3-4 blocks tall at 1:1 scale",
+      "interior_facing_windows": "On the interior face (market-facing side), apartment windows look down into the market hall. Some upper penthouses have glass floors. In Minecraft, place glass_pane on the interior wall surface every 4-6 blocks, set into the mural-covered interior surface.",
+      "exterior_facing_windows": "Living rooms face outward with views toward the Maas river or Laurenskerk. These are the regularly spaced windows visible on the exterior.",
+      "penthouse_detail": "24 penthouses are at the top of the arch where the walls curve. These have inclined windows that transition to glass floor panels. At the very top, represent this with glass blocks in the floor of the uppermost apartment layer."
+    }
+  },
+
+  "underground": {
+    "parking_levels": 4,
+    "parking_spaces": 1200,
+    "supermarket": "Albert Heijn supermarket on level -1",
+    "distribution": "Underground distribution platform on basement level -1 for deliveries",
+    "include_in_build": "SKIP - Underground parking adds enormous excavation work for minimal visual payoff. Only build if you want completeness. If building, dig 4 layers (each 3-4 blocks tall) below ground level using stone_bricks for walls and smooth_stone for floors, with gray_concrete pillars every 6 blocks.",
+    "foundation_note": "The real building's foundation was excavated 20m deep into swampy ground with underwater concrete poured by divers over 72 hours. Dramatic engineering, but not visible in the final build."
+  },
+
+  "block_palette": {
+    "exterior_walls": {
+      "primary": "light_gray_concrete",
+      "accent": "stone",
+      "detail": "stone_bricks (for panel grid lines)",
+      "base": "smooth_stone (ground floor level)"
+    },
+    "apartment_windows_exterior": {
+      "glass": "light_gray_stained_glass_pane",
+      "frame": "light_gray_concrete (surrounding blocks)"
+    },
+    "glass_end_walls": {
+      "glass": "glass_pane",
+      "cables": "iron_bars",
+      "frame": "light_gray_concrete (arch edge framing)"
+    },
+    "interior_mural": {
+      "sky_background": "light_blue_concrete",
+      "warm_fruits": "orange_glazed_terracotta, orange_concrete",
+      "red_elements": "red_glazed_terracotta, red_concrete",
+      "yellow_elements": "yellow_glazed_terracotta, yellow_concrete",
+      "green_elements": "lime_glazed_terracotta, green_glazed_terracotta, lime_concrete",
+      "flowers": "magenta_glazed_terracotta, pink_glazed_terracotta",
+      "fish_water": "cyan_glazed_terracotta",
+      "seeds_earth": "brown_glazed_terracotta",
+      "highlights": "white_glazed_terracotta, white_concrete"
+    },
+    "market_floor": {
+      "floor_surface": "polished_andesite",
+      "walkways": "smooth_stone",
+      "stall_counters": "stripped_oak_log",
+      "stall_frames": "oak_fence",
+      "stall_canopies": "oak_slab, spruce_slab",
+      "decorations": "lantern, item_frame, flower_pot"
+    },
+    "apartment_interiors": {
+      "walls": "white_concrete",
+      "floors": "oak_planks",
+      "interior_windows": "glass_pane"
+    },
+    "structure": {
+      "concrete_frame": "gray_concrete",
+      "reinforcement": "stone_bricks"
+    }
+  },
+
+  "build_order": [
+    "1. FOUNDATION: Lay out the ground floor footprint - a 120x70 block rectangle of polished_andesite. Mark the arch wall positions (12 blocks in from each long side).",
+    "2. ARCH LEGS (layers 1-22): Build both side walls simultaneously, 120 blocks long, rising 22 blocks vertically. Each wall is 12 blocks thick. Exterior face is light_gray_concrete, interior face gets mural colors later.",
+    "3. ARCH CURVE (layers 23-40): Following the layer-by-layer profile, curve the walls inward to meet at the crown. Build one cross-section slice as a template, then replicate it 120 times along the length.",
+    "4. EXTERIOR CLADDING: Apply light_gray_concrete to all exterior surfaces. Add stone_brick lines every 4 blocks horizontally for panel grid effect.",
+    "5. EXTERIOR WINDOWS: Cut 1x2 holes in the exterior walls at regular intervals (every 4 blocks) on apartment floors (heights 5-22). Fill with light_gray_stained_glass_pane.",
+    "6. GLASS END WALLS: At both open ends, fill the arch opening with glass_pane. Add iron_bars grid every 5 blocks in both directions for cable-net effect. Each glass wall is 42 blocks wide x 34 blocks tall.",
+    "7. INTERIOR MURAL: This is the showpiece. Apply colored glazed terracotta and concrete to the entire interior surface following the color zone guide. Work from the crown downward.",
+    "8. APARTMENT FLOORS: Inside the arch walls, place horizontal floors every 3-4 blocks (apartment floor slabs). Add white_concrete interior walls and oak_planks floors. Each apartment is 12 blocks deep.",
+    "9. INTERIOR APARTMENT WINDOWS: Place glass_pane on the interior face of the arch walls every 4-6 blocks, where apartment kitchens look into the market.",
+    "10. MARKET STALLS: Build 5-6 rows of market stalls on the ground floor using oak materials. Add item_frames with food, lanterns for lighting. Each stall 5-6 blocks long by 3-4 blocks wide.",
+    "11. LIGHTING: Place glowstone or sea_lanterns behind the mural panels (hidden) to illuminate the interior. Add lanterns throughout the market floor. The interior should be VERY bright.",
+    "12. FINISHING: Add entrance details at both glass-wall ends, surrounding pavement in smooth_stone matching the building's grey stone."
+  ],
+
+  "unique_challenges": {
+    "arch_curve": {
+      "problem": "Getting a smooth arch in blocks - the transition from vertical walls to curved crown must look natural, not stepped",
+      "solution": "Use the layer-by-layer profile precisely. The key insight is that the lower 55% of the arch is VERTICAL (not curved), and the curve only happens in the upper portion. This actually makes it easier than a full semicircle. For the curved section, narrow by 1-2 blocks per layer and use stairs/slabs on the exterior to smooth transitions. At 1:1 scale you have 18 curved layers to work with, allowing for smoother gradients than at smaller scales."
+    },
+    "mural_representation": {
+      "problem": "Translating an 11,000m2 photorealistic digital artwork into Minecraft blocks at 1:1 scale",
+      "solution": "At 1:1 scale you have enough resolution to suggest individual giant objects (an 8-block sunflower, a 6-block strawberry). Create impressionistic color zones using glazed terracotta (which has inherent swirling patterns). Cluster 3-8 blocks of the same color type together. The overall impression from a distance should be 'colorful and organic'. Warm colors (orange, red, yellow) dominate the center; greens on lower walls; light blue background throughout."
+    },
+    "glass_end_walls": {
+      "problem": "Making convincing cable-net glass facades that look both transparent and structured at 42x34 blocks",
+      "solution": "Glass panes provide transparency. Iron bars at regular intervals create the cable grid visual. The key is getting the arch-shaped outline correct - the glass wall is NOT rectangular but follows the horseshoe profile. Build the arch outline first, then fill with glass/iron bar grid."
+    },
+    "apartment_windows": {
+      "problem": "Maintaining a regular window rhythm on the exterior of a surface that curves at the top",
+      "solution": "On the vertical portion (heights 1-22), windows are in a perfect grid - easy. On the curved portion (heights 23-40), continue placing windows but they naturally get closer together as the wall narrows. Some windows will be on angled surfaces - use stairs blocks as window sills where the wall steps inward."
+    },
+    "interior_lighting": {
+      "problem": "Making the interior feel like the real bright, open market hall. The real building floods with natural light through the glass end walls.",
+      "solution": "Place hidden light sources (glowstone, sea_lanterns) behind mural panels throughout the interior ceiling. Add visible lanterns on market stall posts. The glass end walls naturally admit Minecraft daylight. Aim for light level 12+ throughout the interior. Consider using light blocks if available in your version."
+    },
+    "scale_vs_detail": {
+      "problem": "At 1:1 scale, apartment interiors are 12 blocks deep and 3-4 blocks tall per floor - roomy enough to furnish",
+      "solution": "At 1:1 scale you have enough space to furnish apartments with beds, tables, and kitchen counters. Focus on visible elements first: exterior windows, interior windows (market-facing), and floor divisions. Then optionally furnish apartments that are visible through windows."
+    }
+  },
+
+  "views": {
+    "best_viewing_angle": "Stand at ground level about 60 blocks from one of the glass end walls, looking through the glass into the colorful interior. This is the iconic Markthal photo angle - the transparent glass end framing the enormous colorful mural inside, with market stalls visible at ground level.",
+    "key_silhouette": "Giant horseshoe arch with glass ends - when viewed from the side, the building reads as a massive grey arch. When viewed from the end, the glass wall reveals the explosion of color inside.",
+    "secondary_views": [
+      "Interior looking up: Stand on the market floor in the center and look up at the mural-covered ceiling curving overhead - the full 40-block height is dramatic",
+      "Aerial view: From above, the building is a simple elongated rectangle (120x70) - the arch profile is only visible from the sides/ends",
+      "Night view: With interior lighting, the mural colors glow through the glass end walls - dramatic effect in Minecraft too"
+    ],
+    "surrounding_context": "The Markthal sits next to the Cube Houses (Kubuswoningen) and the Blaak railway station. If building the full Rotterdam scene, position these neighbors to the east."
+  },
+
+  "construction_tips": {
+    "template_slice": "Build ONE perfect cross-section slice first (the arch profile from the layer-by-layer guide). Test it, adjust it, then clone it 119 more times along the length axis. This ensures consistency.",
+    "worldedit_friendly": "If using WorldEdit or similar tools: build the cross-section template, then use //stack 119 to replicate it. Then carve out the glass end walls at both ends.",
+    "survival_mode": "In survival, build the arch from the inside using scaffolding. Place temporary blocks (dirt) as you go up the curve. The interior is self-supporting once the arch is complete.",
+    "block_count_estimate": {
+      "exterior_shell": "~200,000 blocks (light_gray_concrete + stone). Calculated from: 120 slices x ~1,660 shell blocks per slice average across the 40-layer profile.",
+      "interior_mural": "~64,000 blocks (various glazed terracotta + concrete). The interior surface area at 1:1 is roughly 8x the 1:2 version.",
+      "glass_end_walls": "~2,400 blocks (glass_pane + iron_bars). Two end walls, each approximately 42 wide x ~28 average height.",
+      "market_floor_and_stalls": "~12,000 blocks. Floor area is 120x46 = 5,520 blocks, plus stalls and furnishings.",
+      "apartment_interiors": "~80,000 blocks (optional - skip for exterior-only build). 228 apartments with floors, walls, and basic furnishings.",
+      "total_estimated": "~280,000-360,000 blocks depending on interior detail level"
+    }
+  },
+
+  "historical_context": {
+    "significance": "The Markthal was the first indoor market hall in the Netherlands, combining 228 apartments with a fresh food market under one roof. It opened October 1, 2014.",
+    "engineering_feat": "The foundation required excavating 20m into swampy Rotterdam soil. Divers poured underwater concrete over 72 continuous hours. The cable-net glass facades are the largest in Europe.",
+    "cultural_impact": "Nicknamed the 'Sistine Chapel of Rotterdam' for its enormous interior mural. It has become one of Rotterdam's most recognizable landmarks alongside the Erasmus Bridge and Cube Houses."
+  }
+}
