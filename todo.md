@@ -1,89 +1,80 @@
 ## Practical to do list
 
-This is a concrete checklist you can literally paste into a project TODO.
+Updated 2026-04-04. Following bottom-up 9-stage training curriculum.
 
 ### Stage 0: Project setup
 
-* [X] Decide platform
-  * [X] Minecraft + Malmo or custom grid world
+* [X] Decide platform: Minecraft + Malmo (1.11.2)
 * [X] Create repo and base structure
-* [ ] Implement basic environment API
-  * [ ] Step function
-  * [ ] State representation
-  * [ ] Reward return
+* [X] Implement 4-level vision pipeline (reflex, fast PFC, reflective PFC, planning PFC)
+* [X] Set up Malmo integration (builder, multi-agent support)
+* [X] Define 9-stage training curriculum
+* [X] Core settings: 4 agents, 7×7 vision, 20x speed, respawn, 2-layer NN
 
-### Stage 1: Perception and memory skeleton
+### Stage 1: Food in reach — learn to eat (Brainstem) ← CURRENT
 
-* [ ] Implement `sense_environment` function
-  * [ ] Vision patch around agent
-  * [ ] Basic sound events interface
-  * [ ] Internal state extraction
-* [ ] Implement STM data structure
-  * [ ] Append recent events with time and reward
-  * [ ] Truncate history to max length
-* [ ] Implement LTM skeleton
-  * [ ] Dictionaries for action_stats, vocal_meanings, danger_tags
-  * [ ] Functions to update running averages
-* [ ] Implement SPATIAL memory
-  * [ ] Coordinate based dictionary
-  * [ ] Reward accumulation per tile
+* [X] Create Stage 1 world (10×10 room, food adjacent to spawns)
+* [X] Build 2-layer brainstem NN (102 inputs → 64 hidden → 6 actions)
+* [X] Create training runner with episode loop
+* [X] 4 agents, single respawn point, 20x speed
+* [ ] Launch 4 Malmo clients and run first training
+* [ ] Verify agents can observe 7×7 grid
+* [ ] Verify agents learn to eat when food is adjacent
+* [ ] Tune reward/learning rate until survival improves across episodes
+* [ ] Save Stage 1 "graduated" weights
 
-### Stage 2: Reflex module
+### Stage 2: Food nearby — learn to find it (Brainstem+)
 
-* [ ] Design reflex input vector (local tiles + sound + fall + health)
-* [ ] Implement tiny neural network for reflex (or placeholder rules)
-* [ ] Add priority logic so reflex action overrides others
-* [ ] Test in simple environment where agent must avoid lava or cliffs
+* [ ] Expand world: food exists but not immediately visible
+* [ ] Add exploration drive (curiosity bonus for new tiles)
+* [ ] Verify agents learn biased random walk toward food
+* [ ] Save Stage 2 weights
 
-### Stage 3: Fast PFC
+### Stage 3: Food disappears — remember where it was (Hippocampus)
 
-* [ ] Design input vector for fast PFC (compressed perception + simple STM)
-* [ ] Implement heuristic or small network that:
-  * [ ] Moves toward visible food
-  * [ ] Avoids visible danger
-  * [ ] Explores unknown tiles
-* [ ] Integrate with reflex module in tick loop
+* [ ] Add respawning food at fixed locations
+* [ ] Implement short-term spatial memory
+* [ ] Verify agents learn to route to known food spots
+* [ ] Save Stage 3 weights
 
-### Stage 4: RL policy (reflective PFC)
+### Stage 4: Hazards — learn to avoid (Amygdala)
 
-* [ ] Choose RL library or implement PPO / A2C
-* [ ] Define policy network architecture
-* [ ] Connect environment, STM, and LTM summaries into state vector
-* [ ] Implement training loop
-* [ ] Test in simple environment until policy improves over heuristics
+* [ ] Add lava/damage zones
+* [ ] Implement fear/aversion signal (negative reward on health loss)
+* [ ] Verify agents learn to avoid correlated dangers
+* [ ] Save Stage 4 weights
 
-### Stage 5: Memory value tagging
+### Stage 5: Larger world — build a map (Hippocampus+)
 
-* [ ] On each step, log: state hash, action, reward into LTM
-* [ ] Implement update of action_stats (avg_reward, success_rate)
-* [ ] Implement update of SPATIAL avg_reward per tile
-* [ ] Use LTM summaries as extra features for reflective PFC and planning later
+* [ ] Expand arena, make food sparse
+* [ ] Implement long-term spatial memory (persistent map)
+* [ ] Verify persistent path planning emerges
+* [ ] Save Stage 5 weights
 
-### Stage 6: Planning PFC
+### Stage 6: Food requires steps — learn to plan (Prefrontal)
 
-* [ ] Collect dataset of (state, action, next_state, reward) during RL episodes
-* [ ] Train world model network to predict next_state and reward
-* [ ] Implement planning routine that:
-  * [ ] Simulates a few steps ahead for candidate actions
-  * [ ] Uses SPATIAL and LTM risk statistics
-  * [ ] Selects best action
-* [ ] Call planner every N ticks and override lower level action when confident
+* [ ] Require crafting/farming for food
+* [ ] Implement sequential planning + delay tolerance
+* [ ] Verify multi-step goal pursuit
+* [ ] Save Stage 6 weights
 
-### Stage 7: Communication
+### Stage 7: Other agents — model them (Social cortex)
 
-* [ ] Decide mapping of 5 letters to actual Minecraft sounds or note block pitches
-* [ ] Implement vocal actions in the action space
-* [ ] Implement parsing sound events into symbolic letters
-* [ ] Update LTM for vocal_meanings based on reward co-occurrence
-* [ ] Add small reward when vocalizing near another agent
-* [ ] Evaluate if simple meanings emerge (A = danger, B = food etc.)
+* [ ] Multiple agents share same food (already 4 agents!)
+* [ ] Implement agent detection + behavior tracking
+* [ ] Verify agents treat others as entities, not obstacles
+* [ ] Save Stage 7 weights
 
-### Stage 8: Tuning and polish
+### Stage 8: Info sharing — primitive signals (Language proto)
 
-* [ ] Tune reward weights for survival, food, pain, social, and novelty
-* [ ] Adjust reflex threshold smoothness
-* [ ] Adjust how often planner runs to balance compute vs intelligence
-* [ ] Add logging and visualization for:
-  * [ ] Action stats
-  * [ ] Spatial reward heatmap
-  * [ ] Vocal meaning evolution
+* [ ] Enable vocal actions (5 symbols: A-E)
+* [ ] Reward for communication that improves survival
+* [ ] Verify emergent signals for food/danger
+* [ ] Save Stage 8 weights
+
+### Stage 9: Cooperation vs competition (Theory of mind)
+
+* [ ] Mix agent types (cooperative/competitive)
+* [ ] Implement belief model about other agents
+* [ ] Verify trust, reputation, social strategy emerges
+* [ ] Save Stage 9 weights

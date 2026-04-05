@@ -1,0 +1,11 @@
+{
+  "name": "Adam",
+  "episodes_trained": 3,
+  "total_ticks": 11701,
+  "reward_history": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "vocab_size": 6
+}

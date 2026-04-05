@@ -1,0 +1,9 @@
+{
+  "block_vocab": {
+    "grass": 0,
+    "cake": 1,
+    "air": 2,
+    "red_flower": 3
+  },
+  "next_block_id": 4
+}

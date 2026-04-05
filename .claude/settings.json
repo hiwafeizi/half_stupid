@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(C:/Users/hiwa/anaconda3/envs/malmo/python.exe -c \":*)",
-      "Bash(grep -E \"\\\\.\\(py|md|txt\\)$\")"
+      "Bash(grep -E \"\\\\.\\(py|md|txt\\)$\")",
+      "Bash(xargs wc:*)"
     ]
   }
 }

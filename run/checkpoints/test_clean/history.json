@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "episodes_trained": 1,
+  "total_ticks": 1,
+  "reward_history": [
+    1.0
+  ],
+  "vocab_size": 4
+}

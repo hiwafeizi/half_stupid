@@ -1,0 +1,9 @@
+{
+  "block_vocab": {
+    "stone": 0,
+    "air": 1,
+    "cake": 2,
+    "stonebrick": 3
+  },
+  "next_block_id": 4
+}

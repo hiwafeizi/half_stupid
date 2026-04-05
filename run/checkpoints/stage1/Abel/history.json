@@ -1,0 +1,11 @@
+{
+  "name": "Abel",
+  "episodes_trained": 3,
+  "total_ticks": 4434,
+  "reward_history": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "vocab_size": 4
+}

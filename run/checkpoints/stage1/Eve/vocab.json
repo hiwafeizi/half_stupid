@@ -1,0 +1,15 @@
+{
+  "block_vocab": {
+    "grass": 0,
+    "air": 1,
+    "red_flower": 2,
+    "cake": 3,
+    "fence": 4,
+    "dirt": 5,
+    "log": 6,
+    "yellow_flower": 7,
+    "gravel": 8,
+    "quartz_block": 9
+  },
+  "next_block_id": 10
+}
