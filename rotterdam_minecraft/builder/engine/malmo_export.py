@@ -96,6 +96,15 @@ BLOCK_ID_MAP = {
     "minecraft:deepslate_tile_stairs": "stone_brick_stairs",
     "minecraft:stone_brick_slab": "stone_slab 5",
     "minecraft:stone_slab": "stone_slab",
+    "minecraft:redstone_block": "redstone_block",
+    "minecraft:red_nether_bricks": "red_nether_brick",
+    "minecraft:nether_bricks": "nether_brick",
+    "minecraft:magma_block": "magma",
+    "minecraft:lava": "lava",
+    "minecraft:quartz_stairs_north": "quartz_stairs 3",
+    "minecraft:quartz_stairs_south": "quartz_stairs 2",
+    "minecraft:quartz_stairs_east": "quartz_stairs 0",
+    "minecraft:quartz_stairs_west": "quartz_stairs 1",
 }
 
 
@@ -213,10 +222,13 @@ def run_in_malmo(
             wx = x + current_x
             wy = y + y_offset
             wz = z
-            malmo_block = _convert_block_id(block).split(" ")[0]
+            malmo_block = _convert_block_id(block)
+            parts = malmo_block.split(" ")
+            block_name = parts[0]
+            block_data = parts[1] if len(parts) > 1 else "0"
 
             try:
-                agent_host.sendCommand(f"chat /setblock {wx} {wy} {wz} {malmo_block}")
+                agent_host.sendCommand(f"chat /setblock {wx} {wy} {wz} {block_name} {block_data}")
             except Exception:
                 pass
 
@@ -230,6 +242,49 @@ def run_in_malmo(
                     return
                 pct = placed / total_blocks * 100
                 print(f"\r    {placed:,}/{total_blocks:,} ({pct:.0f}%)", end="", flush=True)
+
+        # Spawn LOTS of different non-aggressive fish in water
+        water_positions = [(x, y, z) for (x, y, z), b in blocks.items()
+                           if b in ("minecraft:water",)]
+        if water_positions:
+            import random
+            rng = random.Random(42)
+
+            # All non-aggressive water/fish mobs across versions
+            # 1.11.2 has: squid
+            # 1.13+  has: cod, salmon, tropical_fish, pufferfish
+            # We summon ALL types — unsupported ones silently fail
+            fish_types = [
+                "squid",
+                "squid",
+                "cod",
+                "salmon",
+                "tropical_fish",
+                "pufferfish",
+                "cod",
+                "salmon",
+                "tropical_fish",
+                "squid",
+            ]
+
+            # Spawn a LOT — up to 500 fish
+            fish_count = min(500, len(water_positions))
+            fish_spots = rng.sample(water_positions, fish_count)
+
+            print(f"\n  Spawning {fish_count} fish (squid, cod, salmon, tropical_fish, pufferfish)...")
+            for i, (fx, fy, fz) in enumerate(fish_spots):
+                wx = fx + current_x
+                wy = fy + y_offset
+                wz = fz
+                ftype = fish_types[i % len(fish_types)]
+                try:
+                    agent_host.sendCommand(f"chat /summon {ftype} {wx} {wy} {wz}")
+                except Exception:
+                    pass
+                if i % 30 == 0:
+                    time.sleep(0.05)
+            time.sleep(0.3)
+            print(f"  {fish_count} fish spawned!")
 
         dims = world.dimensions()
         current_x += max(dims[0], dims[2]) + spacing

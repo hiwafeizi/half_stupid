@@ -8,6 +8,7 @@ from .cube_houses import build as build_cube_houses
 from .rotterdam_centraal import build as build_rotterdam_centraal
 from .hotel_new_york import build as build_hotel_new_york
 from .van_nelle_factory import build as build_van_nelle_factory
+from .heaven_temple import build as build_heaven_temple
 
 ALL_BUILDINGS = {
     "euromast": build_euromast,
@@ -20,4 +21,5 @@ ALL_BUILDINGS = {
     "rotterdam_centraal": build_rotterdam_centraal,
     "hotel_new_york": build_hotel_new_york,
     "van_nelle_factory": build_van_nelle_factory,
+    "heaven_temple": build_heaven_temple,
 }
