@@ -1,45 +1,70 @@
-"""Brainstem — Stage 1 brain. 3-hidden-layer neural network.
+"""Brainstem — Stage 1 brain. 2-hidden-layer neural network.
 
-Zero hand-crafted features. The agent receives:
-    - Raw block IDs as integers (block type 0, 1, 2, ...) — no names, no categories
-    - Raw internal numbers: health, food_level, x, y, z, yaw, pitch
-    - The agent must learn what everything means by itself
+Zero hand-crafted features. No guidance. The agent receives raw numbers
+and must learn what everything means through survival alone.
 
-Vision:
-    7×7 grid, 2 layers (floor + eye level) = 98 blocks.
-    Each block is an integer ID. The agent builds its own "names"
-    (object1, object2, ...) through learned embeddings.
+Input layout (124 floats):
+    [0-97]    Vision: 98 raw block IDs (7x7 grid, 2 layers: floor + eye)
+              Each block = integer assigned on first encounter per agent.
+              Agent builds its own vocabulary: "object_0", "object_1", ...
 
-    Block IDs are assigned in order of first encounter. Each agent
-    maintains its own block vocabulary — they independently learn
-    what each block type means.
+    [98]      Health (0-20)
+    [99]      Food level (0-20)
+    [100]     X position
+    [101]     Y position
+    [102]     Z position
+    [103]     Yaw (0-360, facing direction)
+    [104]     Pitch (-90 to 90, look up/down)
 
-Internal state:
-    7 raw numbers: health, food_level, x, y, z, yaw, pitch
-    No normalization — the network learns the scales.
+    [105-113] Hotbar item IDs (9 slots, -1 = empty)
+    [114-122] Hotbar item counts (9 slots, 0-64)
+    [123]     Current held item ID (-1 if empty)
+    [124]     Current held item count (0-64)
+    [125]     Active: eating/use (0 or 1)
+    [126]     Active: moving fwd/back (0 or 1)
+    [127]     Active: strafing (0 or 1)
+    [128]     Active: turning (0 or 1)
+    [129]     Active: looking up/down (0 or 1)
+    [130]     Active: jumping (0 or 1)
+    [131]     Active: crouching (0 or 1)
+    [132]     Active: attacking (0 or 1)
 
-Actions (keyboard-like):
-    0: W     — move forward
-    1: S     — move backward
-    2: A     — strafe left
-    3: D     — strafe right
-    4: ←     — turn left
-    5: →     — turn right
-    6: space — jump
-    7: E     — use/interact/eat
-    8: (nothing) — stand still
+Input masking (reveal inputs step by step):
+    Level 1: health + food + eating flag (3 active)
+    Level 2: + held item ID + held item count (5 active)
+    Level 3: + 9 hotbar IDs + 9 hotbar counts (23 active)
+    Level 4: + 98 vision + 7 movement action flags (128 active)
+    Level 5: + x,y,z,yaw,pitch = everything (133 active)
+
+Actions (23 total, keyboard-like):
+    0:  W           forward         8:  Space   jump
+    1:  S           backward        9:  Shift   crouch
+    2:  A           strafe left     10: RClick  use/eat
+    3:  D           strafe right    11: LClick  attack
+    4:  Mouse L     turn left       12: Q       throw
+    5:  Mouse R     turn right      13-21: 1-9  hotbar select
+    6:  Mouse Up    look up         22: (none)  stand still
+    7:  Mouse Down  look down
+
+Action masking (reveal actions step by step):
+    Level 1: eat + still (2 active)
+    Level 2: + hotbar 1-9 (11 active)
+    Level 3: + walk + turn (15 active)
+    Level 4: + strafe, jump, crouch, attack, throw (21 active)
+    Level 5: everything (23 active)
 
 Architecture:
-    Input (98 block IDs embedded + 7 internal = variable)
-    → Hidden 1 (128 ReLU)
-    → Hidden 2 (64 ReLU)
-    → Output (9 softmax)
-
-    Each block = 1 raw integer ID. 98 blocks + 7 internal = 105 inputs.
+    Input (133) -> Hidden 1 (128, ReLU) -> Hidden 2 (64, ReLU) -> Output (23, softmax)
+    Masked inputs zeroed before layer 1. Masked actions set to -inf before softmax.
 
 Learning:
-    REINFORCE with per-timestep gradients.
-    Each agent saves its own weights, vocabulary, and training history.
+    REINFORCE with per-timestep analytical gradients through all layers.
+    Reward: +1 per tick alive, large negative on death. Nothing else.
+
+Per-agent saves (each agent has its own directory):
+    weights.npz  — network weights (w1, b1, w2, b2, w3, b3)
+    vocab.json   — block vocabulary, input/action levels
+    history.json — full episode-by-episode stats
 """
 
 import numpy as np
@@ -82,13 +107,203 @@ NUM_ACTIONS = len(ACTIONS)
 
 # Vision
 GRID_SIZE = 7 * 7 * 2       # 98 blocks (floor + eye level)
-HOTBAR_SLOTS = 9             # 9 hotbar item IDs
-INTERNAL_DIM = 7 + HOTBAR_SLOTS + 1  # health,food,x,y,z,yaw,pitch + 9 hotbar + current slot = 17
-INPUT_DIM = GRID_SIZE + INTERNAL_DIM  # 98 + 17 = 115
+
+# Input layout (133 total):
+# [0-97]    98 vision block IDs
+# [98]      health
+# [99]      food
+# [100]     x
+# [101]     y
+# [102]     z
+# [103]     yaw
+# [104]     pitch
+# [105-113] 9 hotbar item IDs
+# [114-122] 9 hotbar item counts
+# [123]     held item ID (current slot's item)
+# [124]     held item count (current slot's count)
+# [125]     active: eating/use (0 or 1)
+# [126]     active: moving fwd/back (0 or 1)
+# [127]     active: strafing (0 or 1)
+# [128]     active: turning (0 or 1)
+# [129]     active: looking up/down (0 or 1)
+# [130]     active: jumping (0 or 1)
+# [131]     active: crouching (0 or 1)
+# [132]     active: attacking (0 or 1)
+INPUT_DIM = 133
 
 # Network
 HIDDEN1 = 128
 HIDDEN2 = 64
+
+# ─── Input masking ────────────────────────────────────────────
+# Reveal inputs gradually across stages.
+# Network shape stays the same — masked inputs are just 0.
+# This lets weights trained in Stage 1 carry over to Stage 2+
+# without reshaping the network.
+#
+# Mask is a dict: input_index → True (visible) or False (zeroed out)
+# By default everything is visible. Set a stage mask to restrict.
+
+# ─── Input mask levels ────────────────────────────────────────
+# Reveal inputs step by step. Higher level = more inputs.
+# Network shape stays 133 always. Masked inputs are zeroed.
+# Weights carry over when you upgrade level.
+
+MASK_LEVELS = {
+    # Level 1: health + food + eating flag (3 active)
+    # "Am I dying? Am I eating?"
+    1: {
+        "vision": False,
+        "health": True,
+        "food": True,
+        "x": False, "y": False, "z": False,
+        "yaw": False, "pitch": False,
+        "hotbar_items": False,
+        "held_item": False,
+        "eating_flag": True,
+        "other_action_flags": False,
+    },
+    # Level 2: + held item ID + count (5 active)
+    # "What am I holding? How much left?"
+    2: {
+        "vision": False,
+        "health": True,
+        "food": True,
+        "x": False, "y": False, "z": False,
+        "yaw": False, "pitch": False,
+        "hotbar_items": False,
+        "held_item": True,
+        "eating_flag": True,
+        "other_action_flags": False,
+    },
+    # Level 3: + hotbar IDs + counts (23 active)
+    # "What's in all my slots?"
+    3: {
+        "vision": False,
+        "health": True,
+        "food": True,
+        "x": False, "y": False, "z": False,
+        "yaw": False, "pitch": False,
+        "hotbar_items": True,
+        "held_item": True,
+        "eating_flag": True,
+        "other_action_flags": False,
+    },
+    # Level 4: + vision + movement action flags (125 active)
+    # "What's around me? Am I moving?"
+    4: {
+        "vision": True,
+        "health": True,
+        "food": True,
+        "x": False, "y": False, "z": False,
+        "yaw": False, "pitch": False,
+        "hotbar_items": True,
+        "held_item": True,
+        "eating_flag": True,
+        "other_action_flags": True,
+    },
+    # Level 5: everything (133 active)
+    # "Full awareness"
+    5: {
+        "vision": True,
+        "health": True,
+        "food": True,
+        "x": True, "y": True, "z": True,
+        "yaw": True, "pitch": True,
+        "hotbar_items": True,
+        "held_item": True,
+        "eating_flag": True,
+        "other_action_flags": True,
+    },
+}
+
+# ─── Output (action) masking ─────────────────────────────────
+# Same idea: fewer choices = learns faster.
+# Masked actions get zero probability — agent can't pick them.
+#
+# Action indices:
+#  0-3: move (W,S,A,D)    4-5: turn    6-7: pitch
+#  8: jump    9: crouch    10: use/eat  11: attack
+#  12: throw  13-21: hotbar 1-9         22: stand still
+
+ACTION_MASK_LEVELS = {
+    # Level 1: Only eat or do nothing. 2 actions.
+    1: [10, 22],                          # use/eat, stand still
+
+    # Level 2: + hotbar 1-3 only. 5 actions. Learn to switch between 3 slots.
+    2: [10, 13, 14, 15, 22],              # use + hotbar 1-3 + still
+
+    # Level 3: + hotbar 4-9. All slots. 11 actions.
+    3: [10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],  # use + hotbar 1-9 + still
+
+    # Level 4: + basic movement. 15 actions.
+    4: [0, 1, 4, 5, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],  # + move fwd/back + turn
+
+    # Level 5: + all movement + interaction. 21 actions.
+    5: [0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+
+    # Level 6: Everything. All 23 actions.
+    6: list(range(NUM_ACTIONS)),
+}
+
+
+def _build_action_mask(stage: int) -> np.ndarray:
+    """Build binary mask (23,) for allowed actions at this stage."""
+    active = 1
+    for s in sorted(ACTION_MASK_LEVELS.keys()):
+        if s <= stage:
+            active = s
+
+    allowed = ACTION_MASK_LEVELS[active]
+    mask = np.zeros(NUM_ACTIONS, dtype=np.float32)
+    for idx in allowed:
+        mask[idx] = 1.0
+    return mask
+
+
+def _build_mask(stage: int) -> np.ndarray:
+    """Build a binary mask array (115,) for the given stage."""
+    # Find the highest stage config <= requested stage
+    active_stage = 1
+    for s in sorted(MASK_LEVELS.keys()):
+        if s <= stage:
+            active_stage = s
+
+    cfg = MASK_LEVELS[active_stage]
+    # Layout: [98 vision | 7 body | 9 hotbar IDs | 9 hotbar counts |
+    #          held_id | held_count | eating | 7 action flags]
+    #          0-97      98-104  105-113       114-122
+    #          123       124       125     126-132
+    mask = np.zeros(INPUT_DIM, dtype=np.float32)
+
+    if cfg["vision"]:
+        mask[0:98] = 1.0                    # 0-97
+    if cfg["health"]:
+        mask[98] = 1.0                      # 98
+    if cfg["food"]:
+        mask[99] = 1.0                      # 99
+    if cfg["x"]:
+        mask[100] = 1.0                     # 100
+    if cfg["y"]:
+        mask[101] = 1.0                     # 101
+    if cfg["z"]:
+        mask[102] = 1.0                     # 102
+    if cfg["yaw"]:
+        mask[103] = 1.0                     # 103
+    if cfg["pitch"]:
+        mask[104] = 1.0                     # 104
+    if cfg["hotbar_items"]:
+        mask[105:114] = 1.0                 # 105-113 (IDs)
+        mask[114:123] = 1.0                 # 114-122 (counts)
+    if cfg["held_item"]:
+        mask[123] = 1.0                     # 123 held item ID
+        mask[124] = 1.0                     # 124 held item count
+    if cfg["eating_flag"]:
+        mask[125] = 1.0                     # 125 eating/use active
+    if cfg["other_action_flags"]:
+        mask[126:133] = 1.0                 # 126-132 other 7 action flags
+
+    return mask
 
 
 class Brainstem:
@@ -101,9 +316,21 @@ class Brainstem:
         - Training history
     """
 
-    def __init__(self, name: str = "agent", learning_rate: float = 0.001):
+    def __init__(self, name: str = "agent", learning_rate: float = 0.001,
+                 input_level: int = 1, action_level: int = 1, stage: int = None):
         self.name = name
         self.lr = learning_rate
+        # Support old 'stage' param for backwards compat
+        if stage is not None:
+            input_level = stage
+            action_level = stage
+        self.input_level = input_level
+        self.action_level = action_level
+
+        # Input mask — zeros out inputs not yet revealed
+        self.mask = _build_mask(input_level)
+        # Action mask — zeros out actions not yet available
+        self.action_mask = _build_action_mask(action_level)
 
         # Block vocabulary — built up as agent encounters new blocks
         # Each agent independently assigns IDs: "object_0", "object_1", ...
@@ -130,10 +357,10 @@ class Brainstem:
         self._ep_actions = []
         self._ep_rewards = []
 
-        # Training history
+        # Training history — full stats per episode
         self.episodes_trained = 0
         self.total_ticks = 0
-        self.reward_history = []   # avg reward per episode
+        self.episode_history = []  # list of dicts, one per episode
 
     def _get_block_id(self, block_name: str) -> int:
         """Get or assign integer ID for a block type.
@@ -170,16 +397,19 @@ class Brainstem:
 
         return np.array(block_ids[:GRID_SIZE], dtype=np.float32)
 
-    def encode_internal(self, obs: dict) -> np.ndarray:
+    def encode_internal(self, obs: dict, active_actions: dict = None) -> np.ndarray:
         """Extract raw internal state — no normalization, no feature engineering.
 
-        Returns 17 floats:
-            [health, food, x, y, z, yaw, pitch,
-             hotbar_0_id, hotbar_1_id, ..., hotbar_8_id,
-             current_slot]
+        Returns 35 floats:
+            [health, food, x, y, z, yaw, pitch,          # 7 body
+             hotbar_0_id, ..., hotbar_8_id,                # 9 hotbar IDs
+             hotbar_0_count, ..., hotbar_8_count,          # 9 hotbar counts
+             held_item_id, held_item_count,                # 2 current held item
+             eating_flag,                                  # 1 am I eating?
+             moving, strafing, turning, pitching,          # 7 other action flags
+             jumping, crouching, attacking]
 
-        Hotbar items are raw integer IDs (same vocab as vision blocks).
-        The agent learns what items are and which slot has what.
+        active_actions: dict of currently active continuous commands
         """
         state = [
             obs.get("Life", 0.0),
@@ -191,27 +421,52 @@ class Brainstem:
             obs.get("Pitch", 0.0),
         ]
 
-        # Hotbar: 9 slots, each item gets an ID from the same vocab
-        # Empty slot = -1 (the network learns what -1 means)
-        for slot in range(HOTBAR_SLOTS):
-            item_key = f"Hotbar_{slot}_item"
-            item_name = obs.get(item_key, "")
-            if item_name:
+        # Hotbar item IDs + counts: 9 slots each
+        counts = []
+        for slot in range(9):
+            count = int(obs.get(f"Hotbar_{slot}_size", 0))
+            counts.append(count)
+            item_name = obs.get(f"Hotbar_{slot}_item", "")
+            if item_name and count > 0:
                 state.append(float(self._get_block_id(str(item_name))))
             else:
-                state.append(-1.0)  # empty slot
+                state.append(-1.0)
 
-        # Which slot is currently selected
-        state.append(float(obs.get("currentItemIndex", 0)))
+        for count in counts:
+            state.append(float(count))
+
+        # Held item: ID + count of currently selected slot
+        current_idx = int(obs.get("currentItemIndex", 0))
+        current_item_name = obs.get(f"Hotbar_{current_idx}_item", "")
+        current_item_count = int(obs.get(f"Hotbar_{current_idx}_size", 0))
+        if current_item_name and current_item_count > 0:
+            state.append(float(self._get_block_id(str(current_item_name))))
+        else:
+            state.append(-1.0)
+        state.append(float(current_item_count))
+
+        # Active action flags (8 continuous commands)
+        if active_actions is None:
+            active_actions = {}
+        state.append(float(active_actions.get("use", 0)))       # 125: eating
+        state.append(float(active_actions.get("move", 0)))      # 126: moving
+        state.append(float(active_actions.get("strafe", 0)))    # 127: strafing
+        state.append(float(active_actions.get("turn", 0)))      # 128: turning
+        state.append(float(active_actions.get("pitch", 0)))     # 129: pitching
+        state.append(float(active_actions.get("jump", 0)))      # 130: jumping
+        state.append(float(active_actions.get("crouch", 0)))    # 131: crouching
+        state.append(float(active_actions.get("attack", 0)))    # 132: attacking
 
         return np.array(state, dtype=np.float32)
 
     def forward(self, vision: np.ndarray, internal: np.ndarray):
         """Forward pass: input → h1 (ReLU) → h2 (ReLU) → output (softmax).
 
+        Applies stage mask — zeroes out inputs not yet revealed.
         Returns: (probs, input_vec, h1, h2)
         """
         x = np.concatenate([vision, internal])
+        x = x * self.mask  # zero out masked inputs
 
         # Layer 1
         h1 = x @ self.w1 + self.b1
@@ -221,22 +476,32 @@ class Brainstem:
         h2 = h1 @ self.w2 + self.b2
         h2 = np.maximum(0, h2)  # ReLU
 
-        # Output layer + softmax
+        # Output layer + action mask + softmax + minimum exploration
         logits = h2 @ self.w3 + self.b3
+        # Mask: set disabled actions to -inf so softmax gives them 0
+        logits = np.where(self.action_mask > 0, logits, -1e9)
         logits -= np.max(logits)
         exp_l = np.exp(logits)
         probs = exp_l / (exp_l.sum() + 1e-8)
 
+        # Minimum probability for enabled actions (prevents dead exploration)
+        min_prob = 0.00001
+        num_enabled = self.action_mask.sum()
+        if num_enabled > 0:
+            probs = np.where(self.action_mask > 0,
+                             np.maximum(probs, min_prob), 0.0)
+            probs = probs / (probs.sum() + 1e-8)  # renormalize
+
         return probs, x, h1, h2
 
-    def choose_action(self, obs: dict, grid_blocks: list) -> int:
+    def choose_action(self, obs: dict, grid_blocks: list, active_actions: dict = None) -> int:
         """Full pipeline: observe → encode → forward → sample action.
 
         Stores everything needed for learning.
-        Returns: action index (0-8).
+        Returns: action index (0-22).
         """
         vision = self.encode_vision(grid_blocks)
-        internal = self.encode_internal(obs)
+        internal = self.encode_internal(obs, active_actions)
         probs, x, h1, h2 = self.forward(vision, internal)
 
         # Sample action
@@ -334,7 +599,7 @@ class Brainstem:
 
         # Record history
         self.episodes_trained += 1
-        self.reward_history.append(avg_reward)
+        # survival/deaths/food recorded externally via record_episode_stats()
 
         # Clear episode buffer
         self._ep_inputs.clear()
@@ -363,11 +628,13 @@ class Brainstem:
                  w2=self.w2, b2=self.b2,
                  w3=self.w3, b3=self.b3)
 
-        # Vocabulary
+        # Vocabulary + stage
         with open(d / "vocab.json", "w") as f:
             json.dump({
                 "block_vocab": self.block_vocab,
                 "next_block_id": self.next_block_id,
+                "input_level": self.input_level,
+                "action_level": self.action_level,
             }, f, indent=2)
 
         # Training history
@@ -376,7 +643,7 @@ class Brainstem:
                 "name": self.name,
                 "episodes_trained": self.episodes_trained,
                 "total_ticks": self.total_ticks,
-                "reward_history": self.reward_history,
+                "episode_history": self.episode_history,
                 "vocab_size": self.next_block_id,
             }, f, indent=2)
 
@@ -398,6 +665,13 @@ class Brainstem:
             vocab_data = json.load(f)
             self.block_vocab = vocab_data["block_vocab"]
             self.next_block_id = vocab_data["next_block_id"]
+            if "input_level" in vocab_data:
+                self.input_level = vocab_data["input_level"]
+                self.action_level = vocab_data["action_level"]
+                self.mask = _build_mask(self.input_level)
+                self.action_mask = _build_action_mask(self.action_level)
+            elif "stage" in vocab_data:
+                self.set_stage(vocab_data["stage"])
 
         # History
         if (d / "history.json").exists():
@@ -405,7 +679,25 @@ class Brainstem:
                 hist = json.load(f)
                 self.episodes_trained = hist.get("episodes_trained", 0)
                 self.total_ticks = hist.get("total_ticks", 0)
-                self.reward_history = hist.get("reward_history", [])
+                self.episode_history = hist.get("episode_history", [])
+
+    def record_episode_stats(self, episode_data: dict):
+        """Record full episode stats (called from training loop)."""
+        self.episode_history.append(episode_data)
+
+    def set_levels(self, input_level: int, action_level: int):
+        """Change input/action mask levels independently.
+
+        Network weights stay the same. New inputs/actions just unlock.
+        """
+        self.input_level = input_level
+        self.action_level = action_level
+        self.mask = _build_mask(input_level)
+        self.action_mask = _build_action_mask(action_level)
+
+    def set_stage(self, stage: int):
+        """Set both input and action level to the same value."""
+        self.set_levels(stage, stage)
 
     def __repr__(self):
         return (f"Brainstem('{self.name}', input={INPUT_DIM}, "

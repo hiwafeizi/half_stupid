@@ -145,8 +145,8 @@ def main():
                         help="Number of training episodes")
     parser.add_argument("--load", action="store_true",
                         help="Resume from last checkpoint")
-    parser.add_argument("--speed", type=int, default=None,
-                        help="Game speed multiplier (default: use train script's GAME_SPEED)")
+    parser.add_argument("--ms-per-tick", type=int, default=None,
+                        help="Milliseconds per game tick (default: use train script's MS_PER_TICK)")
     parser.add_argument("--skip-launch", action="store_true",
                         help="Skip launching clients (they're already running)")
     args = parser.parse_args()
@@ -184,8 +184,8 @@ def main():
         "--episodes", str(args.episodes),
         "--ports", ",".join(str(p) for p in PORTS),
     ]
-    if args.speed is not None:
-        train_cmd.extend(["--speed", str(args.speed)])
+    if args.ms_per_tick is not None:
+        train_cmd.extend(["--ms-per-tick", str(args.ms_per_tick)])
     if args.load:
         # Find latest checkpoint
         save_dir = f"run/checkpoints/stage{args.stage}"

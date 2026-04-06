@@ -116,6 +116,8 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
         </AgentStart>
         <AgentHandlers>
             <ObservationFromFullStats/>
+            <ObservationFromHotBar/>
+            <ObservationFromFullInventory/>
             <ObservationFromGrid>
                 <Grid name="view7x7">
                     <min x="-3" y="-1" z="-3"/>

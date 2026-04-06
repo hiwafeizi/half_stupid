@@ -4,12 +4,21 @@
     "air": 1,
     "red_flower": 2,
     "cake": 3,
-    "fence": 4,
-    "dirt": 5,
-    "log": 6,
-    "yellow_flower": 7,
-    "gravel": 8,
-    "quartz_block": 9
+    "cooked_beef": 4,
+    "cooked_chicken": 5,
+    "cooked_fish": 6,
+    "melon": 7,
+    "carrot": 8,
+    "baked_potato": 9,
+    "apple": 10,
+    "bread": 11,
+    "cooked_porkchop": 12,
+    "gravel": 13,
+    "quartz_block": 14,
+    "yellow_flower": 15,
+    "fence": 16
   },
-  "next_block_id": 10
+  "next_block_id": 17,
+  "input_level": 3,
+  "action_level": 3
 }
