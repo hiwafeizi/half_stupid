@@ -6,7 +6,7 @@ Setup: Open 16x16 grassy yard with fence walls. Daytime.
 New capability: Sensation + motor output
 Success: Agent eats when food is adjacent.
 
-4 agents, 7x7 vision, 5x speed, single respawn point.
+4 agents, 5x5x4 vision, single respawn point.
 """
 
 NUM_AGENTS = 4
@@ -119,9 +119,9 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
             <ObservationFromHotBar/>
             <ObservationFromFullInventory/>
             <ObservationFromGrid>
-                <Grid name="view7x7">
-                    <min x="-3" y="-1" z="-3"/>
-                    <max x="3" y="1" z="3"/>
+                <Grid name="view5x5">
+                    <min x="-2" y="-2" z="-2"/>
+                    <max x="2" y="1" z="2"/>
                 </Grid>
             </ObservationFromGrid>
             <ObservationFromNearbyEntities>

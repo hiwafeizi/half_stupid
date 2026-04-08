@@ -1,65 +1,72 @@
-"""Brainstem — Stage 1 brain. 2-hidden-layer neural network.
+"""Brainstem — Survival reflex module. 2-hidden-layer neural network.
 
-Zero hand-crafted features. No guidance. The agent receives raw numbers
-and must learn what everything means through survival alone.
+Purpose: eat when hungry, avoid danger, fight back when attacked.
+This module gets FROZEN once trained. Higher modules (PFC etc.) build on top.
 
-Input layout (124 floats):
-    [0-97]    Vision: 98 raw block IDs (7x7 grid, 2 layers: floor + eye)
+Zero hand-crafted features. No guidance. Raw numbers only.
+
+Input layout (135 floats):
+    [0-24]    Vision layer y=-2 (below feet — cliff detection)
+    [25-49]   Vision layer y=-1 (floor — what you stand on)
+    [50-74]   Vision layer y=0  (eye level — walls, food, mobs)
+    [75-99]   Vision layer y=1  (above head — ceiling, falling blocks)
+              5x5 grid per layer, 4 layers = 100 raw block IDs.
               Each block = integer assigned on first encounter per agent.
-              Agent builds its own vocabulary: "object_0", "object_1", ...
 
-    [98]      Health (0-20)
-    [99]      Food level (0-20)
-    [100]     X position
-    [101]     Y position
-    [102]     Z position
-    [103]     Yaw (0-360, facing direction)
-    [104]     Pitch (-90 to 90, look up/down)
+    [100]     Health (0-20)
+    [101]     Food level (0-20)
+    [102]     X position
+    [103]     Y position
+    [104]     Z position
+    [105]     Yaw (0-360, facing direction)
+    [106]     Pitch (-90 to 90, look up/down)
 
-    [105-113] Hotbar item IDs (9 slots, -1 = empty)
-    [114-122] Hotbar item counts (9 slots, 0-64)
-    [123]     Current held item ID (-1 if empty)
-    [124]     Current held item count (0-64)
-    [125]     Active: eating/use (0 or 1)
-    [126]     Active: moving fwd/back (0 or 1)
-    [127]     Active: strafing (0 or 1)
-    [128]     Active: turning (0 or 1)
-    [129]     Active: looking up/down (0 or 1)
-    [130]     Active: jumping (0 or 1)
-    [131]     Active: crouching (0 or 1)
-    [132]     Active: attacking (0 or 1)
+    [107-115] Hotbar item IDs (9 slots, -1 = empty)
+    [116-124] Hotbar item counts (9 slots, 0-64)
+    [125]     Held item ID (-1 if empty)
+    [126]     Held item count (0-64)
 
-Input masking (reveal inputs step by step):
+    [127]     Active: eating/use (0 or 1)
+    [128]     Active: moving (0 or 1)
+    [129]     Active: strafing (0 or 1)
+    [130]     Active: turning (0 or 1)
+    [131]     Active: pitching (0 or 1)
+    [132]     Active: jumping (0 or 1)
+    [133]     Active: crouching (0 or 1)
+    [134]     Active: attacking (0 or 1)
+
+Input masking (reveal step by step):
     Level 1: health + food + eating flag (3 active)
-    Level 2: + held item ID + held item count (5 active)
-    Level 3: + 9 hotbar IDs + 9 hotbar counts (23 active)
-    Level 4: + 98 vision + 7 movement action flags (128 active)
-    Level 5: + x,y,z,yaw,pitch = everything (133 active)
+    Level 2: + held item ID + count (5 active)
+    Level 3: + hotbar IDs + counts (23 active)
+    Level 4: + vision + movement action flags (128 active)
+    Level 5: + x,y,z,yaw,pitch = everything (135 active)
 
 Actions (23 total, keyboard-like):
-    0:  W           forward         8:  Space   jump
-    1:  S           backward        9:  Shift   crouch
-    2:  A           strafe left     10: RClick  use/eat
-    3:  D           strafe right    11: LClick  attack
-    4:  Mouse L     turn left       12: Q       throw
-    5:  Mouse R     turn right      13-21: 1-9  hotbar select
-    6:  Mouse Up    look up         22: (none)  stand still
-    7:  Mouse Down  look down
+    0:  W forward       8:  Space jump        13-21: hotbar 1-9
+    1:  S backward      9:  Shift crouch      22: stand still
+    2:  A strafe left   10: RClick use/eat
+    3:  D strafe right  11: LClick attack
+    4:  Turn left       12: Q throw
+    5:  Turn right
+    6:  Look up
+    7:  Look down
 
-Action masking (reveal actions step by step):
-    Level 1: eat + still (2 active)
-    Level 2: + hotbar 1-9 (11 active)
-    Level 3: + walk + turn (15 active)
-    Level 4: + strafe, jump, crouch, attack, throw (21 active)
-    Level 5: everything (23 active)
+Action masking (reveal step by step):
+    Level 1: eat + still (2)
+    Level 2: + hotbar 1-3 (5)
+    Level 3: + hotbar 4-9 (11)
+    Level 4: + walk + turn (15)
+    Level 5: + strafe, jump, crouch, attack, throw (21)
+    Level 6: everything (23)
 
 Architecture:
-    Input (133) -> Hidden 1 (128, ReLU) -> Hidden 2 (64, ReLU) -> Output (23, softmax)
-    Masked inputs zeroed before layer 1. Masked actions set to -inf before softmax.
+    Input (135) -> Hidden 1 (64, ReLU) -> Hidden 2 (32, ReLU) -> Output (23, softmax)
+    ~11,400 weights. Sized for survival reflexes only.
 
 Learning:
-    REINFORCE with per-timestep analytical gradients through all layers.
-    Reward: +1 per tick alive, large negative on death. Nothing else.
+    REINFORCE with per-timestep analytical gradients.
+    Reward: +1 alive, large negative on death. Nothing else.
 
 Per-agent saves (each agent has its own directory):
     weights.npz  — network weights (w1, b1, w2, b2, w3, b3)
@@ -105,35 +112,40 @@ ACTIONS = [
 ]
 NUM_ACTIONS = len(ACTIONS)
 
-# Vision
-GRID_SIZE = 7 * 7 * 2       # 98 blocks (floor + eye level)
+# Vision: 5x5 grid, 4 height layers
+GRID_W = 5
+GRID_H = 4                  # y=-2 (below feet), y=-1 (floor), y=0 (eye), y=1 (above head)
+GRID_SIZE = GRID_W * GRID_W * GRID_H  # 5*5*4 = 100 blocks
 
-# Input layout (133 total):
-# [0-97]    98 vision block IDs
-# [98]      health
-# [99]      food
-# [100]     x
-# [101]     y
-# [102]     z
-# [103]     yaw
-# [104]     pitch
-# [105-113] 9 hotbar item IDs
-# [114-122] 9 hotbar item counts
-# [123]     held item ID (current slot's item)
-# [124]     held item count (current slot's count)
-# [125]     active: eating/use (0 or 1)
-# [126]     active: moving fwd/back (0 or 1)
-# [127]     active: strafing (0 or 1)
-# [128]     active: turning (0 or 1)
-# [129]     active: looking up/down (0 or 1)
-# [130]     active: jumping (0 or 1)
-# [131]     active: crouching (0 or 1)
-# [132]     active: attacking (0 or 1)
-INPUT_DIM = 133
+# Input layout (135 total):
+# [0-24]    vision layer y=-2 (below feet — cliff detection)
+# [25-49]   vision layer y=-1 (floor — what you stand on)
+# [50-74]   vision layer y=0  (eye level — walls, food, mobs)
+# [75-99]   vision layer y=1  (above head — ceiling, falling blocks)
+# [100]     health
+# [101]     food
+# [102]     x
+# [103]     y
+# [104]     z
+# [105]     yaw
+# [106]     pitch
+# [107-115] 9 hotbar item IDs
+# [116-124] 9 hotbar item counts
+# [125]     held item ID
+# [126]     held item count
+# [127]     active: eating/use (0 or 1)
+# [128]     active: moving (0 or 1)
+# [129]     active: strafing (0 or 1)
+# [130]     active: turning (0 or 1)
+# [131]     active: pitching (0 or 1)
+# [132]     active: jumping (0 or 1)
+# [133]     active: crouching (0 or 1)
+# [134]     active: attacking (0 or 1)
+INPUT_DIM = 135
 
-# Network
-HIDDEN1 = 128
-HIDDEN2 = 64
+# Network — sized for survival reflexes (eat, avoid danger, fight back)
+HIDDEN1 = 64
+HIDDEN2 = 32
 
 # ─── Input masking ────────────────────────────────────────────
 # Reveal inputs gradually across stages.
@@ -146,7 +158,7 @@ HIDDEN2 = 64
 
 # ─── Input mask levels ────────────────────────────────────────
 # Reveal inputs step by step. Higher level = more inputs.
-# Network shape stays 133 always. Masked inputs are zeroed.
+# Network shape stays 135 always. Masked inputs are zeroed.
 # Weights carry over when you upgrade level.
 
 MASK_LEVELS = {
@@ -189,7 +201,7 @@ MASK_LEVELS = {
         "eating_flag": True,
         "other_action_flags": False,
     },
-    # Level 4: + vision + movement action flags (125 active)
+    # Level 4: + vision (100 blocks) + 7 movement action flags (130 active)
     # "What's around me? Am I moving?"
     4: {
         "vision": True,
@@ -202,7 +214,7 @@ MASK_LEVELS = {
         "eating_flag": True,
         "other_action_flags": True,
     },
-    # Level 5: everything (133 active)
+    # Level 5: everything (135 active)
     # "Full awareness"
     5: {
         "vision": True,
@@ -262,46 +274,45 @@ def _build_action_mask(stage: int) -> np.ndarray:
 
 
 def _build_mask(stage: int) -> np.ndarray:
-    """Build a binary mask array (115,) for the given stage."""
-    # Find the highest stage config <= requested stage
+    """Build a binary mask array (135,) for the given stage."""
     active_stage = 1
     for s in sorted(MASK_LEVELS.keys()):
         if s <= stage:
             active_stage = s
 
     cfg = MASK_LEVELS[active_stage]
-    # Layout: [98 vision | 7 body | 9 hotbar IDs | 9 hotbar counts |
+    # Layout: [100 vision | 7 body | 9 hotbar IDs | 9 hotbar counts |
     #          held_id | held_count | eating | 7 action flags]
-    #          0-97      98-104  105-113       114-122
-    #          123       124       125     126-132
+    #          0-99       100-106  107-115       116-124
+    #          125        126      127      128-134
     mask = np.zeros(INPUT_DIM, dtype=np.float32)
 
     if cfg["vision"]:
-        mask[0:98] = 1.0                    # 0-97
+        mask[0:100] = 1.0                   # 0-99   (5x5x4 vision)
     if cfg["health"]:
-        mask[98] = 1.0                      # 98
-    if cfg["food"]:
-        mask[99] = 1.0                      # 99
-    if cfg["x"]:
         mask[100] = 1.0                     # 100
-    if cfg["y"]:
+    if cfg["food"]:
         mask[101] = 1.0                     # 101
-    if cfg["z"]:
+    if cfg["x"]:
         mask[102] = 1.0                     # 102
-    if cfg["yaw"]:
+    if cfg["y"]:
         mask[103] = 1.0                     # 103
-    if cfg["pitch"]:
+    if cfg["z"]:
         mask[104] = 1.0                     # 104
+    if cfg["yaw"]:
+        mask[105] = 1.0                     # 105
+    if cfg["pitch"]:
+        mask[106] = 1.0                     # 106
     if cfg["hotbar_items"]:
-        mask[105:114] = 1.0                 # 105-113 (IDs)
-        mask[114:123] = 1.0                 # 114-122 (counts)
+        mask[107:116] = 1.0                 # 107-115 (9 IDs)
+        mask[116:125] = 1.0                 # 116-124 (9 counts)
     if cfg["held_item"]:
-        mask[123] = 1.0                     # 123 held item ID
-        mask[124] = 1.0                     # 124 held item count
+        mask[125] = 1.0                     # 125 held item ID
+        mask[126] = 1.0                     # 126 held item count
     if cfg["eating_flag"]:
-        mask[125] = 1.0                     # 125 eating/use active
+        mask[127] = 1.0                     # 127 eating/use active
     if cfg["other_action_flags"]:
-        mask[126:133] = 1.0                 # 126-132 other 7 action flags
+        mask[128:135] = 1.0                 # 128-134 other 7 action flags
 
     return mask
 
@@ -317,9 +328,11 @@ class Brainstem:
     """
 
     def __init__(self, name: str = "agent", learning_rate: float = 0.001,
-                 input_level: int = 1, action_level: int = 1, stage: int = None):
+                 input_level: int = 1, action_level: int = 1, stage: int = None,
+                 min_exploration: float = 0.0005):
         self.name = name
         self.lr = learning_rate
+        self.min_exploration = min_exploration
         # Support old 'stage' param for backwards compat
         if stage is not None:
             input_level = stage
@@ -380,11 +393,11 @@ class Brainstem:
     def encode_vision(self, grid_blocks: list) -> np.ndarray:
         """Convert raw block names to integer ID vector.
 
-        Each block name → integer ID. That's it. No features, no embedding.
-        The network learns what each ID means through training.
+        5x5 grid, 4 height layers = 100 blocks.
+        Each block name → integer ID. No features, no embedding.
 
         Returns:
-            np.ndarray shape (98,) of float block IDs.
+            np.ndarray shape (100,) of float block IDs.
         """
         block_ids = []
         for block in grid_blocks[:GRID_SIZE]:
@@ -485,7 +498,7 @@ class Brainstem:
         probs = exp_l / (exp_l.sum() + 1e-8)
 
         # Minimum probability for enabled actions (prevents dead exploration)
-        min_prob = 0.00001
+        min_prob = self.min_exploration
         num_enabled = self.action_mask.sum()
         if num_enabled > 0:
             probs = np.where(self.action_mask > 0,

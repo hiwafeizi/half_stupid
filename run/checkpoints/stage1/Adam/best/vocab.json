@@ -1,0 +1,22 @@
+{
+  "block_vocab": {
+    "dirt": 0,
+    "grass": 1,
+    "air": 2,
+    "cake": 3,
+    "yellow_flower": 4,
+    "cooked_beef": 5,
+    "cooked_chicken": 6,
+    "cooked_fish": 7,
+    "melon": 8,
+    "carrot": 9,
+    "baked_potato": 10,
+    "apple": 11,
+    "bread": 12,
+    "cooked_porkchop": 13,
+    "log": 14
+  },
+  "next_block_id": 15,
+  "input_level": 3,
+  "action_level": 3
+}

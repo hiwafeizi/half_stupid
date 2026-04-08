@@ -14,11 +14,14 @@ Updated 2026-04-04. Following bottom-up 9-stage training curriculum.
 ### Stage 1: Food in reach — learn to eat (Brainstem) ← CURRENT
 
 * [X] Create Stage 1 world (16×16 grassy yard, daytime, fence walls, food nearby)
-* [X] Build brainstem NN: 124 inputs → 128 hidden → 64 hidden → 23 actions
+* [X] Build brainstem NN: 135 inputs → 64 hidden → 32 hidden → 23 actions (~11.4k weights)
+* [X] Vision: 5×5 grid × 4 height layers (y=-2 to y=1) = 100 raw block IDs
 * [X] Zero features: raw block IDs, raw internals, agent learns everything
 * [X] Per-agent saves: weights, vocabulary, full episode history
-* [X] Input masking: 5 levels (body → slot → hotbar → vision → full)
-* [X] Action masking: 5 levels (eat → hotbar → move → combat → full)
+* [X] Input masking: 5 levels (body+eating → held item → hotbar → vision+flags → full)
+* [X] Action masking: 6 levels (eat → hotbar 1-3 → hotbar 1-9 → walk → combat → full)
+* [X] Active action flags: 8 continuous command states as inputs
+* [X] Held item ID + count as inputs
 * [X] Item counts in hotbar inputs (9 IDs + 9 counts)
 * [X] /give and /effect use agent names (not @p)
 * [X] One life per episode (no respawn)
@@ -27,8 +30,16 @@ Updated 2026-04-04. Following bottom-up 9-stage training curriculum.
 * [X] Full episode stats in history.json (survival%, seconds, deaths, food, reward)
 * [X] Auto-load checkpoints on restart
 * [X] Learning rate configurable (currently 0.01)
+* [X] Best model saved per agent (highest alive_seconds)
+* [X] Probs-only JSON log for monitoring action probabilities
 * [ ] Verify survival improves across episodes
 * [ ] Graduate to input/action level 2, then 3, etc.
+* [ ] Generalization tests before moving on:
+  * [ ] Randomized food order and slot positions each episode
+  * [ ] Random item counts (1-5 per slot)
+  * [ ] Some slots empty (4-9 filled out of 9)
+  * [ ] Uneatable items in some slots (stone, stick) — agent must skip them
+  * [ ] Verify agents still survive well with randomized setup
 * [ ] Save Stage 1 "graduated" weights
 
 ### Stage 2: Food nearby — learn to find it (Brainstem+)
