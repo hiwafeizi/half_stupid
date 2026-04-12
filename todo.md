@@ -1,6 +1,6 @@
 ## Practical to do list
 
-Updated 2026-04-04. Following bottom-up 9-stage training curriculum.
+Updated 2026-04-08. Following bottom-up 9-stage training curriculum.
 
 ### Stage 0: Project setup
 
@@ -9,37 +9,49 @@ Updated 2026-04-04. Following bottom-up 9-stage training curriculum.
 * [X] Implement 4-level vision pipeline (reflex, fast PFC, reflective PFC, planning PFC)
 * [X] Set up Malmo integration (builder, multi-agent support)
 * [X] Define 9-stage training curriculum
-* [X] Core settings: 4 agents, 7×7 vision, 20x speed, respawn, 2-layer NN
+* [X] Core settings: 4 agents, 5x5x4 vision, configurable speed, 1 hidden layer NN
 
 ### Stage 1: Food in reach — learn to eat (Brainstem) ← CURRENT
 
-* [X] Create Stage 1 world (16×16 grassy yard, daytime, fence walls, food nearby)
-* [X] Build brainstem NN: 135 inputs → 64 hidden → 32 hidden → 23 actions (~11.4k weights)
-* [X] Vision: 5×5 grid × 4 height layers (y=-2 to y=1) = 100 raw block IDs
-* [X] Zero features: raw block IDs, raw internals, agent learns everything
-* [X] Per-agent saves: weights, vocabulary, full episode history
-* [X] Input masking: 5 levels (body+eating → held item → hotbar → vision+flags → full)
-* [X] Action masking: 6 levels (eat → hotbar 1-3 → hotbar 1-9 → walk → combat → full)
+**Architecture (PyTorch GPU):**
+* [X] Embedding: 2048 vocab x 4 dims, shared across all block/item IDs
+* [X] Network: 465 -> 32 (ReLU) -> 23 (softmax), ~16.6k params
+* [X] 110 ID inputs (100 vision + 9 hotbar + 1 held) -> embedded to 440 floats
+* [X] 25 raw float inputs (body, counts, action flags)
+* [X] PyTorch + CUDA on RTX 4060 GPU
+* [X] Adam optimizer, autograd handles all gradients
+* [X] REINFORCE with configurable gamma (0.97)
+
+**Inputs & actions:**
+* [X] Vision: 5x5 grid x 4 height layers (y=-2 to y=1) = 100 block IDs
+* [X] Zero features: raw IDs + raw floats, agent learns everything
+* [X] Input masking: 5 levels (body+eating -> held -> hotbar -> vision+flags -> full)
+* [X] Action masking: 6 levels (eat -> hotbar 1-3 -> hotbar 1-9 -> walk -> combat -> full)
 * [X] Active action flags: 8 continuous command states as inputs
 * [X] Held item ID + count as inputs
-* [X] Item counts in hotbar inputs (9 IDs + 9 counts)
-* [X] /give and /effect use agent names (not @p)
+
+**Training infrastructure:**
+* [X] Per-agent saves: weights.pt, vocab.json, history.json
+* [X] Auto-load checkpoints on restart
+* [X] Best model saved per agent (highest alive_seconds)
 * [X] One life per episode (no respawn)
 * [X] Hunger via /effect (food drains, starvation kills on hard)
-* [X] Live debug JSON per agent (live_Adam.json etc.)
+* [X] Configurable: learning rate, gamma, game speed, min exploration
+* [X] Randomized hotbar each episode (random foods, counts, slots, uneatable items)
+* [X] /replaceitem for exact slot placement
+* [X] /gamerule sendCommandFeedback false (no chat spam)
+
+**Monitoring:**
+* [X] Live debug JSON per agent (live_Adam.json) — shows exact AI state
+* [X] Probs JSON per agent (probs_Adam.json) — action probabilities every 20 ticks
 * [X] Full episode stats in history.json (survival%, seconds, deaths, food, reward)
-* [X] Auto-load checkpoints on restart
-* [X] Learning rate configurable (currently 0.01)
-* [X] Best model saved per agent (highest alive_seconds)
-* [X] Probs-only JSON log for monitoring action probabilities
-* [ ] Verify survival improves across episodes
-* [ ] Graduate to input/action level 2, then 3, etc.
-* [ ] Generalization tests before moving on:
-  * [ ] Randomized food order and slot positions each episode
-  * [ ] Random item counts (1-5 per slot)
-  * [ ] Some slots empty (4-9 filled out of 9)
-  * [ ] Uneatable items in some slots (stone, stick) — agent must skip them
-  * [ ] Verify agents still survive well with randomized setup
+
+**Training progress:**
+* [X] Level 1 (eat + still): agents learned to eat, hold right-click for duration
+* [X] Level 2 (+ held item): agents see what they're holding
+* [X] Level 3 (+ hotbar): agents learning to switch slots, eat 15-27 items
+* [ ] Generalization: verify with randomized food, uneatable items, random slots
+* [ ] Graduate: 5 consecutive episodes eating all available food
 * [ ] Save Stage 1 "graduated" weights
 
 ### Stage 2: Food nearby — learn to find it (Brainstem+)

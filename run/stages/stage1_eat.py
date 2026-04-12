@@ -26,13 +26,16 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
         ms_per_tick = MS_PER_TICK_DEFAULT
     h = ARENA_SIZE // 2  # 8
 
-    # Agents spawn in 4 quadrants, facing center
-    spawns = [
-        (-4, 5, -4, 135),   # NW → face SE
-        (4, 5, -4, 225),    # NE → face SW
-        (-4, 5, 4, 45),     # SW → face NE
-        (4, 5, 4, 315),     # SE → face NW
-    ]
+    # Agents spawn at random positions with random facing direction
+    # Minecraft yaw: 0=South, 90=West, 180=North, 270=East
+    import random
+    spawns = []
+    for _ in range(NUM_AGENTS):
+        sx = random.uniform(-7, 7)
+        sz = random.uniform(-7, 7)
+        syaw = random.randint(0, 359)
+        spitch = random.randint(-45, 45)
+        spawns.append((sx, 5, sz, syaw, spitch))
 
     d = []  # drawing commands
 
@@ -58,6 +61,20 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
     # ── Respawn marker (center) ──
     d.append('<DrawBlock x="0" y="4" z="0" type="quartz_block"/>')
 
+    # ── Hazards (random per episode) ──
+    # Lava pit in center (10%) — no cake when lava is present
+    has_lava = random.random() < 0.2
+    if has_lava:
+        for lx in range(-1, 2):
+            for lz in range(-1, 2):
+                d.append(f'<DrawBlock x="{lx}" y="4" z="{lz}" type="lava"/>')
+
+    # Zombie (50%)
+    if random.random() > 0.8:
+        zx = random.randint(-5, 5)
+        zz = random.randint(-5, 5)
+        d.append(f'<DrawEntity x="{zx}" y="5" z="{zz}" type="Zombie"/>')
+
     # ── Small tree ──
     # Trunk
     for y in range(5, 8):
@@ -79,21 +96,22 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
         d.append(f'<DrawBlock x="{fx}" y="{fy}" z="{fz}" type="{ft}"/>')
 
     # ── Food: cake blocks scattered near each spawn ──
-    # Lots of food, close to agents — Stage 1 should be easy to find
-    food = [
-        # Near Adam (NW)
-        (-3, 5, -3), (-5, 5, -3), (-3, 5, -5), (-4, 5, -2),
-        # Near Eve (NE)
-        (3, 5, -3), (5, 5, -3), (3, 5, -5), (4, 5, -2),
-        # Near Cain (SW)
-        (-3, 5, 3), (-5, 5, 3), (-3, 5, 5), (-4, 5, 2),
-        # Near Abel (SE)
-        (3, 5, 3), (5, 5, 3), (3, 5, 5), (4, 5, 2),
-        # Center area
-        (-1, 5, -1), (1, 5, -1), (-1, 5, 1), (1, 5, 1), (0, 5, 0),
-    ]
-    for fx, fy, fz in food:
-        d.append(f'<DrawBlock x="{fx}" y="{fy}" z="{fz}" type="cake"/>')
+    # No cake when lava is present — lava episodes are pure survival
+    if not has_lava:
+        food = [
+            # Near Adam (NW)
+            (-3, 5, -3), (-5, 5, -3), (-3, 5, -5), (-4, 5, -2),
+            # Near Eve (NE)
+            (3, 5, -3), (5, 5, -3), (3, 5, -5), (4, 5, -2),
+            # Near Cain (SW)
+            (-3, 5, 3), (-5, 5, 3), (-3, 5, 5), (-4, 5, 2),
+            # Near Abel (SE)
+            (3, 5, 3), (5, 5, 3), (3, 5, 5), (4, 5, 2),
+            # Center area
+            (-1, 5, -1), (1, 5, -1), (-1, 5, 1), (1, 5, 1), (0, 5, 0),
+        ]
+        for fx, fy, fz in food:
+            d.append(f'<DrawBlock x="{fx}" y="{fy}" z="{fz}" type="cake"/>')
 
     drawing_xml = "\n                ".join(d)
 
@@ -105,14 +123,14 @@ def mission_xml(time_limit_ms: int = 0, headless: bool = False, ms_per_tick: int
     # Agent sections
     agent_sections = ""
     for i in range(NUM_AGENTS):
-        x, y, z, yaw = spawns[i]
+        x, y, z, yaw, pitch = spawns[i]
         name = AGENT_NAMES[i]
 
         agent_sections += f'''
     <AgentSection mode="Survival">
         <Name>{name}</Name>
         <AgentStart>
-            <Placement x="{x}" y="{y}" z="{z}" yaw="{yaw}"/>
+            <Placement x="{x}" y="{y}" z="{z}" yaw="{yaw}" pitch="{pitch}"/>
         </AgentStart>
         <AgentHandlers>
             <ObservationFromFullStats/>

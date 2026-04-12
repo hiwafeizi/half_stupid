@@ -1,0 +1,40 @@
+[
+  {
+    "tick": 72902,
+    "obs": 50000,
+    "ids": {
+      "hotbar": [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        33,
+        30
+      ],
+      "held": 33
+    },
+    "raw": {
+      "health": 9.0,
+      "food": 0.0,
+      "held_count": 5,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.998004,
+      "hotbar_1": 0.0002,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.0002,
+      "hotbar_4": 0.0002,
+      "hotbar_5": 0.0002,
+      "hotbar_6": 0.0002,
+      "hotbar_7": 0.0002,
+      "hotbar_8": 0.0002,
+      "hotbar_9": 0.0002,
+      "stand_still": 0.0002
+    },
+    "chosen": "use_eat"
+  }
+]

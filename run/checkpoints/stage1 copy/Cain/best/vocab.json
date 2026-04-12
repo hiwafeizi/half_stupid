@@ -1,0 +1,31 @@
+{
+  "block_vocab": {
+    "EMPTY": 0,
+    "dirt": 1,
+    "grass": 2,
+    "log": 3,
+    "cake": 4,
+    "cooked_fish": 5,
+    "apple": 6,
+    "bread": 7,
+    "mushroom_stew": 8,
+    "cooked_porkchop": 9,
+    "cookie": 10,
+    "cooked_chicken": 11,
+    "melon": 12,
+    "carrot": 13,
+    "cooked_mutton": 14,
+    "beetroot_soup": 15,
+    "cooked_rabbit": 16,
+    "cooked_beef": 17,
+    "baked_potato": 18,
+    "golden_apple": 19,
+    "pumpkin_pie": 20,
+    "bowl": 21,
+    "air": 22,
+    "yellow_flower": 23
+  },
+  "next_block_id": 24,
+  "input_level": 3,
+  "action_level": 3
+}

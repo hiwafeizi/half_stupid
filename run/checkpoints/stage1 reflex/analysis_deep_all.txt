@@ -1,0 +1,1084 @@
+
+======================================================================
+  Adam — DEEP ANALYSIS (1344 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  72 (eye_level r4c2): impact=2650.0 (+)
+    pos  37 (floor r2c2): impact=2555.2 (+)
+    pos  50 (eye_level r0c0): impact=2554.3 (+)
+    pos  66 (eye_level r3c1): impact=2536.1 (+)
+    pos  75 (above_head r0c0): impact=2425.0 (+)
+    pos  68 (eye_level r3c3): impact=2345.3 (+)
+    pos  51 (eye_level r0c1): impact=2056.7 (+)
+    pos  58 (eye_level r1c3): impact=2052.1 (+)
+    pos  62 (eye_level r2c2): impact=1982.5 (+)
+    pos  88 (above_head r2c3): impact=1791.8 (+)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  75 (above_head r0c0): impact=306.7 (+)
+    pos  50 (eye_level r0c0): impact=285.2 (+)
+    pos  88 (above_head r2c3): impact=271.2 (+)
+    pos  58 (eye_level r1c3): impact=264.8 (+)
+    pos  72 (eye_level r4c2): impact=257.5 (+)
+    pos  54 (eye_level r0c4): impact=256.5 (+)
+    pos  68 (eye_level r3c3): impact=254.8 (+)
+    pos  53 (eye_level r0c3): impact=254.5 (+)
+    pos  97 (above_head r4c2): impact=254.4 (+)
+    pos  66 (eye_level r3c1): impact=252.1 (+)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       1025  1235  1060  1154  1148
+        996  1413  1101   990  1085
+       1118  1493  1429  1228  1056
+        898  1244  1245  1197  1201
+       1013  1415  1188  1147  1329
+    floor:
+       1263  1347  1151  1305  1455
+       1351  1253  1127  1303  1570
+       1463  1454  2555  1227  1269
+       1293  1242  1126   770  1589
+       1299  1173   986   923  1263
+    eye_level:
+       2554  2057  1745  1669  1687
+       1156  1623  1299  2052  1420
+       1548  1135  1983  1331  1545
+       1409  2536  1300  2345  1674
+       1777  1416  2650  1488  1576
+    above_head:
+       2425  1618  1513  1528  1431
+       1363  1466  1486  1473  1293
+       1446  1461  1761  1792  1467
+       1387  1432  1259  1447  1374
+       1308  1353  1446  1355  1377
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: medium        hotbar_1=+4.6 | vis=236 | food=-0.7, health=-0.6
+    n 1: medium      turn_right=+2.0 | vis=204 | health=+0.0, a2_rx=+0.0
+    n 2: STRONG        hotbar_3=+7.4 | vis=379 | health=+4.9, a3_hp=+4.1
+    n 3: STRONG         use_eat=+16.5 | vis=745 | health=-5.5, food=-4.9
+    n 4: STRONG        hotbar_3=+9.5 | vis=782 | health=-5.5, a3_hp=-4.9
+    n 5: STRONG         use_eat=+12.0 | vis=784 | health=-5.5, a3_hp=-4.9
+    n 6: STRONG         use_eat=+16.6 | vis=722 | health=-5.5, food=-4.9
+    n 7: STRONG         use_eat=+16.0 | vis=764 | health=-5.5, a3_hp=-4.9
+    n 8: medium        hotbar_8=+4.3 | vis=400 | health=+0.0, a2_rx=+0.0
+    n 9: STRONG         look_up=+7.6 | vis=367 | health=+5.3, a3_hp=+4.6
+    n10: medium        hotbar_1=+4.5 | vis=449 | i4_rx=-0.3, health=-0.3
+    n11: STRONG         use_eat=+15.2 | vis=746 | health=-5.6, food=-5.0
+    n12: medium      turn_right=+3.7 | vis=304 | z=-0.2, yaw=+0.2
+    n13: weak         look_down=+1.0 | vis=181 | health=+0.0, a2_rx=+0.0
+    n14: STRONG         use_eat=+13.8 | vis=752 | health=-5.5, food=-4.9
+    n15: medium       turn_left=+3.8 | vis=475 | s4_ct=-0.6, s9_ct=-0.6
+    n16: STRONG         use_eat=+13.6 | vis=697 | health=-5.5, a3_hp=-4.8
+    n17: STRONG      turn_right=+8.9 | vis=619 | health=-5.4, a3_hp=-4.8
+    n18: medium   A_strafe_left=+3.2 | vis=661 | s2_ct=-0.6, s9_ct=-0.5
+    n19: STRONG        hotbar_1=+7.6 | vis=698 | health=-5.3, a3_hp=-4.8
+    n20: medium            jump=+4.2 | vis=285 | health=+0.0, a2_rx=+0.0
+    n21: STRONG         use_eat=+17.0 | vis=745 | health=-5.5, food=-4.9
+    n22: STRONG         use_eat=+8.0 | vis=597 | health=-5.2, food=-4.6
+    n23: weak          hotbar_7=+1.4 | vis=32 | i1_rx=+0.3, health=-0.3
+    n24: weak          hotbar_9=+1.4 | vis=71 | s9_ct=-0.2, a2_hp=-0.2
+    n25: STRONG         use_eat=+14.7 | vis=717 | health=-5.6, food=-5.0
+    n26: medium        hotbar_3=+3.9 | vis=200 | held_ct=-0.2, i2_qty=-0.2
+    n27: medium       turn_left=+3.2 | vis=209 | health=+0.0, a2_rx=+0.0
+    n28: medium        hotbar_5=+4.5 | vis=299 | health=+5.4, a3_hp=+4.7
+    n29: STRONG         use_eat=+16.1 | vis=760 | health=-5.6, food=-5.0
+    n30: STRONG         use_eat=+15.7 | vis=715 | health=-5.5, food=-4.9
+    n31: STRONG         use_eat=+10.8 | vis=727 | health=-5.3, food=-4.6
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +28950.9
+      JUNK  dirt                : +26433.3
+      BLOCK bedrock             : +26342.2
+      JUNK  cobblestone         : +18617.8
+      BLOCK leaves              : +11660.9
+      JUNK  wooden_pickaxe      : +8677.5
+      JUNK  bowl                : +8524.2
+      BLOCK grass               : +7940.4
+      FOOD  cooked_chicken      : +6853.8
+      JUNK  diamond             : +6369.8
+    Most eat-suppressing blocks (bottom 5):
+      BLOCK cake                : -16753.9
+      BLOCK quartz_block        : -20167.8
+      FOOD  cooked_beef         : -22284.8
+      BLOCK gravel              : -25630.0
+      BLOCK yellow_flower       : -33928.1
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=32998 hb=5411 held=511 agents=2664 items=2917
+      Nodes:  n17=+6.6, n9=+6.2, n2=+5.1
+      Raw:    health=-187.7, food=-170.6, a3_hp=-166.4, a3_here=-148.2
+      Vision: above[0,0]=+, eye[0,0]=+, eye[1,3]=+
+      Blocks: air=+3452, bedrock=+3239, dirt=+3040
+
+    S_backward:
+      Drive:  vis=27116 hb=4797 held=515 agents=2214 items=2210
+      Nodes:  n2=+6.3, n9=+6.2, n14=+3.0
+      Raw:    health=-129.3, food=-120.9, a3_hp=-114.8, a3_here=-102.0
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+2768, bedrock=+2585, dirt=+2508
+
+    A_strafe_left:
+      Drive:  vis=16420 hb=1486 held=265 agents=650 items=1047
+      Nodes:  n2=+6.8, n4=+6.2, n9=+5.5
+      Raw:    health=-53.3, food=-50.5, a3_hp=-45.8, a3_here=-38.0
+      Vision: above[0,0]=+, above[2,3]=+, eye[0,0]=+
+      Blocks: tripwire=+1493, grass=+1361, leaves=+1301
+
+    D_strafe_right:
+      Drive:  vis=21849 hb=2856 held=411 agents=1250 items=1645
+      Nodes:  n31=+8.3, n4=+6.8, n9=+6.1
+      Raw:    health=-103.3, food=-94.7, a3_hp=-89.2, a3_here=-76.7
+      Vision: above[0,0]=+, eye[0,0]=+, eye[1,3]=+
+      Blocks: air=+1996, bedrock=+1949, dirt=+1804
+
+    turn_left:
+      Drive:  vis=20231 hb=3239 held=338 agents=1426 items=1512
+      Nodes:  n9=+6.8, n15=+3.8, n4=+3.3
+      Raw:    health=-89.4, food=-83.6, a3_hp=-79.4, a3_here=-69.8
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+2042, bedrock=+1924, dirt=+1811
+
+    turn_right:
+      Drive:  vis=74285 hb=14648 held=1303 agents=7350 items=7773
+      Nodes:  n17=+8.9, n5=+7.3, n16=+7.2
+      Raw:    health=-561.9, food=-496.4, a3_hp=-493.6, a3_here=-442.6
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+8165, bedrock=+7717, dirt=+7281
+
+    look_up:
+      Drive:  vis=36749 hb=6928 held=742 agents=3232 items=3360
+      Nodes:  n9=+7.6, n2=+5.8, n31=+5.0
+      Raw:    health=-217.1, food=-197.6, a3_hp=-189.7, a3_here=-169.0
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+3856, bedrock=+3614, dirt=+3494
+
+    look_down:
+      Drive:  vis=23376 hb=4474 held=442 agents=2090 items=2068
+      Nodes:  n9=+4.3, n2=+3.6, n5=+3.1
+      Raw:    health=-131.1, food=-120.3, a3_hp=-116.5, a3_here=-103.8
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+2456, bedrock=+2299, dirt=+2207
+
+    jump:
+      Drive:  vis=6667 hb=720 held=122 agents=296 items=292
+      Nodes:  n9=+5.4, n20=+4.2, n15=+2.6
+      Raw:    a2_here=+4.3, a3_here=+3.7, i5_here=-3.7, i5_qty=-3.5
+      Vision: eye[3,2]=+, above[2,3]=+, floor[0,0]=+
+      Blocks: air=+754, dirt=+716, bedrock=+690
+
+    crouch:
+      Drive:  vis=3975 hb=1150 held=16 agents=742 items=792
+      Nodes:  n9=+6.3, n2=+4.2, n31=+3.4
+      Raw:    health=+78.8, a3_hp=+68.0, food=+63.7, a3_here=+62.6
+      Vision: eye[0,0]=-, above[0,0]=-, eye[2,1]=+
+      Blocks: Abel=+601, cooked_beef=+598, cookie=+584
+
+    use_eat:
+      Drive:  vis=142402 hb=31159 held=2654 agents=15840 items=16250
+      Nodes:  n21=+17.0, n6=+16.6, n3=+16.5
+      Raw:    health=-1213.9, a3_hp=-1063.8, food=-1061.7, a3_here=-958.5
+      Vision: eye[0,0]=+, above[0,0]=+, eye[3,3]=+
+      Blocks: air=+16538, bedrock=+15476, dirt=+15061
+
+    attack:
+      Drive:  vis=31046 hb=5715 held=575 agents=2630 items=2687
+      Nodes:  n9=+7.6, n28=+3.4, n31=+3.3
+      Raw:    health=-165.4, food=-151.1, a3_hp=-145.9, a3_here=-130.0
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+3247, bedrock=+3043, dirt=+2897
+
+    Q_throw:
+      Drive:  vis=59689 hb=11627 held=1089 agents=5763 items=6067
+      Nodes:  n16=+6.4, n9=+6.3, n22=+6.2
+      Raw:    health=-425.0, food=-379.0, a3_hp=-372.2, a3_here=-333.2
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+6499, bedrock=+6116, dirt=+5832
+
+    hotbar_1:
+      Drive:  vis=40710 hb=6956 held=712 agents=3442 items=3867
+      Nodes:  n4=+8.1, n19=+7.6, n9=+6.6
+      Raw:    health=-273.9, food=-244.6, a3_hp=-239.7, a3_here=-212.6
+      Vision: above[0,0]=+, eye[0,0]=+, eye[1,3]=+
+      Blocks: air=+4280, bedrock=+4092, dirt=+3845
+
+    hotbar_2:
+      Drive:  vis=4912 hb=1886 held=134 agents=795 items=865
+      Nodes:  n9=+5.5, n2=+5.1, n0=+3.7
+      Raw:    health=+77.4, a3_hp=+66.3, food=+62.1, a3_here=+60.6
+      Vision: eye[0,0]=-, above[0,0]=-, floor[2,4]=-
+      Blocks: cooked_beef=+1032, Abel=+866, cookie=+761
+
+    hotbar_3:
+      Drive:  vis=38634 hb=5842 held=601 agents=3058 items=3638
+      Nodes:  n4=+9.5, n17=+8.1, n31=+7.4
+      Raw:    health=-261.1, food=-232.1, a3_hp=-229.7, a3_here=-203.0
+      Vision: above[0,0]=+, eye[0,0]=+, eye[1,3]=+
+      Blocks: air=+4028, bedrock=+3868, dirt=+3567
+
+    hotbar_4:
+      Drive:  vis=9586 hb=423 held=146 agents=255 items=515
+      Nodes:  n2=+6.3, n31=+6.0, n9=+5.6
+      Raw:    health=+17.6, a3_here=+16.0, a3_hp=+15.1, a2_hp=+12.2
+      Vision: above[2,3]=+, eye[4,3]=+, above[4,2]=+
+      Blocks: tripwire=+883, grass=+799, leaves=+743
+
+    hotbar_5:
+      Drive:  vis=25991 hb=3790 held=450 agents=1750 items=2109
+      Nodes:  n19=+6.4, n9=+6.1, n4=+6.0
+      Raw:    health=-136.6, food=-123.2, a3_hp=-120.3, a3_here=-104.9
+      Vision: above[0,0]=+, eye[0,0]=+, eye[1,3]=+
+      Blocks: air=+2532, bedrock=+2450, dirt=+2272
+
+    hotbar_6:
+      Drive:  vis=6877 hb=1303 held=24 agents=832 items=778
+      Nodes:  n9=+5.5, n2=+4.8, n19=+4.3
+      Raw:    health=+55.6, a3_hp=+46.8, food=+45.2, a3_here=+44.9
+      Vision: eye[2,3]=+, above[1,3]=+, above[1,0]=+
+      Blocks: tripwire=+870, grass=+620, leaves=+481
+
+    hotbar_7:
+      Drive:  vis=47833 hb=8964 held=866 agents=4497 items=4702
+      Nodes:  n14=+8.3, n22=+7.0, n2=+6.9
+      Raw:    health=-321.0, food=-288.8, a3_hp=-281.8, a3_here=-252.7
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+5138, bedrock=+4808, dirt=+4617
+
+    hotbar_8:
+      Drive:  vis=42835 hb=8223 held=800 agents=4091 items=4166
+      Nodes:  n11=+8.0, n29=+7.7, n9=+6.1
+      Raw:    health=-282.1, food=-254.4, a3_hp=-248.3, a3_here=-223.1
+      Vision: eye[0,0]=+, above[0,0]=+, eye[1,3]=+
+      Blocks: air=+4589, bedrock=+4316, dirt=+4164
+
+    hotbar_9:
+      Drive:  vis=5352 hb=1955 held=112 agents=896 items=831
+      Nodes:  n22=+5.1, n2=+4.9, n9=+3.8
+      Raw:    health=+52.3, a3_hp=+46.7, a3_here=+43.6, food=+42.9
+      Vision: eye[0,0]=-, floor[3,2]=-, below[4,4]=-
+      Blocks: yellow_flower=+559, cooked_beef=+523, gravel=+315
+
+    stand_still:
+      Drive:  vis=20786 hb=2736 held=349 agents=1227 items=1450
+      Nodes:  n2=+6.8, n9=+6.1, n31=+4.1
+      Raw:    health=-82.1, food=-78.0, a3_hp=-73.9, a3_here=-64.4
+      Vision: above[0,0]=+, eye[0,0]=+, above[2,3]=+
+      Blocks: air=+2069, bedrock=+1953, dirt=+1830
+
+======================================================================
+  Eve — DEEP ANALYSIS (1341 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  51 (eye_level r0c1): impact=3793.1 (-)
+    pos  54 (eye_level r0c4): impact=2840.4 (-)
+    pos  52 (eye_level r0c2): impact=2613.4 (-)
+    pos  62 (eye_level r2c2): impact=2571.5 (-)
+    pos  56 (eye_level r1c1): impact=2504.0 (+)
+    pos  66 (eye_level r3c1): impact=2310.5 (-)
+    pos   4 (below_feet r0c4): impact=2287.5 (-)
+    pos   3 (below_feet r0c3): impact=2280.0 (+)
+    pos  72 (eye_level r4c2): impact=2194.2 (-)
+    pos  12 (below_feet r2c2): impact=2154.6 (-)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  51 (eye_level r0c1): impact=607.6 (+)
+    pos  52 (eye_level r0c2): impact=476.4 (+)
+    pos  54 (eye_level r0c4): impact=457.7 (+)
+    pos  62 (eye_level r2c2): impact=408.1 (+)
+    pos  56 (eye_level r1c1): impact=391.8 (-)
+    pos  66 (eye_level r3c1): impact=383.0 (+)
+    pos   4 (below_feet r0c4): impact=365.6 (+)
+    pos  63 (eye_level r2c3): impact=364.3 (+)
+    pos   3 (below_feet r0c3): impact=359.3 (-)
+    pos  72 (eye_level r4c2): impact=349.3 (+)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       1606  1648  1978  2280  2287
+       1057  1197  1190  1574  1675
+        855  1052  2155  1993  1960
+       1123   911   878  1426  1332
+        979  1096   981  1467  1295
+    floor:
+       1144  1787  1866  1678  1079
+       1317   556  1526  1810   715
+       1514  1094  1810  1670   559
+       1616  1520  1336  1122   687
+       1276   889  1155  1850  1172
+    eye_level:
+       1487  3793  2613  1007  2840
+       1039  2504   889   857  1365
+       2060  1518  2572  2081  1948
+        955  2310  1077  1582  1057
+        671  1417  2194   504  1091
+    above_head:
+        961   978   705   593   710
+        948   899   888   819   871
+        677   960  1433   541   907
+        882   933   889   858   897
+        947   956   959  1009  1646
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: weak    D_strafe_right=+1.9 | vis=367 | health=+0.0, a2_rx=+0.0
+    n 1: STRONG         use_eat=+12.7 | vis=719 | health=-5.4, food=-4.9
+    n 2: medium     stand_still=+3.1 | vis=100 | health=+4.5, food=+4.0
+    n 3: STRONG         use_eat=+15.3 | vis=603 | health=-5.4, food=-4.9
+    n 4: STRONG       look_down=+10.3 | vis=301 | health=+4.3, food=+3.6
+    n 5: medium         Q_throw=+3.2 | vis=366 | health=+0.0, a2_rx=+0.0
+    n 6: STRONG         use_eat=+16.8 | vis=565 | health=-5.4, food=-5.0
+    n 7: STRONG         use_eat=+13.2 | vis=548 | health=-5.3, food=-4.8
+    n 8: STRONG     stand_still=+5.8 | vis=206 | health=+2.5, a2_hp=+2.0
+    n 9: weak    D_strafe_right=-0.7 | vis=328 | s7_ct=-0.4, s8_ct=-0.4
+    n10: STRONG         use_eat=+14.3 | vis=495 | health=-5.3, food=-4.8
+    n11: STRONG         use_eat=+16.0 | vis=571 | health=-5.4, food=-5.0
+    n12: weak     A_strafe_left=+1.8 | vis=288 | s9_ct=-0.2, a3_rx=+0.2
+    n13: STRONG         use_eat=+13.1 | vis=579 | health=-5.3, food=-4.9
+    n14: STRONG        hotbar_9=+14.0 | vis=499 | health=-5.0, food=-4.7
+    n15: weak          hotbar_5=-0.8 | vis=180 | i3_rx=+0.2, i5_rx=+0.2
+    n16: STRONG        hotbar_9=+12.8 | vis=617 | health=-5.2, food=-4.8
+    n17: medium      S_backward=+2.1 | vis=369 | health=+0.0, a2_rx=+0.0
+    n18: medium       turn_left=+3.8 | vis=179 | health=+4.6, a2_hp=+3.9
+    n19: STRONG         use_eat=+14.8 | vis=579 | health=-5.4, food=-4.9
+    n20: STRONG        hotbar_4=+9.5 | vis=542 | health=+4.6, food=+4.3
+    n21: STRONG         use_eat=+17.1 | vis=590 | health=-5.4, food=-5.0
+    n22: STRONG         use_eat=+14.3 | vis=509 | health=-5.3, food=-4.7
+    n23: STRONG         use_eat=+14.2 | vis=594 | health=-5.3, food=-4.9
+    n24: medium         Q_throw=+2.9 | vis=284 | a2_rz=-0.2, a1_rx=+0.2
+    n25: STRONG         use_eat=+14.9 | vis=535 | health=-5.3, food=-5.0
+    n26: STRONG         use_eat=+13.0 | vis=570 | health=-5.2, food=-4.8
+    n27: weak          hotbar_4=+1.7 | vis=265 | i2_qty=-0.2, health=-0.2
+    n28: medium  D_strafe_right=+3.4 | vis=327 | health=+0.0, a2_rx=+0.0
+    n29: STRONG         use_eat=+16.6 | vis=584 | health=-5.4, food=-4.9
+    n30: STRONG         use_eat=+15.8 | vis=528 | health=-5.4, food=-5.0
+    n31: medium  D_strafe_right=+2.1 | vis=223 | health=+0.0, a2_rx=+0.0
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      FOOD  cooked_beef         : +27606.7
+      FOOD  mushroom_stew       : +21684.4
+      BLOCK Cain                : +21421.3
+      BLOCK air                 : +20148.1
+      BLOCK Abel                : +18948.7
+      BLOCK grass               : +18194.8
+      FOOD  cooked_fish         : +17391.9
+      FOOD  golden_apple        : +15352.1
+      FOOD  melon               : +11909.2
+      BLOCK flowing_lava        : +11737.4
+    Most eat-suppressing blocks (bottom 5):
+      BLOCK gravel              : -31215.5
+      JUNK  gold_ingot          : -34104.6
+      BLOCK red_flower          : -62018.9
+      BLOCK yellow_flower       : -78250.2
+      BLOCK quartz_block        : -85882.6
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=59323 hb=15665 held=2097 agents=7922 items=6356
+      Nodes:  n7=+7.9, n16=+7.8, n26=+7.7
+      Raw:    health=-493.1, food=-457.3, a3_hp=-410.6, a2_hp=-409.6
+      Vision: eye[2,2]=-, below[4,4]=+, eye[2,3]=-
+      Blocks: cooked_beef=+4195, Cain=+3592, air=+3189
+
+    S_backward:
+      Drive:  vis=60166 hb=16110 held=2175 agents=8242 items=6557
+      Nodes:  n1=+7.9, n7=+7.8, n16=+7.6
+      Raw:    health=-510.4, food=-473.8, a3_hp=-424.5, a2_hp=-424.1
+      Vision: eye[2,2]=-, below[4,4]=+, eye[2,3]=-
+      Blocks: cooked_beef=+4257, Cain=+3689, air=+3275
+
+    A_strafe_left:
+      Drive:  vis=60347 hb=16362 held=2164 agents=8313 items=6720
+      Nodes:  n16=+7.5, n20=+7.1, n19=+7.0
+      Raw:    health=-527.9, food=-486.8, a3_hp=-438.6, a2_hp=-438.4
+      Vision: eye[2,2]=-, below[4,4]=+, eye[2,3]=-
+      Blocks: cooked_beef=+4375, Cain=+3749, air=+3342
+
+    D_strafe_right:
+      Drive:  vis=40464 hb=11017 held=1438 agents=5336 items=4252
+      Nodes:  n20=+7.7, n4=+7.6, n25=+4.7
+      Raw:    health=-314.1, food=-293.1, a3_hp=-264.6, a2_hp=-263.4
+      Vision: eye[2,2]=-, below[4,4]=+, above[2,2]=-
+      Blocks: cooked_beef=+3834, mushroom_stew=+3120, cooked_fish=+2892
+
+    turn_left:
+      Drive:  vis=24399 hb=6211 held=830 agents=2840 items=2173
+      Nodes:  n20=+7.1, n4=+6.2, n18=+3.8
+      Raw:    health=-134.8, food=-129.5, a3_hp=-117.2, a2_hp=-116.5
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+2017, mushroom_stew=+1870, cooked_beef=+1594
+
+    turn_right:
+      Drive:  vis=32554 hb=8628 held=1133 agents=4030 items=3192
+      Nodes:  n20=+8.8, n4=+6.7, n3=+4.4
+      Raw:    health=-219.6, food=-205.9, a3_hp=-186.4, a2_hp=-186.1
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+2851, mushroom_stew=+2612, cooked_beef=+2266
+
+    look_up:
+      Drive:  vis=12041 hb=2785 held=397 agents=2099 items=1847
+      Nodes:  n20=+9.3, n4=+6.0, n8=+3.4
+      Raw:    health=+188.1, food=+168.2, a2_hp=+148.4, a3_hp=+146.9
+      Vision: eye[2,2]=+, below[2,2]=+, eye[0,1]=+
+      Blocks: quartz_block=+5658, yellow_flower=+5322, red_flower=+4575
+
+    look_down:
+      Drive:  vis=37544 hb=9797 held=1298 agents=4615 items=3691
+      Nodes:  n4=+10.3, n20=+6.3, n7=+5.1
+      Raw:    health=-263.6, food=-248.3, a3_hp=-222.9, a2_hp=-222.4
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+3029, mushroom_stew=+2815, cooked_beef=+2490
+
+    jump:
+      Drive:  vis=34749 hb=9469 held=1261 agents=4570 items=3557
+      Nodes:  n4=+9.0, n20=+5.6, n10=+4.3
+      Raw:    health=-251.3, food=-237.3, a3_hp=-213.4, a2_hp=-213.0
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+2984, mushroom_stew=+2762, cooked_beef=+2467
+
+    crouch:
+      Drive:  vis=7620 hb=1502 held=206 agents=1071 items=1056
+      Nodes:  n20=+5.8, n8=+4.1, n4=+3.4
+      Raw:    health=+107.3, food=+94.8, a2_hp=+84.0, a3_hp=+82.1
+      Vision: eye[2,2]=+, below[2,2]=+, eye[0,1]=+
+      Blocks: quartz_block=+2769, yellow_flower=+2709, red_flower=+2390
+
+    use_eat:
+      Drive:  vis=133044 hb=37135 held=4971 agents=20296 items=16718
+      Nodes:  n21=+17.1, n6=+16.8, n29=+16.6
+      Raw:    health=-1387.6, food=-1269.7, a2_hp=-1136.8, a3_hp=-1133.4
+      Vision: eye[2,2]=-, eye[0,1]=-, eye[2,3]=-
+      Blocks: Cain=+15655, Abel=+14391, cooked_beef=+14370
+
+    attack:
+      Drive:  vis=23620 hb=5970 held=797 agents=2659 items=2039
+      Nodes:  n20=+9.2, n4=+4.7, n16=+3.4
+      Raw:    health=-130.9, food=-124.7, a3_hp=-113.4, a2_hp=-112.6
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+1917, mushroom_stew=+1782, cooked_beef=+1512
+
+    Q_throw:
+      Drive:  vis=9811 hb=1984 held=258 agents=1430 items=1370
+      Nodes:  n20=+7.2, n4=+3.8, n8=+3.6
+      Raw:    health=+136.2, food=+120.3, a2_hp=+107.2, a3_hp=+105.4
+      Vision: eye[2,2]=+, below[2,2]=+, eye[1,0]=-
+      Blocks: quartz_block=+1250, yellow_flower=+1208, red_flower=+1086
+
+    hotbar_1:
+      Drive:  vis=21180 hb=4924 held=684 agents=2108 items=1596
+      Nodes:  n20=+8.3, n4=+7.3, n7=+5.7
+      Raw:    health=-95.4, food=-92.5, a2_hp=-84.2, a3_hp=-84.2
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+1542, mushroom_stew=+1460, cooked_beef=+1218
+
+    hotbar_2:
+      Drive:  vis=22205 hb=5108 held=714 agents=2204 items=1678
+      Nodes:  n20=+9.3, n4=+6.3, n1=+5.2
+      Raw:    health=-103.8, food=-99.1, a3_hp=-91.2, a2_hp=-91.0
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+1639, mushroom_stew=+1542, cooked_beef=+1283
+
+    hotbar_3:
+      Drive:  vis=11526 hb=1199 held=205 agents=266 items=318
+      Nodes:  n20=+9.3, n1=+6.9, n4=+5.6
+      Raw:    health=+21.2, a3_here=+16.4, food=+15.7, a2_hp=+13.3
+      Vision: floor[1,2]=-, floor[4,1]=-, floor[0,2]=-
+      Blocks: cooked_beef=+1073, Cain=+861, Abel=+741
+
+    hotbar_4:
+      Drive:  vis=7206 hb=511 held=41 agents=688 items=712
+      Nodes:  n20=+9.5, n4=+5.4, n3=+3.4
+      Raw:    health=+88.4, food=+77.0, a2_hp=+67.4, a3_hp=+65.8
+      Vision: below[2,2]=+, below[2,4]=+, below[2,3]=+
+      Blocks: quartz_block=+1147, wooden_pickaxe=+981, bowl=+979
+
+    hotbar_5:
+      Drive:  vis=8724 hb=1628 held=175 agents=1293 items=1229
+      Nodes:  n4=+8.5, n20=+6.7, n26=+3.2
+      Raw:    health=+126.8, food=+110.8, a2_hp=+98.1, a3_hp=+97.7
+      Vision: eye[2,2]=+, below[2,2]=+, floor[0,4]=-
+      Blocks: red_flower=+916, yellow_flower=+897, quartz_block=+769
+
+    hotbar_6:
+      Drive:  vis=38620 hb=10124 held=1345 agents=4802 items=3862
+      Nodes:  n20=+8.7, n4=+6.9, n14=+6.0
+      Raw:    health=-284.8, food=-264.5, a2_hp=-239.9, a3_hp=-239.5
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+3109, mushroom_stew=+2892, cooked_beef=+2564
+
+    hotbar_7:
+      Drive:  vis=20003 hb=4403 held=581 agents=1722 items=1296
+      Nodes:  n20=+8.8, n7=+6.6, n4=+5.7
+      Raw:    health=-77.0, food=-75.5, a3_hp=-68.6, a2_hp=-67.5
+      Vision: eye[2,2]=-, below[3,4]=+, below[4,4]=+
+      Blocks: cooked_fish=+1415, mushroom_stew=+1329, grass=+1091
+
+    hotbar_8:
+      Drive:  vis=30795 hb=8695 held=1111 agents=4148 items=3254
+      Nodes:  n14=+7.8, n23=+6.3, n16=+6.1
+      Raw:    health=-238.0, food=-222.5, a3_hp=-204.9, a2_hp=-201.6
+      Vision: eye[2,2]=-, below[4,4]=+, below[3,4]=+
+      Blocks: cooked_fish=+2741, mushroom_stew=+2544, cooked_beef=+2292
+
+    hotbar_9:
+      Drive:  vis=74616 hb=19919 held=2632 agents=10051 items=8179
+      Nodes:  n14=+14.0, n16=+12.8, n22=+12.8
+      Raw:    health=-646.8, food=-596.0, a3_hp=-538.8, a2_hp=-537.3
+      Vision: eye[2,2]=-, below[4,4]=+, eye[2,3]=-
+      Blocks: cooked_beef=+5233, Cain=+4576, Abel=+4069
+
+    stand_still:
+      Drive:  vis=20766 hb=5756 held=764 agents=3292 items=2957
+      Nodes:  n8=+5.8, n4=+4.4, n6=-3.4
+      Raw:    health=+262.3, food=+234.1, a2_hp=+211.5, a3_hp=+208.7
+      Vision: eye[2,2]=+, eye[0,1]=+, below[3,0]=-
+      Blocks: yellow_flower=+5401, red_flower=+4922, quartz_block=+4916
+
+======================================================================
+  Cain — DEEP ANALYSIS (1346 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  52 (eye_level r0c2): impact=3590.5 (+)
+    pos  72 (eye_level r4c2): impact=3464.6 (+)
+    pos  68 (eye_level r3c3): impact=3334.4 (+)
+    pos  67 (eye_level r3c2): impact=2778.4 (+)
+    pos  57 (eye_level r1c2): impact=2702.4 (+)
+    pos  70 (eye_level r4c0): impact=2555.1 (+)
+    pos  62 (eye_level r2c2): impact=2522.6 (-)
+    pos  87 (above_head r2c2): impact=2425.3 (+)
+    pos  66 (eye_level r3c1): impact=2403.6 (+)
+    pos  74 (eye_level r4c4): impact=2296.5 (+)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  37 (floor r2c2): impact=443.2 (-)
+    pos  72 (eye_level r4c2): impact=413.0 (-)
+    pos  27 (floor r0c2): impact=309.7 (-)
+    pos  62 (eye_level r2c2): impact=300.9 (+)
+    pos  68 (eye_level r3c3): impact=295.7 (-)
+    pos  52 (eye_level r0c2): impact=291.2 (-)
+    pos  67 (eye_level r3c2): impact=285.4 (-)
+    pos  57 (eye_level r1c2): impact=276.8 (-)
+    pos  74 (eye_level r4c4): impact=244.7 (-)
+    pos  66 (eye_level r3c1): impact=238.1 (-)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+        757   737   871   747   808
+        793   944   877   866   757
+        875   960   516  1011  1026
+        994  1254  1387  1204  1237
+        970   998   894  1000   999
+    floor:
+        662   697  1773   769   812
+        875   696   465   638   526
+        583   628  2227   529   531
+        907   727   746   525   552
+        919   857   698   704   804
+    eye_level:
+       1409  1678  3590  1874  1809
+        568  1798  2702  2008  1280
+        557  2065  2523  1414  1633
+       1108  2404  2778  3334  1434
+       2555  2242  3465  1938  2296
+    above_head:
+       1589  1889  1791  1761  1678
+       1581  1802  1834  1618  1706
+       1484  1748  2425  1712  1754
+       1858  1761  1987  1768  1703
+       1918  1754  1720  1627  1960
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: medium   A_strafe_left=+2.5 | vis=325 | health=+0.0, a2_rx=+0.0
+    n 1: STRONG        hotbar_4=+10.4 | vis=539 | health=+6.1, a3_hp=+5.7
+    n 2: STRONG        hotbar_8=+10.9 | vis=343 | health=+5.0, food=+4.4
+    n 3: STRONG         use_eat=+15.8 | vis=812 | health=-6.1, food=-5.7
+    n 4: STRONG        hotbar_2=+8.9 | vis=362 | health=+6.1, a3_hp=+5.8
+    n 5: STRONG         use_eat=+9.8 | vis=727 | health=-6.0, food=-5.6
+    n 6: STRONG         use_eat=+15.1 | vis=792 | health=-6.1, food=-5.7
+    n 7: medium        hotbar_3=+3.7 | vis=661 | s6_ct=-0.4, s2_ct=-0.4
+    n 8: STRONG         use_eat=+13.0 | vis=667 | health=-6.1, food=-5.7
+    n 9: weak          hotbar_3=-0.3 | vis=64 | i5_rz=-0.2, y=-0.2
+    n10: STRONG         use_eat=-14.2 | vis=284 | health=+6.1, food=+5.7
+    n11: STRONG         use_eat=+14.5 | vis=746 | health=-6.1, food=-5.7
+    n12: medium      S_backward=+2.8 | vis=259 | health=+0.0, a2_rx=+0.0
+    n13: STRONG         use_eat=+12.5 | vis=731 | health=-6.1, food=-5.7
+    n14: STRONG         use_eat=+11.2 | vis=620 | health=-6.1, food=-5.7
+    n15: STRONG        hotbar_7=+12.6 | vis=411 | health=+6.0, a3_hp=+5.8
+    n16: STRONG         use_eat=+12.7 | vis=688 | health=-6.1, food=-5.6
+    n17: STRONG       turn_left=+5.3 | vis=195 | a1_rx=-0.1, pitch=+0.1
+    n18: STRONG        hotbar_6=+9.4 | vis=366 | health=+6.1, a3_hp=+5.7
+    n19: medium        hotbar_4=+3.4 | vis=316 | a1_hp=+0.2, a3_hp=+0.2
+    n20: medium       turn_left=+2.6 | vis=392 | y=+0.3, eating=+0.3
+    n21: STRONG         use_eat=+15.6 | vis=762 | health=-6.1, food=-5.7
+    n22: STRONG         use_eat=+14.6 | vis=754 | health=-6.1, food=-5.7
+    n23: STRONG        hotbar_2=+8.3 | vis=355 | health=-5.2, food=-4.4
+    n24: medium        hotbar_2=+4.1 | vis=416 | i1_rx=-0.3, s8_ct=+0.3
+    n25: STRONG         use_eat=+13.6 | vis=704 | health=-6.1, food=-5.7
+    n26: STRONG        hotbar_4=+10.3 | vis=366 | health=+6.1, a3_hp=+5.8
+    n27: STRONG         use_eat=+13.4 | vis=739 | health=-6.1, food=-5.7
+    n28: medium       turn_left=+3.6 | vis=364 | x=+0.3, pitch=-0.3
+    n29: STRONG         use_eat=+15.0 | vis=790 | health=-6.1, food=-5.7
+    n30: STRONG         use_eat=+14.0 | vis=744 | health=-6.1, food=-5.7
+    n31: medium        hotbar_2=+4.6 | vis=446 | y=+0.2, s3_ct=+0.2
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +48105.8
+      BLOCK Eve                 : +33678.2
+      JUNK  string              : +28008.3
+      BLOCK Adam                : +22239.2
+      JUNK  stick               : +21670.2
+      JUNK  wooden_pickaxe      : +19062.7
+      JUNK  gold_ingot          : +18149.4
+      BLOCK Abel                : +17859.4
+      JUNK  bowl                : +16141.7
+      FOOD  melon               : +15648.7
+    Most eat-suppressing blocks (bottom 5):
+      BLOCK bedrock             : -21483.2
+      BLOCK log                 : -23978.3
+      BLOCK fence               : -36329.1
+      BLOCK yellow_flower       : -50639.2
+      BLOCK red_flower          : -54841.7
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=79075 hb=15797 held=1808 agents=8262 items=7486
+      Nodes:  n23=+8.3, n22=+8.1, n3=+8.0
+      Raw:    health=-530.7, food=-494.6, a3_hp=-485.5, a2_hp=-433.6
+      Vision: below[3,4]=+, below[3,3]=+, below[3,2]=+
+      Blocks: bedrock=+7391, fence=+6119, yellow_flower=+5764
+
+    S_backward:
+      Drive:  vis=65182 hb=12006 held=1357 agents=5775 items=5176
+      Nodes:  n10=+9.0, n3=+6.8, n4=+6.5
+      Raw:    health=-296.9, food=-277.9, a3_hp=-271.2, a2_hp=-244.0
+      Vision: below[3,4]=+, below[3,2]=+, below[3,3]=+
+      Blocks: bedrock=+6219, fence=+4969, yellow_flower=+4808
+
+    A_strafe_left:
+      Drive:  vis=27164 hb=3388 held=420 agents=1255 items=1175
+      Nodes:  n10=+8.6, n2=+6.7, n15=+6.7
+      Raw:    a2_here=+48.2, a3_hp=+44.9, health=+43.4, a1_hp=+42.4
+      Vision: below[2,4]=+, below[3,4]=+, below[2,2]=+
+      Blocks: wooden_pickaxe=+3001, bedrock=+2667, bowl=+2476
+
+    D_strafe_right:
+      Drive:  vis=54141 hb=9681 held=1110 agents=4227 items=3702
+      Nodes:  n10=+9.5, n4=+8.3, n26=+7.5
+      Raw:    health=-176.5, food=-166.2, a3_hp=-159.6, a2_hp=-145.8
+      Vision: below[3,4]=+, below[2,4]=+, below[3,2]=+
+      Blocks: bedrock=+5063, fence=+3946, yellow_flower=+3821
+
+    turn_left:
+      Drive:  vis=23803 hb=3714 held=514 agents=1442 items=1155
+      Nodes:  n1=+9.0, n10=+8.2, n2=+6.0
+      Raw:    eating=+23.1, s1_ct=+21.8, i1_here=+20.3, s7_ct=+20.0
+      Vision: below[2,4]=+, below[3,4]=+, below[3,3]=+
+      Blocks: bedrock=+2134, wooden_pickaxe=+1752, fence=+1543
+
+    turn_right:
+      Drive:  vis=30391 hb=3718 held=472 agents=1289 items=1336
+      Nodes:  n10=+12.1, n26=+8.9, n1=+8.2
+      Raw:    health=+104.7, a3_hp=+99.1, food=+94.9, a2_hp=+84.7
+      Vision: below[2,2]=+, below[2,4]=+, below[2,3]=+
+      Blocks: wooden_pickaxe=+3037, bedrock=+2893, leather=+2530
+
+    look_up:
+      Drive:  vis=11054 hb=2319 held=200 agents=1988 items=2313
+      Nodes:  n1=+7.4, n10=+7.1, n4=+3.6
+      Raw:    health=+225.1, a3_hp=+208.9, food=+208.0, a2_hp=+184.6
+      Vision: eye[0,4]=-, eye[1,1]=-, below[3,4]=-
+      Blocks: cooked_chicken=+554, beetroot_soup=+535, cooked_beef=+501
+
+    look_down:
+      Drive:  vis=12024 hb=1116 held=95 agents=1338 items=1859
+      Nodes:  n10=+8.9, n1=+7.5, n15=+4.6
+      Raw:    health=+196.5, a3_hp=+184.5, food=+181.9, a2_hp=+164.1
+      Vision: below[2,2]=+, floor[1,2]=+, floor[2,3]=+
+      Blocks: red_flower=+742, fence=+732, bedrock=+714
+
+    jump:
+      Drive:  vis=73071 hb=14914 held=1719 agents=7730 items=7002
+      Nodes:  n27=+7.8, n8=+7.7, n29=+7.7
+      Raw:    health=-500.5, food=-467.6, a3_hp=-460.3, a2_hp=-411.2
+      Vision: below[3,4]=+, below[3,3]=+, below[3,2]=+
+      Blocks: bedrock=+6737, fence=+5671, yellow_flower=+5310
+
+    crouch:
+      Drive:  vis=56586 hb=9732 held=1132 agents=4373 items=3748
+      Nodes:  n4=+8.0, n10=+7.7, n26=+6.8
+      Raw:    health=-176.5, food=-167.0, a3_hp=-160.2, a2_hp=-145.5
+      Vision: below[3,4]=+, below[2,4]=+, below[3,2]=+
+      Blocks: bedrock=+5417, fence=+4264, yellow_flower=+4210
+
+    use_eat:
+      Drive:  vis=138226 hb=29904 held=3360 agents=17274 items=16610
+      Nodes:  n3=+15.8, n21=+15.6, n6=+15.1
+      Raw:    health=-1338.8, food=-1245.5, a3_hp=-1237.0, a2_hp=-1104.5
+      Vision: below[3,4]=+, below[3,3]=+, below[3,2]=+
+      Blocks: bedrock=+12302, red_flower=+11225, fence=+11202
+
+    attack:
+      Drive:  vis=65867 hb=11679 held=1320 agents=5587 items=5007
+      Nodes:  n10=+8.5, n2=+8.5, n15=+7.1
+      Raw:    health=-276.7, food=-258.9, a3_hp=-252.3, a2_hp=-226.1
+      Vision: below[3,4]=+, below[3,3]=+, below[3,2]=+
+      Blocks: bedrock=+6513, fence=+5152, yellow_flower=+5077
+
+    Q_throw:
+      Drive:  vis=48464 hb=9701 held=1103 agents=4708 items=4239
+      Nodes:  n10=+8.1, n16=+5.5, n11=+5.3
+      Raw:    health=-267.5, food=-250.2, a3_hp=-244.8, a2_hp=-219.8
+      Vision: below[3,4]=+, below[3,3]=+, below[3,2]=+
+      Blocks: bedrock=+4412, fence=+3523, yellow_flower=+3265
+
+    hotbar_1:
+      Drive:  vis=18863 hb=4023 held=373 agents=3179 items=3773
+      Nodes:  n10=+8.9, n1=+8.1, n26=+6.5
+      Raw:    health=+361.2, a3_hp=+337.1, food=+334.2, a2_hp=+299.8
+      Vision: eye[0,4]=-, below[3,1]=-, below[3,4]=-
+      Blocks: bowl=+987, Abel=+681, gold_ingot=+600
+
+    hotbar_2:
+      Drive:  vis=33202 hb=4537 held=590 agents=1546 items=1431
+      Nodes:  n4=+8.9, n10=+8.9, n26=+8.8
+      Raw:    a2_here=+47.0, a1_hp=+42.2, a3_hp=+37.4, a1_here=+36.3
+      Vision: below[2,4]=+, below[3,4]=+, below[2,3]=+
+      Blocks: wooden_pickaxe=+3489, bedrock=+3064, bowl=+2820
+
+    hotbar_3:
+      Drive:  vis=16993 hb=3757 held=356 agents=2760 items=3124
+      Nodes:  n26=+6.6, n5=+6.3, n4=+6.2
+      Raw:    health=+288.6, a3_hp=+269.4, food=+266.5, a2_hp=+237.3
+      Vision: below[3,4]=-, below[4,3]=-, below[3,1]=-
+      Blocks: bowl=+1697, air=+1470, Eve=+1292
+
+    hotbar_4:
+      Drive:  vis=37474 hb=5109 held=664 agents=1707 items=1560
+      Nodes:  n1=+10.4, n26=+10.3, n5=+8.8
+      Raw:    a2_here=+49.1, health=+44.9, a3_hp=+44.5, a1_hp=+42.6
+      Vision: below[2,4]=+, below[3,4]=+, below[3,2]=+
+      Blocks: bedrock=+3459, wooden_pickaxe=+3035, arrow=+2676
+
+    hotbar_5:
+      Drive:  vis=20700 hb=1446 held=179 agents=728 items=1289
+      Nodes:  n4=+8.6, n26=+7.2, n18=+7.0
+      Raw:    health=+146.6, a3_hp=+140.6, food=+135.3, a2_hp=+123.5
+      Vision: below[2,2]=+, floor[2,2]=+, floor[2,1]=+
+      Blocks: red_flower=+2154, yellow_flower=+1964, fence=+1963
+
+    hotbar_6:
+      Drive:  vis=27889 hb=3027 held=436 agents=1199 items=1173
+      Nodes:  n15=+10.0, n18=+9.4, n10=+8.8
+      Raw:    health=+106.1, a3_hp=+104.8, food=+96.7, a2_hp=+92.5
+      Vision: below[2,4]=+, floor[2,1]=+, below[2,2]=+
+      Blocks: bedrock=+2287, wooden_pickaxe=+1835, fence=+1767
+
+    hotbar_7:
+      Drive:  vis=35572 hb=4417 held=573 agents=1677 items=1401
+      Nodes:  n15=+12.6, n10=+7.9, n23=+7.5
+      Raw:    a2_here=+39.1, eating=+33.1, s7_ct=+32.2, a1_here=+31.8
+      Vision: below[2,4]=+, below[3,4]=+, below[3,3]=+
+      Blocks: bedrock=+3690, wooden_pickaxe=+3585, arrow=+3070
+
+    hotbar_8:
+      Drive:  vis=24683 hb=2891 held=390 agents=1145 items=1137
+      Nodes:  n2=+10.9, n10=+7.7, n1=+7.2
+      Raw:    health=+72.8, a3_hp=+66.5, food=+63.7, a2_here=+60.7
+      Vision: below[2,4]=+, below[3,4]=+, below[2,2]=+
+      Blocks: bedrock=+2485, wooden_pickaxe=+2185, arrow=+1953
+
+    hotbar_9:
+      Drive:  vis=30180 hb=4749 held=590 agents=2104 items=1631
+      Nodes:  n14=+6.6, n26=+6.4, n23=+6.2
+      Raw:    health=-58.1, food=-55.6, a3_hp=-48.3, a2_hp=-43.6
+      Vision: below[3,4]=+, below[2,4]=+, below[3,2]=+
+      Blocks: bedrock=+2762, wooden_pickaxe=+2458, arrow=+2061
+
+    stand_still:
+      Drive:  vis=14655 hb=3131 held=318 agents=2105 items=2349
+      Nodes:  n23=+6.2, n10=+5.0, n15=+4.6
+      Raw:    health=+188.6, a3_hp=+181.4, food=+177.2, a2_hp=+164.3
+      Vision: below[3,4]=-, below[3,1]=-, below[3,3]=-
+      Blocks: bowl=+1990, wooden_pickaxe=+1568, string=+1145
+
+======================================================================
+  Abel — DEEP ANALYSIS (1343 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  13 (below_feet r2c3): impact=2617.3 (-)
+    pos  12 (below_feet r2c2): impact=2589.8 (-)
+    pos   3 (below_feet r0c3): impact=2228.7 (-)
+    pos   2 (below_feet r0c2): impact=2228.6 (-)
+    pos   8 (below_feet r1c3): impact=2220.9 (-)
+    pos  67 (eye_level r3c2): impact=2212.0 (+)
+    pos   7 (below_feet r1c2): impact=2200.4 (-)
+    pos  59 (eye_level r1c4): impact=2194.7 (+)
+    pos  11 (below_feet r2c1): impact=2192.7 (-)
+    pos   1 (below_feet r0c1): impact=2191.5 (-)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  52 (eye_level r0c2): impact=159.9 (-)
+    pos  69 (eye_level r3c4): impact=158.0 (-)
+    pos  66 (eye_level r3c1): impact=132.4 (-)
+    pos  56 (eye_level r1c1): impact=127.8 (-)
+    pos  58 (eye_level r1c3): impact=118.9 (-)
+    pos  57 (eye_level r1c2): impact=108.8 (-)
+    pos  83 (above_head r1c3): impact=101.8 (-)
+    pos  77 (above_head r0c2): impact=99.4 (-)
+    pos  82 (above_head r1c2): impact=97.7 (-)
+    pos  80 (above_head r1c0): impact=97.1 (-)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       2078  2192  2229  2229  2162
+       2068  2027  2200  2221  2159
+       2096  2193  2590  2617  2160
+       2095  2145  2165  2162  2087
+       1982  2019  2045  2056  1960
+    floor:
+       1693  1301  1330  1476  1588
+       1239  1293  1053  1124  1596
+       1675  1124  1804  1385  1577
+       1660  1195  1550  1564  1652
+       1691  1723  1636  1618  1708
+    eye_level:
+       1982  1543  1619  2072  1887
+       1714  1633  1653  1411  2195
+       2017  1397   268  1959  1945
+       2005  1588  2212  1939  1846
+       1963  2028  1937  1916  1979
+    above_head:
+       1959  1639  1653  1851  1653
+       1692  1388  1557  1118  1654
+       1697  1042   190  1890  1653
+       2026  1669  2132  1849  1656
+       1977  2011  2006  1808  1656
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: medium      turn_right=+3.1 | vis=916 | s2_ct=+0.4, s6_ct=+0.4
+    n 1: medium         use_eat=+4.5 | vis=830 | held_ct=+0.4, s2_ct=+0.4
+    n 2: STRONG         use_eat=+10.2 | vis=1021 | held_ct=+0.4, s2_ct=+0.4
+    n 3: weak          hotbar_4=+1.3 | vis=110 | i1_rz=+0.3, a1_rx=-0.3
+    n 4: medium        hotbar_6=+4.8 | vis=320 | s1_ct=-0.6, i2_rz=-0.6
+    n 5: weak          hotbar_4=+1.9 | vis=61 | i1_rz=-0.3, eating=-0.3
+    n 6: STRONG         use_eat=+11.8 | vis=1329 | held_ct=+0.4, s2_ct=+0.4
+    n 7: STRONG        hotbar_7=+9.7 | vis=836 | health=-5.6, a3_hp=-4.4
+    n 8: medium         use_eat=+4.9 | vis=1212 | held_ct=+0.4, s6_ct=+0.4
+    n 9: medium        hotbar_1=+2.9 | vis=74 | health=+4.4, a3_hp=+3.0
+    n10: weak          hotbar_6=+1.4 | vis=61 | a3_rx=-0.2, health=-0.2
+    n11: STRONG         use_eat=+10.4 | vis=1338 | held_ct=+0.4, s2_ct=+0.4
+    n12: STRONG         use_eat=+8.8 | vis=1154 | held_ct=+0.4, s2_ct=+0.4
+    n13: medium   A_strafe_left=+4.0 | vis=1056 | pitch=+0.3, z=+0.3
+    n14: STRONG         use_eat=+7.5 | vis=1098 | held_ct=+0.4, s2_ct=+0.4
+    n15: STRONG         use_eat=+9.3 | vis=1122 | held_ct=+0.4, s2_ct=+0.4
+    n16: medium         use_eat=+3.4 | vis=1081 | s6_ct=+0.4, s2_ct=+0.4
+    n17: weak          hotbar_8=+1.2 | vis=50 | a2_hp=+0.5, a2_here=+0.5
+    n18: weak          hotbar_6=+1.9 | vis=233 | health=-2.6, food=-1.9
+    n19: medium   A_strafe_left=+3.4 | vis=1065 | pitch=+0.4, s5_ct=+0.3
+    n20: STRONG         use_eat=+5.1 | vis=651 | held_ct=+0.4, s2_ct=+0.4
+    n21: STRONG         use_eat=+11.2 | vis=1301 | held_ct=+0.4, s2_ct=+0.4
+    n22: STRONG         use_eat=+9.1 | vis=1321 | held_ct=+0.4, s2_ct=+0.4
+    n23: weak          hotbar_8=+0.9 | vis=89 | z=-0.3, x=-0.3
+    n24: STRONG        hotbar_6=+6.5 | vis=364 | health=-3.0, a3_hp=-2.6
+    n25: STRONG         use_eat=+9.6 | vis=1339 | held_ct=+0.4, s2_ct=+0.4
+    n26: medium       turn_left=+4.5 | vis=381 | health=+1.0, a3_hp=+0.8
+    n27: STRONG         use_eat=+10.0 | vis=1353 | held_ct=+0.4, s2_ct=+0.4
+    n28: STRONG        hotbar_3=+6.6 | vis=457 | health=+4.8, a3_hp=+3.5
+    n29: STRONG         use_eat=+11.7 | vis=1316 | held_ct=+0.4, s2_ct=+0.4
+    n30: STRONG         use_eat=+11.3 | vis=1339 | held_ct=+0.4, s2_ct=+0.4
+    n31: medium         use_eat=+2.5 | vis=764 | pitch=+0.4, s5_ct=+0.3
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK bedrock             : +39223.7
+      BLOCK air                 : +27353.5
+      JUNK  leather             : +11376.6
+      FOOD  bread               : +10001.4
+      BLOCK flowing_lava        : +9907.4
+      BLOCK Adam                : +9192.0
+      FOOD  beetroot_soup       : +7612.0
+      BLOCK Zombie              : +7595.6
+      BLOCK poisonous_potato    : +5803.9
+      BLOCK spider_eye          : +4654.6
+    Most eat-suppressing blocks (bottom 5):
+      JUNK  bone                : -23109.5
+      FOOD  carrot              : -24122.8
+      BLOCK log                 : -29881.1
+      JUNK  string              : -31265.1
+      JUNK  dirt                : -47137.2
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=81737 hb=6585 held=706 agents=2751 items=2154
+      Nodes:  n22=+4.9, n25=+4.8, n6=+4.8
+      Raw:    s3_ct=+25.7, s6_ct=+25.3, s2_ct=+25.2, held_ct=+23.6
+      Vision: below[2,3]=-, below[2,2]=-, below[4,4]=-
+      Blocks: bedrock=+11106, air=+7555, leather=+3234
+
+    S_backward:
+      Drive:  vis=58543 hb=4404 held=468 agents=2191 items=1643
+      Nodes:  n7=+5.8, n1=+3.6, n12=+3.6
+      Raw:    a3_hp=-29.1, health=-26.8, a3_here=-23.5, a2_hp=-21.1
+      Vision: below[2,3]=-, below[2,2]=-, below[1,2]=-
+      Blocks: bedrock=+8385, air=+5489, leather=+2483
+
+    A_strafe_left:
+      Drive:  vis=86537 hb=6340 held=683 agents=2728 items=2182
+      Nodes:  n15=+5.1, n12=+5.0, n14=+4.9
+      Raw:    s6_ct=+26.7, s3_ct=+25.9, s2_ct=+25.4, jumping=+23.7
+      Vision: below[2,3]=-, below[3,4]=-, below[3,2]=-
+      Blocks: bedrock=+11377, air=+7953, leather=+3332
+
+    D_strafe_right:
+      Drive:  vis=11901 hb=978 held=110 agents=702 items=344
+      Nodes:  n28=+6.0, n24=+4.9, n26=+3.4
+      Raw:    health=+12.7, a2_rx=+10.5, i3_here=-9.6, i3_qty=-8.5
+      Vision: below[0,4]=-, below[0,0]=-, below[0,2]=-
+      Blocks: bedrock=+1718, air=+1004, leather=+534
+
+    turn_left:
+      Drive:  vis=38143 hb=2662 held=301 agents=1513 items=1070
+      Nodes:  n26=+4.5, n24=+4.2, n4=+4.1
+      Raw:    a3_hp=-15.1, s3_ct=+14.0, s6_ct=+13.9, a2_rx=+13.6
+      Vision: below[2,3]=-, below[0,4]=-, below[3,4]=-
+      Blocks: bedrock=+5210, air=+3657, leather=+1542
+
+    turn_right:
+      Drive:  vis=5079 hb=828 held=76 agents=165 items=276
+      Nodes:  n28=+5.4, n24=+3.7, n26=+3.6
+      Raw:    a2_rx=+8.2, i1_rx=+7.1, a3_rx=+6.3, i3_here=-5.6
+      Vision: floor[4,0]=-, floor[0,2]=-, floor[3,0]=-
+      Blocks: wooden_pickaxe=+753, bowl=+698, air=+572
+
+    look_up:
+      Drive:  vis=23520 hb=2055 held=229 agents=990 items=660
+      Nodes:  n26=+3.6, n28=+2.5, n24=+2.3
+      Raw:    s6_ct=+8.1, a2_rx=+7.8, s3_ct=+7.2, s2_ct=+7.0
+      Vision: below[2,3]=-, below[4,4]=-, below[3,2]=-
+      Blocks: bedrock=+3134, air=+2141, leather=+920
+
+    look_down:
+      Drive:  vis=53641 hb=4388 held=468 agents=1881 items=1405
+      Nodes:  n26=+3.7, n30=+3.4, n22=+3.4
+      Raw:    s6_ct=+15.8, s2_ct=+15.3, jumping=+14.9, s3_ct=+14.7
+      Vision: below[2,3]=-, below[2,2]=-, below[3,2]=-
+      Blocks: bedrock=+7451, air=+4992, leather=+2196
+
+    jump:
+      Drive:  vis=60884 hb=4459 held=488 agents=2126 items=1627
+      Nodes:  n26=+4.0, n7=+3.9, n24=+3.6
+      Raw:    a3_hp=-20.1, s3_ct=+19.8, s6_ct=+19.1, s2_ct=+18.8
+      Vision: below[2,3]=-, below[3,4]=-, below[3,2]=-
+      Blocks: bedrock=+8036, air=+5631, leather=+2365
+
+    crouch:
+      Drive:  vis=64733 hb=5036 held=519 agents=2064 items=1655
+      Nodes:  n28=+4.8, n14=+3.7, n27=+3.7
+      Raw:    s6_ct=+21.0, s3_ct=+19.9, s2_ct=+19.7, held_ct=+18.0
+      Vision: below[2,3]=-, below[3,4]=-, below[2,2]=-
+      Blocks: bedrock=+8905, air=+5968, leather=+2610
+
+    use_eat:
+      Drive:  vis=177321 hb=14684 held=1595 agents=5883 items=4571
+      Nodes:  n6=+11.8, n29=+11.7, n30=+11.3
+      Raw:    held_ct=+52.5, s2_ct=+52.2, s3_ct=+52.2, s6_ct=+51.3
+      Vision: below[2,3]=-, below[2,2]=-, below[3,2]=-
+      Blocks: bedrock=+24291, air=+16736, leather=+7115
+
+    attack:
+      Drive:  vis=11461 hb=1397 held=124 agents=756 items=513
+      Nodes:  n7=+5.5, n26=+2.9, n28=+2.3
+      Raw:    food=-8.1, a3_hp=-7.6, s1_ct=+6.4, s3_ct=+6.4
+      Vision: below[1,2]=-, below[2,1]=-, below[1,3]=-
+      Blocks: bedrock=+1697, air=+983, bread=+570
+
+    Q_throw:
+      Drive:  vis=52355 hb=3495 held=377 agents=1600 items=1341
+      Nodes:  n28=+4.7, n26=+3.9, n7=+3.6
+      Raw:    s3_ct=+18.2, s6_ct=+18.1, s2_ct=+17.2, s1_ct=+15.4
+      Vision: below[2,3]=-, below[0,4]=-, below[3,4]=-
+      Blocks: bedrock=+7021, air=+4869, leather=+2057
+
+    hotbar_1:
+      Drive:  vis=90881 hb=7824 held=832 agents=2752 items=2220
+      Nodes:  n30=-6.3, n28=+6.0, n6=-5.9
+      Raw:    held_ct=-27.3, attacking=-26.3, turning=-25.4, strafing=-25.2
+      Vision: below[2,2]=+, below[2,3]=+, below[3,3]=+
+      Blocks: dirt=+14679, log=+9784, string=+9405
+
+    hotbar_2:
+      Drive:  vis=24157 hb=2346 held=240 agents=645 items=600
+      Nodes:  n28=+6.0, n24=+4.7, n29=-1.9
+      Raw:    health=+12.4, i1_rx=+9.8, i2_here=-9.8, a3_hp=+9.5
+      Vision: below[2,2]=+, below[3,3]=+, below[2,3]=+
+      Blocks: dirt=+3773, log=+2959, string=+2072
+
+    hotbar_3:
+      Drive:  vis=17049 hb=2041 held=238 agents=700 items=522
+      Nodes:  n28=+6.6, n11=-2.1, n6=-2.1
+      Raw:    health=+20.2, a3_hp=+16.0, a3_here=+13.4, i3_here=-10.4
+      Vision: below[2,2]=+, floor[0,4]=-, floor[4,0]=-
+      Blocks: air=+499, bedrock=+415, wooden_pickaxe=+326
+
+    hotbar_4:
+      Drive:  vis=16380 hb=737 held=20 agents=431 items=500
+      Nodes:  n7=+5.4, n2=+5.0, n1=+3.6
+      Raw:    health=-22.3, a3_hp=-22.0, food=-18.3, a3_here=-17.2
+      Vision: below[1,2]=-, below[0,0]=-, below[0,1]=-
+      Blocks: bedrock=+2488, air=+1603, leather=+777
+
+    hotbar_5:
+      Drive:  vis=4669 hb=912 held=96 agents=152 items=218
+      Nodes:  n28=+6.1, n14=+6.0, n24=+4.0
+      Raw:    health=+17.4, i3_here=-11.5, i4_here=-10.4, i5_here=-10.2
+      Vision: floor[0,2]=-, floor[0,4]=-, floor[2,0]=-
+      Blocks: wooden_pickaxe=+684, bowl=+596, pumpkin_pie=+577
+
+    hotbar_6:
+      Drive:  vis=21474 hb=2452 held=214 agents=432 items=540
+      Nodes:  n24=+6.5, n4=+4.8, n26=+3.9
+      Raw:    food=-16.0, health=-12.8, a3_hp=-11.7, a1_hp=-10.0
+      Vision: floor[4,0]=-, floor[3,0]=-, floor[4,2]=-
+      Blocks: bedrock=+2250, air=+2137, beetroot_soup=+854
+
+    hotbar_7:
+      Drive:  vis=28244 hb=1440 held=168 agents=1269 items=1123
+      Nodes:  n7=+9.7, n24=+4.2, n1=+4.1
+      Raw:    health=-87.1, a3_hp=-72.2, food=-60.3, a3_here=-55.3
+      Vision: below[2,2]=-, below[1,2]=-, below[1,0]=-
+      Blocks: bedrock=+4195, air=+2686, bread=+1288
+
+    hotbar_8:
+      Drive:  vis=8177 hb=531 held=45 agents=268 items=286
+      Nodes:  n28=+4.8, n7=+3.4, n4=+3.4
+      Raw:    a2_rx=+8.4, a3_rx=+7.1, i1_rx=+5.7, i3_here=-4.7
+      Vision: below[0,1]=-, below[0,0]=-, below[0,4]=-
+      Blocks: bedrock=+1418, air=+718, bread=+510
+
+    hotbar_9:
+      Drive:  vis=23029 hb=2582 held=278 agents=843 items=681
+      Nodes:  n28=+4.8, n4=+3.3, n26=+3.2
+      Raw:    health=+27.2, a3_hp=+21.1, a3_here=+16.7, i3_here=-13.1
+      Vision: below[2,2]=+, floor[4,0]=-, below[4,2]=+
+      Blocks: dirt=+1206, string=+892, log=+761
+
+    stand_still:
+      Drive:  vis=8037 hb=633 held=52 agents=362 items=210
+      Nodes:  n24=+5.4, n2=+5.1, n28=+3.9
+      Raw:    food=-15.1, a3_hp=-12.7, health=-11.7, a3_here=-9.9
+      Vision: eye[0,2]=-, floor[0,2]=-, floor[4,2]=-
+      Blocks: bedrock=+1039, air=+925, beetroot_soup=+430

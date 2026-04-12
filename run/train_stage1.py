@@ -2,9 +2,9 @@
 
 World: 16x16 grassy yard, daytime, fence walls, cake blocks nearby.
 Agents: 4 (Adam, Eve, Cain, Abel), one life per episode.
-Brain: 465 -> 32 -> 23 (embedding + 1 hidden layer, REINFORCE).
-Embedding: 2048 vocab x 4 dims, shared across all block/item IDs.
-Inputs: 110 IDs (100 vision + 9 hotbar + 1 held) -> 440 embed + 25 raw = 465.
+Brain: reflex 529->32->23 (every tick) + context 160->64->23 (every 5 ticks).
+Embedding: 2048 vocab x 4 dims, shared across all block/item/agent IDs.
+Inputs: 118 IDs (100 vision + 9 hotbar + 1 held + 8 entities) -> 472 embed + 57 raw = 529.
 Reward: ONLY +1 alive, death penalty. Nothing else. Ever.
 Hunger: /effect hunger drains food bar, starvation kills on hard difficulty.
 Hotbar: randomized each episode (random foods, uneatable items, random slots).
@@ -32,8 +32,8 @@ except ImportError:
     from malmo.MalmoPython import AgentHost, MissionSpec, MissionRecordSpec, ClientPool, ClientInfo
 
 from run.stages.stage1_eat import mission_xml, NUM_AGENTS, AGENT_NAMES, RESPAWN
-from brain.brainstem import Brainstem, ACTIONS, NUM_ACTIONS, ACTION_NAMES, NUM_ID_INPUTS
-import numpy as np
+from brain.brainstem import Brainstem, ACTIONS, ACTION_NAMES
+import brain.brainstem as brainstem_module
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -42,13 +42,13 @@ import numpy as np
 BASE_PORT = 10000
 SAVE_DIR = "run/checkpoints/stage1"
 EPISODE_TIME_MS = 3000000      # 50 minutes real time per episode
-GAME_SPEED =5                # How fast the Minecraft WORLD runs vs real time.
+GAME_SPEED =8                # How fast the Minecraft WORLD runs vs real time.
                                # 1 = real time. 20 = world runs 20x faster.
                                # Hunger drains 20x faster, day passes 20x faster.
                                # Malmo MsPerTick = 50 / GAME_SPEED (lower = faster world).
                                # The agent's brain speed is NOT affected by this.
 
-MS_PER_TICK = 50               # Agent think rate in GAME time (ms).
+MS_PER_TICK = 100               # Agent think rate in GAME time (ms).
                                # 50 = 20 decisions per game second.
                                # At GAME_SPEED=20, real sleep = 50/20 = 2.5ms = 400 decisions/real sec.
                                # GAME_SPEED only affects real time, not game logic.
@@ -57,24 +57,31 @@ LEARNING_RATE = 0.03          # 0.1 for discovery, 0.03 for refinement, 0.01 for
 GAMMA = 0.97                   # discount factor for REINFORCE returns
                                # 0.97 = punishes ~130 ticks (~6.5 sec) before death
                                # increase for later stages where long-term planning matters
-MIN_EXPLORATION = 0.0002       # minimum probability per enabled action
+MIN_EXPLORATION = 0.001       # minimum probability per enabled action
                                # prevents dead exploration but interrupts eating ~7.7% over 16 ticks
                                # lower = less interruption, higher = more exploration
+CONTEXT_LR_SCALE = 1.5        # context layer learns at this fraction of LEARNING_RATE
+                               # 0.5 = half speed, 0.2 = slow and steady
+
+# ─── LOGGING FREQUENCY ───────────────────────────────────────
+LIVE_JSON_EVERY = 100000          # overwrite live_<name>.json every N observations (0 = disabled)
+PROBS_JSON_EVERY = 500         # append to probs_<name>.json every N observations (0 = disabled)
 
 # ─── HOTBAR RANDOMIZATION ────────────────────────────────────
 # Randomized each episode for generalization
-HOTBAR_SLOTS_FILLED = (9, 9)   # min, max slots filled per episode (out of 9)
-HOTBAR_UNEATABLE = (0, 0)      # min, max uneatable items mixed in
+HOTBAR_SLOTS_FILLED = (6, 9)   # min, max slots filled per episode (out of 9)
+HOTBAR_UNEATABLE = (2, 4)      # min, max uneatable items mixed in
+HOTBAR_POISON = (1, 3)         # min, max poison items mixed in (looks edible but hurts)
 HOTBAR_ITEM_COUNT = (1, 5)     # min, max count per item
 
 # ─── INPUT MASK LEVEL ─────────────────────────────────────────
 # See brain/brainstem.py MASK_LEVELS for full details
 # Level 1: health + food + eating flag (3 active)
-# Level 2: + held item ID + held item count (5 active)
-# Level 3: + 9 hotbar IDs + 9 hotbar counts (23 active)
-# Level 4: + 100 vision (5x5x4) + 7 movement action flags (130 active)
-# Level 5: + x,y,z + yaw + pitch (135 active = all)
-INPUT_MASK_LEVEL = 2
+# Level 2: + held item ID + held item count (8 active)
+# Level 3: + 9 hotbar IDs + 9 hotbar counts (53 active)
+# Level 4: + 100 vision (5x5x4) + 7 movement action flags (460 active)
+# Level 5: + nearby entities (3 agents + 5 items) + x,y,z,yaw,pitch (529 active = all)
+INPUT_MASK_LEVEL = 5
 
 # ─── OUTPUT (ACTION) MASK LEVEL ──────────────────────────────
 # See brain/brainstem.py ACTION_MASK_LEVELS for full details
@@ -84,13 +91,13 @@ INPUT_MASK_LEVEL = 2
 # Level 4: + walk fwd/back + turn (15 active)
 # Level 5: + strafe, jump, crouch, attack, throw (21 active)
 # Level 6: + look up/down (23 active = all)
-ACTION_MASK_LEVEL = 1
+ACTION_MASK_LEVEL = 6
 
 # ═══════════════════════════════════════════════════════════════
 #  REWARD — DO NOT CHANGE. Only survival. See feedback_reward.md
 # ═══════════════════════════════════════════════════════════════
 REWARD_ALIVE = 1.0            # +1 per tick alive
-REWARD_DEATH = -2000.0       # -4,000 on death
+REWARD_DEATH = -10000.0       # -10,000 on death
 
 
 def parse_args():
@@ -119,6 +126,7 @@ def connect_agents(ports: list, xml: str) -> list:
 
     mission = MissionSpec(xml, True)
 
+    # All agents must call startMission before Malmo begins any of them
     for i in range(NUM_AGENTS):
         host = AgentHost()
         agents.append(host)
@@ -138,20 +146,29 @@ def connect_agents(ports: list, xml: str) -> list:
         if i < NUM_AGENTS - 1:
             time.sleep(1)
 
-    # Wait for all to start
+    # Wait for all to start (with timeout so we don't hang forever)
     print("  Waiting for mission...", end="", flush=True)
-    while True:
-        all_started = all(
-            agents[i].getWorldState().has_mission_begun
-            for i in range(NUM_AGENTS)
-        )
-        if all_started:
-            break
-        time.sleep(0.1)
+    t0 = time.time()
+    while time.time() - t0 < 120:
+        states = [agents[i].getWorldState() for i in range(NUM_AGENTS)]
+        if all(ws.has_mission_begun for ws in states):
+            print(" Started!")
+            return agents
+        # Check for errors
+        for i, ws in enumerate(states):
+            if len(ws.errors) > 0:
+                print(f"\n  ERROR on {AGENT_NAMES[i]}: {ws.errors[0].text}")
+                return None
+        time.sleep(0.3)
         print(".", end="", flush=True)
-    print(" Started!")
 
-    return agents
+    # Timeout — show which agents didn't start
+    for i in range(NUM_AGENTS):
+        ws = agents[i].getWorldState()
+        if not ws.has_mission_begun:
+            print(f"\n  {AGENT_NAMES[i]} never started (port {ports[i]})")
+    print("\n  TIMEOUT. Restart Malmo clients and retry.")
+    return None
 
 
 def respawn_agent(host, name: str):
@@ -179,196 +196,181 @@ HUNGER_DRAIN_EVERY = 160    # Reapply hunger effect every 160 ticks
 
 def run_episode(agents: list, brains: list, episode: int) -> dict:
     """Run one training episode. Returns stats."""
-    tick = 0
+    tick = 0                      # actual observations processed (across all agents)
+    loop_count = 0                 # raw loop iterations (for internal use)
     alive_ticks = [0] * NUM_AGENTS
+
+    # Clear live logs for this episode
+    os.makedirs(SAVE_DIR, exist_ok=True)
+    for name in AGENT_NAMES:
+        p = os.path.join(SAVE_DIR, f"live_{name}.json")
+        if os.path.exists(p):
+            os.remove(p)
     dead = [False] * NUM_AGENTS
     food_eaten = [0] * NUM_AGENTS
     prev_food = [20.0] * NUM_AGENTS
-    live_logs = {name: [] for name in AGENT_NAMES}  # accumulate every second
-    prob_logs = {name: [] for name in AGENT_NAMES}  # probs only, every 20 ticks
+    obs_count = [0] * NUM_AGENTS   # per-agent observation count
+    prob_logs = {name: [] for name in AGENT_NAMES}
     # Track active continuous commands per agent
     active = [{"use": 0, "move": 0, "strafe": 0, "turn": 0,
                "pitch": 0, "jump": 0, "crouch": 0, "attack": 0}
               for _ in range(NUM_AGENTS)]
 
+    from threading import Thread
+
+    def _agent_tick(i, obs, tick_num):
+        """One agent's full tick: encode, forward, choose action. Runs in thread."""
+        health = obs.get("Life", 0)
+        food_level = obs.get("Food", 0)
+
+        if health <= 0:
+            dead[i] = True
+            brains[i].record_reward(REWARD_DEATH)
+            print(f"    {AGENT_NAMES[i]} DIED at tick {tick_num} (alive {alive_ticks[i]} ticks)")
+            return None
+
+        alive_ticks[i] += 1
+
+        if food_level > prev_food[i]:
+            food_eaten[i] += 1
+        prev_food[i] = food_level
+
+        brains[i].record_reward(REWARD_ALIVE)
+
+        grid = obs.get("view5x5", [])
+        action_idx = brains[i].choose_action(obs, grid, active[i])
+        return action_idx
+
     while True:
-        tick += 1
+        loop_count += 1
         any_running = False
 
+        # Step 1: Poll all agents for observations (sequential — Malmo requires this)
+        observations = [None] * NUM_AGENTS
         for i in range(NUM_AGENTS):
-            # Already dead — skip for rest of episode
             if dead[i]:
                 continue
-
             ws = agents[i].getWorldState()
             if not ws.is_mission_running:
                 continue
             any_running = True
+            if ws.number_of_observations_since_last_state > 0:
+                observations[i] = json.loads(ws.observations[-1].text)
 
-            if ws.number_of_observations_since_last_state == 0:
+        if not any_running:
+            break
+
+        # Count actual observations
+        got_obs = any(o is not None for o in observations)
+        if got_obs:
+            tick += 1
+        for i in range(NUM_AGENTS):
+            if observations[i] is not None:
+                obs_count[i] += 1
+
+        # Step 2: Run all agent brains in parallel threads
+        results = [None] * NUM_AGENTS
+        threads = []
+        for i in range(NUM_AGENTS):
+            if observations[i] is None or dead[i]:
                 continue
+            t = Thread(target=lambda idx=i: results.__setitem__(idx, _agent_tick(idx, observations[idx], tick)))
+            threads.append(t)
+            t.start()
+        for t in threads:
+            t.join()
 
-            obs = json.loads(ws.observations[-1].text)
-
-            health = obs.get("Life", 0)
-            food_level = obs.get("Food", 0)
-
-            if health <= 0:
-                dead[i] = True
-                brains[i].record_reward(REWARD_DEATH)
-                print(f"    {AGENT_NAMES[i]} DIED at tick {tick} (alive {alive_ticks[i]} ticks)")
-                continue
-
-            alive_ticks[i] += 1
-
-
-            # Apply hunger effect — drains food bar, then health on empty stomach
-            # Reapply every N ticks to keep it going
-            if tick % HUNGER_DRAIN_EVERY == 0:
+        # Step 3: Apply hunger effect (sequential — Malmo commands)
+        if tick % HUNGER_DRAIN_EVERY == 0:
+            for i in range(NUM_AGENTS):
+                if dead[i] or observations[i] is None:
+                    continue
                 try:
-                    agents[i].sendCommand(f"chat /effect {AGENT_NAMES[i]} 17 5 127 true")  # hunger, 5sec, max level, silent
+                    agents[i].sendCommand(f"chat /effect {AGENT_NAMES[i]} 17 5 127 true")
                 except Exception:
                     pass
 
-            # Track food for stats only — reward is ONLY survival
-            if food_level > prev_food[i]:
-                food_eaten[i] += 1
-            prev_food[i] = food_level
+        # Step 4: Send actions + write debug JSON (sequential)
+        for i in range(NUM_AGENTS):
+            action_idx = results[i]
+            if action_idx is None:
+                continue
 
-            reward = REWARD_ALIVE  # +1 alive. Nothing else. Ever.
-
-            # Agent chooses action (observe → encode → forward → sample)
-            grid = obs.get("view5x5", [])
-            action_idx = brains[i].choose_action(obs, grid, active[i])
-
-            # Save live debug snapshot every ~1 second
-            # Shows EXACTLY what the AI sees — raw IDs, raw floats, embeddings, output probs
-            if tick % 500 == i:
+            # Live JSON
+            if LIVE_JSON_EVERY and obs_count[i] % LIVE_JSON_EVERY == 0:
                 brain = brains[i]
-                ids = brain._ep_id_indices[-1] if brain._ep_id_indices else np.zeros(NUM_ID_INPUTS, dtype=np.int32)
-                net_input = brain._ep_inputs[-1].tolist() if brain._ep_inputs else []
-                probs = brain._ep_probs[-1].tolist() if brain._ep_probs else []
+                ids = brain._last_ids
+                rf = brain._last_raw
+                pr = brain._last_probs.tolist()
+                x465 = getattr(brain, '_last_x', None)
+                # Only the values the AI actually receives (non-zero after masking)
+                INPUT_LABELS = {}
+                for j in range(110):
+                    for d in range(4):
+                        INPUT_LABELS[j * 4 + d] = f"embed_{j}_d{d}"
+                RAW_LABELS = [
+                    "health", "food", "x", "y", "z", "yaw", "pitch",
+                    "s1_ct", "s2_ct", "s3_ct", "s4_ct", "s5_ct",
+                    "s6_ct", "s7_ct", "s8_ct", "s9_ct",
+                    "held_ct", "eating", "moving", "strafing", "turning",
+                    "pitching", "jumping", "crouching", "attacking",
+                    "a1_here", "a1_rx", "a1_rz", "a1_hp",
+                    "a2_here", "a2_rx", "a2_rz", "a2_hp",
+                    "a3_here", "a3_rx", "a3_rz", "a3_hp",
+                    "i1_here", "i1_rx", "i1_rz", "i1_qty",
+                    "i2_here", "i2_rx", "i2_rz", "i2_qty",
+                    "i3_here", "i3_rx", "i3_rz", "i3_qty",
+                    "i4_here", "i4_rx", "i4_rz", "i4_qty",
+                    "i5_here", "i5_rx", "i5_rz", "i5_qty",
+                ]
+                for j in range(len(RAW_LABELS)):
+                    INPUT_LABELS[472 + j] = RAW_LABELS[j]
 
-                # Get raw floats from _encode (re-extract from obs)
-                _, raw_floats = brain._encode(obs, grid, active[i])
+                ai_input = {}
+                if x465 is not None:
+                    for j, v in enumerate(x465):
+                        if abs(v) > 1e-6:
+                            ai_input[INPUT_LABELS.get(j, str(j))] = round(float(v), 4)
 
-                ms_tick = MS_PER_TICK
+                reverse_vocab = {v: k for k, v in brain.block_vocab.items()}
+                held_id = int(ids[109])
                 snapshot = {
-                    "agent": AGENT_NAMES[i],
-                    "episode": episode,
-                    "tick": tick,
-                    "alive_ticks": alive_ticks[i],
-                    "alive_seconds": round(alive_ticks[i] * ms_tick / 1000.0, 1),
-                    "episode_seconds": round(tick * ms_tick / 1000.0, 1),
-
-                    # === WHAT AI SEES: raw IDs (before embedding) ===
-                    "ids": {
-                        "vision_below": [int(ids[j]) for j in range(0, 25)],
-                        "vision_floor": [int(ids[j]) for j in range(25, 50)],
-                        "vision_eye": [int(ids[j]) for j in range(50, 75)],
-                        "vision_above": [int(ids[j]) for j in range(75, 100)],
-                        "hotbar": [int(ids[100+j]) for j in range(9)],
-                        "held": int(ids[109]),
-                    },
-
-                    # === WHAT AI SEES: raw floats (no embedding) ===
-                    "raw": {
-                        "health": float(raw_floats[0]),
-                        "food": float(raw_floats[1]),
-                        "x": round(float(raw_floats[2]), 1),
-                        "y": round(float(raw_floats[3]), 1),
-                        "z": round(float(raw_floats[4]), 1),
-                        "yaw": round(float(raw_floats[5]), 1),
-                        "pitch": round(float(raw_floats[6]), 1),
-                        "hotbar_counts": [int(raw_floats[7+j]) for j in range(9)],
-                        "held_count": int(raw_floats[16]),
-                        "eating": int(raw_floats[17]),
-                        "moving": int(raw_floats[18]),
-                        "strafing": int(raw_floats[19]),
-                        "turning": int(raw_floats[20]),
-                        "pitching": int(raw_floats[21]),
-                        "jumping": int(raw_floats[22]),
-                        "crouching": int(raw_floats[23]),
-                        "attacking": int(raw_floats[24]),
-                    },
-
-                    # === WHAT AI SEES: 465-float network input (embedded + raw) ===
-                    "network_input_465": [round(v, 4) for v in net_input] if net_input else [],
-
-                    # === AI OUTPUT: action probabilities ===
-                    "output": {
-                        "probs": {ACTION_NAMES[j]: round(p, 8)
-                                  for j, p in enumerate(probs) if p > 0.000001},
-                        "chosen": {
-                            "index": action_idx,
-                            "name": ACTION_NAMES[action_idx],
-                            "command": f"{ACTIONS[action_idx][0]} {ACTIONS[action_idx][1]}",
-                        },
-                    },
-
-                    # === MASKS ===
-                    "levels": {
-                        "input": brain.input_level,
-                        "action": brain.action_level,
-                        "active_id_inputs": int(brain.id_mask.sum()),
-                        "active_raw_inputs": int(brain.raw_mask.sum()),
-                        "active_actions": int(brain.action_mask.sum()),
-                    },
-
-                    # === DICTIONARIES (human-readable, separate from AI data) ===
-                    "dict_blocks": {str(v): k for k, v in brain.block_vocab.items()},
-                    "dict_actions": {str(j): ACTION_NAMES[j] for j in range(NUM_ACTIONS)},
+                    "tick": tick, "obs": obs_count[i],
+                    "alive_seconds": round(alive_ticks[i] * MS_PER_TICK / 1000.0, 1),
+                    "input_level": brain.input_level,
+                    "action_level": brain.action_level,
+                    "enabled_actions": int(brain.action_mask.sum()),
+                    "held": reverse_vocab.get(held_id, "EMPTY"),
+                    "eating": int(rf[17]),
+                    "ai_input": ai_input,
+                    "output": {ACTION_NAMES[j]: round(p, 6) for j, p in enumerate(pr) if brain.action_mask[j] > 0},
+                    "chosen": ACTION_NAMES[action_idx],
                 }
-                live_logs[AGENT_NAMES[i]].append(snapshot)
                 debug_path = os.path.join(SAVE_DIR, f"live_{AGENT_NAMES[i]}.json")
-                os.makedirs(SAVE_DIR, exist_ok=True)
-                with open(debug_path, "w") as f:
-                    json.dump(live_logs[AGENT_NAMES[i]], f, indent=2)
+                with open(debug_path, "a") as f:
+                    f.write(json.dumps(snapshot) + "\n")
 
-            # Probs-only log every 1000 ticks (independent of live snapshot)
-            if tick % 1000 == 0:
+            # Probs log
+            if PROBS_JSON_EVERY and obs_count[i] % PROBS_JSON_EVERY == 0:
                 brain = brains[i]
-                p_raw = brain._ep_probs[-1].tolist() if brain._ep_probs else []
+                pr = brain._last_probs.tolist()
+                rf = brain._last_raw
+                ids = brain._last_ids
+                prob_entry = {
+                    "tick": tick, "obs": obs_count[i],
+                    "input_level": brain.input_level,
+                    "action_level": brain.action_level,
+                    "ids": [int(v) for v in ids],
+                    "raw": [round(float(v), 2) for v in rf],
+                    "probs": {ACTION_NAMES[j]: round(p, 6) for j, p in enumerate(pr) if brain.action_mask[j] > 0},
+                    "chosen": ACTION_NAMES[action_idx],
+                }
+                prob_logs[AGENT_NAMES[i]].append(prob_entry)
+                prob_path = os.path.join(SAVE_DIR, f"probs_{AGENT_NAMES[i]}.json")
+                with open(prob_path, "w") as f:
+                    json.dump(prob_logs[AGENT_NAMES[i]], f, indent=2)
 
-                if p_raw:
-                    # Show raw floats (unmasked) — what the AI actually has
-                    AN = ACTION_NAMES
-                    p_ids = brain._ep_id_indices[-1] if brain._ep_id_indices else []
-                    _, p_raw_floats = brain._encode(obs, grid, active[i])
-
-                    # Build readable active inputs
-                    RAW_NAMES = [
-                        "health", "food", "x", "y", "z", "yaw", "pitch",
-                        "slot1_ct", "slot2_ct", "slot3_ct", "slot4_ct", "slot5_ct",
-                        "slot6_ct", "slot7_ct", "slot8_ct", "slot9_ct",
-                        "held_ct", "eating", "moving", "strafing", "turning",
-                        "pitching", "jumping", "crouching", "attacking",
-                    ]
-                    active_raw = {RAW_NAMES[j]: round(float(p_raw_floats[j]), 1)
-                                  for j in range(len(RAW_NAMES))
-                                  if brain.raw_mask[j] > 0}
-                    active_ids = {}
-                    if brain.id_mask[109] > 0 and len(p_ids) > 109:
-                        active_ids["held_id"] = int(p_ids[109])
-                    for s in range(9):
-                        if brain.id_mask[100 + s] > 0 and len(p_ids) > 100 + s:
-                            active_ids[f"slot{s+1}_id"] = int(p_ids[100 + s])
-
-                    prob_entry = {
-                        "tick": tick,
-                        "alive_seconds": round(alive_ticks[i] * MS_PER_TICK / 1000.0, 1),
-                        "inputs": {**active_raw, **active_ids},
-                        "probs": {AN[j]: round(p, 8)
-                                  for j, p in enumerate(p_raw) if p > 0.000001},
-                        "chosen": AN[action_idx],
-                    }
-                    prob_logs[AGENT_NAMES[i]].append(prob_entry)
-                    prob_path = os.path.join(SAVE_DIR, f"probs_{AGENT_NAMES[i]}.json")
-                    os.makedirs(SAVE_DIR, exist_ok=True)
-                    with open(prob_path, "w") as f:
-                        json.dump(prob_logs[AGENT_NAMES[i]], f, indent=2)
-
-            # Execute action and track active continuous commands
+            # Execute action
             cmd, val = ACTIONS[action_idx]
             try:
                 if cmd.startswith("hotbar.") or cmd == "discardCurrentItem":
@@ -379,23 +381,23 @@ def run_episode(agents: list, brains: list, episode: int) -> dict:
                     agents[i].sendCommand(f"{cmd} 1")
                     agents[i].sendCommand(f"{cmd} 0")
                 elif cmd == "move" and val == 0.0:
-                    # Stand still: only stop movement, don't cancel eating
+                    # Stand still: stop movement, don't cancel eating
                     agents[i].sendCommand("move 0")
                     active[i]["move"] = 0
-                else:
-                    # Continuous: send and track
+                elif cmd in ("use", "crouch"):
+                    # Continuous: eat, crouch, turn stay held until changed
                     agents[i].sendCommand(f"{cmd} {val}")
                     if cmd in active[i]:
                         active[i][cmd] = 1 if val != 0 else 0
+                else:
+                    # Pulse: everything else fires once then resets
+                    # move, strafe, turn, pitch, jump, attack
+                    agents[i].sendCommand(f"{cmd} {val}")
+                    agents[i].sendCommand(f"{cmd} 0")
+                    if cmd in active[i]:
+                        active[i][cmd] = 0
             except Exception:
                 pass
-
-            brains[i].record_reward(reward)
-
-        if not any_running:
-            break
-
-        time.sleep(MS_PER_TICK / GAME_SPEED / 1000.0)
 
     # End of episode — compute stats, update brains, record
     ms_per_tick = MS_PER_TICK
@@ -439,6 +441,12 @@ FOOD_ITEMS = [
     "minecraft:pumpkin_pie", "minecraft:golden_apple",
     "minecraft:mushroom_stew", "minecraft:beetroot_soup",
 ]
+POISON_ITEMS = [
+    "minecraft:spider_eye",         # gives poison effect
+    "minecraft:rotten_flesh",       # gives hunger effect (food drains faster)
+    "minecraft:poisonous_potato",   # 60% chance of poison
+    "minecraft:raw_chicken",        # 30% chance of hunger effect
+]
 UNEATABLE_ITEMS = [
     "minecraft:stone", "minecraft:stick", "minecraft:cobblestone", "minecraft:dirt",
     "minecraft:iron_ingot", "minecraft:gold_ingot", "minecraft:diamond", "minecraft:coal",
@@ -456,10 +464,10 @@ def main():
     agent_thinks_per_sec = 1000 // MS_PER_TICK
     input_desc = {
         1: "health + food + eating flag (3)",
-        2: "health + food + eating + held item ID/count (5)",
-        3: "health + food + eating + held + hotbar IDs/counts (23)",
-        4: "vision(100) + all above + movement flags (130)",
-        5: "ALL 135 inputs",
+        2: "health + food + eating + held item ID/count (8)",
+        3: "health + food + eating + held + hotbar IDs/counts (53)",
+        4: "vision(100) + all above + movement flags (460)",
+        5: "ALL 529: + entities(3 agents + 5 items) + position",
     }
     action_desc = {
         1: "eat + still (2)",
@@ -481,6 +489,9 @@ def main():
 
     # Create brains — each agent gets its own
     # Input and action masks are separate — can be at different levels
+    # Apply context layer learning rate scale before creating brains
+    brainstem_module.CONTEXT_LR_SCALE = CONTEXT_LR_SCALE
+
     brains = []
     for i in range(NUM_AGENTS):
         name = AGENT_NAMES[i]
@@ -491,7 +502,7 @@ def main():
         # Auto-load from checkpoint if it exists
         load_dir = args.load_dir or args.load or SAVE_DIR
         agent_dir = os.path.join(load_dir, name)
-        if os.path.exists(os.path.join(agent_dir, "weights.npz")):
+        if os.path.exists(os.path.join(agent_dir, "weights.pt")):
             brain.load(agent_dir)
             brain.set_levels(args.input_level, args.action_level)
             print(f"  Loaded {name} (ep={brain.episodes_trained}, vocab={brain.next_block_id})")
@@ -511,12 +522,19 @@ def main():
         xml = mission_xml(time_limit_ms=EPISODE_TIME_MS,
                           ms_per_tick=max(1, MS_PER_TICK // GAME_SPEED))
 
-        # Connect
-        agents = connect_agents(ports, xml)
+        # Connect (retry on timeout — Malmo sometimes needs a kick)
+        agents = None
+        for retry in range(3):
+            agents = connect_agents(ports, xml)
+            if agents is not None:
+                break
+            print(f"  Retry {retry + 1}/3 — regenerating mission...")
+            time.sleep(5)
+            xml = mission_xml(time_limit_ms=EPISODE_TIME_MS,
+                              ms_per_tick=max(1, MS_PER_TICK // GAME_SPEED))
         if agents is None:
-            print("Failed to connect. Make sure 4 Malmo clients are running.")
-            print("Run: run\\launch_4_clients.bat")
-            return
+            print("  Failed 3 times. Skipping episode.")
+            continue
 
         # Setup: hard difficulty (starvation kills), fill hotbar with food
         time.sleep(0.5)
@@ -542,11 +560,13 @@ def main():
 
                 num_slots = random.randint(*HOTBAR_SLOTS_FILLED)
                 num_uneatable = min(random.randint(*HOTBAR_UNEATABLE), num_slots)
-                num_food = num_slots - num_uneatable
+                num_poison = min(random.randint(*HOTBAR_POISON), num_slots - num_uneatable)
+                num_food = num_slots - num_uneatable - num_poison
 
                 food_picks = random.sample(FOOD_ITEMS, min(num_food, len(FOOD_ITEMS)))
                 junk_picks = random.sample(UNEATABLE_ITEMS, min(num_uneatable, len(UNEATABLE_ITEMS)))
-                items = food_picks + junk_picks
+                poison_picks = random.sample(POISON_ITEMS, min(num_poison, len(POISON_ITEMS)))
+                items = food_picks + junk_picks + poison_picks
                 random.shuffle(items)
 
                 # Place items in random slot positions using /replaceitem

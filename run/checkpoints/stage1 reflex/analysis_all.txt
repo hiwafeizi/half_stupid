@@ -1,0 +1,512 @@
+
+======================================================================
+  Adam — 1261 ep, 56 vocab
+  Input: 5, Action: 6
+======================================================================
+
+  Embed dist food<->uneat: 7.88 | EMPTY norm: 15.92
+  SEPARATED
+
+  --- W1: INPUT -> HIDDEN (strongest connections) ---
+    n 0 (b=-0.93): vis=235.9 hb=48.0 held=2.4 | food=-0.68, health=-0.55, s8_ct=-0.55
+    n 1 (b=-1.69): vis=204.2 hb=21.8 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n 2 (b=-1.46): vis=507.0 hb=47.2 held=8.4 | health=+3.46, a3_hp=+3.31, a3_here=+3.02
+    n 3 (b=+4.72): vis=598.7 hb=144.0 held=8.9 | health=-3.63, a3_hp=-3.49, food=-3.29
+    n 4 (b=+1.51): vis=712.9 hb=87.5 held=8.4 | health=-3.61, a3_hp=-3.44, food=-3.27
+    n 5 (b=+4.41): vis=665.4 hb=128.3 held=8.8 | health=-3.62, a3_hp=-3.47, food=-3.26
+    n 6 (b=+4.55): vis=581.4 hb=161.9 held=9.0 | health=-3.63, a3_hp=-3.50, food=-3.29
+    n 7 (b=+4.91): vis=605.5 hb=159.9 held=8.7 | health=-3.63, a3_hp=-3.50, food=-3.29
+    n 8 (b=-1.26): vis=399.6 hb=35.3 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n 9 (b=-0.97): vis=506.1 hb=31.5 held=9.0 | health=+3.61, a3_hp=+3.45, a3_here=+3.18
+    n10 (b=-1.61): vis=449.3 hb=33.4 held=1.3 | i4_rx=-0.34, health=-0.33, s2_ct=-0.31
+    n11 (b=+4.42): vis=602.2 hb=163.6 held=8.8 | health=-3.64, a3_hp=-3.50, food=-3.28
+    n12 (b=-1.67): vis=304.1 hb=28.8 held=0.7 | z=-0.16, yaw=+0.16, s8_ct=-0.16
+    n13 (b=+0.54): vis=180.9 hb=11.4 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n14 (b=+3.10): vis=620.8 hb=133.1 held=8.9 | health=-3.63, a3_hp=-3.49, food=-3.28
+    n15 (b=-0.12): vis=474.5 hb=26.8 held=0.5 | s4_ct=-0.64, s9_ct=-0.64, i2_rx=+0.47
+    n16 (b=+4.05): vis=555.6 hb=100.8 held=9.0 | health=-3.62, a3_hp=-3.48, food=-3.22
+    n17 (b=+1.09): vis=464.6 hb=53.6 held=8.2 | health=-3.50, a3_hp=-3.30, a3_here=-3.13
+    n18 (b=-0.20): vis=661.0 hb=25.3 held=0.8 | s2_ct=-0.61, s9_ct=-0.53, s4_ct=-0.52
+    n19 (b=+0.23): vis=673.3 hb=73.1 held=7.8 | health=-3.51, a3_hp=-3.35, food=-3.00
+    n20 (b=-1.26): vis=285.0 hb=33.4 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n21 (b=+6.27): vis=600.8 hb=163.0 held=8.9 | health=-3.63, a3_hp=-3.50, food=-3.29
+    n22 (b=+0.52): vis=507.9 hb=74.3 held=8.2 | health=-3.46, a3_hp=-3.31, food=-3.04
+    n23 (b=-0.29): vis=31.9 hb=14.4 held=0.7 | i1_rx=+0.29, health=-0.28, a3_rx=-0.25
+    n24 (b=-0.89): vis=71.4 hb=16.7 held=0.7 | pitch=+0.18, s8_ct=-0.18, s9_ct=-0.18
+    n25 (b=+3.06): vis=571.1 hb=151.2 held=8.9 | health=-3.63, a3_hp=-3.49, food=-3.28
+    n26 (b=-1.29): vis=200.1 hb=26.7 held=0.7 | s3_ct=-0.18, held_ct=-0.18, a1_rx=-0.18
+    n27 (b=-1.54): vis=208.5 hb=28.0 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n28 (b=-0.52): vis=497.9 hb=21.4 held=11.3 | health=+3.83, a3_hp=+3.66, food=+3.43
+    n29 (b=+5.10): vis=615.2 hb=167.0 held=8.8 | health=-3.64, a3_hp=-3.50, food=-3.28
+    n30 (b=+3.88): vis=574.3 hb=160.2 held=8.9 | health=-3.63, a3_hp=-3.50, food=-3.29
+    n31 (b=+1.14): vis=608.3 hb=82.4 held=9.2 | health=-3.58, a3_hp=-3.42, food=-3.17
+
+  --- W2: HIDDEN -> ACTIONS (top 5 per action) ---
+    W_forward       (b=+1.20): n17=+5.39, n9=+4.79, n2=+3.59, n26=+2.69, n22=+2.55
+    S_backward      (b=+0.45): n2=+5.00, n9=+4.87, n20=+1.93, n4=+1.65, n14=+1.56
+    A_strafe_left   (b=+1.07): n2=+6.88, n4=+6.47, n9=+5.66, n31=+5.39, n19=+4.34
+    D_strafe_right  (b=+2.38): n31=+8.55, n4=+7.03, n9=+6.17, n2=+6.08, n19=+4.68
+    turn_left       (b=+1.56): n9=+6.14, n15=+3.80, n27=+3.21, n4=+2.79, n17=+2.67
+    turn_right      (b=+4.71): n17=+8.44, n5=+6.56, n4=+6.44, n14=+6.33, n25=+6.31
+    look_up         (b=+2.97): n9=+7.50, n2=+5.65, n31=+5.23, n14=+4.92, n22=+4.90
+    look_down       (b=+1.15): n9=+3.54, n2=+2.85, n27=+2.85, n5=+2.68, n25=+2.29
+    jump            (b=+0.01): n9=+4.92, n20=+4.23, n15=+2.64, n28=+1.94, n2=+1.93
+    crouch          (b=+0.81): n9=+6.03, n2=+3.79, n31=+3.61, n20=+3.29, n28=+2.40
+    use_eat         (b=+0.56): n21=+15.91, n6=+15.55, n3=+15.48, n29=+15.09, n7=+15.01
+    attack          (b=+1.38): n9=+6.39, n31=+2.69, n16=+2.43, n3=+2.40, n25=+2.29
+    Q_throw         (b=+2.84): n9=+6.33, n2=+6.00, n16=+5.59, n30=+5.57, n6=+5.53
+    hotbar_1        (b=+2.45): n4=+7.71, n19=+7.32, n9=+6.71, n3=+5.16, n22=+4.74
+    hotbar_2        (b=+1.71): n9=+5.68, n2=+5.31, n0=+3.67, n28=+3.50, n26=+3.49
+    hotbar_3        (b=+2.12): n4=+8.78, n2=+7.62, n17=+7.62, n31=+6.57, n7=+4.51
+    hotbar_4        (b=+0.90): n31=+5.37, n2=+5.31, n9=+4.64, n4=+2.89, n28=+2.35
+    hotbar_5        (b=+1.38): n9=+5.54, n19=+5.30, n4=+4.88, n31=+4.19, n28=+3.91
+    hotbar_6        (b=+1.25): n9=+5.58, n2=+4.91, n19=+3.87, n28=+3.71, n11=-2.90
+    hotbar_7        (b=+1.88): n14=+8.07, n22=+6.79, n2=+6.35, n16=+5.27, n7=+4.87
+    hotbar_8        (b=+2.51): n11=+7.67, n29=+7.31, n9=+6.17, n2=+5.76, n14=+5.44
+    hotbar_9        (b=+0.11): n22=+5.04, n2=+4.20, n31=+3.17, n9=+3.14, n26=+3.10
+    stand_still     (b=+1.16): n2=+5.96, n9=+5.19, n31=+3.04, n4=+2.90, n5=+2.49
+
+  --- END-TO-END: input group -> action influence ---
+    W_forward      : vis=17204 hb=2715 held=168 | health=-70.5, a3_hp=-66.8, food=-63.4, a3_here=-60.8
+    S_backward     : vis=11296 hb=1735 held=38 | health=-17.0, food=-16.7, a3_hp=-15.5, a3_here=-13.9
+    A_strafe_left  : vis=17963 hb=2012 held=112 | health=-50.1, food=-44.6, a3_hp=-44.5, a3_here=-39.4
+    D_strafe_right : vis=22047 hb=3235 held=193 | health=-82.2, a3_hp=-75.4, food=-73.9, a3_here=-67.1
+    turn_left      : vis=12602 hb=1923 held=64 | health=-30.5, a3_hp=-28.4, food=-27.9, a3_here=-25.4
+    turn_right     : vis=52958 hb=11719 held=797 | health=-331.5, a3_hp=-315.1, food=-296.6, a3_here=-286.2
+    look_up        : vis=32481 hb=6757 held=369 | health=-153.0, a3_hp=-144.7, food=-138.6, a3_here=-130.4
+    look_down      : vis=15938 hb=3387 held=165 | health=-69.8, a3_hp=-66.7, food=-63.6, a3_here=-60.2
+    jump           : vis=6920 hb=854 held=6 | food=-5.0, health=-4.9, a3_hp=-3.5, s9_ct=-3.4
+    crouch         : vis=5793 hb=518 held=98 | health=+38.1, a3_hp=+36.1, a3_here=+33.3, food=+33.2
+    use_eat        : vis=101842 hb=25663 held=1798 | health=-735.5, a3_hp=-703.8, food=-659.2, a3_here=-639.6
+    attack         : vis=19541 hb=3936 held=186 | health=-79.1, a3_hp=-75.4, food=-71.8, a3_here=-68.0
+    Q_throw        : vis=43084 hb=9264 held=576 | health=-238.5, a3_hp=-225.7, food=-214.7, a3_here=-204.4
+    hotbar_1       : vis=29995 hb=5296 held=356 | health=-150.3, a3_hp=-139.9, food=-134.6, a3_here=-126.2
+    hotbar_2       : vis=7586 hb=2822 held=214 | health=+88.1, a3_hp=+84.6, food=+77.9, a3_here=+76.4
+    hotbar_3       : vis=25049 hb=3374 held=273 | health=-115.1, a3_hp=-106.9, food=-102.8, a3_here=-97.0
+    hotbar_4       : vis=7266 hb=1018 held=104 | health=+41.2, a3_hp=+40.9, a3_here=+37.7, food=+36.0
+    hotbar_5       : vis=13900 hb=1122 held=43 | health=-23.4, food=-20.4, a3_hp=-19.9, a3_here=-17.1
+    hotbar_6       : vis=7769 hb=1458 held=135 | health=+50.6, a3_hp=+49.1, food=+45.6, a3_here=+45.4
+    hotbar_7       : vis=37320 hb=7672 held=490 | health=-201.6, a3_hp=-191.4, food=-182.0, a3_here=-173.8
+    hotbar_8       : vis=32019 hb=6654 held=377 | health=-157.2, a3_hp=-148.5, food=-142.1, a3_here=-134.5
+    hotbar_9       : vis=5572 hb=2022 held=88 | a3_hp=+36.2, health=+35.4, a3_here=+32.9, food=+32.2
+    stand_still    : vis=8871 hb=387 held=22 | a3_hp=+7.6, health=+7.6, a3_here=+7.2, a2_hp=+7.0
+
+  --- EMBEDDING CLUSTERS ---
+    FOOD  apple               : [-2.55, +3.53, -0.85, +4.32]
+    FOOD  baked_potato        : [+1.57, -0.91, -0.88, -0.32]
+    FOOD  beetroot_soup       : [-3.84, +1.98, -3.84, +2.18]
+    FOOD  bread               : [-3.78, +4.42, -2.67, +3.94]
+    FOOD  carrot              : [-4.17, +3.26, -1.81, +4.84]
+    FOOD  cooked_beef         : [-6.73, +3.01, -4.55, -0.04]
+    FOOD  cooked_chicken      : [-1.58, +2.97, -1.41, +2.05]
+    FOOD  cooked_fish         : [-4.10, +4.50, -3.80, +5.93]
+    FOOD  cooked_mutton       : [-2.92, +1.75, -2.83, +3.33]
+    FOOD  cooked_porkchop     : [-2.01, +2.52, -3.23, -0.21]
+    FOOD  cooked_rabbit       : [-2.24, +1.15, -1.21, +1.82]
+    FOOD  cookie              : [-3.50, +2.76, -6.55, +4.03]
+    FOOD  golden_apple        : [-2.28, +2.58, -1.79, +3.82]
+    FOOD  melon               : [-0.41, +0.78, -1.78, +0.18]
+    FOOD  mushroom_stew       : [-3.62, +4.17, -2.19, +2.81]
+    FOOD  pumpkin_pie         : [-0.41, -2.79, -1.06, -1.07]
+    JUNK  arrow               : [+3.65, -3.35, +4.67, -5.35]
+    JUNK  bone                : [+1.35, -2.10, +1.70, -2.78]
+    JUNK  bowl                : [+7.28, -5.48, +5.18, -5.92]
+    JUNK  coal                : [+1.54, -2.00, +1.24, -0.28]
+    JUNK  cobblestone         : [-0.29, +3.65, -1.76, +3.61]
+    JUNK  diamond             : [+1.97, -0.82, -0.65, -1.73]
+    JUNK  dirt                : [+4.52, +1.18, -0.23, +0.36]
+    JUNK  feather             : [+1.82, -4.17, +2.18, -4.05]
+    JUNK  gold_ingot          : [+3.29, -2.96, +3.16, -6.52]
+    JUNK  iron_ingot          : [+2.78, -1.69, +3.87, -4.71]
+    JUNK  leather             : [-0.03, +0.04, -1.94, +2.41]
+    JUNK  paper               : [+0.81, -0.89, -3.23, -0.98]
+    JUNK  stick               : [+1.52, -0.28, +2.13, -0.35]
+    JUNK  stone               : [+2.99, -2.39, +2.15, -1.80]
+    JUNK  string              : [-3.18, +0.75, -0.73, +3.51]
+    JUNK  wooden_pickaxe      : [+2.29, -0.36, +1.34, -1.90]
+    JUNK  wooden_sword        : [+0.14, -1.10, -0.33, -0.68]
+    EMPTY                     : [+6.59, -9.06, +7.57, -8.41]
+
+======================================================================
+  Eve — 1258 ep, 56 vocab
+  Input: 5, Action: 6
+======================================================================
+
+  Embed dist food<->uneat: 6.17 | EMPTY norm: 17.27
+  SEPARATED
+
+  --- W1: INPUT -> HIDDEN (strongest connections) ---
+    n 0 (b=-1.33): vis=367.4 hb=23.6 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n 1 (b=+4.00): vis=657.3 hb=107.1 held=5.4 | health=-3.33, food=-3.03, a3_hp=-2.95
+    n 2 (b=-0.68): vis=92.7 hb=20.8 held=3.2 | health=+2.62, food=+2.49, a3_hp=+2.14
+    n 3 (b=+5.57): vis=555.3 hb=159.7 held=6.1 | health=-3.34, a3_hp=-3.09, food=-3.05
+    n 4 (b=-2.27): vis=339.3 hb=32.4 held=5.6 | health=+2.97, food=+2.64, a3_hp=+2.39
+    n 5 (b=-2.00): vis=366.1 hb=27.8 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n 6 (b=+6.58): vis=509.9 hb=165.3 held=5.6 | health=-3.33, food=-3.12, a3_hp=-3.01
+    n 7 (b=+3.26): vis=470.4 hb=112.9 held=6.2 | health=-3.36, food=-3.09, a3_hp=-3.01
+    n 8 (b=-1.84): vis=188.3 hb=39.8 held=2.7 | held_ct=+0.74, health=+0.71, s3_ct=+0.66
+    n 9 (b=-0.54): vis=327.6 hb=24.8 held=0.5 | s7_ct=-0.40, s8_ct=-0.39, food=-0.39
+    n10 (b=+5.88): vis=438.4 hb=116.4 held=5.5 | health=-3.34, food=-3.05, a3_hp=-2.95
+    n11 (b=+6.34): vis=522.6 hb=173.3 held=5.9 | health=-3.34, food=-3.12, a3_hp=-3.03
+    n12 (b=-2.11): vis=288.2 hb=29.1 held=0.7 | s9_ct=-0.19, a3_rx=+0.19, x=-0.18
+    n13 (b=+4.07): vis=501.7 hb=120.5 held=5.8 | health=-3.33, food=-3.10, a3_hp=-3.00
+    n14 (b=+4.57): vis=452.6 hb=154.6 held=5.7 | health=-3.30, food=-2.98, a3_hp=-2.96
+    n15 (b=-0.21): vis=180.4 hb=13.8 held=0.6 | i3_rx=+0.15, x=-0.15, i1_rx=-0.15
+    n16 (b=+3.59): vis=550.4 hb=116.8 held=6.1 | health=-3.31, food=-3.03, a3_hp=-2.99
+    n17 (b=-0.72): vis=369.2 hb=45.6 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n18 (b=+0.43): vis=211.4 hb=19.4 held=6.8 | health=+2.98, a2_hp=+2.59, food=+2.46
+    n19 (b=+5.08): vis=526.7 hb=143.3 held=5.6 | health=-3.35, food=-3.06, a3_hp=-2.99
+    n20 (b=-0.68): vis=700.5 hb=36.7 held=5.4 | health=+3.17, food=+2.89, a3_hp=+2.66
+    n21 (b=+8.17): vis=528.5 hb=163.5 held=5.7 | health=-3.34, food=-3.11, a3_hp=-3.00
+    n22 (b=+5.34): vis=464.1 hb=161.5 held=5.8 | health=-3.31, food=-3.00, a3_hp=-2.96
+    n23 (b=+4.54): vis=530.3 hb=142.2 held=5.7 | health=-3.33, food=-3.03, a3_hp=-2.98
+    n24 (b=-1.74): vis=284.3 hb=22.4 held=0.2 | a2_rz=-0.18, a1_rx=+0.17, a3_rx=+0.17
+    n25 (b=+4.29): vis=483.2 hb=159.4 held=5.8 | health=-3.33, food=-3.12, a3_hp=-3.00
+    n26 (b=+2.73): vis=495.4 hb=121.0 held=5.8 | health=-3.33, food=-3.05, a3_hp=-3.00
+    n27 (b=-0.76): vis=265.3 hb=29.6 held=0.6 | i2_qty=-0.15, health=-0.15, yaw=+0.15
+    n28 (b=-0.80): vis=326.8 hb=27.6 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n29 (b=+6.87): vis=533.1 hb=177.2 held=5.9 | health=-3.33, food=-3.11, a3_hp=-3.04
+    n30 (b=+5.77): vis=477.1 hb=162.1 held=5.6 | health=-3.33, food=-3.12, a3_hp=-2.99
+    n31 (b=-1.10): vis=222.6 hb=39.5 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+
+  --- W2: HIDDEN -> ACTIONS (top 5 per action) ---
+    W_forward       (b=+4.18): n7=+7.54, n16=+7.37, n26=+7.26, n1=+7.24, n23=+7.23
+    S_backward      (b=+3.89): n1=+8.20, n7=+8.11, n16=+7.82, n26=+7.75, n19=+7.40
+    A_strafe_left   (b=+4.70): n16=+7.48, n20=+7.10, n19=+7.05, n7=+7.02, n26=+6.96
+    D_strafe_right  (b=+6.28): n20=+8.03, n4=+7.62, n30=+4.81, n25=+4.79, n11=+4.66
+    turn_left       (b=+3.85): n20=+6.80, n4=+5.73, n1=+3.60, n18=+3.22, n16=+3.22
+    turn_right      (b=+3.23): n20=+8.38, n4=+6.30, n3=+3.74, n11=+3.35, n1=+3.30
+    look_up         (b=+0.50): n20=+9.23, n4=+5.73, n8=+2.95, n5=+2.60, n2=+1.53
+    look_down       (b=-0.23): n4=+10.07, n20=+5.99, n1=+4.50, n7=+4.46, n13=+4.33
+    jump            (b=+4.72): n4=+8.51, n20=+4.89, n10=+3.09, n26=+2.89, n18=+2.86
+    crouch          (b=-0.28): n20=+5.58, n8=+3.69, n4=+3.09, n28=+2.71, n24=+2.29
+    use_eat         (b=+1.58): n21=+16.22, n6=+15.90, n29=+15.71, n11=+15.02, n30=+14.88
+    attack          (b=+1.45): n20=+8.88, n4=+4.37, n18=+3.12, n16=+3.03, n26=+2.95
+    Q_throw         (b=-0.88): n20=+5.82, n5=+3.16, n24=+2.86, n28=+2.66, n29=-2.58
+    hotbar_1        (b=+1.26): n20=+7.88, n4=+6.89, n7=+4.51, n1=+2.69, n16=+2.62
+    hotbar_2        (b=+0.68): n20=+8.98, n4=+5.82, n1=+4.81, n19=+3.59, n23=+3.56
+    hotbar_3        (b=+1.99): n20=+8.97, n1=+6.64, n4=+4.96, n26=+2.95, n28=+2.52
+    hotbar_4        (b=+1.23): n20=+8.93, n4=+4.72, n3=+2.65, n21=-2.47, n18=+1.99
+    hotbar_5        (b=+1.20): n4=+8.17, n20=+6.49, n6=-3.61, n29=-3.34, n3=-2.86
+    hotbar_6        (b=+0.87): n20=+8.69, n4=+6.77, n1=+5.64, n14=+5.61, n23=+5.16
+    hotbar_7        (b=+1.14): n20=+8.59, n7=+6.39, n4=+5.32, n26=+4.45, n16=+3.01
+    hotbar_8        (b=-0.12): n14=+7.71, n23=+6.14, n16=+6.05, n20=+5.55, n3=+5.18
+    hotbar_9        (b=+1.24): n14=+13.52, n16=+12.52, n23=+12.19, n22=+12.08, n3=+11.77
+    stand_still     (b=+1.50): n8=+4.94, n6=-3.82, n29=-3.47, n4=+3.46, n21=-3.39
+
+  --- END-TO-END: input group -> action influence ---
+    W_forward      : vis=48784 hb=14063 held=499 | health=-292.4, food=-271.4, a3_hp=-266.8, a2_hp=-243.5
+    S_backward     : vis=54853 hb=16137 held=577 | health=-338.8, food=-314.5, a3_hp=-309.0, a2_hp=-282.0
+    A_strafe_left  : vis=53278 hb=15841 held=574 | health=-333.5, food=-309.1, a3_hp=-303.5, a2_hp=-278.1
+    D_strafe_right : vis=36467 hb=10804 held=329 | health=-195.9, food=-183.1, a3_hp=-181.3, a2_hp=-164.5
+    turn_left      : vis=22596 hb=6197 held=154 | health=-93.1, a3_hp=-88.3, food=-87.5, a2_hp=-79.4
+    turn_right     : vis=24429 hb=6858 held=174 | health=-104.0, a3_hp=-98.0, food=-97.6, a2_hp=-88.3
+    look_up        : vis=10226 hb=2200 held=185 | health=+104.0, food=+94.1, a3_hp=+89.2, a2_hp=+83.0
+    look_down      : vis=28470 hb=7894 held=215 | health=-129.8, a3_hp=-121.7, food=-121.7, a2_hp=-109.9
+    jump           : vis=20756 hb=6084 held=149 | health=-91.8, a3_hp=-87.4, food=-86.8, a2_hp=-78.8
+    crouch         : vis=11123 hb=2830 held=171 | health=+96.2, food=+87.1, a3_hp=+83.4, a2_hp=+77.4
+    use_eat        : vis=107745 hb=33342 held=1408 | health=-812.3, food=-748.3, a3_hp=-727.9, a2_hp=-669.7
+    attack         : vis=18336 hb=4729 held=95 | health=-58.4, a3_hp=-57.0, food=-55.5, a2_hp=-50.5
+    Q_throw        : vis=13900 hb=3791 held=198 | health=+112.1, food=+102.5, a3_hp=+98.3, a2_hp=+91.2
+    hotbar_1       : vis=11164 hb=1604 held=25 | health=+11.2, a3_here=+9.5, food=+8.6, a2_here=+6.9
+    hotbar_2       : vis=17993 hb=4028 held=73 | health=-46.5, a3_hp=-46.0, food=-43.9, a2_hp=-40.8
+    hotbar_3       : vis=11036 hb=732 held=43 | health=+20.7, food=+18.3, a3_here=+17.4, a2_hp=+15.8
+    hotbar_4       : vis=8920 hb=1675 held=156 | health=+88.0, food=+80.2, a3_hp=+74.9, a2_hp=+70.5
+    hotbar_5       : vis=12965 hb=3473 held=218 | health=+122.6, food=+111.5, a3_hp=+105.6, a2_hp=+98.0
+    hotbar_6       : vis=31636 hb=8866 held=263 | health=-154.3, a3_hp=-142.9, food=-142.7, a2_hp=-130.2
+    hotbar_7       : vis=16515 hb=3459 held=50 | a3_hp=-33.1, health=-31.7, food=-30.9, a2_hp=-28.2
+    hotbar_8       : vis=26405 hb=8157 held=263 | health=-153.2, food=-142.3, a3_hp=-141.2, a2_hp=-129.3
+    hotbar_9       : vis=61997 hb=18072 held=667 | health=-386.1, food=-355.2, a3_hp=-350.9, a2_hp=-321.8
+    stand_still    : vis=21604 hb=6546 held=306 | health=+171.9, food=+156.2, a3_hp=+151.5, a2_hp=+140.4
+
+  --- EMBEDDING CLUSTERS ---
+    FOOD  apple               : [-1.52, +2.00, +0.64, +2.78]
+    FOOD  baked_potato        : [+2.83, -2.54, +0.31, -2.08]
+    FOOD  beetroot_soup       : [-0.92, +0.56, -1.86, +0.29]
+    FOOD  bread               : [+0.83, -0.20, -0.03, -0.96]
+    FOOD  carrot              : [-2.76, +2.00, +0.27, +3.48]
+    FOOD  cooked_beef         : [-4.97, +1.93, -3.51, +0.19]
+    FOOD  cooked_chicken      : [+1.38, +0.36, +1.58, -0.53]
+    FOOD  cooked_fish         : [-4.31, +4.87, -4.08, +6.27]
+    FOOD  cooked_mutton       : [-0.66, -1.30, -0.28, -0.28]
+    FOOD  cooked_porkchop     : [+1.55, -1.47, +1.78, -4.03]
+    FOOD  cooked_rabbit       : [-2.29, +0.51, +0.00, +0.46]
+    FOOD  cookie              : [+0.09, +1.39, -3.58, +2.35]
+    FOOD  golden_apple        : [-3.77, +1.47, -2.92, +2.08]
+    FOOD  melon               : [+0.54, +0.33, -3.88, +0.60]
+    FOOD  mushroom_stew       : [-3.80, +4.50, -2.44, +3.28]
+    FOOD  pumpkin_pie         : [-0.67, -2.21, -2.67, -0.08]
+    JUNK  arrow               : [+3.94, +0.77, +1.06, -0.73]
+    JUNK  bone                : [+2.14, -0.51, +3.41, -3.79]
+    JUNK  bowl                : [+5.81, -3.36, +4.03, -4.22]
+    JUNK  coal                : [+2.69, -0.93, +1.81, +1.26]
+    JUNK  cobblestone         : [+0.08, -0.61, +0.23, -0.01]
+    JUNK  diamond             : [+4.29, -1.53, -0.18, -0.63]
+    JUNK  dirt                : [+2.54, +1.51, +1.49, -1.07]
+    JUNK  feather             : [+3.81, -2.70, +2.40, -0.43]
+    JUNK  gold_ingot          : [+5.22, -5.38, +5.79, -3.58]
+    JUNK  iron_ingot          : [+1.59, -1.51, +3.51, -3.29]
+    JUNK  leather             : [-0.76, +1.23, -1.38, +0.13]
+    JUNK  paper               : [+2.74, -4.97, +2.61, -5.09]
+    JUNK  stick               : [+2.08, -3.80, +2.60, -0.34]
+    JUNK  stone               : [-1.40, +2.95, -2.09, +2.67]
+    JUNK  string              : [+5.48, -4.07, +2.36, -3.05]
+    JUNK  wooden_pickaxe      : [+4.35, -2.97, +4.26, -5.61]
+    JUNK  wooden_sword        : [+2.45, -2.25, +1.14, -0.44]
+    EMPTY                     : [+7.36, -9.43, +8.56, -9.05]
+
+======================================================================
+  Cain — 1261 ep, 57 vocab
+  Input: 5, Action: 6
+======================================================================
+
+  Embed dist food<->uneat: 10.08 | EMPTY norm: 12.55
+  SEPARATED
+
+  --- W1: INPUT -> HIDDEN (strongest connections) ---
+    n 0 (b=-0.57): vis=325.2 hb=35.5 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n 1 (b=-2.98): vis=546.7 hb=43.0 held=6.7 | health=+3.72, a3_hp=+3.39, food=+3.36
+    n 2 (b=-1.12): vis=355.1 hb=31.3 held=3.8 | health=+2.91, food=+2.59, a3_hp=+2.45
+    n 3 (b=+6.53): vis=777.6 hb=151.9 held=6.2 | health=-3.67, a3_hp=-3.34, food=-3.33
+    n 4 (b=-1.27): vis=370.2 hb=34.0 held=7.2 | health=+3.71, a3_hp=+3.54, food=+3.37
+    n 5 (b=+3.14): vis=693.4 hb=94.7 held=6.2 | health=-3.65, food=-3.32, a3_hp=-3.24
+    n 6 (b=+6.17): vis=769.6 hb=166.3 held=6.3 | health=-3.66, a3_hp=-3.34, food=-3.32
+    n 7 (b=-0.19): vis=660.5 hb=29.0 held=0.2 | s6_ct=-0.42, s2_ct=-0.40, held_ct=-0.40
+    n 8 (b=+4.52): vis=643.2 hb=126.2 held=6.2 | health=-3.66, food=-3.32, a3_hp=-3.29
+    n 9 (b=-0.41): vis=9.6 hb=0.8 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n10 (b=-1.41): vis=268.4 hb=54.3 held=7.2 | health=+3.69, a3_hp=+3.39, food=+3.35
+    n11 (b=+5.73): vis=724.1 hb=165.1 held=6.2 | health=-3.67, a3_hp=-3.33, food=-3.32
+    n12 (b=-1.37): vis=258.9 hb=38.1 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n13 (b=+4.20): vis=706.1 hb=124.4 held=6.2 | health=-3.66, food=-3.32, a3_hp=-3.31
+    n14 (b=+4.03): vis=597.2 hb=94.5 held=6.1 | health=-3.67, food=-3.33, a3_hp=-3.28
+    n15 (b=-0.50): vis=390.1 hb=44.6 held=7.2 | health=+3.70, a3_hp=+3.59, a2_hp=+3.43
+    n16 (b=+4.83): vis=653.9 hb=106.5 held=6.2 | health=-3.65, food=-3.31, a3_hp=-3.28
+    n17 (b=-1.16): vis=194.8 hb=50.7 held=0.2 | pitch=+0.07, a1_rx=-0.07, a2_rz=+0.07
+    n18 (b=-1.04): vis=387.1 hb=29.3 held=6.8 | health=+3.69, a3_hp=+3.47, food=+3.34
+    n19 (b=-0.91): vis=322.5 hb=55.5 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n20 (b=-0.82): vis=391.9 hb=36.2 held=1.0 | y=+0.27, eating=+0.26, strafing=+0.26
+    n21 (b=+7.59): vis=737.2 hb=159.6 held=6.3 | health=-3.67, a3_hp=-3.35, food=-3.33
+    n22 (b=+6.06): vis=725.6 hb=154.5 held=6.2 | health=-3.67, a3_hp=-3.33, food=-3.33
+    n23 (b=+0.30): vis=346.1 hb=38.8 held=4.1 | health=-2.96, food=-2.38, a3_hp=-2.11
+    n24 (b=-0.60): vis=416.5 hb=47.4 held=0.4 | i1_rx=-0.30, s8_ct=+0.28, i3_rx=-0.28
+    n25 (b=+4.33): vis=683.1 hb=153.7 held=6.2 | health=-3.67, a3_hp=-3.33, food=-3.32
+    n26 (b=-2.57): vis=372.4 hb=46.5 held=7.2 | health=+3.72, a3_hp=+3.50, food=+3.37
+    n27 (b=+5.50): vis=713.1 hb=152.5 held=6.2 | health=-3.67, food=-3.32, a3_hp=-3.32
+    n28 (b=-0.12): vis=364.1 hb=37.0 held=0.2 | x=+0.28, pitch=-0.28, z=-0.27
+    n29 (b=+6.62): vis=764.5 hb=168.1 held=6.2 | health=-3.67, a3_hp=-3.34, food=-3.32
+    n30 (b=+5.49): vis=721.2 hb=163.4 held=6.3 | health=-3.66, a3_hp=-3.33, food=-3.32
+    n31 (b=-1.93): vis=446.5 hb=40.0 held=0.9 | y=+0.24, s3_ct=+0.24, eating=+0.24
+
+  --- W2: HIDDEN -> ACTIONS (top 5 per action) ---
+    W_forward       (b=+3.51): n22=+7.41, n23=+7.35, n3=+7.31, n6=+7.29, n8=+7.27
+    S_backward      (b=+4.05): n10=+8.16, n3=+6.10, n4=+5.72, n14=+5.62, n22=+5.56
+    A_strafe_left   (b=+1.54): n10=+8.06, n2=+6.46, n15=+6.37, n23=+6.31, n18=+5.75
+    D_strafe_right  (b=+5.62): n10=+8.16, n4=+7.24, n26=+6.45, n5=+6.39, n18=+6.24
+    turn_left       (b=+3.11): n1=+7.38, n10=+6.52, n17=+5.31, n2=+4.80, n5=+3.89
+    turn_right      (b=+2.50): n10=+10.80, n26=+7.71, n1=+7.09, n18=+7.04, n4=+5.59
+    look_up         (b=+1.63): n1=+6.87, n10=+6.48, n4=+3.02, n26=+2.52, n19=+2.51
+    look_down       (b=-1.02): n10=+7.15, n1=+5.75, n15=+2.77, n18=+2.61, n17=+2.57
+    jump            (b=+5.34): n27=+6.74, n8=+6.61, n29=+6.58, n6=+6.53, n21=+6.52
+    crouch          (b=+4.79): n4=+7.27, n10=+6.85, n26=+6.05, n18=+5.95, n2=+5.68
+    use_eat         (b=+2.05): n3=+15.31, n21=+15.08, n6=+14.58, n29=+14.49, n22=+14.08
+    attack          (b=+5.71): n10=+8.36, n2=+8.32, n15=+6.97, n14=+5.99, n6=+5.87
+    Q_throw         (b=+5.87): n10=+7.31, n16=+5.11, n11=+4.86, n6=+4.67, n14=+4.63
+    hotbar_1        (b=+0.53): n10=+7.88, n1=+7.45, n26=+5.86, n18=+5.48, n4=+5.13
+    hotbar_2        (b=+1.17): n26=+7.23, n4=+7.21, n10=+7.13, n23=+7.02, n18=+6.06
+    hotbar_3        (b=+0.60): n5=+6.44, n26=+6.37, n4=+5.88, n18=+4.91, n1=+4.65
+    hotbar_4        (b=+1.68): n1=+9.05, n26=+8.91, n5=+7.69, n10=+6.95, n18=+6.40
+    hotbar_5        (b=+1.24): n4=+7.34, n26=+6.14, n18=+5.84, n10=+5.62, n14=+4.53
+    hotbar_6        (b=+2.03): n15=+9.70, n18=+9.05, n10=+8.24, n1=+6.64, n4=+6.55
+    hotbar_7        (b=+2.09): n15=+11.69, n10=+6.89, n23=+6.77, n2=+5.73, n16=+5.64
+    hotbar_8        (b=+1.38): n2=+9.76, n10=+6.24, n1=+5.91, n14=+4.17, n26=+3.93
+    hotbar_9        (b=+0.35): n23=+5.48, n14=+5.43, n26=+4.72, n15=+4.56, n4=+4.40
+    stand_still     (b=+0.75): n23=+5.89, n10=+4.10, n15=+3.87, n17=+3.35, n6=-3.33
+
+  --- END-TO-END: input group -> action influence ---
+    W_forward      : vis=68006 hb=13244 held=465 | health=-286.5, food=-258.3, a3_hp=-253.1, a2_hp=-240.9
+    S_backward     : vis=54684 hb=9933 held=245 | health=-158.3, food=-142.9, a3_hp=-138.1, a2_hp=-132.0
+    A_strafe_left  : vis=24916 hb=3114 held=64 | a3_hp=+26.4, a2_here=+26.3, a2_hp=+23.8, a1_hp=+23.6
+    D_strafe_right : vis=43617 hb=7801 held=126 | health=-90.6, food=-82.0, a3_hp=-77.0, a2_hp=-74.3
+    turn_left      : vis=15205 hb=2544 held=10 | i1_here=+13.5, crouching=+13.4, s8_ct=+13.3, eating=+12.5
+    turn_right     : vis=22735 hb=2681 held=145 | health=+68.4, a3_hp=+65.7, food=+61.4, a2_hp=+61.4
+    look_up        : vis=14221 hb=2806 held=257 | health=+143.9, a3_hp=+131.3, food=+129.9, a2_hp=+124.1
+    look_down      : vis=18904 hb=4125 held=308 | health=+173.4, a3_hp=+159.0, food=+157.2, a2_hp=+150.6
+    jump           : vis=58008 hb=11911 held=458 | health=-279.6, food=-253.5, a3_hp=-250.1, a2_hp=-237.4
+    crouch         : vis=47332 hb=7983 held=123 | health=-88.1, food=-80.0, a3_hp=-74.9, a2_hp=-71.9
+    use_eat        : vis=128710 hb=26481 held=1292 | health=-752.6, food=-680.4, a3_hp=-679.5, a2_hp=-643.8
+    attack         : vis=59940 hb=10332 held=235 | health=-152.1, food=-136.3, a3_hp=-131.4, a2_hp=-125.4
+    Q_throw        : vis=41877 hb=8372 held=239 | health=-154.0, food=-139.4, a3_hp=-135.5, a2_hp=-129.5
+    hotbar_1       : vis=19844 hb=3939 held=394 | health=+215.5, a3_hp=+198.8, food=+194.6, a2_hp=+187.7
+    hotbar_2       : vis=20182 hb=2575 held=94 | a3_hp=+39.0, a2_hp=+35.3, health=+34.6, a2_here=+34.5
+    hotbar_3       : vis=15675 hb=3150 held=298 | health=+162.9, a3_hp=+150.4, food=+146.8, a2_hp=+141.1
+    hotbar_4       : vis=23885 hb=2900 held=122 | health=+54.7, a3_hp=+53.5, a2_hp=+49.9, food=+48.5
+    hotbar_5       : vis=11022 hb=900 held=226 | health=+116.5, a3_hp=+111.2, food=+106.2, a2_hp=+103.8
+    hotbar_6       : vis=23805 hb=2435 held=157 | a3_hp=+72.2, health=+70.7, a2_hp=+66.8, food=+64.7
+    hotbar_7       : vis=25132 hb=2595 held=81 | a3_hp=+34.9, a2_here=+33.4, a2_hp=+32.5, a1_hp=+29.9
+    hotbar_8       : vis=15340 hb=1488 held=100 | health=+52.6, a3_hp=+48.8, food=+46.7, a2_hp=+46.0
+    hotbar_9       : vis=15197 hb=2222 held=6 | crouching=+16.4, i1_here=+15.2, strafing=+14.0, eating=+13.8
+    stand_still    : vis=18182 hb=3705 held=223 | health=+118.6, a3_hp=+113.0, food=+108.8, a2_hp=+106.3
+
+  --- EMBEDDING CLUSTERS ---
+    FOOD  apple               : [-1.28, +3.52, +1.06, +1.66]
+    FOOD  baked_potato        : [+1.04, -1.57, -0.92, -1.38]
+    FOOD  beetroot_soup       : [-4.53, +1.99, -6.91, +2.76]
+    FOOD  bread               : [-0.44, +1.26, -0.57, -0.24]
+    FOOD  carrot              : [-6.75, +5.74, -3.57, +4.83]
+    FOOD  cooked_beef         : [-5.64, +3.30, -2.14, +0.86]
+    FOOD  cooked_chicken      : [-6.78, +8.00, -7.92, +4.40]
+    FOOD  cooked_fish         : [-1.57, +1.34, -0.74, +1.67]
+    FOOD  cooked_mutton       : [+0.10, +0.15, +1.19, -0.73]
+    FOOD  cooked_porkchop     : [-1.11, +1.79, -2.43, -0.68]
+    FOOD  cooked_rabbit       : [-2.45, -0.59, -1.96, +1.47]
+    FOOD  cookie              : [-2.40, +6.39, -5.36, +6.47]
+    FOOD  golden_apple        : [-1.98, +0.67, -0.37, +1.76]
+    FOOD  melon               : [-0.62, +0.51, -4.23, -0.29]
+    FOOD  mushroom_stew       : [-4.55, +4.10, -3.29, +2.52]
+    FOOD  pumpkin_pie         : [-2.72, -0.51, -4.19, +0.99]
+    JUNK  arrow               : [+3.70, -4.64, +4.45, -2.01]
+    JUNK  bone                : [+3.07, -1.36, +3.28, -3.95]
+    JUNK  bowl                : [+6.58, -5.22, +4.49, -5.39]
+    JUNK  coal                : [+0.97, -0.79, -1.59, +0.48]
+    JUNK  cobblestone         : [+3.53, -0.03, +1.79, -0.12]
+    JUNK  diamond             : [+3.35, -2.24, +1.12, +0.48]
+    JUNK  dirt                : [+4.76, +0.18, +1.90, +0.66]
+    JUNK  feather             : [+1.73, -2.08, +1.91, -1.33]
+    JUNK  gold_ingot          : [+2.66, -2.24, -0.60, -2.62]
+    JUNK  iron_ingot          : [+3.58, -1.46, +0.59, -1.10]
+    JUNK  leather             : [+4.26, -5.78, +4.50, -2.87]
+    JUNK  paper               : [+4.52, -2.15, +5.02, -4.50]
+    JUNK  stick               : [+5.10, -0.95, +3.09, -2.82]
+    JUNK  stone               : [+0.61, -0.98, +1.92, -3.86]
+    JUNK  string              : [+4.94, -1.61, +0.22, -2.59]
+    JUNK  wooden_pickaxe      : [+7.59, -4.12, +6.39, -5.40]
+    JUNK  wooden_sword        : [+3.48, -2.49, +2.42, -1.34]
+    EMPTY                     : [+4.04, -7.65, +6.53, -6.34]
+
+======================================================================
+  Abel — 1261 ep, 56 vocab
+  Input: 5, Action: 6
+======================================================================
+
+  Embed dist food<->uneat: 1.72 | EMPTY norm: 11.43
+  OVERLAP
+
+  --- W1: INPUT -> HIDDEN (strongest connections) ---
+    n 0 (b=+0.21): vis=916.2 hb=27.9 held=1.4 | s2_ct=+0.35, s6_ct=+0.35, jumping=+0.35
+    n 1 (b=+0.05): vis=829.5 hb=44.5 held=1.5 | held_ct=+0.38, s2_ct=+0.38, s3_ct=+0.38
+    n 2 (b=+4.08): vis=1021.4 hb=93.8 held=1.4 | held_ct=+0.38, s2_ct=+0.36, s3_ct=+0.36
+    n 3 (b=+0.02): vis=109.9 hb=20.4 held=0.5 | i1_rz=+0.30, a1_rx=-0.30, s6_ct=+0.26
+    n 4 (b=-1.96): vis=319.6 hb=66.1 held=0.9 | x=-0.50, a1_rx=+0.42, s1_ct=-0.42
+    n 5 (b=-2.23): vis=61.2 hb=39.2 held=0.7 | i1_rz=-0.27, eating=-0.26, attacking=-0.26
+    n 6 (b=+5.29): vis=1329.0 hb=129.8 held=1.4 | held_ct=+0.37, s2_ct=+0.35, s3_ct=+0.35
+    n 7 (b=-0.87): vis=774.1 hb=44.2 held=2.8 | health=-3.27, a3_hp=-2.75, food=-2.32
+    n 8 (b=+1.67): vis=1211.7 hb=51.1 held=1.4 | held_ct=+0.39, s6_ct=+0.36, s2_ct=+0.36
+    n 9 (b=-0.61): vis=63.6 hb=9.9 held=1.4 | health=+2.00, a3_hp=+1.48, i3_here=-1.23
+    n10 (b=-1.41): vis=9.1 hb=21.2 held=0.0 | health=+0.00, food=+0.00, x=+0.00
+    n11 (b=+5.22): vis=1338.4 hb=137.7 held=1.4 | held_ct=+0.37, s2_ct=+0.35, s3_ct=+0.35
+    n12 (b=+3.97): vis=1153.7 hb=105.1 held=1.4 | held_ct=+0.38, s2_ct=+0.36, s3_ct=+0.36
+    n13 (b=+0.92): vis=1056.4 hb=35.0 held=0.1 | pitch=+0.31, z=+0.27, moving=-0.25
+    n14 (b=+2.66): vis=1098.0 hb=87.3 held=1.4 | held_ct=+0.39, s2_ct=+0.36, s3_ct=+0.35
+    n15 (b=+4.53): vis=1121.6 hb=99.6 held=1.4 | held_ct=+0.38, s2_ct=+0.37, s6_ct=+0.36
+    n16 (b=+0.31): vis=1080.9 hb=36.5 held=1.5 | s6_ct=+0.38, s2_ct=+0.38, eating=+0.37
+    n17 (b=-0.50): vis=50.0 hb=16.9 held=0.8 | a2_hp=+0.48, a2_here=+0.47, a3_here=+0.38
+    n18 (b=+0.22): vis=100.9 hb=14.6 held=0.9 | a1_rz=-0.41, i5_qty=+0.41, i5_here=+0.40
+    n19 (b=+0.14): vis=1065.3 hb=28.4 held=0.5 | pitch=+0.39, s5_ct=+0.26, moving=-0.24
+    n20 (b=+0.74): vis=651.3 hb=45.1 held=1.5 | held_ct=+0.38, s2_ct=+0.38, s6_ct=+0.37
+    n21 (b=+6.80): vis=1300.9 hb=127.9 held=1.4 | held_ct=+0.37, s2_ct=+0.35, s3_ct=+0.35
+    n22 (b=+4.05): vis=1321.1 hb=107.4 held=1.4 | held_ct=+0.38, s2_ct=+0.36, s3_ct=+0.35
+    n23 (b=-0.23): vis=89.1 hb=15.3 held=0.0 | z=-0.27, x=-0.26, eating=+0.25
+    n24 (b=-1.28): vis=331.7 hb=60.4 held=3.7 | health=-2.59, a3_hp=-2.23, food=-2.22
+    n25 (b=+3.83): vis=1338.6 hb=130.0 held=1.4 | held_ct=+0.38, s2_ct=+0.36, s3_ct=+0.35
+    n26 (b=-2.94): vis=372.8 hb=45.0 held=0.7 | health=+0.96, a3_hp=+0.91, a3_rz=-0.80
+    n27 (b=+5.04): vis=1352.8 hb=117.3 held=1.4 | held_ct=+0.38, s2_ct=+0.35, s3_ct=+0.35
+    n28 (b=-0.06): vis=471.8 hb=29.7 held=1.9 | health=+2.50, a3_hp=+2.01, a3_here=+1.55
+    n29 (b=+5.86): vis=1315.8 hb=135.4 held=1.4 | held_ct=+0.37, s2_ct=+0.35, s3_ct=+0.35
+    n30 (b=+5.07): vis=1339.2 hb=124.6 held=1.4 | held_ct=+0.37, s2_ct=+0.35, s3_ct=+0.35
+    n31 (b=+0.97): vis=764.5 hb=42.6 held=0.5 | pitch=+0.39, s5_ct=+0.26, moving=-0.22
+
+  --- W2: HIDDEN -> ACTIONS (top 5 per action) ---
+    W_forward       (b=+2.31): n22=+4.86, n25=+4.84, n6=+4.78, n27=+4.77, n11=+4.72
+    S_backward      (b=+3.45): n7=+5.64, n1=+3.63, n12=+3.62, n4=+3.52, n27=+3.51
+    A_strafe_left   (b=+3.93): n15=+5.07, n12=+4.98, n14=+4.93, n22=+4.83, n27=+4.68
+    D_strafe_right  (b=+1.68): n28=+5.38, n24=+4.83, n26=+3.40, n4=+2.93, n13=-1.63
+    turn_left       (b=+4.86): n26=+4.53, n24=+4.27, n4=+3.91, n28=+3.57, n7=+3.51
+    turn_right      (b=+1.06): n28=+4.92, n26=+3.49, n24=+3.16, n0=+3.05, n16=+2.77
+    look_up         (b=+3.29): n26=+3.53, n8=+1.98, n24=+1.97, n22=+1.92, n27=+1.91
+    look_down       (b=+5.44): n26=+3.65, n30=+3.45, n22=+3.41, n25=+3.36, n21=+3.32
+    jump            (b=+5.28): n7=+4.39, n26=+3.92, n28=+3.54, n24=+3.53, n27=+3.51
+    crouch          (b=+4.38): n28=+4.46, n14=+3.74, n27=+3.67, n25=+3.65, n8=+3.65
+    use_eat         (b=+2.37): n6=+11.77, n29=+11.73, n30=+11.29, n21=+11.17, n11=+10.39
+    attack          (b=+1.88): n7=+5.55, n26=+2.88, n28=+2.28, n12=+1.73, n2=+1.69
+    Q_throw         (b=+1.35): n28=+4.28, n26=+3.82, n13=+3.49, n8=+3.45, n7=+3.20
+    hotbar_1        (b=+1.26): n30=-6.30, n6=-5.91, n29=-5.79, n15=-5.70, n11=-5.69
+    hotbar_2        (b=+0.17): n28=+4.87, n24=+3.99, n29=-1.92, n6=-1.91, n26=+1.90
+    hotbar_3        (b=+0.44): n28=+5.79, n11=-2.14, n6=-2.13, n26=+2.06, n15=-1.95
+    hotbar_4        (b=+0.60): n7=+5.43, n2=+5.02, n1=+3.56, n13=+3.36, n19=+3.35
+    hotbar_5        (b=-0.26): n14=+5.96, n28=+5.27, n4=+3.89, n24=+3.54, n29=-2.37
+    hotbar_6        (b=+1.36): n24=+6.20, n4=+4.59, n26=+3.81, n6=-3.05, n29=-2.73
+    hotbar_7        (b=+1.18): n7=+8.90, n1=+4.08, n2=+4.01, n24=+3.43, n16=+3.17
+    hotbar_8        (b=+0.28): n28=+4.16, n4=+3.12, n26=+3.05, n7=+2.97, n0=+2.77
+    hotbar_9        (b=+1.44): n28=+4.36, n26=+3.22, n21=-3.16, n4=+3.13, n6=-2.23
+    stand_still     (b=+0.09): n24=+5.40, n2=+5.15, n7=+3.60, n28=+3.45, n26=+2.84
+
+  --- END-TO-END: input group -> action influence ---
+    W_forward      : vis=82584 hb=6618 held=87 | s3_ct=+24.5, s2_ct=+23.9, s6_ct=+23.7, held_ct=+23.4
+    S_backward     : vis=59153 hb=4385 held=45 | a3_hp=-22.2, a2_hp=-18.8, a3_here=-18.4, health=-17.7
+    A_strafe_left  : vis=86905 hb=6360 held=85 | s6_ct=+24.9, s3_ct=+24.8, s2_ct=+24.2, jumping=+24.0
+    D_strafe_right : vis=12435 hb=1041 held=6 | a2_rx=+8.0, a3_rx=+6.5, i3_here=-5.9, s6_ct=+5.8
+    turn_left      : vis=38799 hb=2673 held=30 | a2_hp=-13.4, a3_rx=+13.0, a3_hp=-12.8, a2_rx=+12.3
+    turn_right     : vis=5362 hb=769 held=6 | a3_rx=+6.1, a2_rx=+5.7, i1_rx=+5.2, food=-5.0
+    look_up        : vis=24112 hb=2100 held=17 | a3_rx=+6.8, jumping=+6.6, eating=+6.5, s6_ct=+6.4
+    look_down      : vis=54083 hb=4410 held=49 | jumping=+15.3, strafing=+14.5, pitching=+14.4, s2_ct=+14.4
+    jump           : vis=60923 hb=4421 held=52 | s3_ct=+18.5, jumping=+18.5, a3_hp=-18.0, pitching=+17.9
+    crouch         : vis=65016 hb=5065 held=73 | s6_ct=+20.5, s3_ct=+19.5, s2_ct=+18.8, eating=+18.1
+    use_eat        : vis=178102 hb=14745 held=199 | held_ct=+52.0, s3_ct=+51.5, s2_ct=+51.3, s6_ct=+50.9
+    attack         : vis=11787 hb=1347 held=5 | a3_hp=-7.6, health=-6.9, food=-6.9, a2_hp=-6.3
+    Q_throw        : vis=52933 hb=3518 held=53 | s3_ct=+16.9, s6_ct=+16.5, s2_ct=+15.8, eating=+15.0
+    hotbar_1       : vis=89772 hb=7742 held=106 | held_ct=-28.1, attacking=-25.6, s2_ct=-25.3, turning=-25.2
+    hotbar_2       : vis=23024 hb=2221 held=29 | held_ct=-9.1, s9_ct=-8.5, y=-8.1, turning=-7.3
+    hotbar_3       : vis=16209 hb=1955 held=10 | health=+11.8, a3_hp=+11.4, a3_here=+9.5, i2_here=-6.3
+    hotbar_4       : vis=16868 hb=744 held=1 | a3_hp=-18.3, health=-17.7, a2_hp=-14.4, food=-14.4
+    hotbar_5       : vis=4558 hb=832 held=1 | a2_rx=+7.0, i3_here=-5.9, a3_rx=+5.2, i3_qty=-5.2
+    hotbar_6       : vis=20423 hb=2389 held=43 | food=-14.3, a1_hp=-12.3, health=-11.4, a3_hp=-9.4
+    hotbar_7       : vis=29782 hb=1361 held=1 | health=-43.6, a3_hp=-41.4, a3_here=-32.4, food=-30.8
+    hotbar_8       : vis=8500 hb=484 held=1 | a3_rx=+7.0, a2_rx=+6.4, food=-5.4, a2_hp=-4.8
+    hotbar_9       : vis=23031 hb=2544 held=21 | health=+10.9, a3_hp=+10.5, a3_here=+8.9, strafing=-8.2
+    stand_still    : vis=7470 hb=629 held=22 | food=-14.6, health=-11.9, a3_hp=-11.7, a1_hp=-10.2
+
+  --- EMBEDDING CLUSTERS ---
+    FOOD  apple               : [+0.97, -1.73, +3.16, +0.61]
+    FOOD  baked_potato        : [+3.87, -2.58, +1.79, -2.64]
+    FOOD  beetroot_soup       : [-0.77, -1.75, -1.38, -2.48]
+    FOOD  bread               : [-2.14, +1.88, -0.85, +1.53]
+    FOOD  carrot              : [+2.35, -3.15, +4.58, -1.37]
+    FOOD  cooked_beef         : [+0.12, -2.44, +2.10, -4.53]
+    FOOD  cooked_chicken      : [+2.02, -0.88, +1.27, -1.77]
+    FOOD  cooked_fish         : [+0.11, -0.42, +1.34, +1.64]
+    FOOD  cooked_mutton       : [-0.71, -1.58, +0.44, -0.73]
+    FOOD  cooked_porkchop     : [+0.40, +0.73, +1.43, -1.14]
+    FOOD  cooked_rabbit       : [-0.19, -1.53, -0.78, -0.85]
+    FOOD  cookie              : [+1.50, +0.81, -0.44, +0.58]
+    FOOD  golden_apple        : [-0.58, -1.22, +1.19, -1.91]
+    FOOD  melon               : [+2.34, -3.25, +1.19, -3.60]
+    FOOD  mushroom_stew       : [+2.56, -2.31, +3.54, -1.85]
+    FOOD  pumpkin_pie         : [+2.10, -4.65, +0.09, -2.06]
+    JUNK  arrow               : [+1.31, +0.17, +0.47, +0.25]
+    JUNK  bone                : [+4.52, -2.67, +2.83, -2.11]
+    JUNK  bowl                : [+4.72, -3.42, +2.74, -4.69]
+    JUNK  coal                : [-0.47, -0.90, +0.07, +0.75]
+    JUNK  cobblestone         : [-0.65, +0.23, -0.04, +0.78]
+    JUNK  diamond             : [+2.19, -2.67, +1.22, -1.44]
+    JUNK  dirt                : [+2.71, -4.19, +4.51, +4.10]
+    JUNK  feather             : [+3.45, -1.41, +1.89, -1.94]
+    JUNK  gold_ingot          : [+1.66, -1.04, -1.22, -0.10]
+    JUNK  iron_ingot          : [+4.54, -2.79, +0.72, -3.14]
+    JUNK  leather             : [-0.94, +0.85, +0.40, -2.15]
+    JUNK  paper               : [+2.98, -2.86, +1.76, -2.40]
+    JUNK  stick               : [+1.33, -2.41, +1.20, -1.51]
+    JUNK  stone               : [+4.07, -2.43, +4.75, -4.72]
+    JUNK  string              : [+5.10, -4.13, +3.66, -3.09]
+    JUNK  wooden_pickaxe      : [+3.99, -3.40, +3.29, -6.60]
+    JUNK  wooden_sword        : [+1.28, +1.77, +0.21, +1.52]
+    EMPTY                     : [+5.40, -6.67, +5.09, -5.58]

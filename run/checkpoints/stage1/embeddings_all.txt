@@ -1,0 +1,340 @@
+
+======================================================================
+  Adam — 1955 ep, 56 vocab
+======================================================================
+
+  --- CATEGORY AVERAGES ---
+    Abel         ( 1): [-0.08, +8.56, -14.48, +3.35]
+    CONTAINER    ( 1): [+9.48, -6.34, +6.81, -6.70]
+    Cain         ( 1): [-2.78, +4.59, -10.49, +5.04]
+    DANGER       ( 2): [-1.41, -0.28, -1.21, -0.80]
+    DECORATION   ( 2): [-2.12, -0.53, -0.75, -2.09]
+    EMPTY        ( 1): [+13.86, -21.27, +18.69, -20.54]
+    Eve          ( 1): [-1.53, +5.81, -14.83, +6.48]
+    FOOD         (16): [-5.27, +3.84, -4.72, +4.03]
+    JUNK         (16): [+1.71, +0.33, +0.20, +0.03]
+    POISON       ( 3): [-5.33, +3.72, -5.22, +3.64]
+    TERRAIN      (10): [+1.72, +1.48, +2.17, +2.34]
+
+  --- DISTANCE MATRIX ---
+                  Abel      CONTAINE  Cain      DANGER    DECORATI  EMPTY     Eve       FOOD      JUNK      POISON    TERRAIN 
+    Abel              0.00     29.45      6.47     16.53     17.46     52.49      4.43     12.04     17.25     11.69     18.21
+    CONTAINER        29.45      0.00     26.58     15.95     15.70     23.98     30.18     23.85     13.92     23.92     14.98
+    Cain              6.47     26.58      0.00     12.08     13.13     49.51      4.90      6.41     13.33      6.08     14.05
+    DANGER           16.53     15.95     12.08      0.00      1.56     38.20     16.61      8.22      3.58      8.20      5.85
+    DECORATION       17.46     15.70     13.13      1.56      0.00     37.47     17.67      9.07      4.56      9.02      6.85
+    EMPTY            52.49     23.98     49.51     38.20     37.47      0.00     53.15     46.35     37.14     46.37     38.23
+    Eve               4.43     30.18      4.90     16.61     17.67     53.15      0.00     11.23     17.55     10.91     18.32
+    FOOD             12.04     23.85      6.41      8.22      9.07     46.35     11.23      0.00     10.06      0.65     10.23
+    JUNK             17.25     13.92     13.33      3.58      4.56     37.14     17.55     10.06      0.00     10.17      3.25
+    POISON           11.69     23.92      6.08      8.20      9.02     46.37     10.91      0.65     10.17      0.00     10.54
+    TERRAIN          18.21     14.98     14.05      5.85      6.85     38.23     18.32     10.23      3.25     10.54      0.00
+
+  --- POISON ITEMS: closest category ---
+    poisonous_potato     -> FOOD (FOOD=1.3, Cain=6.9, DANGER=8.3, DECORATION=9.0)
+    rotten_flesh         -> FOOD (FOOD=1.4, Cain=5.8, DANGER=7.9, DECORATION=8.8)
+    spider_eye           -> FOOD (FOOD=0.8, Cain=5.8, DANGER=8.5, DECORATION=9.4)
+
+  --- PER-CATEGORY ITEMS + SPREAD ---
+    FOOD (spread=3.55):
+      apple                [-3.85, +5.03, -2.20, +5.81]  own=3.6  closest=POISON(4.2)
+      baked_potato         [-0.80, +0.25, -3.59, +0.93]  own=6.6  closest=DANGER(3.1)
+      beetroot_soup        [-7.60, +3.90, -6.89, +4.14]  own=3.2  closest=POISON(2.9)
+      bread                [-6.44, +5.90, -4.16, +5.41]  own=2.8  closest=POISON(3.2)
+      carrot               [-7.77, +5.53, -5.07, +7.21]  own=4.4  closest=POISON(4.7)
+      cooked_beef          [-9.19, +5.50, -7.41, +2.52]  own=5.3  closest=POISON(4.9)
+      cooked_chicken       [-4.91, +3.90, -3.25, +3.07]  own=1.8  closest=POISON(2.1)
+      cooked_fish          [-5.96, +6.00, -5.06, +7.52]  own=4.2  closest=POISON(4.5)
+      cooked_mutton        [-5.39, +4.22, -5.57, +5.90]  own=2.1  closest=POISON(2.3)
+      cooked_porkchop      [-5.77, +5.12, -6.25, +2.39]  own=2.6  closest=POISON(2.2)
+      cooked_rabbit        [-5.28, +1.96, -3.81, +2.65]  own=2.5  closest=POISON(2.5)
+      cookie               [-5.20, +3.74, -8.25, +5.10]  own=3.7  closest=POISON(3.4)
+      golden_apple         [-3.93, +3.63, -2.69, +5.07]  own=2.7  closest=POISON(3.2)
+      melon                [-3.55, +2.62, -3.96, +2.09]  own=3.0  closest=POISON(2.9)
+      mushroom_stew        [-5.46, +5.37, -3.72, +4.08]  own=1.8  closest=POISON(2.3)
+      pumpkin_pie          [-3.18, -1.26, -3.62, +0.51]  own=6.6  closest=DANGER(3.4)
+    POISON (spread=0.92):
+      poisonous_potato     [-5.81, +4.50, -4.66, +3.09]  own=1.2  closest=FOOD(1.3)
+      rotten_flesh         [-4.83, +2.77, -5.52, +3.97]  own=1.2  closest=FOOD(1.4)
+      spider_eye           [-5.34, +3.90, -5.49, +3.86]  own=0.4  closest=FOOD(0.8)
+    JUNK (spread=4.55):
+      arrow                [+3.57, -1.26, +3.71, -3.22]  own=5.4  closest=TERRAIN(6.7)
+      bone                 [+1.84, -2.12, +2.45, -2.79]  own=4.4  closest=DECORATION(5.4)
+      coal                 [+1.24, -0.72, +0.21, +0.98]  own=1.5  closest=TERRAIN(3.3)
+      cobblestone          [-0.02, +4.95, -2.54, +4.87]  own=7.4  closest=FOOD(5.8)
+      diamond              [+2.28, +0.28, -1.22, -0.59]  own=1.7  closest=DANGER(3.7)
+      dirt                 [+6.57, +3.23, +1.55, +2.26]  own=6.2  closest=TERRAIN(5.2)
+      feather              [+2.73, -2.65, +1.85, -2.59]  own=4.4  closest=DECORATION(5.9)
+      gold_ingot           [+3.44, -0.83, +2.28, -4.38]  own=5.3  closest=DECORATION(6.7)
+      iron_ingot           [+2.76, -0.29, +2.56, -3.26]  own=4.2  closest=TERRAIN(6.0)
+      leather              [-1.37, +2.51, -4.13, +4.89]  own=7.5  closest=FOOD(4.2)
+      paper                [+1.14, +0.20, -3.48, +0.24]  own=3.7  closest=DANGER(3.6)
+      stick                [+0.80, +1.25, +0.94, +1.07]  own=1.8  closest=TERRAIN(2.0)
+      stone                [+4.51, -2.03, +2.34, -1.55]  own=4.5  closest=TERRAIN(5.9)
+      string               [-5.61, +3.48, -3.69, +6.33]  own=10.9  closest=FOOD(2.6)
+      wooden_pickaxe       [+2.74, +0.00, +1.10, -1.46]  own=2.0  closest=TERRAIN(4.3)
+      wooden_sword         [+0.73, -0.75, -0.72, -0.34]  own=1.8  closest=DANGER(2.3)
+    DANGER (spread=2.87):
+      flowing_lava         [-3.37, -0.02, -2.45, -2.47]  own=2.9  closest=DECORATION(2.2)
+      lava                 [+0.55, -0.55, +0.04, +0.87]  own=2.9  closest=JUNK(1.7)
+    Abel (spread=0.00):
+      Abel                 [-0.08, +8.56, -14.48, +3.35]  own=0.0  closest=Eve(4.4)
+    Cain (spread=0.00):
+      Cain                 [-2.78, +4.59, -10.49, +5.04]  own=0.0  closest=Eve(4.9)
+    Eve (spread=0.00):
+      Eve                  [-1.53, +5.81, -14.83, +6.48]  own=0.0  closest=Abel(4.4)
+
+======================================================================
+  Eve — 1951 ep, 56 vocab
+======================================================================
+
+  --- CATEGORY AVERAGES ---
+    Abel         ( 1): [-0.23, +4.46, -8.82, +0.76]
+    Adam         ( 1): [-1.37, +0.67, -8.19, -0.42]
+    CONTAINER    ( 1): [+7.12, -2.63, +4.63, -3.44]
+    Cain         ( 1): [-2.14, +3.59, -8.51, +1.37]
+    DANGER       ( 2): [-0.05, -0.04, +0.75, +0.96]
+    DECORATION   ( 2): [+0.52, -7.05, +7.46, +4.63]
+    EMPTY        ( 1): [+12.97, -19.86, +17.46, -18.90]
+    FOOD         (16): [-2.61, +1.74, -2.52, +1.69]
+    JUNK         (16): [+3.74, -0.87, +2.33, -1.09]
+    POISON       ( 3): [-3.25, +2.77, -3.57, +2.47]
+    TERRAIN      (10): [-0.01, +1.83, +0.38, +0.15]
+
+  --- DISTANCE MATRIX ---
+                  Abel      Adam      CONTAINE  Cain      DANGER    DECORATI  EMPTY     FOOD      JUNK      POISON    TERRAIN 
+    Abel              0.00      4.17     17.40      2.20     10.58     20.32     42.93      7.32     13.11      6.52      9.59
+    Adam              4.17      0.00     16.01      3.52      9.17     18.27     40.33      6.27     11.82      6.14      8.77
+    CONTAINER        17.40     16.01      0.00     17.89      9.61     11.67     27.11     13.83      5.03     15.45     10.08
+    Cain              2.20      3.52     17.89      0.00     10.18     19.65     43.17      6.30     13.35      5.25      9.39
+    DANGER           10.58      9.17      9.61     10.18      0.00     10.39     35.16      4.58      4.67      6.25      2.06
+    DECORATION       20.32     18.27     11.67     19.65     10.39      0.00     31.19     13.98     10.38     15.39     12.22
+    EMPTY            42.93     40.33     27.11     43.17     35.16     31.19      0.00     39.15     31.49     40.92     35.97
+    FOOD              7.32      6.27     13.83      6.30      4.58     13.98     39.15      0.00      8.86      1.78      4.19
+    JUNK             13.11     11.82      5.03     13.35      4.67     10.38     31.49      8.86      0.00     10.47      5.17
+    POISON            6.52      6.14     15.45      5.25      6.25     15.39     40.92      1.78     10.47      0.00      5.68
+    TERRAIN           9.59      8.77     10.08      9.39      2.06     12.22     35.97      4.19      5.17      5.68      0.00
+
+  --- POISON ITEMS: closest category ---
+    poisonous_potato     -> FOOD (FOOD=2.3, Cain=5.6, TERRAIN=5.7, DANGER=6.6)
+    rotten_flesh         -> FOOD (FOOD=1.3, TERRAIN=5.3, DANGER=5.5, Cain=5.6)
+    spider_eye           -> FOOD (FOOD=2.6, Cain=4.8, Abel=6.1, Adam=6.2)
+
+  --- PER-CATEGORY ITEMS + SPREAD ---
+    FOOD (spread=3.78):
+      apple                [-4.22, +3.46, -1.42, +4.22]  own=3.6  closest=POISON(3.0)
+      baked_potato         [+1.00, -1.34, -1.45, -0.76]  own=5.5  closest=DANGER(3.3)
+      beetroot_soup        [-2.31, +1.26, -2.29, +0.84]  own=1.0  closest=POISON(2.7)
+      bread                [+0.11, -0.38, -0.39, -1.40]  own=5.1  closest=DANGER(2.6)
+      carrot               [-3.31, +2.60, -0.48, +3.94]  own=3.2  closest=POISON(3.4)
+      cooked_beef          [-6.52, +3.07, -5.23, +1.18]  own=5.0  closest=POISON(3.9)
+      cooked_chicken       [-0.30, +1.00, +0.52, -0.04]  own=4.3  closest=TERRAIN(0.9)
+      cooked_fish          [-4.69, +5.72, -4.40, +6.69]  own=7.0  closest=POISON(5.4)
+      cooked_mutton        [-2.21, +0.43, -2.07, +1.07]  own=1.6  closest=POISON(3.3)
+      cooked_porkchop      [-0.27, -0.34, +0.52, -2.99]  own=6.4  closest=TERRAIN(3.8)
+      cooked_rabbit        [-4.43, +1.85, -2.07, +1.45]  own=1.9  closest=POISON(2.4)
+      cookie               [-0.87, +1.48, -3.68, +2.07]  own=2.2  closest=POISON(2.7)
+      golden_apple         [-5.16, +3.02, -4.44, +3.41]  own=3.8  closest=POISON(2.3)
+      melon                [-1.41, +1.73, -5.53, +1.88]  own=3.3  closest=POISON(2.9)
+      mushroom_stew        [-5.06, +4.23, -3.14, +3.04]  own=3.8  closest=POISON(2.4)
+      pumpkin_pie          [-2.20, +0.09, -4.73, +2.39]  own=2.9  closest=POISON(3.1)
+    POISON (spread=1.17):
+      poisonous_potato     [-3.70, +3.62, -3.13, +2.04]  own=1.1  closest=FOOD(2.3)
+      rotten_flesh         [-2.87, +1.39, -3.49, +2.37]  own=1.4  closest=FOOD(1.3)
+      spider_eye           [-3.16, +3.32, -4.07, +3.00]  own=0.9  closest=FOOD(2.6)
+    JUNK (spread=4.04):
+      arrow                [+5.81, +0.21, +2.94, -1.31]  own=2.4  closest=CONTAINER(4.1)
+      bone                 [+3.07, -0.78, +3.68, -4.24]  own=3.5  closest=CONTAINER(4.6)
+      coal                 [+3.84, -0.48, +2.70, +1.54]  own=2.7  closest=DANGER(4.4)
+      cobblestone          [+1.43, -0.12, +1.17, +0.14]  own=3.0  closest=DANGER(1.7)
+      diamond              [+5.29, +1.13, -0.85, +1.80]  own=5.0  closest=TERRAIN(5.7)
+      dirt                 [+1.00, +4.71, +2.25, -1.20]  own=6.2  closest=TERRAIN(3.8)
+      feather              [+4.98, -2.41, +2.96, -0.11]  own=2.3  closest=CONTAINER(4.3)
+      gold_ingot           [+6.75, -5.64, +6.65, -3.52]  own=7.5  closest=CONTAINER(3.6)
+      iron_ingot           [+3.56, -1.00, +3.93, -2.75]  own=2.3  closest=CONTAINER(4.0)
+      leather              [+1.28, +1.63, -0.27, +0.77]  own=4.7  closest=TERRAIN(1.6)
+      paper                [+3.84, -4.52, +3.06, -4.71]  own=5.2  closest=CONTAINER(4.3)
+      stick                [+2.96, -3.45, +2.94, -0.12]  own=2.9  closest=DANGER(5.2)
+      stone                [+0.51, +2.78, -1.21, +1.84]  own=6.7  closest=TERRAIN(2.6)
+      string               [+5.34, -2.87, +1.61, -1.83]  own=2.8  closest=CONTAINER(3.9)
+      wooden_pickaxe       [+6.27, -2.11, +4.44, -4.77]  own=5.1  closest=CONTAINER(1.7)
+      wooden_sword         [+3.95, -0.93, +1.32, +0.95]  own=2.3  closest=DANGER(4.1)
+    DANGER (spread=1.22):
+      flowing_lava         [-0.79, +0.86, +0.40, +0.96]  own=1.2  closest=TERRAIN(1.5)
+      lava                 [+0.69, -0.94, +1.10, +0.95]  own=1.2  closest=TERRAIN(3.0)
+    Abel (spread=0.00):
+      Abel                 [-0.23, +4.46, -8.82, +0.76]  own=0.0  closest=Cain(2.2)
+    Adam (spread=0.00):
+      Adam                 [-1.37, +0.67, -8.19, -0.42]  own=0.0  closest=Cain(3.5)
+    Cain (spread=0.00):
+      Cain                 [-2.14, +3.59, -8.51, +1.37]  own=0.0  closest=Abel(2.2)
+
+======================================================================
+  Cain — 1954 ep, 57 vocab
+======================================================================
+
+  --- CATEGORY AVERAGES ---
+    Abel         ( 1): [-3.07, +3.61, -9.71, +2.12]
+    Adam         ( 1): [+1.33, +3.32, -7.60, +2.41]
+    CONTAINER    ( 1): [+9.50, -5.87, +6.31, -6.31]
+    DANGER       ( 2): [-1.01, -0.15, +0.25, +0.99]
+    DECORATION   ( 2): [-2.62, -3.47, +2.78, +2.45]
+    EMPTY        ( 1): [+8.12, -17.95, +15.58, -15.87]
+    Eve          ( 1): [-0.04, +6.83, -9.59, +1.79]
+    FOOD         (16): [-4.61, +3.23, -4.01, +2.68]
+    JUNK         (16): [+4.74, -1.32, +2.70, -1.24]
+    POISON       ( 3): [-2.68, +2.66, -3.13, +2.42]
+    TERRAIN      (10): [+1.53, +1.67, +1.05, +0.95]
+
+  --- DISTANCE MATRIX ---
+                  Abel      Adam      CONTAINE  DANGER    DECORATI  EMPTY     Eve       FOOD      JUNK      POISON    TERRAIN 
+    Abel              0.00      4.89     23.99     10.90     14.37     39.41      4.43      5.94     15.83      6.66     11.92
+    Adam              4.89      0.00     20.51      9.01     13.02     37.01      4.30      6.94     12.35      6.04      8.93
+    CONTAINER        23.99     20.51      0.00     15.27     15.56     18.03     23.89     21.67      9.06     19.67     14.17
+    DANGER           10.90      9.01     15.27      0.00      4.71     30.32     12.13      6.74      6.74      4.92      3.22
+    DECORATION       14.37     13.02     15.56      4.71      0.00     28.72     16.32      9.75      8.52      8.52      6.99
+    EMPTY            39.41     37.01     18.03     30.32     28.72      0.00     40.33     36.59     25.85     35.02     30.37
+    Eve               4.43      4.30     23.89     12.13     16.32     40.33      0.00      8.10     15.80      8.15     11.96
+    FOOD              5.94      6.94     21.67      6.74      9.75     36.59      8.10      0.00     12.98      2.20      8.29
+    JUNK             15.83     12.35      9.06      6.74      8.52     25.85     15.80     12.98      0.00     10.88      5.18
+    POISON            6.66      6.04     19.67      4.92      8.52     35.02      8.15      2.20     10.88      0.00      6.20
+    TERRAIN          11.92      8.93     14.17      3.22      6.99     30.37     11.96      8.29      5.18      6.20      0.00
+
+  --- POISON ITEMS: closest category ---
+    poisonous_potato     -> FOOD (FOOD=2.2, Adam=5.6, Abel=6.1, DANGER=6.2)
+    rotten_flesh         -> DANGER (DANGER=2.5, TERRAIN=3.9, FOOD=5.0, DECORATION=6.6)
+    spider_eye           -> FOOD (FOOD=1.0, Abel=6.0, DANGER=6.6, Adam=7.0)
+
+  --- PER-CATEGORY ITEMS + SPREAD ---
+    FOOD (spread=4.97):
+      apple                [-2.50, +5.09, -0.30, +3.19]  own=4.7  closest=POISON(3.8)
+      baked_potato         [+0.55, -2.41, -0.56, -2.02]  own=9.6  closest=DANGER(4.2)
+      beetroot_soup        [-8.26, +1.59, -7.20, +2.20]  own=5.1  closest=Abel(6.1)
+      bread                [-3.64, +1.21, -2.07, -0.10]  own=4.1  closest=POISON(3.2)
+      carrot               [-9.67, +6.14, -4.74, +5.48]  own=6.5  closest=POISON(8.5)
+      cooked_beef          [-7.95, +4.81, -4.06, +2.42]  own=3.7  closest=POISON(5.8)
+      cooked_chicken       [-10.25, +9.39, -9.89, +6.07]  own=10.8  closest=Abel(10.0)
+      cooked_fish          [-3.87, +3.43, -2.98, +3.93]  own=1.8  closest=POISON(2.1)
+      cooked_mutton        [-1.30, +2.56, -1.12, +1.55]  own=4.6  closest=POISON(2.6)
+      cooked_porkchop      [-2.11, +2.31, -2.66, -0.14]  own=4.1  closest=POISON(2.7)
+      cooked_rabbit        [-3.36, +0.14, -2.86, +2.36]  own=3.5  closest=POISON(2.6)
+      cookie               [-4.97, +7.64, -8.05, +7.91]  own=7.9  closest=Abel(7.5)
+      golden_apple         [-3.12, +2.54, -2.04, +3.64]  own=2.7  closest=POISON(1.7)
+      melon                [-2.60, +2.69, -6.63, +1.85]  own=3.4  closest=Abel(3.3)
+      mushroom_stew        [-6.31, +5.09, -4.18, +3.70]  own=2.7  closest=POISON(4.7)
+      pumpkin_pie          [-4.34, -0.47, -4.86, +0.90]  own=4.2  closest=POISON(4.2)
+    POISON (spread=2.21):
+      poisonous_potato     [-2.62, +3.50, -3.82, +3.44]  own=1.5  closest=FOOD(2.2)
+      rotten_flesh         [-0.88, +1.05, -1.65, +2.11]  own=2.9  closest=DANGER(2.5)
+      spider_eye           [-4.55, +3.44, -3.93, +1.72]  own=2.3  closest=FOOD(1.0)
+    JUNK (spread=3.87):
+      arrow                [+2.11, -4.47, +4.00, -1.82]  own=4.3  closest=DECORATION(6.6)
+      bone                 [+5.18, +0.39, +2.53, -2.26]  own=2.0  closest=TERRAIN(5.2)
+      coal                 [+1.12, +1.47, -3.35, +2.67]  own=8.5  closest=POISON(4.0)
+      cobblestone          [+4.36, +0.75, +1.44, +0.50]  own=3.0  closest=TERRAIN(3.0)
+      diamond              [+4.83, -0.61, +1.22, +2.26]  own=3.9  closest=TERRAIN(4.2)
+      dirt                 [+8.61, +2.24, +5.49, +4.12]  own=8.0  closest=TERRAIN(9.0)
+      feather              [+2.48, -0.96, +1.69, -0.13]  own=2.7  closest=TERRAIN(3.1)
+      gold_ingot           [+6.01, -3.18, +1.65, -3.85]  own=3.6  closest=CONTAINER(6.9)
+      iron_ingot           [+4.49, -2.15, +1.77, -1.82]  own=1.4  closest=TERRAIN(5.6)
+      leather              [+5.56, -5.36, +5.38, -2.49]  own=5.1  closest=CONTAINER(5.6)
+      paper                [+3.67, -1.13, +3.99, -3.48]  own=2.8  closest=TERRAIN(6.4)
+      stick                [+5.18, -0.13, +3.06, -1.85]  own=1.4  closest=TERRAIN(5.3)
+      stone                [+2.85, -0.97, +3.17, -3.66]  own=3.1  closest=TERRAIN(5.9)
+      string               [+5.76, -0.79, +0.13, -1.90]  own=2.9  closest=TERRAIN(5.7)
+      wooden_pickaxe       [+8.44, -2.82, +6.41, -4.08]  own=6.1  closest=CONTAINER(3.9)
+      wooden_sword         [+5.23, -3.37, +4.61, -2.09]  own=3.0  closest=CONTAINER(6.7)
+    DANGER (spread=1.47):
+      flowing_lava         [-1.46, -0.10, -0.21, -0.33]  own=1.5  closest=TERRAIN(3.9)
+      lava                 [-0.55, -0.20, +0.71, +2.32]  own=1.5  closest=TERRAIN(3.1)
+    Abel (spread=0.00):
+      Abel                 [-3.07, +3.61, -9.71, +2.12]  own=0.0  closest=Eve(4.4)
+    Adam (spread=0.00):
+      Adam                 [+1.33, +3.32, -7.60, +2.41]  own=0.0  closest=Eve(4.3)
+    Eve (spread=0.00):
+      Eve                  [-0.04, +6.83, -9.59, +1.79]  own=0.0  closest=Adam(4.3)
+
+======================================================================
+  Abel — 1953 ep, 57 vocab
+======================================================================
+
+  --- CATEGORY AVERAGES ---
+    Adam         ( 1): [+0.09, +3.63, -7.38, +6.65]
+    CONTAINER    ( 1): [+10.71, -6.64, +7.30, -7.02]
+    Cain         ( 1): [-2.60, +5.68, -10.89, +5.52]
+    DANGER       ( 2): [-0.95, +0.24, +0.83, -0.02]
+    DECORATION   ( 2): [-1.91, -1.03, -0.71, -2.29]
+    EMPTY        ( 1): [+13.57, -21.84, +18.99, -20.76]
+    Eve          ( 1): [-0.40, +5.00, -13.13, +5.07]
+    FOOD         (16): [-5.58, +4.21, -4.84, +4.37]
+    JUNK         (16): [+2.03, +0.39, +0.49, +0.05]
+    POISON       ( 3): [-5.17, +3.43, -5.04, +3.42]
+    TERRAIN      (10): [+1.61, +1.61, +1.02, +2.60]
+
+  --- DISTANCE MATRIX ---
+                  Adam      CONTAINE  Cain      DANGER    DECORATI  EMPTY     Eve       FOOD      JUNK      POISON    TERRAIN 
+    Adam              0.00     24.91      5.00     11.15     12.25     47.72      6.13      6.65     10.94      6.60      9.66
+    CONTAINER        24.91      0.00     28.58     16.55     16.65     23.77     28.67     25.69     14.87     24.79     16.81
+    Cain              5.00     28.58      0.00     14.15     14.50     51.01      3.24      7.00     14.45      7.09     13.59
+    DANGER           11.15     16.55     14.15      0.00      3.17     38.19     15.61      9.41      3.00      8.61      3.92
+    DECORATION       12.25     16.65     14.50      3.17      0.00     37.44     15.72     10.11      4.94      9.05      6.80
+    EMPTY            47.72     23.77     51.01     38.19     37.44      0.00     51.13     47.38     37.45     46.39     39.52
+    Eve               6.13     28.67      3.24     15.61     15.72     51.13      0.00      9.83     15.42      9.66     14.89
+    FOOD              6.65     25.69      7.00      9.41     10.11     47.38      9.83      0.00     10.93      1.31      9.80
+    JUNK             10.94     14.87     14.45      3.00      4.94     37.45     15.42     10.93      0.00     10.15      2.91
+    POISON            6.60     24.79      7.09      8.61      9.05     46.39      9.66      1.31     10.15      0.00      9.31
+    TERRAIN           9.66     16.81     13.59      3.92      6.80     39.52     14.89      9.80      2.91      9.31      0.00
+
+  --- POISON ITEMS: closest category ---
+    poisonous_potato     -> FOOD (FOOD=1.7, Cain=6.5, Adam=7.3, Eve=9.4)
+    rotten_flesh         -> FOOD (FOOD=2.4, Adam=6.3, Cain=7.5, DANGER=7.8)
+    spider_eye           -> FOOD (FOOD=2.1, Adam=6.7, DANGER=7.6, Cain=7.8)
+
+  --- PER-CATEGORY ITEMS + SPREAD ---
+    FOOD (spread=3.60):
+      apple                [-4.74, +4.61, -2.29, +5.45]  own=2.9  closest=POISON(3.6)
+      baked_potato         [-1.38, +1.04, -3.32, +1.72]  own=6.1  closest=DANGER(4.6)
+      beetroot_soup        [-7.39, +3.90, -6.80, +4.10]  own=2.7  closest=POISON(3.0)
+      bread                [-6.58, +6.68, -5.49, +6.18]  own=3.3  closest=POISON(4.5)
+      carrot               [-6.23, +4.14, -3.53, +5.74]  own=2.0  closest=POISON(3.0)
+      cooked_beef          [-9.95, +6.24, -7.50, +3.23]  own=5.6  closest=POISON(6.1)
+      cooked_chicken       [-5.41, +4.87, -3.90, +3.92]  own=1.2  closest=POISON(1.9)
+      cooked_fish          [-6.52, +6.50, -5.13, +7.98]  own=4.4  closest=POISON(5.7)
+      cooked_mutton        [-5.22, +3.12, -4.49, +4.76]  own=1.3  closest=POISON(1.5)
+      cooked_porkchop      [-4.55, +3.87, -4.28, +1.18]  own=3.4  closest=POISON(2.5)
+      cooked_rabbit        [-6.97, +3.78, -4.77, +4.50]  own=1.5  closest=POISON(2.1)
+      cookie               [-6.50, +5.71, -9.79, +6.96]  own=5.9  closest=Cain(4.3)
+      golden_apple         [-2.87, +2.14, -1.82, +3.45]  own=4.6  closest=POISON(4.2)
+      melon                [-3.15, +2.88, -4.31, +2.40]  own=3.4  closest=POISON(2.4)
+      mushroom_stew        [-7.72, +7.62, -5.39, +6.26]  own=4.5  closest=POISON(5.7)
+      pumpkin_pie          [-4.09, +0.30, -4.61, +2.03]  own=4.8  closest=POISON(3.6)
+    POISON (spread=1.55):
+      poisonous_potato     [-6.32, +5.09, -5.93, +3.77]  own=2.2  closest=FOOD(1.7)
+      rotten_flesh         [-4.46, +2.24, -4.81, +3.45]  own=1.4  closest=FOOD(2.4)
+      spider_eye           [-4.71, +2.96, -4.37, +3.06]  own=1.0  closest=FOOD(2.1)
+    JUNK (spread=4.63):
+      arrow                [+3.60, -1.18, +3.82, -3.24]  own=5.2  closest=DANGER(6.5)
+      bone                 [+3.26, -2.13, +3.58, -2.87]  own=5.1  closest=DANGER(6.2)
+      coal                 [+1.07, +0.29, +0.39, +1.94]  own=2.1  closest=TERRAIN(1.7)
+      cobblestone          [+0.04, +5.45, -2.79, +5.30]  own=8.2  closest=Adam(5.1)
+      diamond              [+3.07, -0.43, -0.25, -1.37]  own=2.1  closest=DANGER(4.4)
+      dirt                 [+5.96, +2.67, +0.53, +1.65]  own=4.8  closest=TERRAIN(4.6)
+      feather              [+2.71, -2.29, +2.51, -2.25]  own=4.1  closest=DANGER(5.3)
+      gold_ingot           [+5.21, -2.64, +4.32, -6.18]  own=8.5  closest=CONTAINER(7.5)
+      iron_ingot           [+3.64, -0.86, +3.31, -3.84]  own=5.2  closest=DANGER(6.6)
+      leather              [+0.33, +1.66, -3.05, +3.96]  own=5.7  closest=TERRAIN(4.5)
+      paper                [+0.28, +1.83, -4.80, +1.82]  own=6.0  closest=Adam(5.8)
+      stick                [+0.61, +2.55, +1.38, +2.49]  own=3.7  closest=TERRAIN(1.4)
+      stone                [+2.89, +0.74, +0.19, +1.00]  own=1.4  closest=TERRAIN(2.4)
+      string               [-3.43, +1.45, -2.20, +4.20]  own=7.4  closest=POISON(3.9)
+      wooden_pickaxe       [+2.61, -0.55, +1.43, -2.01]  own=2.5  closest=DANGER(4.2)
+      wooden_sword         [+0.64, -0.35, -0.57, +0.15]  own=1.9  closest=DANGER(2.2)
+    DANGER (spread=2.61):
+      flowing_lava         [-2.84, +0.67, +0.31, -1.68]  own=2.6  closest=DECORATION(2.3)
+      lava                 [+0.95, -0.19, +1.34, +1.64]  own=2.6  closest=TERRAIN(2.2)
+    Adam (spread=0.00):
+      Adam                 [+0.09, +3.63, -7.38, +6.65]  own=0.0  closest=Cain(5.0)
+    Cain (spread=0.00):
+      Cain                 [-2.60, +5.68, -10.89, +5.52]  own=0.0  closest=Eve(3.2)
+    Eve (spread=0.00):
+      Eve                  [-0.40, +5.00, -13.13, +5.07]  own=0.0  closest=Cain(3.2)

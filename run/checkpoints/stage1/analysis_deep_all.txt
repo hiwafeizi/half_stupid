@@ -1,0 +1,1816 @@
+
+======================================================================
+  Adam — DEEP ANALYSIS (1952 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  75 (above_head r0c0): impact=7395.7 (+)
+    pos  50 (eye_level r0c0): impact=6772.9 (+)
+    pos  29 (floor r0c4): impact=6252.3 (+)
+    pos  70 (eye_level r4c0): impact=6090.7 (+)
+    pos  68 (eye_level r3c3): impact=5969.0 (+)
+    pos  56 (eye_level r1c1): impact=5940.9 (+)
+    pos  88 (above_head r2c3): impact=5938.5 (+)
+    pos  78 (above_head r0c3): impact=5875.0 (+)
+    pos  66 (eye_level r3c1): impact=5861.6 (+)
+    pos  97 (above_head r4c2): impact=5835.7 (+)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  75 (above_head r0c0): impact=1407.1 (+)
+    pos  88 (above_head r2c3): impact=1338.7 (+)
+    pos  97 (above_head r4c2): impact=1307.0 (+)
+    pos  78 (above_head r0c3): impact=1293.1 (+)
+    pos  81 (above_head r1c1): impact=1288.5 (+)
+    pos  77 (above_head r0c2): impact=1282.4 (+)
+    pos  91 (above_head r3c1): impact=1280.5 (+)
+    pos  76 (above_head r0c1): impact=1278.5 (+)
+    pos  80 (above_head r1c0): impact=1274.8 (+)
+    pos  96 (above_head r4c1): impact=1272.4 (+)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       4369  4820  4099  4548  4624
+       4541  4796  4708  4472  4594
+       4232  4929  4656  4709  4617
+       4188  4297  4596  4884  4848
+       4140  4737  4875  4822  5041
+    floor:
+       5231  5138  4160  5113  6252
+       4869  5025  4010  4613  5562
+       4703  4234  5742  4774  5507
+       4388  4216  3584  4127  5024
+       4785  4598  3495  3293  4933
+    eye_level:
+       6773  5179  4607  5555  4312
+       5281  5941  4671  5622  5403
+       5634  4645  3814  4487  4604
+       4691  5862  4303  5969  5213
+       6091  5538  5156  5759  4862
+    above_head:
+       7396  5786  5790  5875  5514
+       5654  5787  5433  5451  5501
+       5291  5586  5124  5939  5704
+       5155  5749  5524  5629  5391
+       5511  5652  5836  5635  4962
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: medium        hotbar_1=+4.6 | vis=236 | food=-0.7, health=-0.6
+    n 1: medium      turn_right=+2.0 | vis=204 | health=+0.0, food=+0.0
+    n 2: STRONG         use_eat=-14.3 | vis=701 | health=+24.1, food=+20.9
+    n 3: STRONG         use_eat=+24.1 | vis=1649 | health=-24.7, food=-22.3
+    n 4: STRONG         use_eat=+16.1 | vis=1570 | health=-24.7, food=-22.1
+    n 5: STRONG         use_eat=+19.6 | vis=1721 | health=-24.8, food=-22.0
+    n 6: STRONG         use_eat=+24.3 | vis=1623 | health=-24.7, food=-22.3
+    n 7: STRONG         use_eat=+23.5 | vis=1684 | health=-24.7, food=-22.1
+    n 8: medium        hotbar_8=+4.3 | vis=400 | health=+0.0, food=+0.0
+    n 9: STRONG         use_eat=-17.5 | vis=692 | health=+24.6, food=+21.4
+    n10: medium        hotbar_1=+4.5 | vis=449 | i4_rx=-0.3, health=-0.3
+    n11: STRONG         use_eat=+22.8 | vis=1654 | health=-24.8, food=-22.4
+    n12: medium      turn_right=+3.7 | vis=304 | yaw=+0.2, z=-0.2
+    n13: weak         look_down=+1.0 | vis=181 | health=+0.0, food=+0.0
+    n14: STRONG         use_eat=+21.6 | vis=1624 | health=-24.7, food=-22.3
+    n15: STRONG      turn_right=+7.8 | vis=625 | health=+16.8, food=+15.5
+    n16: STRONG         use_eat=+21.4 | vis=1612 | health=-24.7, food=-22.0
+    n17: STRONG         use_eat=+15.2 | vis=1504 | health=-24.6, food=-21.9
+    n18: medium   A_strafe_left=+3.2 | vis=658 | s2_ct=-0.7, health=-0.6
+    n19: STRONG         use_eat=+15.0 | vis=1428 | health=-24.5, food=-21.8
+    n20: medium            jump=+4.2 | vis=285 | health=+0.0, food=+0.0
+    n21: STRONG         use_eat=+24.5 | vis=1653 | health=-24.7, food=-22.3
+    n22: STRONG         use_eat=+16.5 | vis=1375 | health=-24.4, food=-21.8
+    n23: weak          hotbar_7=+1.4 | vis=32 | i1_rx=+0.3, health=-0.3
+    n24: weak          hotbar_9=+1.4 | vis=71 | pitch=+0.2, s8_ct=-0.2
+    n25: STRONG         use_eat=+22.4 | vis=1628 | health=-24.8, food=-22.3
+    n26: medium        hotbar_3=+3.9 | vis=200 | s3_ct=-0.2, held_ct=-0.2
+    n27: medium       turn_left=+3.2 | vis=209 | health=+0.0, food=+0.0
+    n28: STRONG         use_eat=-13.2 | vis=673 | health=+24.8, food=+21.7
+    n29: STRONG         use_eat=+23.7 | vis=1668 | health=-24.8, food=-22.4
+    n30: STRONG         use_eat=+23.4 | vis=1614 | health=-24.7, food=-22.3
+    n31: STRONG         use_eat=+18.9 | vis=1607 | health=-24.5, food=-21.9
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +182877.5
+      BLOCK grass               : +137778.3
+      JUNK  dirt                : +126296.6
+      BLOCK fence               : +110386.5
+      BLOCK bedrock             : +81381.3
+      JUNK  cobblestone         : +70559.8
+      BLOCK tripwire            : +56719.4
+      BLOCK leaves              : +48429.6
+      FOOD  apple               : +38900.7
+      BLOCK Abel                : +34546.8
+    Most eat-suppressing blocks (bottom 5):
+      FOOD  cooked_beef         : -65905.4
+      BLOCK flowing_lava        : -68185.5
+      BLOCK quartz_block        : -76252.4
+      BLOCK yellow_flower       : -80702.1
+      BLOCK gravel              : -95665.1
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=132240 hb=17680 held=1908 agents=8062 items=7642
+      Nodes:  n9=+11.0, n2=+9.7, n17=+8.0
+      Raw:    health=-981.3, food=-896.6, a3_hp=-788.8, a3_here=-695.8
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+25835, grass=+20807, dirt=+17562
+
+    S_backward:
+      Drive:  vis=82204 hb=8414 held=1070 agents=2661 items=2340
+      Nodes:  n2=+11.1, n9=+11.1, n28=+7.5
+      Raw:    i3_here=+162.5, i2_here=+162.2, i4_here=+157.8, crouching=+157.4
+      Vision: above[2,3]=+, above[4,2]=+, above[0,0]=+
+      Blocks: air=+15423, grass=+12400, dirt=+10500
+
+    A_strafe_left:
+      Drive:  vis=68028 hb=4786 held=775 agents=1077 items=1315
+      Nodes:  n2=+11.9, n9=+10.6, n28=+7.0
+      Raw:    eating=+125.1, y=+120.8, i1_here=+118.2, i2_here=+113.3
+      Vision: above[2,3]=+, above[1,1]=+, above[4,2]=+
+      Blocks: air=+12898, grass=+11433, dirt=+8646
+
+    D_strafe_right:
+      Drive:  vis=82220 hb=7311 held=1045 agents=2277 items=2133
+      Nodes:  n9=+11.5, n2=+11.0, n31=+8.6
+      Raw:    i3_here=+161.5, i2_here=+160.5, i4_here=+155.1, i1_here=+152.6
+      Vision: above[2,3]=+, above[0,0]=+, above[4,2]=+
+      Blocks: air=+15648, grass=+13871, dirt=+10454
+
+    turn_left:
+      Drive:  vis=77145 hb=6804 held=895 agents=1839 items=1550
+      Nodes:  n9=+12.5, n2=+8.6, n28=+8.3
+      Raw:    eating=+141.6, i2_here=+140.6, i1_here=+139.5, y=+136.1
+      Vision: above[2,3]=+, above[4,2]=+, above[3,2]=+
+      Blocks: air=+14358, grass=+11843, dirt=+9735
+
+    turn_right:
+      Drive:  vis=218367 hb=34844 held=3545 agents=17403 items=17763
+      Nodes:  n17=+9.9, n9=+8.7, n16=+8.2
+      Raw:    health=-2386.9, food=-2153.0, a3_hp=-1904.1, a3_here=-1687.3
+      Vision: above[0,0]=+, eye[0,0]=+, above[2,3]=+
+      Blocks: air=+44526, grass=+36475, dirt=+30154
+
+    look_up:
+      Drive:  vis=121561 hb=15950 held=1847 agents=6710 items=6151
+      Nodes:  n9=+12.6, n2=+10.9, n28=+6.8
+      Raw:    health=-742.5, food=-683.6, a3_hp=-598.9, a3_here=-526.5
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+23475, grass=+18896, dirt=+16038
+
+    look_down:
+      Drive:  vis=114185 hb=15076 held=1687 agents=6347 items=5758
+      Nodes:  n9=+10.6, n2=+9.5, n28=+8.3
+      Raw:    health=-696.2, food=-641.4, a3_hp=-563.6, a3_here=-495.9
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+22088, grass=+17766, dirt=+15058
+
+    jump:
+      Drive:  vis=52153 hb=2468 held=488 agents=1472 items=2078
+      Nodes:  n9=+11.7, n2=+8.5, n28=+8.5
+      Raw:    health=+340.0, food=+290.2, a3_hp=+261.5, a2_hp=+240.8
+      Vision: eye[3,2]=+, above[2,3]=+, eye[0,4]=+
+      Blocks: air=+10152, grass=+7933, dirt=+6973
+
+    crouch:
+      Drive:  vis=81080 hb=7490 held=1005 agents=2262 items=2024
+      Nodes:  n9=+12.0, n2=+10.0, n28=+8.3
+      Raw:    i2_here=+156.3, i3_here=+153.3, i1_here=+150.7, eating=+150.3
+      Vision: above[2,3]=+, above[0,0]=+, above[4,2]=+
+      Blocks: air=+15169, grass=+12259, dirt=+10239
+
+    use_eat:
+      Drive:  vis=503362 hb=108033 held=10053 agents=60461 items=67366
+      Nodes:  n21=+24.5, n6=+24.3, n3=+24.1
+      Raw:    health=-9424.9, food=-8436.5, a3_hp=-7481.7, a3_here=-6651.0
+      Vision: above[0,0]=+, eye[0,0]=+, floor[0,4]=+
+      Blocks: air=+111282, grass=+92747, dirt=+73529
+
+    attack:
+      Drive:  vis=131300 hb=17591 held=1951 agents=7506 items=6977
+      Nodes:  n9=+13.2, n28=+8.8, n2=+7.5
+      Raw:    health=-857.0, food=-785.4, a3_hp=-690.8, a3_here=-608.8
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+25394, grass=+20369, dirt=+17316
+
+    Q_throw:
+      Drive:  vis=199755 hb=30941 held=3223 agents=15053 items=15065
+      Nodes:  n9=+11.2, n2=+10.6, n16=+8.0
+      Raw:    health=-2009.8, food=-1818.7, a3_hp=-1605.7, a3_here=-1421.3
+      Vision: above[0,0]=+, eye[0,0]=+, above[2,3]=+
+      Blocks: air=+40174, grass=+32434, dirt=+27322
+
+    hotbar_1:
+      Drive:  vis=176317 hb=25903 held=2772 agents=12578 items=12532
+      Nodes:  n9=+11.3, n4=+10.2, n19=+9.6
+      Raw:    health=-1682.8, food=-1523.1, a3_hp=-1341.6, a3_here=-1186.3
+      Vision: above[0,0]=+, above[2,3]=+, eye[0,0]=+
+      Blocks: air=+35541, grass=+29715, dirt=+24003
+
+    hotbar_2:
+      Drive:  vis=72146 hb=5712 held=771 agents=1811 items=1539
+      Nodes:  n9=+11.3, n2=+10.8, n28=+8.9
+      Raw:    eating=+137.5, i1_here=+132.1, i2_here=+132.1, y=+130.7
+      Vision: above[2,3]=+, above[4,2]=+, above[3,2]=+
+      Blocks: air=+13522, grass=+11125, dirt=+9147
+
+    hotbar_3:
+      Drive:  vis=107328 hb=11905 held=1422 agents=5290 items=4966
+      Nodes:  n2=+12.7, n9=+9.4, n4=+9.2
+      Raw:    health=-604.5, food=-555.2, a3_hp=-483.9, a3_here=-423.7
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+21109, grass=+18261, dirt=+14176
+
+    hotbar_4:
+      Drive:  vis=109425 hb=12736 held=1535 agents=5228 items=4825
+      Nodes:  n2=+11.3, n9=+10.7, n31=+8.6
+      Raw:    health=-555.9, food=-513.6, a3_hp=-448.7, a3_here=-392.7
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+21155, grass=+17845, dirt=+14283
+
+    hotbar_5:
+      Drive:  vis=111955 hb=13511 held=1583 agents=5809 items=5405
+      Nodes:  n9=+10.7, n28=+9.0, n2=+8.4
+      Raw:    health=-663.8, food=-607.3, a3_hp=-532.6, a3_here=-467.5
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+21808, grass=+18696, dirt=+14711
+
+    hotbar_6:
+      Drive:  vis=32467 hb=2268 held=104 agents=2558 items=3927
+      Nodes:  n9=+11.0, n2=+10.1, n28=+8.9
+      Raw:    health=+584.2, food=+510.8, a3_hp=+457.7, a2_hp=+414.3
+      Vision: eye[3,2]=+, eye[0,4]=+, above[1,3]=+
+      Blocks: air=+6630, grass=+5816, fence=+4348
+
+    hotbar_7:
+      Drive:  vis=128023 hb=17054 held=1906 agents=7651 items=7013
+      Nodes:  n2=+11.9, n9=+10.4, n14=+8.2
+      Raw:    health=-871.1, food=-799.1, a3_hp=-702.3, a3_here=-619.0
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+24952, grass=+19974, dirt=+17055
+
+    hotbar_8:
+      Drive:  vis=219630 hb=35488 held=3656 agents=17633 items=17920
+      Nodes:  n11=+12.0, n29=+11.6, n9=+10.3
+      Raw:    health=-2417.5, food=-2185.2, a3_hp=-1930.4, a3_here=-1710.8
+      Vision: above[0,0]=+, eye[0,0]=+, above[2,3]=+
+      Blocks: air=+44661, grass=+36257, dirt=+30375
+
+    hotbar_9:
+      Drive:  vis=73589 hb=5556 held=801 agents=1747 items=1569
+      Nodes:  n2=+11.1, n9=+10.2, n28=+8.6
+      Raw:    eating=+140.3, i2_here=+138.0, i1_here=+136.8, y=+135.0
+      Vision: above[2,3]=+, above[0,0]=+, above[4,2]=+
+      Blocks: air=+13879, grass=+11849, dirt=+9276
+
+    stand_still:
+      Drive:  vis=113344 hb=13710 held=1599 agents=5788 items=5389
+      Nodes:  n2=+11.5, n9=+10.8, n28=+6.9
+      Raw:    health=-650.3, food=-598.4, a3_hp=-525.0, a3_here=-460.8
+      Vision: above[0,0]=+, above[2,3]=+, above[4,2]=+
+      Blocks: air=+22018, grass=+18212, dirt=+14890
+
+  --- CONTEXT NODES: role of each context node ---
+    c 0: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | food=0.1, crouching=0.1, strafing=0.1
+    c 1: STRONG         use_eat=+4.28 | hidden=399 raw=88 hbar=71 | tick=even | health=38.6, food=34.5, crouching=14.6
+    c 2: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t1 | food=0.1, jumping=0.1, crouching=0.0
+    c 3: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c 4: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.7, food=36.4, crouching=15.5
+    c 5: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c 6: STRONG         use_eat=+4.44 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.6
+    c 7: dead        S_backward=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, crouching=0.4, food=0.3
+    c 8: STRONG         use_eat=+4.43 | hidden=420 raw=92 hbar=69 | tick=even | health=40.6, food=36.3, crouching=15.3
+    c 9: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t4 | strafing=0.1, health=0.1, crouching=0.1
+    c10: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c11: dead           Q_throw=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | health=0.4, crouching=0.4, food=0.4
+    c12: STRONG         use_eat=+4.44 | hidden=420 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c13: STRONG         use_eat=-5.50 | hidden=129 raw=72 hbar=13 | tick=even | health=38.0, food=32.8, crouching=1.0
+    c14: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.5, food=36.4, crouching=15.5
+    c15: dead            crouch=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | crouching=0.1, attacking=0.1, food=0.1
+    c16: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c17: STRONG         use_eat=+4.43 | hidden=420 raw=93 hbar=68 | tick=even | health=40.5, food=36.4, crouching=15.6
+    c18: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.6
+    c19: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c20: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | food=0.1, pitching=0.1, jumping=0.0
+    c21: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c22: dead     A_strafe_left=+0.02 | hidden=1 raw=0 hbar=0 | tick=t0 | moving=0.1, crouching=0.1, health=0.1
+    c23: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c24: STRONG         use_eat=+4.44 | hidden=420 raw=93 hbar=68 | tick=even | health=40.7, food=36.3, crouching=15.5
+    c25: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c26: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | pitching=0.0, moving=0.0, food=0.0
+    c27: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c28: dead        S_backward=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.3
+    c29: STRONG         use_eat=+4.44 | hidden=420 raw=93 hbar=68 | tick=even | health=40.7, food=36.3, crouching=15.5
+    c30: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.7, food=36.4, crouching=15.5
+    c31: weak         turn_left=+0.14 | hidden=6 raw=1 hbar=0 | tick=even | health=0.5, crouching=0.3, strafing=0.1
+    c32: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | food=0.1, turning=0.0, health=0.0
+    c33: weak          hotbar_5=+0.13 | hidden=6 raw=2 hbar=0 | tick=t3 | crouching=0.5, health=0.5, food=0.3
+    c34: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c35: STRONG         use_eat=+4.42 | hidden=419 raw=92 hbar=68 | tick=even | health=40.5, food=36.1, crouching=15.2
+    c36: dead     A_strafe_left=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | crouching=0.1, turning=0.1, jumping=0.1
+    c37: weak           look_up=+0.48 | hidden=8 raw=1 hbar=4 | tick=t4 | crouching=0.6, food=0.5, pitching=0.1
+    c38: weak          hotbar_7=+0.13 | hidden=8 raw=2 hbar=2 | tick=even | health=0.6, food=0.5, crouching=0.5
+    c39: dead     A_strafe_left=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, food=0.3, crouching=0.3
+    c40: dead           Q_throw=+0.09 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.3, health=0.3, turning=0.1
+    c41: dead           Q_throw=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.3
+    c42: STRONG         use_eat=+4.44 | hidden=420 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c43: dead            crouch=-0.07 | hidden=7 raw=1 hbar=2 | tick=even | health=0.4, crouching=0.3, moving=0.0
+    c44: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c45: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c46: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c47: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.4
+    c48: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c49: dead     A_strafe_left=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.4, health=0.4, food=0.3
+    c50: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c51: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c52: dead          hotbar_7=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | turning=0.1, strafing=0.0, moving=0.0
+    c53: dead          hotbar_4=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | jumping=0.1, pitching=0.1, food=0.0
+    c54: dead           look_up=+0.05 | hidden=1 raw=0 hbar=0 | tick=even | crouching=0.1, food=0.0, strafing=0.0
+    c55: STRONG         use_eat=+4.43 | hidden=419 raw=93 hbar=68 | tick=even | health=40.6, food=36.4, crouching=15.5
+    c56: STRONG         use_eat=+4.43 | hidden=421 raw=93 hbar=68 | tick=even | health=40.6, food=36.3, crouching=15.5
+    c57: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | moving=0.1, crouching=0.1, pitching=0.1
+    c58: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | food=0.1, moving=0.1, jumping=0.0
+    c59: dead           Q_throw=+0.08 | hidden=6 raw=1 hbar=0 | tick=even | crouching=0.3, health=0.3, strafing=0.1
+    c60: STRONG         use_eat=+4.43 | hidden=420 raw=93 hbar=68 | tick=even | health=40.5, food=36.3, crouching=15.5
+    c61: dead           Q_throw=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.4
+    c62: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t0 | moving=0.1, turning=0.0, food=0.0
+    c63: STRONG         use_eat=+4.44 | hidden=415 raw=91 hbar=68 | tick=even | health=40.0, food=35.9, crouching=14.8
+
+  --- CONTEXT ACTIONS: what drives each action through context ---
+
+    W_forward:
+      Drive:  hidden=5036 raw=1002 hbar=896
+      Nodes:  c13=+2.51, c55=+0.42, c30=+0.42
+      Raw:    health=-424.0, food=-382.6, crouching=+194.9, turning=-0.1
+
+    S_backward:
+      Drive:  hidden=6116 raw=1459 hbar=923
+      Nodes:  c13=+2.60, c1=-0.68, c8=-0.46
+      Raw:    health=+657.3, food=+585.0, crouching=-216.1, moving=-0.1
+
+    A_strafe_left:
+      Drive:  hidden=2844 raw=738 hbar=389
+      Nodes:  c13=+2.58, c8=-0.24, c35=-0.24
+      Raw:    health=+340.3, food=+301.2, crouching=-95.5, moving=-0.1
+
+    D_strafe_right:
+      Drive:  hidden=2519 raw=667 hbar=338
+      Nodes:  c13=+2.60, c1=-0.33, c8=-0.19
+      Raw:    health=+309.3, food=+273.5, crouching=-83.3, moving=-0.1
+
+    turn_left:
+      Drive:  hidden=2043 raw=555 hbar=267
+      Nodes:  c13=+2.45, c1=-0.25, c37=+0.23
+      Raw:    health=+259.2, food=+228.9, crouching=-66.5, moving=-0.1
+
+    turn_right:
+      Drive:  hidden=1270 raw=380 hbar=149
+      Nodes:  c13=+2.35, c1=-0.18, c63=-0.13
+      Raw:    health=+181.9, food=+159.8, crouching=-38.2, moving=-0.1
+
+    look_up:
+      Drive:  hidden=3745 raw=921 hbar=545
+      Nodes:  c13=+2.23, c37=+0.48, c1=-0.34
+      Raw:    health=+418.3, food=+371.7, crouching=-130.1, moving=-0.1
+
+    look_down:
+      Drive:  hidden=2996 raw=552 hbar=565
+      Nodes:  c13=+2.53, c37=+0.36, c16=+0.27
+      Raw:    health=-226.2, food=-205.5, crouching=+119.7, turning=-0.1
+
+    jump:
+      Drive:  hidden=1675 raw=475 hbar=210
+      Nodes:  c13=+2.46, c1=-0.20, c33=+0.13
+      Raw:    health=+224.0, food=+197.3, crouching=-52.8, moving=-0.1
+
+    crouch:
+      Drive:  hidden=6574 raw=1340 hbar=1146
+      Nodes:  c13=+2.49, c35=+0.55, c55=+0.55
+      Raw:    health=-572.2, food=-515.1, crouching=+252.0, turning=-0.2
+
+    use_eat:
+      Drive:  hidden=58187 raw=13060 hbar=9344
+      Nodes:  c13=-5.50, c24=+4.44, c42=+4.44
+      Raw:    health=-5770.8, food=-5157.2, crouching=+2125.7, moving=+1.0
+
+    attack:
+      Drive:  hidden=3490 raw=668 hbar=639
+      Nodes:  c13=+2.32, c1=+0.39, c35=+0.30
+      Raw:    health=-278.1, food=-251.7, crouching=+137.5, turning=-0.1
+
+    Q_throw:
+      Drive:  hidden=8195 raw=1712 hbar=1404
+      Nodes:  c13=+2.20, c35=+0.67, c14=+0.67
+      Raw:    health=-737.6, food=-662.6, crouching=+310.3, turning=-0.2
+
+    hotbar_1:
+      Drive:  hidden=12198 raw=2589 hbar=2059
+      Nodes:  c13=+2.26, c1=+1.03, c25=+0.97
+      Raw:    health=-1122.1, food=-1007.0, crouching=+458.6, turning=-0.3
+
+    hotbar_2:
+      Drive:  hidden=10241 raw=2144 hbar=1752
+      Nodes:  c13=+2.64, c1=+0.86, c63=+0.85
+      Raw:    health=-924.5, food=-830.5, crouching=+387.4, turning=-0.2
+
+    hotbar_3:
+      Drive:  hidden=4886 raw=1188 hbar=721
+      Nodes:  c13=+2.57, c30=-0.37, c60=-0.37
+      Raw:    health=+538.1, food=+478.3, crouching=-170.8, moving=-0.2
+
+    hotbar_4:
+      Drive:  hidden=10926 raw=2301 hbar=1858
+      Nodes:  c13=+2.49, c60=+0.89, c30=+0.89
+      Raw:    health=-994.2, food=-892.8, crouching=+412.3, turning=-0.2
+
+    hotbar_5:
+      Drive:  hidden=1420 raw=204 hbar=306
+      Nodes:  c13=+2.54, c16=+0.14, c50=+0.14
+      Raw:    health=-73.3, food=-68.9, crouching=+61.7, turning=-0.1
+
+    hotbar_6:
+      Drive:  hidden=2228 raw=604 hbar=293
+      Nodes:  c13=+2.61, c1=-0.41, c37=+0.28
+      Raw:    health=+281.7, food=+248.9, crouching=-72.5, moving=-0.1
+
+    hotbar_7:
+      Drive:  hidden=8660 raw=2008 hbar=1346
+      Nodes:  c13=+2.34, c1=-0.81, c8=-0.66
+      Raw:    health=+896.8, food=+799.6, crouching=-311.0, moving=-0.2
+
+    hotbar_8:
+      Drive:  hidden=20318 raw=4387 hbar=3379
+      Nodes:  c13=+2.05, c30=+1.60, c55=+1.60
+      Raw:    health=-1913.2, food=-1714.6, crouching=+757.4, turning=-0.4
+
+    hotbar_9:
+      Drive:  hidden=9229 raw=1924 hbar=1584
+      Nodes:  c13=+2.56, c1=+0.79, c55=+0.74
+      Raw:    health=-828.1, food=-744.5, crouching=+350.0, turning=-0.2
+
+    stand_still:
+      Drive:  hidden=3889 raw=752 hbar=709
+      Nodes:  c13=+2.44, c1=+0.57, c63=+0.41
+      Raw:    health=-314.5, food=-284.5, crouching=+152.3, turning=-0.1
+
+======================================================================
+  Eve — DEEP ANALYSIS (1948 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  51 (eye_level r0c1): impact=12448.6 (-)
+    pos  66 (eye_level r3c1): impact=10545.2 (-)
+    pos  50 (eye_level r0c0): impact=9740.0 (-)
+    pos  54 (eye_level r0c4): impact=9702.1 (-)
+    pos  87 (above_head r2c2): impact=9309.5 (-)
+    pos  60 (eye_level r2c0): impact=9136.3 (-)
+    pos  25 (floor r0c0): impact=8893.4 (-)
+    pos  68 (eye_level r3c3): impact=8726.8 (-)
+    pos  40 (floor r3c0): impact=8663.7 (-)
+    pos  30 (floor r1c0): impact=8617.7 (-)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  51 (eye_level r0c1): impact=665.9 (+)
+    pos  66 (eye_level r3c1): impact=501.6 (+)
+    pos  50 (eye_level r0c0): impact=485.5 (+)
+    pos  25 (floor r0c0): impact=473.9 (+)
+    pos  35 (floor r2c0): impact=459.2 (+)
+    pos  30 (floor r1c0): impact=442.4 (+)
+    pos  40 (floor r3c0): impact=434.4 (+)
+    pos  13 (below_feet r2c3): impact=411.6 (+)
+    pos  14 (below_feet r2c4): impact=407.7 (+)
+    pos  65 (eye_level r3c0): impact=386.9 (+)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       5085  4721  4917  6351  6546
+       3707  3965  4451  5375  5656
+       3852  4289  5070  5784  5787
+       3090  3718  4099  5317  5066
+       3444  3672  4110  5539  4822
+    floor:
+       8893  6140  5829  6062  5530
+       8618  6634  5638  6940  5205
+       8467  7544  7001  6597  4569
+       8664  7122  5375  6760  5703
+       7909  5023  4701  6833  5713
+    eye_level:
+       9740 12449  8285  7292  9702
+       6809  8614  5083  7084  5839
+       9136  7836  8232  7967  8211
+       8483 10545  5647  8727  7421
+       7153  7546  6209  7382  6438
+    above_head:
+       8400  8429  7837  7546  7731
+       8268  7383  7872  7520  8039
+       7858  8196  9310  7842  8127
+       8078  8151  7991  8006  7958
+       8094  8226  8029  8255  8189
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: weak    D_strafe_right=+1.9 | vis=367 | health=+0.0, food=+0.0
+    n 1: STRONG         use_eat=+21.3 | vis=1857 | health=-21.4, food=-18.4
+    n 2: STRONG         use_eat=-8.5 | vis=353 | health=+20.8, food=+16.5
+    n 3: STRONG         use_eat=+23.8 | vis=1872 | health=-21.0, food=-18.2
+    n 4: STRONG       look_down=+13.1 | vis=413 | health=+20.5, food=+16.1
+    n 5: medium         Q_throw=+3.2 | vis=366 | health=+0.0, food=+0.0
+    n 6: STRONG         use_eat=+25.3 | vis=1870 | health=-20.8, food=-18.3
+    n 7: STRONG         use_eat=+21.8 | vis=1736 | health=-21.1, food=-18.4
+    n 8: STRONG     stand_still=+9.9 | vis=384 | health=+19.0, food=+14.5
+    n 9: weak    D_strafe_right=-1.0 | vis=332 | yaw=+0.9, i1_here=+0.8
+    n10: STRONG         use_eat=+23.0 | vis=1647 | health=-21.1, food=-18.3
+    n11: STRONG         use_eat=+24.5 | vis=1865 | health=-20.9, food=-18.3
+    n12: weak     A_strafe_left=+1.8 | vis=288 | s9_ct=-0.2, a3_rx=+0.2
+    n13: STRONG         use_eat=+21.8 | vis=1700 | health=-21.1, food=-18.4
+    n14: STRONG         use_eat=+22.0 | vis=1471 | health=-21.2, food=-18.2
+    n15: weak          hotbar_5=-0.8 | vis=180 | i3_rx=+0.2, x=-0.2
+    n16: STRONG         use_eat=+20.9 | vis=1752 | health=-21.3, food=-18.5
+    n17: medium      S_backward=+2.1 | vis=369 | health=+0.0, food=+0.0
+    n18: STRONG         use_eat=-8.1 | vis=408 | health=+21.0, food=+15.9
+    n19: STRONG         use_eat=+23.4 | vis=1789 | health=-21.1, food=-18.2
+    n20: STRONG         use_eat=-14.0 | vis=497 | health=+20.7, food=+16.7
+    n21: STRONG         use_eat=+25.6 | vis=1948 | health=-20.7, food=-18.2
+    n22: STRONG         use_eat=+23.2 | vis=1499 | health=-21.3, food=-18.2
+    n23: STRONG         use_eat=+22.9 | vis=1775 | health=-21.2, food=-18.3
+    n24: medium         Q_throw=+2.9 | vis=284 | a2_rz=-0.2, a1_rx=+0.2
+    n25: STRONG         use_eat=+23.5 | vis=1661 | health=-21.1, food=-18.4
+    n26: STRONG         use_eat=+21.6 | vis=1748 | health=-21.1, food=-18.4
+    n27: weak          hotbar_4=+1.7 | vis=265 | i2_qty=-0.2, health=-0.2
+    n28: medium  D_strafe_right=+3.4 | vis=327 | health=+0.0, food=+0.0
+    n29: STRONG         use_eat=+25.1 | vis=1936 | health=-20.8, food=-18.1
+    n30: STRONG         use_eat=+24.4 | vis=1733 | health=-21.1, food=-18.3
+    n31: medium  D_strafe_right=+2.1 | vis=223 | health=+0.0, food=+0.0
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +363405.6
+      BLOCK grass               : +249710.6
+      FOOD  cooked_beef         : +170442.2
+      BLOCK Abel                : +164131.6
+      BLOCK Cain                : +162244.5
+      BLOCK Adam                : +128915.0
+      FOOD  mushroom_stew       : +122650.7
+      FOOD  golden_apple        : +115022.4
+      BLOCK fence               : +113282.1
+      BLOCK poisonous_potato    : +108639.0
+    Most eat-suppressing blocks (bottom 5):
+      BLOCK gravel              : -136579.0
+      JUNK  gold_ingot          : -199175.6
+      BLOCK red_flower          : -237718.2
+      BLOCK yellow_flower       : -284695.2
+      BLOCK quartz_block        : -402823.4
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=171853 hb=27839 held=3384 agents=12019 items=7397
+      Nodes:  n20=+9.6, n4=+7.6, n7=+7.1
+      Raw:    health=-1360.4, food=-1233.8, a3_hp=-1025.3, a2_hp=-882.4
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+49548, grass=+33487, cooked_beef=+24207
+
+    S_backward:
+      Drive:  vis=194305 hb=32125 held=3887 agents=14360 items=8792
+      Nodes:  n1=+7.6, n7=+7.5, n20=+7.5
+      Raw:    health=-1701.5, food=-1526.0, a3_hp=-1262.3, a2_hp=-1089.7
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+56715, grass=+38172, cooked_beef=+27577
+
+    A_strafe_left:
+      Drive:  vis=238718 hb=40534 held=4812 agents=18495 items=11465
+      Nodes:  n16=+8.9, n20=+8.9, n7=+8.4
+      Raw:    health=-2316.8, food=-2051.7, a3_hp=-1694.8, a2_hp=-1467.8
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+70553, grass=+47275, cooked_beef=+34056
+
+    D_strafe_right:
+      Drive:  vis=159327 hb=25580 held=3116 agents=10454 items=6512
+      Nodes:  n20=+10.7, n4=+10.6, n8=+6.4
+      Raw:    health=-1105.1, food=-1018.3, a3_hp=-849.8, a2_hp=-730.2
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+45653, grass=+30889, cooked_beef=+22282
+
+    turn_left:
+      Drive:  vis=132728 hb=20547 held=2573 agents=8027 items=5002
+      Nodes:  n20=+9.9, n4=+9.2, n18=+6.8
+      Raw:    health=-744.0, food=-708.4, a3_hp=-594.3, a2_hp=-508.0
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+37624, grass=+25409, cooked_beef=+18309
+
+    turn_right:
+      Drive:  vis=164233 hb=26530 held=3238 agents=10930 items=6862
+      Nodes:  n20=+11.5, n4=+9.4, n3=+6.2
+      Raw:    health=-1185.6, food=-1085.7, a3_hp=-903.3, a2_hp=-778.0
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+47255, grass=+31818, cooked_beef=+22883
+
+    look_up:
+      Drive:  vis=13538 hb=3329 held=195 agents=4244 items=3048
+      Nodes:  n20=+13.8, n4=+10.6, n8=+7.3
+      Raw:    health=+997.7, food=+794.0, a3_hp=+634.5, a2_hp=+561.2
+      Vision: below[2,2]=+, floor[0,4]=-, floor[4,2]=-
+      Blocks: air=+2046, grass=+1554, cooked_beef=+994
+
+    look_down:
+      Drive:  vis=161153 hb=25766 held=3154 agents=10588 items=6596
+      Nodes:  n4=+13.1, n20=+8.8, n7=+6.2
+      Raw:    health=-1127.2, food=-1038.3, a3_hp=-865.9, a2_hp=-743.6
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+45908, grass=+31016, cooked_beef=+22369
+
+    jump:
+      Drive:  vis=127905 hb=19748 held=2483 agents=7541 items=4641
+      Nodes:  n4=+12.3, n20=+8.5, n18=+6.7
+      Raw:    health=-658.9, food=-638.4, a3_hp=-536.6, i5_here=+477.9
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+36024, grass=+24385, cooked_beef=+17582
+
+    crouch:
+      Drive:  vis=72629 hb=9856 held=1312 agents=2914 items=1722
+      Nodes:  n20=+9.8, n8=+7.7, n4=+7.4
+      Raw:    i5_qty=+222.4, i4_here=+220.8, i3_here=+217.3, i5_here=+217.1
+      Vision: above[2,2]=-, above[2,1]=-, above[0,0]=-
+      Blocks: air=+19625, grass=+13577, cooked_beef=+9866
+
+    use_eat:
+      Drive:  vis=681066 hb=125560 held=14387 agents=64460 items=40090
+      Nodes:  n21=+25.6, n6=+25.3, n29=+25.1
+      Raw:    health=-9300.8, food=-7995.6, a3_hp=-6541.0, a2_hp=-5699.4
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+210588, grass=+139105, cooked_beef=+99864
+
+    attack:
+      Drive:  vis=142491 hb=22113 held=2766 agents=8631 items=5360
+      Nodes:  n20=+12.7, n4=+8.2, n18=+7.0
+      Raw:    health=-817.7, food=-775.0, a3_hp=-649.8, a2_hp=-555.4
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+40252, grass=+27224, cooked_beef=+19640
+
+    Q_throw:
+      Drive:  vis=31109 hb=1247 held=355 agents=1933 items=1901
+      Nodes:  n20=+12.5, n4=+9.5, n8=+8.9
+      Raw:    health=+728.2, food=+552.4, a3_hp=+434.8, a2_hp=+390.2
+      Vision: floor[0,4]=-, above[0,2]=-, above[0,4]=-
+      Blocks: air=+8852, grass=+5866, cooked_beef=+4620
+
+    hotbar_1:
+      Drive:  vis=79070 hb=10359 held=1418 agents=2875 items=1798
+      Nodes:  n20=+11.5, n4=+10.9, n7=+5.9
+      Raw:    i5_qty=+231.5, i4_here=+227.2, i5_here=+225.5, i3_here=+222.9
+      Vision: above[2,2]=-, above[2,1]=-, above[3,1]=-
+      Blocks: air=+21386, grass=+14706, cooked_beef=+10701
+
+    hotbar_2:
+      Drive:  vis=111392 hb=16117 held=2098 agents=5694 items=3552
+      Nodes:  n20=+12.6, n4=+9.9, n1=+6.5
+      Raw:    food=-426.5, health=-417.4, i5_here=+380.0, i4_here=+378.0
+      Vision: above[2,2]=-, above[2,1]=-, above[0,0]=-
+      Blocks: air=+29992, grass=+20600, cooked_beef=+14888
+
+    hotbar_3:
+      Drive:  vis=106819 hb=15132 held=1982 agents=5443 items=3347
+      Nodes:  n20=+12.5, n1=+9.3, n4=+9.0
+      Raw:    food=-417.2, health=-409.7, i5_here=+365.1, i4_here=+362.6
+      Vision: above[2,2]=-, above[2,1]=-, above[0,0]=-
+      Blocks: air=+28551, grass=+19729, cooked_beef=+14316
+
+    hotbar_4:
+      Drive:  vis=87677 hb=12173 held=1580 agents=3675 items=2299
+      Nodes:  n20=+12.7, n4=+8.9, n18=+6.2
+      Raw:    i5_qty=+269.4, i4_here=+268.7, i5_here=+267.4, i3_here=+261.4
+      Vision: above[2,2]=-, above[2,1]=-, above[0,0]=-
+      Blocks: air=+23903, grass=+16340, cooked_beef=+11777
+
+    hotbar_5:
+      Drive:  vis=18840 hb=1369 held=106 agents=2694 items=2147
+      Nodes:  n4=+12.5, n20=+10.3, n2=+6.6
+      Raw:    health=+759.6, food=+589.1, a3_hp=+470.2, a2_hp=+417.4
+      Vision: floor[0,4]=-, below[2,2]=+, floor[1,4]=-
+      Blocks: air=+4593, grass=+3482, cooked_beef=+2350
+
+    hotbar_6:
+      Drive:  vis=177705 hb=28763 held=3511 agents=12037 items=7496
+      Nodes:  n20=+11.7, n4=+10.2, n14=+7.7
+      Raw:    health=-1330.2, food=-1211.8, a3_hp=-1012.6, a2_hp=-870.5
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+50948, grass=+34477, cooked_beef=+24882
+
+    hotbar_7:
+      Drive:  vis=111925 hb=16656 held=2103 agents=6126 items=3769
+      Nodes:  n20=+11.6, n4=+8.7, n7=+8.2
+      Raw:    health=-519.4, food=-510.4, a3_hp=-431.3, i5_here=+397.7
+      Vision: above[2,2]=-, eye[2,2]=-, above[2,1]=-
+      Blocks: air=+28955, grass=+20188, cooked_beef=+14944
+
+    hotbar_8:
+      Drive:  vis=153317 hb=24881 held=3022 agents=10256 items=6287
+      Nodes:  n20=+9.4, n14=+9.3, n8=+8.4
+      Raw:    health=-1046.2, food=-968.2, a3_hp=-813.7, a2_hp=-698.6
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+44380, grass=+29839, cooked_beef=+21496
+
+    hotbar_9:
+      Drive:  vis=251362 hb=43057 held=5072 agents=19964 items=12328
+      Nodes:  n14=+14.5, n22=+13.3, n16=+13.2
+      Raw:    health=-2543.2, food=-2241.5, a3_hp=-1862.8, a2_hp=-1608.8
+      Vision: above[2,2]=-, eye[2,2]=-, eye[0,1]=-
+      Blocks: air=+74126, grass=+49778, cooked_beef=+35938
+
+    stand_still:
+      Drive:  vis=25659 hb=7353 held=647 agents=5655 items=4033
+      Nodes:  n8=+9.9, n4=+9.3, n18=+7.7
+      Raw:    health=+1208.4, food=+975.3, a3_hp=+786.1, a2_hp=+694.2
+      Vision: eye[2,2]=+, eye[0,1]=+, floor[0,0]=+
+      Blocks: quartz_block=+11119, yellow_flower=+8350, red_flower=+7371
+
+  --- CONTEXT NODES: role of each context node ---
+    c 0: dead         look_down=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.4
+    c 1: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | turning=0.1, crouching=0.1, pitching=0.1
+    c 2: dead          hotbar_5=-0.09 | hidden=1 raw=0 hbar=0 | tick=even | jumping=0.1, attacking=0.0, health=0.0
+    c 3: dead           Q_throw=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.4
+    c 4: dead          hotbar_6=+0.02 | hidden=2 raw=0 hbar=0 | tick=t4 | health=0.0, jumping=0.0, turning=0.0
+    c 5: weak        S_backward=+0.44 | hidden=9 raw=5 hbar=3 | tick=even | health=2.4, food=2.4, moving=0.1
+    c 6: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | pitching=0.1, health=0.1, food=0.0
+    c 7: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | attacking=0.1, moving=0.1, turning=0.0
+    c 8: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | food=0.1, jumping=0.0, moving=0.0
+    c 9: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | attacking=0.1, health=0.1, food=0.1
+    c10: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | attacking=0.0, food=0.0, health=0.0
+    c11: dead           Q_throw=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | food=0.5, health=0.4, crouching=0.4
+    c12: dead           Q_throw=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | health=0.5, food=0.4, crouching=0.4
+    c13: dead            crouch=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c14: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t0 | crouching=0.1, health=0.1, pitching=0.1
+    c15: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | health=0.1, jumping=0.1, crouching=0.0
+    c16: dead          hotbar_2=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c17: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | health=0.1, crouching=0.1, strafing=0.1
+    c18: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | health=0.1, crouching=0.1, moving=0.0
+    c19: dead        S_backward=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c20: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | crouching=0.1, food=0.1, health=0.0
+    c21: dead          hotbar_2=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c22: dead          hotbar_3=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | crouching=0.1, jumping=0.1, turning=0.1
+    c23: dead    D_strafe_right=+0.02 | hidden=1 raw=0 hbar=0 | tick=t0 | crouching=0.1, food=0.1, turning=0.1
+    c24: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | crouching=0.1, strafing=0.1, attacking=0.1
+    c25: dead          hotbar_3=+0.02 | hidden=2 raw=0 hbar=0 | tick=even | food=0.1, turning=0.1, health=0.0
+    c26: dead           Q_throw=+0.09 | hidden=9 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.1
+    c27: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | strafing=0.1, food=0.1, attacking=0.0
+    c28: dead    D_strafe_right=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | pitching=0.1, food=0.1, moving=0.0
+    c29: dead          hotbar_8=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.4, health=0.3, crouching=0.1
+    c30: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=even | moving=0.1, health=0.1, jumping=0.0
+    c31: dead           Q_throw=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.5, health=0.4, crouching=0.3
+    c32: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | jumping=0.1, crouching=0.1, food=0.0
+    c33: dead        S_backward=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | health=0.4, crouching=0.4, food=0.4
+    c34: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | food=0.1, health=0.1, strafing=0.0
+    c35: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=even | health=0.1, pitching=0.1, food=0.0
+    c36: weak        S_backward=+0.45 | hidden=12 raw=5 hbar=4 | tick=even | health=2.6, food=2.4, crouching=0.2
+    c37: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | health=0.1, jumping=0.0, strafing=0.0
+    c38: dead         look_down=+0.02 | hidden=2 raw=0 hbar=0 | tick=even | turning=0.1, crouching=0.1, jumping=0.1
+    c39: dead           Q_throw=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.5, health=0.4, crouching=0.4
+    c40: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | attacking=0.1, turning=0.1, pitching=0.0
+    c41: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | crouching=0.1, jumping=0.1, turning=0.1
+    c42: dead              jump=+0.02 | hidden=2 raw=1 hbar=1 | tick=even | crouching=0.2, health=0.1, food=0.1
+    c43: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t4 | strafing=0.0, crouching=0.0, moving=0.0
+    c44: dead           Q_throw=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.4
+    c45: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | food=0.1, health=0.1, attacking=0.1
+    c46: medium         use_eat=-2.90 | hidden=83 raw=60 hbar=8 | tick=even | health=34.1, food=24.4, crouching=0.9
+    c47: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=even | moving=0.0, food=0.0, health=0.0
+    c48: dead           Q_throw=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c49: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | attacking=0.1, health=0.1, crouching=0.1
+    c50: dead    D_strafe_right=+0.09 | hidden=3 raw=1 hbar=0 | tick=even | food=0.2, health=0.2, moving=0.1
+    c51: weak    D_strafe_right=+0.23 | hidden=3 raw=1 hbar=0 | tick=t0 | food=0.4, health=0.4, crouching=0.1
+    c52: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | moving=0.1, food=0.1, jumping=0.0
+    c53: dead           Q_throw=+0.10 | hidden=9 raw=2 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.4
+    c54: dead           Q_throw=-0.02 | hidden=1 raw=0 hbar=0 | tick=even | turning=0.1, food=0.1, crouching=0.0
+    c55: dead           Q_throw=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.4
+    c56: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t2 | attacking=0.0, turning=0.0, strafing=0.0
+    c57: weak     A_strafe_left=+0.44 | hidden=11 raw=2 hbar=3 | tick=even | health=1.1, food=0.5, crouching=0.4
+    c58: medium         use_eat=-2.80 | hidden=75 raw=58 hbar=9 | tick=even | health=33.0, food=23.5, crouching=1.5
+    c59: dead    D_strafe_right=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | jumping=0.1, food=0.0, attacking=0.0
+    c60: dead        S_backward=+0.10 | hidden=9 raw=1 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.3
+    c61: dead          hotbar_6=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | attacking=0.1, crouching=0.1, pitching=0.1
+    c62: STRONG         use_eat=-3.14 | hidden=82 raw=61 hbar=10 | tick=even | health=34.2, food=25.2, crouching=0.8
+    c63: dead         look_down=-0.08 | hidden=5 raw=1 hbar=0 | tick=even | food=0.4, health=0.3, moving=0.1
+
+  --- CONTEXT ACTIONS: what drives each action through context ---
+
+    W_forward:
+      Drive:  hidden=264 raw=195 hbar=29
+      Nodes:  c46=+1.28, c58=+1.11, c62=+0.95
+      Raw:    health=+111.4, food=+79.6, crouching=-3.4, moving=-0.1
+
+    S_backward:
+      Drive:  hidden=240 raw=171 hbar=26
+      Nodes:  c58=+1.02, c46=+1.00, c62=+0.90
+      Raw:    health=+97.3, food=+69.7, crouching=-4.0, turning=-0.1
+
+    A_strafe_left:
+      Drive:  hidden=149 raw=104 hbar=16
+      Nodes:  c46=+0.66, c58=+0.61, c62=+0.48
+      Raw:    health=+58.9, food=+42.1, crouching=-2.6, attacking=-0.0
+
+    D_strafe_right:
+      Drive:  hidden=287 raw=208 hbar=30
+      Nodes:  c46=+1.35, c62=+1.10, c58=+1.05
+      Raw:    health=+118.2, food=+85.1, crouching=-4.4, turning=-0.0
+
+    turn_left:
+      Drive:  hidden=323 raw=239 hbar=36
+      Nodes:  c62=+1.38, c58=+1.37, c46=+1.33
+      Raw:    health=+136.3, food=+97.9, crouching=-4.1, moving=-0.1
+
+    turn_right:
+      Drive:  hidden=268 raw=194 hbar=29
+      Nodes:  c46=+1.11, c58=+1.11, c62=+1.07
+      Raw:    health=+110.1, food=+79.2, crouching=-4.3, turning=-0.0
+
+    look_up:
+      Drive:  hidden=490 raw=362 hbar=53
+      Nodes:  c58=+2.07, c62=+2.04, c46=+1.97
+      Raw:    health=+205.6, food=+148.3, crouching=-7.2, moving=-0.1
+
+    look_down:
+      Drive:  hidden=285 raw=208 hbar=31
+      Nodes:  c58=+1.29, c46=+1.14, c62=+1.09
+      Raw:    health=+118.1, food=+84.8, crouching=-4.6, turning=-0.1
+
+    jump:
+      Drive:  hidden=279 raw=206 hbar=31
+      Nodes:  c62=+1.33, c46=+1.16, c58=+1.00
+      Raw:    health=+117.6, food=+84.7, crouching=-3.4, moving=-0.1
+
+    crouch:
+      Drive:  hidden=393 raw=290 hbar=43
+      Nodes:  c62=+1.79, c58=+1.61, c46=+1.45
+      Raw:    health=+164.4, food=+118.7, crouching=-5.9, moving=-0.1
+
+    use_eat:
+      Drive:  hidden=706 raw=525 hbar=78
+      Nodes:  c62=-3.14, c46=-2.90, c58=-2.80
+      Raw:    health=-299.0, food=-215.8, crouching=+9.0, moving=+0.2
+
+    attack:
+      Drive:  hidden=306 raw=225 hbar=33
+      Nodes:  c62=+1.36, c58=+1.24, c46=+1.19
+      Raw:    health=+127.4, food=+91.7, crouching=-4.7, moving=-0.1
+
+    Q_throw:
+      Drive:  hidden=459 raw=338 hbar=50
+      Nodes:  c62=+2.07, c58=+1.88, c46=+1.71
+      Raw:    health=+191.5, food=+138.2, crouching=-6.9, moving=-0.1
+
+    hotbar_1:
+      Drive:  hidden=356 raw=264 hbar=39
+      Nodes:  c58=+1.52, c62=+1.51, c46=+1.44
+      Raw:    health=+150.4, food=+108.2, crouching=-4.6, moving=-0.1
+
+    hotbar_2:
+      Drive:  hidden=329 raw=239 hbar=35
+      Nodes:  c62=+1.36, c46=+1.34, c58=+1.32
+      Raw:    health=+135.6, food=+97.6, crouching=-5.1, attacking=-0.1
+
+    hotbar_3:
+      Drive:  hidden=363 raw=268 hbar=40
+      Nodes:  c58=+1.54, c46=+1.53, c62=+1.45
+      Raw:    health=+152.3, food=+109.5, crouching=-5.2, moving=-0.1
+
+    hotbar_4:
+      Drive:  hidden=383 raw=283 hbar=42
+      Nodes:  c62=+1.64, c46=+1.63, c58=+1.54
+      Raw:    health=+160.9, food=+115.6, crouching=-5.3, moving=-0.1
+
+    hotbar_5:
+      Drive:  hidden=440 raw=323 hbar=48
+      Nodes:  c46=+1.93, c62=+1.77, c58=+1.75
+      Raw:    health=+183.4, food=+132.0, crouching=-6.6, moving=-0.1
+
+    hotbar_6:
+      Drive:  hidden=255 raw=188 hbar=28
+      Nodes:  c62=+1.17, c46=+1.12, c58=+0.91
+      Raw:    health=+107.4, food=+77.2, crouching=-3.0, moving=-0.1
+
+    hotbar_7:
+      Drive:  hidden=305 raw=222 hbar=33
+      Nodes:  c46=+1.33, c62=+1.27, c58=+1.14
+      Raw:    health=+126.1, food=+90.9, crouching=-4.7, moving=-0.0
+
+    hotbar_8:
+      Drive:  hidden=302 raw=219 hbar=32
+      Nodes:  c46=+1.28, c62=+1.27, c58=+1.16
+      Raw:    health=+124.0, food=+89.2, crouching=-4.7, turning=-0.1
+
+    hotbar_9:
+      Drive:  hidden=133 raw=96 hbar=14
+      Nodes:  c62=+0.57, c58=+0.54, c46=+0.50
+      Raw:    health=+54.4, food=+39.1, crouching=-2.2, turning=-0.0
+
+    stand_still:
+      Drive:  hidden=493 raw=366 hbar=54
+      Nodes:  c58=+2.10, c46=+2.09, c62=+1.97
+      Raw:    health=+208.4, food=+150.1, crouching=-6.8, moving=-0.1
+
+======================================================================
+  Cain — DEEP ANALYSIS (1951 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  72 (eye_level r4c2): impact=10042.7 (+)
+    pos  52 (eye_level r0c2): impact=9741.3 (+)
+    pos  68 (eye_level r3c3): impact=9443.4 (+)
+    pos  87 (above_head r2c2): impact=9200.5 (+)
+    pos  70 (eye_level r4c0): impact=9031.1 (+)
+    pos  57 (eye_level r1c2): impact=8810.5 (+)
+    pos  92 (above_head r3c2): impact=8354.1 (+)
+    pos  74 (eye_level r4c4): impact=8341.6 (+)
+    pos  66 (eye_level r3c1): impact=8234.9 (+)
+    pos  95 (above_head r4c0): impact=8200.4 (+)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  53 (eye_level r0c3): impact=492.0 (-)
+    pos  50 (eye_level r0c0): impact=489.5 (-)
+    pos  64 (eye_level r2c4): impact=487.6 (-)
+    pos  37 (floor r2c2): impact=480.1 (+)
+    pos  59 (eye_level r1c4): impact=474.6 (-)
+    pos  12 (below_feet r2c2): impact=449.3 (+)
+    pos  75 (above_head r0c0): impact=425.1 (-)
+    pos  85 (above_head r2c0): impact=423.9 (-)
+    pos  63 (eye_level r2c3): impact=415.3 (-)
+    pos  65 (eye_level r3c0): impact=396.7 (-)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       5587  5551  5475  5318  5508
+       5855  6156  5857  5670  5452
+       5932  6165  4944  5817  5940
+       5925  6229  6032  6031  6181
+       5739  6004  5999  5835  5880
+    floor:
+       3338  3741  4149  3998  3508
+       3459  3331  3430  4083  3578
+       3800  4120  4755  4632  4462
+       3456  3638  4310  4226  3892
+       3364  3133  4720  4421  3772
+    eye_level:
+       6694  7057  9741  6735  7697
+       6280  7811  8811  7303  6018
+       4454  6931  6298  4409  4498
+       7007  8235  7998  9443  6791
+       9031  8180 10043  7811  8342
+    above_head:
+       7627  8108  8061  7902  7689
+       7493  7928  7928  7591  7324
+       7412  8027  9200  7810  7805
+       8118  7985  8354  7816  7772
+       8200  8016  7968  7728  7963
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: medium   A_strafe_left=+2.5 | vis=338 | yaw=-0.1, i2_rx=-0.1
+    n 1: STRONG        hotbar_4=+13.0 | vis=570 | health=+23.9, food=+20.3
+    n 2: STRONG        hotbar_8=+14.1 | vis=399 | health=+22.8, food=+18.8
+    n 3: STRONG         use_eat=+22.8 | vis=2322 | health=-23.6, food=-20.9
+    n 4: STRONG        hotbar_2=+13.0 | vis=437 | health=+23.9, food=+20.3
+    n 5: STRONG         use_eat=+17.0 | vis=2025 | health=-23.9, food=-20.8
+    n 6: STRONG         use_eat=+21.9 | vis=2313 | health=-23.5, food=-20.8
+    n 7: medium        hotbar_3=+4.0 | vis=703 | z=+1.0, s5_ct=-0.9
+    n 8: STRONG         use_eat=+20.1 | vis=2064 | health=-23.7, food=-20.9
+    n 9: weak       stand_still=+0.4 | vis=64 | s1_ct=-0.3, y=-0.3
+    n10: STRONG         use_eat=-21.6 | vis=393 | health=+23.7, food=+20.4
+    n11: STRONG         use_eat=+21.5 | vis=2213 | health=-23.6, food=-20.8
+    n12: medium      S_backward=+2.8 | vis=271 | a2_rx=-0.2, a2_hp=-0.2
+    n13: STRONG         use_eat=+19.4 | vis=2204 | health=-23.7, food=-20.8
+    n14: STRONG         use_eat=+18.3 | vis=1984 | health=-23.8, food=-21.0
+    n15: STRONG        hotbar_7=+15.5 | vis=445 | health=+23.8, food=+20.2
+    n16: STRONG         use_eat=+19.7 | vis=2100 | health=-23.7, food=-20.9
+    n17: STRONG       turn_left=+5.3 | vis=195 | pitch=+0.1, a2_rz=+0.1
+    n18: STRONG        hotbar_6=+13.1 | vis=451 | health=+23.9, food=+20.3
+    n19: STRONG        hotbar_7=+5.9 | vis=395 | health=+17.1, food=+13.7
+    n20: medium       turn_left=+2.8 | vis=395 | z=+0.7, i3_rz=+0.6
+    n21: STRONG         use_eat=+22.5 | vis=2286 | health=-23.5, food=-20.9
+    n22: STRONG         use_eat=+21.5 | vis=2245 | health=-23.6, food=-20.8
+    n23: STRONG         use_eat=+14.5 | vis=877 | health=-22.9, food=-19.3
+    n24: medium        hotbar_2=+3.9 | vis=422 | z=+0.7, x=-0.6
+    n25: STRONG         use_eat=+20.6 | vis=2146 | health=-23.6, food=-20.9
+    n26: STRONG        hotbar_2=+13.0 | vis=439 | health=+23.9, food=+20.3
+    n27: STRONG         use_eat=+20.3 | vis=2210 | health=-23.7, food=-20.9
+    n28: medium       turn_left=+3.8 | vis=410 | i3_here=-1.2, i3_qty=-1.1
+    n29: STRONG         use_eat=+21.9 | vis=2312 | health=-23.6, food=-20.9
+    n30: STRONG         use_eat=+21.0 | vis=2219 | health=-23.6, food=-20.9
+    n31: medium         Q_throw=+4.5 | vis=449 | i1_rx=+0.5, i3_rx=+0.5
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +386725.5
+      BLOCK Eve                 : +167265.0
+      BLOCK Adam                : +114152.0
+      JUNK  string              : +86798.1
+      BLOCK Abel                : +85956.2
+      JUNK  bone                : +70350.0
+      JUNK  gold_ingot          : +66371.4
+      JUNK  bowl                : +55950.7
+      JUNK  wooden_pickaxe      : +53228.2
+      JUNK  stick               : +53199.5
+    Most eat-suppressing blocks (bottom 5):
+      FOOD  carrot              : -62869.0
+      BLOCK tripwire            : -65732.5
+      BLOCK bedrock             : -67321.6
+      BLOCK red_flower          : -102992.2
+      BLOCK yellow_flower       : -168069.7
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=265215 hb=35921 held=4599 agents=14984 items=9720
+      Nodes:  n22=+8.5, n3=+8.4, n8=+8.4
+      Raw:    health=-1773.7, food=-1599.5, a3_hp=-1207.7, a2_hp=-1042.7
+      Vision: below[3,4]=+, below[3,3]=+, below[2,1]=+
+      Blocks: grass=+49445, dirt=+39886, bedrock=+18731
+
+    S_backward:
+      Drive:  vis=235711 hb=29256 held=3765 agents=10679 items=6948
+      Nodes:  n10=+12.1, n4=+9.6, n2=+9.2
+      Raw:    health=-946.9, food=-884.2, i5_here=+723.3, i4_here=+709.7
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+43608, dirt=+36254, bedrock=+17028
+
+    A_strafe_left:
+      Drive:  vis=170242 hb=18813 held=2489 agents=5771 items=3602
+      Nodes:  n10=+11.5, n15=+9.8, n2=+9.8
+      Raw:    i2_here=+439.9, i4_here=+437.6, i3_here=+435.9, i1_here=+430.6
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+31632, dirt=+27107, bedrock=+12771
+
+    D_strafe_right:
+      Drive:  vis=203253 hb=23606 held=3083 agents=7494 items=4829
+      Nodes:  n10=+12.9, n4=+11.5, n26=+10.9
+      Raw:    i4_here=+547.2, i3_here=+541.0, i2_here=+541.0, i5_here=+539.0
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+37567, dirt=+31565, bedrock=+14814
+
+    turn_left:
+      Drive:  vis=128705 hb=12576 held=1780 agents=2840 items=2689
+      Nodes:  n1=+12.6, n10=+11.9, n2=+9.9
+      Raw:    eating=+339.1, i1_here=+316.9, i2_here=+307.2, y=+302.3
+      Vision: below[3,3]=+, below[3,4]=+, below[2,4]=+
+      Blocks: grass=+23861, dirt=+20486, bedrock=+9485
+
+    turn_right:
+      Drive:  vis=139220 hb=12835 held=1775 agents=2301 items=3039
+      Nodes:  n10=+15.2, n26=+12.1, n1=+11.2
+      Raw:    health=+491.6, food=+370.6, eating=+357.7, i1_here=+318.7
+      Vision: below[3,3]=+, below[3,4]=+, below[2,4]=+
+      Blocks: grass=+25626, dirt=+22363, bedrock=+10594
+
+    look_up:
+      Drive:  vis=28173 hb=1989 held=135 agents=3624 items=3262
+      Nodes:  n10=+10.5, n1=+10.5, n4=+6.7
+      Raw:    health=+1089.4, food=+916.1, a3_hp=+657.4, a2_hp=+597.1
+      Vision: below[2,2]=+, floor[1,2]=+, below[0,2]=+
+      Blocks: grass=+6615, dirt=+5599, bedrock=+2980
+
+    look_down:
+      Drive:  vis=82207 hb=5249 held=803 agents=1599 items=2273
+      Nodes:  n10=+12.5, n1=+11.0, n15=+8.0
+      Raw:    health=+749.3, food=+611.0, a3_hp=+428.3, a2_hp=+400.8
+      Vision: below[2,2]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+15820, dirt=+14287, wooden_pickaxe=+7474
+
+    jump:
+      Drive:  vis=257873 hb=33853 held=4356 agents=13316 items=8556
+      Nodes:  n15=+10.6, n10=+10.3, n27=+8.4
+      Raw:    health=-1423.8, food=-1297.8, a3_hp=-988.1, i5_here=+878.3
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+47724, dirt=+39203, bedrock=+18236
+
+    crouch:
+      Drive:  vis=196335 hb=22391 held=2942 agents=7131 items=4512
+      Nodes:  n4=+10.9, n10=+10.9, n26=+9.6
+      Raw:    i4_here=+522.4, i2_here=+516.8, i3_here=+516.5, i5_here=+510.6
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+36415, dirt=+30640, bedrock=+14602
+
+    use_eat:
+      Drive:  vis=623840 hb=105234 held=13038 agents=54483 items=36726
+      Nodes:  n3=+22.8, n21=+22.5, n6=+21.9
+      Raw:    health=-8915.8, food=-7800.5, a3_hp=-5774.5, a2_hp=-5097.5
+      Vision: below[3,1]=+, below[3,4]=+, below[2,1]=+
+      Blocks: grass=+119164, dirt=+89023, bedrock=+41687
+
+    attack:
+      Drive:  vis=196971 hb=22896 held=2961 agents=7525 items=4941
+      Nodes:  n10=+11.9, n2=+11.8, n15=+10.1
+      Raw:    i4_here=+536.5, i5_here=+529.5, i3_here=+526.5, i2_here=+524.2
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+36580, dirt=+30997, bedrock=+14827
+
+    Q_throw:
+      Drive:  vis=166334 hb=18109 held=2395 agents=5019 items=3417
+      Nodes:  n10=+13.7, n4=+10.1, n26=+9.7
+      Raw:    eating=+421.7, i2_here=+419.4, i1_here=+415.3, i3_here=+410.7
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+30691, dirt=+26233, bedrock=+12254
+
+    hotbar_1:
+      Drive:  vis=24486 hb=5742 held=528 agents=6334 items=5348
+      Nodes:  n10=+12.6, n1=+11.6, n26=+10.3
+      Raw:    health=+1679.8, food=+1424.3, a3_hp=+1032.9, a2_hp=+933.4
+      Vision: below[2,2]=+, floor[1,2]=+, floor[0,2]=+
+      Blocks: grass=+6916, dirt=+4575, bedrock=+3192
+
+    hotbar_2:
+      Drive:  vis=158810 hb=15340 held=2122 agents=3323 items=3217
+      Nodes:  n26=+13.0, n4=+13.0, n10=+13.0
+      Raw:    eating=+409.2, i1_here=+372.1, y=+367.0, i2_here=+357.8
+      Vision: below[3,3]=+, below[3,4]=+, below[2,4]=+
+      Blocks: grass=+29441, dirt=+25899, bedrock=+12241
+
+    hotbar_3:
+      Drive:  vis=30388 hb=2515 held=173 agents=4146 items=3813
+      Nodes:  n26=+10.6, n4=+9.9, n10=+9.0
+      Raw:    health=+1242.8, food=+1046.7, a3_hp=+757.1, a2_hp=+685.4
+      Vision: below[2,2]=+, floor[1,2]=+, below[0,2]=+
+      Blocks: grass=+7311, dirt=+6252, bedrock=+3304
+
+    hotbar_4:
+      Drive:  vis=159596 hb=15827 held=2180 agents=3671 items=3188
+      Nodes:  n1=+13.0, n26=+12.7, n10=+11.1
+      Raw:    eating=+411.9, i1_here=+387.9, i2_here=+380.6, y=+369.6
+      Vision: below[3,3]=+, below[3,4]=+, below[2,4]=+
+      Blocks: grass=+29515, dirt=+25143, bedrock=+11885
+
+    hotbar_5:
+      Drive:  vis=70376 hb=2224 held=335 agents=3360 items=3758
+      Nodes:  n4=+13.0, n26=+12.0, n10=+11.5
+      Raw:    health=+1316.3, food=+1096.8, a3_hp=+786.8, a2_hp=+720.3
+      Vision: below[2,2]=+, below[0,2]=+, below[2,3]=+
+      Blocks: grass=+14354, dirt=+13265, wooden_pickaxe=+7703
+
+    hotbar_6:
+      Drive:  vis=141374 hb=12564 held=1794 agents=2350 items=2925
+      Nodes:  n15=+13.6, n18=+13.1, n10=+12.5
+      Raw:    health=+536.8, food=+409.4, eating=+370.1, y=+327.2
+      Vision: below[3,3]=+, below[3,4]=+, below[2,4]=+
+      Blocks: grass=+26367, dirt=+23279, bedrock=+11050
+
+    hotbar_7:
+      Drive:  vis=161506 hb=16184 held=2216 agents=4358 items=3118
+      Nodes:  n15=+15.5, n10=+11.4, n2=+9.9
+      Raw:    eating=+411.7, i1_here=+396.0, i2_here=+390.8, i1_qty=+378.9
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+30354, dirt=+26132, bedrock=+12630
+
+    hotbar_8:
+      Drive:  vis=146922 hb=15036 held=2049 agents=4016 items=3062
+      Nodes:  n2=+14.1, n10=+10.9, n1=+10.3
+      Raw:    eating=+371.5, i1_here=+361.0, i2_here=+359.9, i3_here=+348.9
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+27465, dirt=+23278, bedrock=+11191
+
+    hotbar_9:
+      Drive:  vis=149128 hb=14849 held=2032 agents=3817 items=2933
+      Nodes:  n26=+10.9, n4=+10.5, n15=+10.3
+      Raw:    eating=+386.9, i1_here=+367.2, i2_here=+362.4, i1_qty=+351.3
+      Vision: below[3,4]=+, below[3,3]=+, below[2,4]=+
+      Blocks: grass=+27685, dirt=+23941, bedrock=+11186
+
+    stand_still:
+      Drive:  vis=32340 hb=1214 held=117 agents=2289 items=2600
+      Nodes:  n10=+8.5, n15=+8.0, n23=+7.6
+      Raw:    health=+763.5, food=+644.1, a3_hp=+471.9, a2_hp=+431.7
+      Vision: below[2,2]=+, below[0,2]=+, below[2,3]=+
+      Blocks: grass=+7137, dirt=+6935, wooden_pickaxe=+4409
+
+  --- CONTEXT NODES: role of each context node ---
+    c 0: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c 1: dead    D_strafe_right=+0.09 | hidden=1 raw=0 hbar=0 | tick=even | jumping=0.1, attacking=0.0, strafing=0.0
+    c 2: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, food=0.4, health=0.4
+    c 3: dead         turn_left=+0.09 | hidden=1 raw=0 hbar=0 | tick=t4 | turning=0.0, attacking=0.0, pitching=0.0
+    c 4: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | crouching=0.1, attacking=0.1, moving=0.0
+    c 5: dead            attack=-0.08 | hidden=7 raw=1 hbar=0 | tick=even | health=0.3, crouching=0.3, food=0.2
+    c 6: weak          hotbar_3=+0.26 | hidden=9 raw=1 hbar=0 | tick=even | crouching=0.7, food=0.1, health=0.1
+    c 7: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=even | turning=0.1, strafing=0.0, health=0.0
+    c 8: medium         use_eat=-2.80 | hidden=117 raw=68 hbar=10 | tick=even | health=36.4, food=28.2, crouching=3.1
+    c 9: dead              jump=-0.09 | hidden=1 raw=0 hbar=0 | tick=t4 | jumping=0.1, health=0.1, turning=0.1
+    c10: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t4 | pitching=0.0, turning=0.0, moving=0.0
+    c11: STRONG         use_eat=+3.73 | hidden=343 raw=85 hbar=80 | tick=even | health=37.4, food=31.8, crouching=15.7
+    c12: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t1 | health=0.1, strafing=0.1, jumping=0.0
+    c13: medium         use_eat=-2.96 | hidden=119 raw=68 hbar=10 | tick=even | health=36.6, food=28.5, crouching=2.8
+    c14: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | food=0.4, crouching=0.4, health=0.4
+    c15: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, food=0.4, health=0.4
+    c16: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, health=0.3, food=0.3
+    c17: STRONG         use_eat=-3.07 | hidden=123 raw=69 hbar=11 | tick=even | health=36.6, food=29.1, crouching=3.2
+    c18: medium         use_eat=-2.71 | hidden=120 raw=68 hbar=11 | tick=even | health=36.6, food=28.7, crouching=2.7
+    c19: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | attacking=0.1, crouching=0.1, health=0.0
+    c20: dead          hotbar_5=+0.06 | hidden=6 raw=1 hbar=0 | tick=even | health=0.3, food=0.2, crouching=0.0
+    c21: medium         use_eat=-2.94 | hidden=119 raw=68 hbar=10 | tick=even | health=36.3, food=28.8, crouching=2.7
+    c22: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, food=0.4, health=0.4
+    c23: dead          hotbar_7=+0.09 | hidden=1 raw=0 hbar=0 | tick=t3 | strafing=0.1, attacking=0.1, moving=0.0
+    c24: dead          hotbar_5=-0.09 | hidden=1 raw=0 hbar=0 | tick=t4 | pitching=0.1, jumping=0.1, strafing=0.0
+    c25: weak           look_up=+0.30 | hidden=9 raw=1 hbar=1 | tick=even | crouching=0.6, food=0.1, health=0.1
+    c26: STRONG         use_eat=+3.74 | hidden=343 raw=85 hbar=80 | tick=even | health=37.5, food=32.0, crouching=15.7
+    c27: STRONG         use_eat=-3.19 | hidden=119 raw=68 hbar=10 | tick=even | health=36.1, food=28.9, crouching=2.8
+    c28: STRONG         use_eat=-3.03 | hidden=119 raw=69 hbar=9 | tick=even | health=36.5, food=28.6, crouching=3.4
+    c29: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c30: dead        S_backward=-0.09 | hidden=1 raw=0 hbar=0 | tick=t4 | crouching=0.1, turning=0.1, strafing=0.0
+    c31: weak          hotbar_3=+0.10 | hidden=10 raw=2 hbar=0 | tick=even | food=0.5, crouching=0.5, health=0.4
+    c32: STRONG         use_eat=-3.08 | hidden=119 raw=68 hbar=8 | tick=even | health=36.4, food=29.2, crouching=2.4
+    c33: dead    D_strafe_right=+0.09 | hidden=1 raw=0 hbar=0 | tick=t3 | crouching=0.1, turning=0.0, food=0.0
+    c34: weak          hotbar_3=+0.27 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.7, health=0.1, food=0.1
+    c35: medium         use_eat=-2.89 | hidden=115 raw=69 hbar=9 | tick=even | health=36.6, food=28.6, crouching=3.4
+    c36: medium         use_eat=-2.77 | hidden=117 raw=67 hbar=8 | tick=even | health=35.8, food=28.3, crouching=2.8
+    c37: weak           look_up=+0.10 | hidden=4 raw=1 hbar=0 | tick=even | health=0.3, food=0.2, crouching=0.1
+    c38: weak     A_strafe_left=+0.25 | hidden=6 raw=0 hbar=0 | tick=t1 | food=0.1, health=0.1, crouching=0.1
+    c39: weak          hotbar_3=+0.26 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.7, food=0.1, health=0.1
+    c40: weak           look_up=+0.26 | hidden=11 raw=1 hbar=0 | tick=t0 | crouching=0.4, food=0.1, moving=0.1
+    c41: dead        S_backward=-0.09 | hidden=1 raw=0 hbar=0 | tick=t3 | attacking=0.1, health=0.1, jumping=0.1
+    c42: STRONG         use_eat=-3.13 | hidden=115 raw=69 hbar=7 | tick=even | health=37.1, food=28.5, crouching=3.5
+    c43: dead          hotbar_4=+0.06 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.3, health=0.2, food=0.2
+    c44: weak        turn_right=+0.26 | hidden=6 raw=1 hbar=0 | tick=t1 | food=0.4, health=0.3, crouching=0.2
+    c45: STRONG         use_eat=+3.73 | hidden=343 raw=85 hbar=80 | tick=even | health=37.4, food=31.7, crouching=15.7
+    c46: dead        S_backward=+0.09 | hidden=1 raw=0 hbar=0 | tick=t0 | strafing=0.1, moving=0.1, attacking=0.0
+    c47: weak          hotbar_3=+0.10 | hidden=10 raw=2 hbar=0 | tick=even | food=0.4, crouching=0.4, health=0.4
+    c48: weak    D_strafe_right=+0.25 | hidden=18 raw=3 hbar=3 | tick=even | crouching=0.8, food=0.8, health=0.8
+    c49: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | health=0.0, moving=0.0, food=0.0
+    c50: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | crouching=0.1, jumping=0.1, health=0.1
+    c51: medium         use_eat=-2.89 | hidden=118 raw=67 hbar=10 | tick=even | health=36.3, food=28.6, crouching=2.2
+    c52: medium         use_eat=-2.87 | hidden=119 raw=68 hbar=10 | tick=even | health=36.3, food=28.3, crouching=3.1
+    c53: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t4 | strafing=0.1, attacking=0.1, crouching=0.1
+    c54: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, health=0.4, food=0.4
+    c55: medium         use_eat=-2.88 | hidden=118 raw=69 hbar=10 | tick=even | health=36.6, food=29.0, crouching=3.4
+    c56: medium         use_eat=-2.74 | hidden=116 raw=68 hbar=10 | tick=even | health=36.4, food=28.8, crouching=2.8
+    c57: medium         use_eat=-2.71 | hidden=116 raw=68 hbar=9 | tick=even | health=36.1, food=28.5, crouching=3.4
+    c58: weak          hotbar_3=+0.26 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.7, food=0.2, health=0.2
+    c59: weak          hotbar_3=+0.10 | hidden=10 raw=2 hbar=0 | tick=even | crouching=0.5, food=0.5, health=0.4
+    c60: weak          hotbar_3=+0.10 | hidden=10 raw=1 hbar=0 | tick=even | crouching=0.5, health=0.4, food=0.4
+    c61: medium         use_eat=-2.98 | hidden=116 raw=69 hbar=8 | tick=even | health=36.6, food=28.5, crouching=3.2
+    c62: weak          hotbar_3=+0.51 | hidden=12 raw=3 hbar=2 | tick=even | health=1.3, crouching=0.7, food=0.2
+    c63: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | strafing=0.1, food=0.1, attacking=0.1
+
+  --- CONTEXT ACTIONS: what drives each action through context ---
+
+    W_forward:
+      Drive:  hidden=2147 raw=1264 hbar=155
+      Nodes:  c42=+1.23, c36=+1.16, c28=+1.15
+      Raw:    health=+678.6, food=+532.4, crouching=-51.8, attacking=+0.2
+
+    S_backward:
+      Drive:  hidden=2536 raw=1487 hbar=180
+      Nodes:  c13=+1.44, c17=+1.43, c28=+1.39
+      Raw:    health=+799.5, food=+626.8, crouching=-59.6, attacking=+0.3
+
+    A_strafe_left:
+      Drive:  hidden=1793 raw=770 hbar=111
+      Nodes:  c55=+0.95, c18=+0.92, c51=+0.89
+      Raw:    health=+431.7, food=+333.2, crouching=-3.9, attacking=+0.2
+
+    D_strafe_right:
+      Drive:  hidden=2613 raw=1523 hbar=179
+      Nodes:  c17=+1.57, c56=+1.45, c32=+1.43
+      Raw:    health=+819.6, food=+642.6, crouching=-59.2, attacking=+0.3
+
+    turn_left:
+      Drive:  hidden=2768 raw=1631 hbar=200
+      Nodes:  c32=+1.61, c42=+1.54, c27=+1.52
+      Raw:    health=+875.7, food=+687.1, crouching=-67.1, attacking=+0.3
+
+    turn_right:
+      Drive:  hidden=2836 raw=1658 hbar=197
+      Nodes:  c61=+1.62, c35=+1.60, c28=+1.55
+      Raw:    health=+892.2, food=+699.4, crouching=-65.0, attacking=+0.3
+
+    look_up:
+      Drive:  hidden=2524 raw=1413 hbar=149
+      Nodes:  c28=+1.42, c42=+1.40, c35=+1.39
+      Raw:    health=+764.8, food=+597.9, crouching=-49.3, attacking=+0.3
+
+    look_down:
+      Drive:  hidden=2083 raw=1071 hbar=99
+      Nodes:  c18=+1.21, c32=+1.12, c35=+1.11
+      Raw:    health=+585.5, food=+456.3, crouching=-27.6, attacking=+0.2
+
+    jump:
+      Drive:  hidden=3022 raw=1768 hbar=226
+      Nodes:  c61=+1.66, c52=+1.65, c57=+1.63
+      Raw:    health=+946.6, food=+743.4, crouching=-76.1, attacking=+0.3
+
+    crouch:
+      Drive:  hidden=3288 raw=1900 hbar=250
+      Nodes:  c42=+2.08, c35=+1.79, c51=+1.78
+      Raw:    health=+1015.8, food=+798.1, crouching=-84.2, attacking=+0.3
+
+    use_eat:
+      Drive:  hidden=9667 raw=4334 hbar=1220
+      Nodes:  c26=+3.74, c11=+3.73, c45=+3.73
+      Raw:    health=-2228.1, food=-1778.5, crouching=+323.9, strafing=-0.5
+
+    attack:
+      Drive:  hidden=3793 raw=2094 hbar=303
+      Nodes:  c18=+1.94, c51=+1.89, c8=+1.83
+      Raw:    health=+1112.9, food=+876.7, crouching=-102.6, attacking=+0.3
+
+    Q_throw:
+      Drive:  hidden=3569 raw=2005 hbar=278
+      Nodes:  c17=+2.46, c42=+1.87, c21=+1.86
+      Raw:    health=+1068.2, food=+840.8, crouching=-94.6, attacking=+0.3
+
+    hotbar_1:
+      Drive:  hidden=2573 raw=1495 hbar=193
+      Nodes:  c18=+1.43, c52=+1.40, c17=+1.40
+      Raw:    health=+799.9, food=+628.1, crouching=-65.5, attacking=+0.3
+
+    hotbar_2:
+      Drive:  hidden=2503 raw=1408 hbar=153
+      Nodes:  c28=+1.44, c27=+1.36, c35=+1.35
+      Raw:    health=+761.2, food=+595.6, crouching=-49.7, attacking=+0.3
+
+    hotbar_3:
+      Drive:  hidden=2379 raw=1328 hbar=140
+      Nodes:  c28=+1.41, c56=+1.34, c17=+1.30
+      Raw:    health=+718.9, food=+562.1, crouching=-45.9, attacking=+0.3
+
+    hotbar_4:
+      Drive:  hidden=2653 raw=1505 hbar=169
+      Nodes:  c42=+1.55, c21=+1.55, c17=+1.49
+      Raw:    health=+813.0, food=+636.4, crouching=-54.3, attacking=+0.3
+
+    hotbar_5:
+      Drive:  hidden=3508 raw=2015 hbar=268
+      Nodes:  c32=+1.90, c17=+1.88, c55=+1.85
+      Raw:    health=+1076.6, food=+846.7, crouching=-89.9, attacking=+0.3
+
+    hotbar_6:
+      Drive:  hidden=2355 raw=1267 hbar=126
+      Nodes:  c17=+1.45, c42=+1.40, c61=+1.37
+      Raw:    health=+688.8, food=+538.0, crouching=-38.9, attacking=+0.2
+
+    hotbar_7:
+      Drive:  hidden=2419 raw=1302 hbar=127
+      Nodes:  c42=+1.49, c17=+1.45, c21=+1.40
+      Raw:    health=+707.7, food=+552.5, crouching=-40.2, attacking=+0.3
+
+    hotbar_8:
+      Drive:  hidden=2039 raw=991 hbar=96
+      Nodes:  c42=+1.28, c17=+1.17, c21=+1.09
+      Raw:    health=+546.0, food=+423.9, crouching=-19.7, attacking=+0.2
+
+    hotbar_9:
+      Drive:  hidden=3131 raw=1809 hbar=237
+      Nodes:  c13=+1.74, c36=+1.71, c32=+1.68
+      Raw:    health=+967.4, food=+760.4, crouching=-79.8, attacking=+0.3
+
+    stand_still:
+      Drive:  hidden=2583 raw=1395 hbar=137
+      Nodes:  c28=+1.49, c21=+1.44, c56=+1.39
+      Raw:    health=+758.2, food=+591.9, crouching=-43.5, attacking=+0.3
+
+======================================================================
+  Abel — DEEP ANALYSIS (1950 ep)
+======================================================================
+
+  --- VISION: top 10 positions for EAT ---
+  Layer guide: 0-24=below_feet, 25-49=floor, 50-74=eye, 75-99=above
+    pos  66 (eye_level r3c1): impact=8435.3 (+)
+    pos  68 (eye_level r3c3): impact=7983.9 (+)
+    pos  56 (eye_level r1c1): impact=7750.7 (+)
+    pos  58 (eye_level r1c3): impact=7719.1 (+)
+    pos  51 (eye_level r0c1): impact=7476.8 (+)
+    pos  70 (eye_level r4c0): impact=7348.1 (+)
+    pos  72 (eye_level r4c2): impact=6935.5 (+)
+    pos  55 (eye_level r1c0): impact=6853.8 (+)
+    pos  87 (above_head r2c2): impact=6790.7 (+)
+    pos  88 (above_head r2c3): impact=6766.6 (+)
+
+  --- VISION: top 10 positions for STAND STILL ---
+    pos  66 (eye_level r3c1): impact=1644.0 (+)
+    pos  68 (eye_level r3c3): impact=1606.5 (+)
+    pos  87 (above_head r2c2): impact=1571.8 (+)
+    pos  88 (above_head r2c3): impact=1564.7 (+)
+    pos  70 (eye_level r4c0): impact=1560.0 (+)
+    pos  76 (above_head r0c1): impact=1502.9 (+)
+    pos  51 (eye_level r0c1): impact=1502.8 (+)
+    pos  82 (above_head r1c2): impact=1476.0 (+)
+    pos  93 (above_head r3c3): impact=1474.7 (+)
+    pos  55 (eye_level r1c0): impact=1473.7 (+)
+
+  --- VISION EAT HEATMAP (5x5 per layer, higher=more eat drive) ---
+    below_feet:
+       4806  5453  4919  4971  5118
+       4975  5637  4922  4786  4702
+       4531  5158  4108  4174  3925
+       4841  5734  4979  4738  4760
+       4846  6217  5249  4677  5308
+    floor:
+       6250  6544  5639  6225  6359
+       5008  5020  5365  4530  4635
+       5418  5128  5627  3391  4483
+       6064  6019  4664  4912  6178
+       6181  5464  5220  4401  6273
+    eye_level:
+       6123  7477  5169  6312  4833
+       6854  7751  4231  7719  6374
+       4886  3918  3241  4373  3980
+       5835  8435  4720  7984  5596
+       7348  6287  6935  6539  5061
+    above_head:
+       6115  6595  5930  5799  6339
+       6090  5577  6289  6135  5944
+       6361  6308  6791  6767  6101
+       6191  5830  5978  6269  5738
+       5754  6054  5954  6060  5221
+
+  --- HIDDEN NODES: role of each node ---
+    n 0: STRONG        hotbar_8=+6.9 | vis=384 | health=+4.7, a3_dist=+4.4
+    n 1: medium      turn_right=+2.0 | vis=204 | health=+0.0, food=+0.0
+    n 2: STRONG         use_eat=-14.0 | vis=657 | health=+24.4, food=+21.8
+    n 3: STRONG         use_eat=+24.6 | vis=1786 | health=-25.4, food=-23.3
+    n 4: STRONG         use_eat=+16.8 | vis=1478 | health=-25.2, food=-23.1
+    n 5: STRONG         use_eat=+20.3 | vis=1635 | health=-25.4, food=-23.2
+    n 6: STRONG         use_eat=+24.7 | vis=1762 | health=-25.4, food=-23.3
+    n 7: STRONG         use_eat=+24.0 | vis=1811 | health=-25.4, food=-23.3
+    n 8: medium        hotbar_8=+4.3 | vis=400 | health=+0.0, food=+0.0
+    n 9: STRONG         use_eat=-17.1 | vis=629 | health=+24.9, food=+22.2
+    n10: medium        hotbar_1=+4.5 | vis=449 | i4_rx=-0.3, health=-0.3
+    n11: STRONG         use_eat=+23.3 | vis=1781 | health=-25.5, food=-23.4
+    n12: medium      turn_right=+3.7 | vis=304 | yaw=+0.2, z=-0.2
+    n13: weak         look_down=+1.0 | vis=181 | health=+0.0, food=+0.0
+    n14: STRONG         use_eat=+22.1 | vis=1771 | health=-25.4, food=-23.3
+    n15: STRONG      turn_right=+7.1 | vis=576 | health=+14.4, food=+13.4
+    n16: STRONG         use_eat=+22.0 | vis=1724 | health=-25.3, food=-23.1
+    n17: STRONG         use_eat=+15.9 | vis=1526 | health=-25.2, food=-22.9
+    n18: medium  D_strafe_right=+3.3 | vis=673 | s9_ct=-0.8, i5_rx=+0.7
+    n19: STRONG         use_eat=+15.7 | vis=1338 | health=-25.0, food=-22.7
+    n20: medium            jump=+4.2 | vis=285 | health=+0.0, food=+0.0
+    n21: STRONG         use_eat=+25.0 | vis=1792 | health=-25.4, food=-23.3
+    n22: STRONG         use_eat=+17.1 | vis=1517 | health=-24.9, food=-22.8
+    n23: weak          hotbar_7=+1.4 | vis=72 | i1_rx=+0.4, health=-0.4
+    n24: weak          hotbar_9=+1.4 | vis=71 | pitch=+0.2, s8_ct=-0.2
+    n25: STRONG         use_eat=+22.9 | vis=1747 | health=-25.4, food=-23.4
+    n26: medium        hotbar_3=+3.9 | vis=211 | i1_rx=-0.7, i2_rx=-0.7
+    n27: STRONG         use_eat=-7.4 | vis=486 | health=+16.2, food=+14.8
+    n28: STRONG         use_eat=-12.6 | vis=588 | health=+25.1, food=+22.5
+    n29: STRONG         use_eat=+24.2 | vis=1806 | health=-25.5, food=-23.4
+    n30: STRONG         use_eat=+23.9 | vis=1747 | health=-25.4, food=-23.3
+    n31: STRONG         use_eat=+19.4 | vis=1675 | health=-25.1, food=-22.9
+
+  --- WHICH BLOCKS DRIVE EATING (via vision)? ---
+    Most eat-promoting blocks (top 10):
+      BLOCK air                 : +234777.9
+      BLOCK Eve                 : +177664.3
+      BLOCK Adam                : +143506.9
+      BLOCK Cain                : +140877.0
+      BLOCK fence               : +128046.0
+      JUNK  dirt                : +119489.7
+      JUNK  cobblestone         : +118157.0
+      BLOCK log                 : +109563.1
+      BLOCK bedrock             : +104714.6
+      FOOD  cookie              : +92887.1
+    Most eat-suppressing blocks (bottom 5):
+      BLOCK flowing_lava        : -48758.1
+      BLOCK yellow_flower       : -56492.5
+      BLOCK quartz_block        : -142225.2
+      BLOCK cake                : -147761.0
+      BLOCK gravel              : -161332.0
+
+  --- ALL ACTIONS: what drives each one ---
+
+    W_forward:
+      Drive:  vis=83841 hb=7884 held=937 agents=2666 items=2203
+      Nodes:  n9=+11.6, n2=+10.4, n28=+8.3
+      Raw:    i3_here=+191.7, i2_here=+185.2, i4_here=+184.1, i5_here=+178.5
+      Vision: below[3,2]=+, below[4,2]=+, below[2,2]=+
+      Blocks: grass=+12910, air=+12202, fence=+10628
+
+    S_backward:
+      Drive:  vis=82971 hb=9686 held=1127 agents=3528 items=2905
+      Nodes:  n2=+10.2, n9=+10.2, n28=+6.3
+      Raw:    health=-269.9, food=-262.3, a3_hp=-225.2, i5_here=+224.6
+      Vision: below[4,2]=+, below[3,2]=+, below[2,2]=+
+      Blocks: grass=+12574, air=+11715, fence=+10238
+
+    A_strafe_left:
+      Drive:  vis=85641 hb=8481 held=1102 agents=2914 items=2544
+      Nodes:  n2=+12.0, n9=+10.7, n4=+7.3
+      Raw:    i3_here=+219.8, i4_here=+214.6, i5_here=+208.8, i2_here=+205.2
+      Vision: floor[4,0]=+, floor[0,4]=+, floor[3,0]=+
+      Blocks: air=+14870, fence=+10724, grass=+10615
+
+    D_strafe_right:
+      Drive:  vis=81770 hb=8007 held=1085 agents=2606 items=2290
+      Nodes:  n9=+11.7, n2=+11.4, n31=+8.8
+      Raw:    i3_here=+199.4, i4_here=+193.3, i2_here=+188.2, i5_here=+187.8
+      Vision: floor[4,0]=+, floor[3,0]=+, floor[3,1]=+
+      Blocks: air=+14524, fence=+10341, grass=+10132
+
+    turn_left:
+      Drive:  vis=97346 hb=10759 held=1230 agents=3886 items=3223
+      Nodes:  n9=+12.1, n2=+8.3, n28=+7.9
+      Raw:    health=-274.8, food=-267.3, i3_here=+260.1, i4_here=+259.4
+      Vision: below[4,2]=+, below[3,2]=+, below[4,1]=+
+      Blocks: grass=+14742, air=+13886, fence=+12135
+
+    turn_right:
+      Drive:  vis=203451 hb=33051 held=3171 agents=16077 items=14208
+      Nodes:  n17=+9.2, n9=+8.3, n16=+7.6
+      Raw:    health=-2211.9, food=-2035.8, a3_hp=-1766.1, a2_hp=-1436.7
+      Vision: floor[0,4]=+, eye[0,0]=+, above[0,0]=+
+      Blocks: air=+42067, fence=+27813, grass=+24300
+
+    look_up:
+      Drive:  vis=142985 hb=20665 held=2189 agents=9076 items=7686
+      Nodes:  n9=+12.0, n2=+9.9, n31=+6.3
+      Raw:    health=-1095.3, food=-1018.7, a3_hp=-880.6, a3_here=-712.7
+      Vision: floor[0,4]=+, below[4,2]=+, below[4,1]=+
+      Blocks: air=+21592, grass=+20656, fence=+17943
+
+    look_down:
+      Drive:  vis=99817 hb=12465 held=1371 agents=4866 items=3968
+      Nodes:  n9=+10.1, n2=+9.0, n28=+7.9
+      Raw:    health=-434.4, food=-412.5, a3_hp=-357.7, i5_here=+307.5
+      Vision: below[4,2]=+, below[3,2]=+, below[4,1]=+
+      Blocks: grass=+15463, air=+13670, fence=+12325
+
+    jump:
+      Drive:  vis=75554 hb=6827 held=890 agents=1885 items=1528
+      Nodes:  n9=+11.5, n2=+8.5, n28=+8.4
+      Raw:    eating=+165.0, i3_here=+158.4, i2_here=+156.6, y=+156.0
+      Vision: below[3,2]=+, below[4,2]=+, below[2,2]=+
+      Blocks: grass=+11151, air=+10960, fence=+9379
+
+    crouch:
+      Drive:  vis=91399 hb=10210 held=1219 agents=3765 items=3149
+      Nodes:  n9=+11.7, n2=+9.6, n28=+8.0
+      Raw:    health=-310.0, food=-299.6, a3_hp=-256.0, i5_here=+250.5
+      Vision: below[3,2]=+, below[4,2]=+, below[4,1]=+
+      Blocks: grass=+14123, air=+12565, fence=+11262
+
+    use_eat:
+      Drive:  vis=558706 hb=116001 held=10146 agents=62441 items=59797
+      Nodes:  n21=+25.0, n6=+24.7, n3=+24.6
+      Raw:    health=-9940.9, food=-9078.4, a3_hp=-7896.4, a2_hp=-6562.4
+      Vision: eye[0,0]=+, above[0,0]=+, floor[0,4]=+
+      Blocks: air=+117878, fence=+79011, grass=+70408
+
+    attack:
+      Drive:  vis=110799 hb=14531 held=1577 agents=5862 items=4912
+      Nodes:  n9=+12.6, n28=+8.2, n2=+6.9
+      Raw:    health=-606.2, food=-570.7, a3_hp=-491.9, a3_here=-396.2
+      Vision: below[4,2]=+, below[3,2]=+, below[4,1]=+
+      Blocks: grass=+17361, air=+15100, fence=+13705
+
+    Q_throw:
+      Drive:  vis=203825 hb=32407 held=3168 agents=15510 items=13641
+      Nodes:  n9=+10.4, n2=+9.7, n16=+8.1
+      Raw:    health=-2097.6, food=-1933.5, a3_hp=-1677.1, a3_here=-1363.3
+      Vision: floor[0,4]=+, eye[0,0]=+, above[0,0]=+
+      Blocks: air=+41918, fence=+27549, grass=+23761
+
+    hotbar_1:
+      Drive:  vis=119450 hb=15710 held=1695 agents=6854 items=5810
+      Nodes:  n9=+11.4, n2=+8.6, n4=+8.0
+      Raw:    health=-791.8, food=-738.7, a3_hp=-635.0, a3_here=-511.2
+      Vision: floor[0,4]=+, floor[3,4]=+, above[0,0]=+
+      Blocks: air=+22881, fence=+15643, grass=+14425
+
+    hotbar_2:
+      Drive:  vis=38688 hb=868 held=161 agents=1494 items=2195
+      Nodes:  n9=+10.0, n2=+9.5, n28=+7.6
+      Raw:    health=+444.3, food=+393.1, a3_hp=+344.7, a2_hp=+306.5
+      Vision: below[2,4]=+, below[2,2]=+, below[2,3]=+
+      Blocks: grass=+6340, air=+6191, fence=+5373
+
+    hotbar_3:
+      Drive:  vis=99541 hb=11040 held=1269 agents=4725 items=4075
+      Nodes:  n2=+12.8, n9=+9.3, n4=+9.0
+      Raw:    health=-488.2, food=-459.6, a3_hp=-393.2, i5_here=+323.5
+      Vision: floor[0,4]=+, above[0,0]=+, below[3,2]=+
+      Blocks: air=+17514, grass=+12881, fence=+12777
+
+    hotbar_4:
+      Drive:  vis=92290 hb=9827 held=1207 agents=3560 items=3039
+      Nodes:  n2=+11.0, n9=+10.5, n28=+8.0
+      Raw:    health=-251.0, food=-245.1, i3_here=+244.3, i4_here=+243.1
+      Vision: below[3,2]=+, below[4,2]=+, floor[0,4]=+
+      Blocks: air=+13962, grass=+12745, fence=+11334
+
+    hotbar_5:
+      Drive:  vis=115827 hb=14630 held=1620 agents=6177 items=5255
+      Nodes:  n9=+10.9, n28=+9.2, n2=+8.5
+      Raw:    health=-670.4, food=-626.4, a3_hp=-541.1, a3_here=-435.9
+      Vision: floor[0,4]=+, floor[3,4]=+, eye[0,0]=+
+      Blocks: air=+22034, fence=+15106, grass=+14049
+
+    hotbar_6:
+      Drive:  vis=18925 hb=5181 held=165 agents=4002 items=4694
+      Nodes:  n9=+10.5, n2=+10.0, n28=+8.6
+      Raw:    health=+862.1, food=+775.4, a3_hp=+676.5, a2_hp=+588.0
+      Vision: below[2,4]=+, eye[2,2]=+, below[2,2]=+
+      Blocks: air=+4472, fence=+3197, grass=+3041
+
+    hotbar_7:
+      Drive:  vis=186140 hb=28717 held=2851 agents=13646 items=11797
+      Nodes:  n2=+10.8, n14=+10.4, n9=+8.9
+      Raw:    health=-1788.4, food=-1651.6, a3_hp=-1432.6, a3_here=-1163.3
+      Vision: floor[0,4]=+, below[4,1]=+, below[4,2]=+
+      Blocks: air=+28334, grass=+27395, fence=+23694
+
+    hotbar_8:
+      Drive:  vis=166600 hb=24905 held=2508 agents=11509 items=9809
+      Nodes:  n9=+10.7, n2=+10.3, n11=+9.8
+      Raw:    health=-1448.5, food=-1342.1, a3_hp=-1161.6, a3_here=-941.3
+      Vision: floor[0,4]=+, below[4,2]=+, floor[0,0]=+
+      Blocks: air=+28758, grass=+21408, fence=+21338
+
+    hotbar_9:
+      Drive:  vis=53871 hb=1897 held=424 agents=1047 items=1803
+      Nodes:  n2=+10.6, n9=+9.9, n28=+8.3
+      Raw:    health=+299.8, food=+261.3, a3_hp=+230.4, a2_hp=+218.7
+      Vision: below[2,2]=+, below[2,4]=+, floor[3,1]=+
+      Blocks: air=+8269, grass=+7858, fence=+6874
+
+    stand_still:
+      Drive:  vis=128027 hb=16843 held=1824 agents=7251 items=6156
+      Nodes:  n2=+11.8, n9=+10.9, n28=+7.1
+      Raw:    health=-831.9, food=-777.2, a3_hp=-671.5, a3_here=-542.4
+      Vision: below[4,2]=+, below[3,2]=+, floor[0,4]=+
+      Blocks: air=+19475, grass=+18114, fence=+15924
+
+  --- CONTEXT NODES: role of each context node ---
+    c 0: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | food=0.1, crouching=0.1, strafing=0.1
+    c 1: STRONG         use_eat=-5.21 | hidden=143 raw=67 hbar=13 | tick=even | health=35.2, food=30.9, crouching=0.3
+    c 2: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t1 | food=0.1, jumping=0.1, crouching=0.0
+    c 3: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c 4: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c 5: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c 6: STRONG         use_eat=+4.74 | hidden=446 raw=95 hbar=70 | tick=even | health=41.6, food=38.6, crouching=14.1
+    c 7: dead        S_backward=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, crouching=0.4, food=0.3
+    c 8: STRONG         use_eat=+4.75 | hidden=444 raw=94 hbar=70 | tick=even | health=41.5, food=38.5, crouching=14.1
+    c 9: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t4 | strafing=0.1, health=0.1, crouching=0.1
+    c10: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c11: dead           Q_throw=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | health=0.4, crouching=0.4, food=0.4
+    c12: STRONG         use_eat=+4.73 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.6, crouching=14.0
+    c13: STRONG         use_eat=-5.36 | hidden=150 raw=75 hbar=13 | tick=even | health=38.8, food=34.2, crouching=1.5
+    c14: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.4, food=38.6, crouching=14.0
+    c15: dead            crouch=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | crouching=0.1, attacking=0.1, food=0.1
+    c16: STRONG         use_eat=+4.76 | hidden=444 raw=94 hbar=70 | tick=even | health=41.5, food=38.4, crouching=14.0
+    c17: STRONG         use_eat=+4.73 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.1
+    c18: STRONG         use_eat=+4.73 | hidden=446 raw=95 hbar=70 | tick=even | health=41.6, food=38.6, crouching=14.1
+    c19: STRONG         use_eat=+4.74 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.5, crouching=14.0
+    c20: dead         look_down=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | food=0.1, pitching=0.1, jumping=0.0
+    c21: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c22: dead     A_strafe_left=+0.02 | hidden=1 raw=0 hbar=0 | tick=t0 | moving=0.1, crouching=0.1, health=0.1
+    c23: STRONG         use_eat=+4.74 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.5, crouching=14.0
+    c24: STRONG         use_eat=+4.73 | hidden=445 raw=94 hbar=70 | tick=even | health=41.6, food=38.6, crouching=14.0
+    c25: STRONG         use_eat=+4.74 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.5, crouching=14.1
+    c26: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=even | pitching=0.0, moving=0.0, food=0.0
+    c27: STRONG         use_eat=+4.76 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.5, crouching=14.0
+    c28: dead        S_backward=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | food=0.4, health=0.4, crouching=0.3
+    c29: STRONG         use_eat=+4.73 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.5, crouching=14.0
+    c30: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c31: weak         turn_left=+0.14 | hidden=6 raw=1 hbar=0 | tick=even | health=0.5, crouching=0.3, strafing=0.1
+    c32: dead          hotbar_9=+0.02 | hidden=1 raw=0 hbar=0 | tick=t1 | food=0.1, turning=0.0, health=0.0
+    c33: weak          hotbar_5=+0.13 | hidden=6 raw=2 hbar=0 | tick=t3 | crouching=0.5, health=0.5, food=0.3
+    c34: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.3
+    c35: STRONG         use_eat=+4.75 | hidden=442 raw=94 hbar=70 | tick=even | health=41.4, food=38.3, crouching=14.0
+    c36: dead     A_strafe_left=+0.02 | hidden=1 raw=0 hbar=0 | tick=t2 | crouching=0.1, turning=0.1, jumping=0.1
+    c37: weak            attack=+0.13 | hidden=5 raw=1 hbar=2 | tick=even | crouching=0.3, food=0.2, health=0.1
+    c38: weak              jump=+0.15 | hidden=1 raw=0 hbar=0 | tick=t0 | strafing=0.1, attacking=0.1, moving=0.0
+    c39: dead     A_strafe_left=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, food=0.3, crouching=0.3
+    c40: dead           Q_throw=+0.09 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.3, health=0.3, turning=0.1
+    c41: dead           Q_throw=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | health=0.4, food=0.4, crouching=0.3
+    c42: STRONG         use_eat=+4.73 | hidden=446 raw=94 hbar=70 | tick=even | health=41.6, food=38.6, crouching=14.0
+    c43: weak     A_strafe_left=+0.15 | hidden=11 raw=1 hbar=3 | tick=even | crouching=0.9, food=0.2, health=0.1
+    c44: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c45: STRONG         use_eat=+4.72 | hidden=445 raw=94 hbar=69 | tick=even | health=41.6, food=38.6, crouching=14.0
+    c46: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c47: dead        S_backward=+0.10 | hidden=8 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.4
+    c48: STRONG         use_eat=+4.76 | hidden=445 raw=94 hbar=70 | tick=even | health=41.5, food=38.5, crouching=14.1
+    c49: dead     A_strafe_left=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.4, health=0.4, food=0.3
+    c50: STRONG         use_eat=+4.76 | hidden=445 raw=94 hbar=70 | tick=even | health=41.5, food=38.5, crouching=14.0
+    c51: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.4, food=38.5, crouching=13.9
+    c52: dead          hotbar_7=+0.02 | hidden=1 raw=0 hbar=0 | tick=t4 | turning=0.1, strafing=0.0, moving=0.0
+    c53: dead          hotbar_4=+0.02 | hidden=1 raw=0 hbar=0 | tick=t3 | jumping=0.1, pitching=0.1, food=0.0
+    c54: weak          hotbar_1=+0.27 | hidden=9 raw=1 hbar=4 | tick=even | crouching=0.5, food=0.3, health=0.0
+    c55: STRONG         use_eat=+4.75 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.7, crouching=14.0
+    c56: STRONG         use_eat=+4.76 | hidden=444 raw=94 hbar=70 | tick=even | health=41.5, food=38.5, crouching=14.1
+    c57: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | moving=0.1, crouching=0.1, pitching=0.1
+    c58: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t3 | food=0.1, moving=0.1, jumping=0.0
+    c59: dead            crouch=+0.08 | hidden=6 raw=1 hbar=3 | tick=even | crouching=0.4, health=0.4, strafing=0.1
+    c60: STRONG         use_eat=+4.72 | hidden=445 raw=94 hbar=69 | tick=even | health=41.5, food=38.6, crouching=14.0
+    c61: dead           Q_throw=+0.10 | hidden=7 raw=1 hbar=0 | tick=even | crouching=0.4, food=0.4, health=0.4
+    c62: dead         W_forward=+0.00 | hidden=1 raw=0 hbar=0 | tick=t0 | moving=0.1, turning=0.0, food=0.0
+    c63: STRONG         use_eat=+4.73 | hidden=439 raw=93 hbar=72 | tick=even | health=40.8, food=38.1, crouching=13.9
+
+  --- CONTEXT ACTIONS: what drives each action through context ---
+
+    W_forward:
+      Drive:  hidden=9146 raw=2109 hbar=1306
+      Nodes:  c13=+2.22, c1=+2.17, c8=-0.65
+      Raw:    health=+955.9, food=+879.5, crouching=-272.2, moving=-0.3
+
+    S_backward:
+      Drive:  hidden=4823 raw=1164 hbar=654
+      Nodes:  c13=+1.85, c1=+1.79, c63=-0.36
+      Raw:    health=+534.6, food=+489.7, crouching=-138.8, moving=-0.2
+
+    A_strafe_left:
+      Drive:  hidden=2922 raw=442 hbar=583
+      Nodes:  c13=+2.32, c1=+2.15, c55=+0.29
+      Raw:    health=-168.6, food=-164.9, crouching=+108.0, turning=-0.1
+
+    D_strafe_right:
+      Drive:  hidden=2075 raw=620 hbar=230
+      Nodes:  c13=+2.33, c1=+2.27, c54=+0.16
+      Raw:    health=+300.3, food=+270.3, crouching=-48.7, moving=-0.2
+
+    turn_left:
+      Drive:  hidden=3138 raw=486 hbar=617
+      Nodes:  c13=+2.46, c1=+2.03, c63=+0.30
+      Raw:    health=-188.0, food=-182.9, crouching=+114.7, turning=-0.2
+
+    turn_right:
+      Drive:  hidden=3915 raw=979 hbar=514
+      Nodes:  c1=+2.02, c13=+1.82, c63=-0.31
+      Raw:    health=+454.0, food=+414.5, crouching=-109.4, moving=-0.2
+
+    look_up:
+      Drive:  hidden=977 raw=82 hbar=238
+      Nodes:  c13=+2.14, c1=+2.05, c45=+0.12
+      Raw:    crouching=+39.5, health=+25.8, food=+16.2, moving=-0.2
+
+    look_down:
+      Drive:  hidden=1152 raw=418 hbar=99
+      Nodes:  c13=+2.29, c1=+2.13, c54=+0.18
+      Raw:    health=+210.1, food=+186.9, crouching=-20.2, moving=-0.2
+
+    jump:
+      Drive:  hidden=7810 raw=1471 hbar=1353
+      Nodes:  c13=+2.42, c1=+2.21, c63=+0.71
+      Raw:    health=-621.3, food=-585.7, crouching=+262.8, turning=-0.2
+
+    crouch:
+      Drive:  hidden=7119 raw=1330 hbar=1238
+      Nodes:  c1=+2.31, c13=+2.15, c35=+0.59
+      Raw:    health=-560.0, food=-528.1, crouching=+241.0, turning=-0.2
+
+    use_eat:
+      Drive:  hidden=64820 raw=14142 hbar=9839
+      Nodes:  c13=-5.36, c1=-5.21, c56=+4.76
+      Raw:    health=-6300.1, food=-5831.3, crouching=+2003.4, moving=+1.7
+
+    attack:
+      Drive:  hidden=1727 raw=546 hbar=182
+      Nodes:  c1=+2.30, c13=+2.25, c54=+0.17
+      Raw:    health=+267.6, food=+240.1, crouching=-37.4, moving=-0.2
+
+    Q_throw:
+      Drive:  hidden=10264 raw=2020 hbar=1714
+      Nodes:  c13=+2.04, c1=+1.83, c45=+0.83
+      Raw:    health=-867.8, food=-813.1, crouching=+337.6, turning=-0.2
+
+    hotbar_1:
+      Drive:  hidden=7973 raw=1863 hbar=1123
+      Nodes:  c13=+2.34, c1=+2.05, c8=-0.56
+      Raw:    health=+847.8, food=+779.2, crouching=-235.0, moving=-0.3
+
+    hotbar_2:
+      Drive:  hidden=1273 raw=444 hbar=116
+      Nodes:  c13=+2.24, c1=+2.19, c43=+0.12
+      Raw:    health=+221.7, food=+197.8, crouching=-23.9, moving=-0.2
+
+    hotbar_3:
+      Drive:  hidden=6961 raw=1647 hbar=965
+      Nodes:  c13=+2.31, c1=+2.06, c30=-0.49
+      Raw:    health=+752.0, food=+690.1, crouching=-203.5, moving=-0.3
+
+    hotbar_4:
+      Drive:  hidden=2541 raw=361 hbar=523
+      Nodes:  c13=+2.29, c1=+2.19, c54=+0.26
+      Raw:    health=-132.8, food=-131.7, crouching=+96.2, turning=-0.1
+
+    hotbar_5:
+      Drive:  hidden=1306 raw=99 hbar=327
+      Nodes:  c13=+2.28, c1=+2.16, c55=+0.15
+      Raw:    crouching=+56.6, food=-24.3, health=-17.4, moving=-0.2
+
+    hotbar_6:
+      Drive:  hidden=6270 raw=1505 hbar=856
+      Nodes:  c1=+2.27, c13=+2.24, c8=-0.44
+      Raw:    health=+690.4, food=+632.8, crouching=-180.9, moving=-0.3
+
+    hotbar_7:
+      Drive:  hidden=9459 raw=1855 hbar=1586
+      Nodes:  c13=+1.93, c1=+1.84, c63=+0.84
+      Raw:    health=-795.8, food=-745.9, crouching=+311.8, turning=-0.2
+
+    hotbar_8:
+      Drive:  hidden=2447 raw=349 hbar=501
+      Nodes:  c13=+2.24, c1=+2.00, c55=+0.24
+      Raw:    health=-128.3, food=-127.0, crouching=+92.6, moving=-0.1
+
+    hotbar_9:
+      Drive:  hidden=3950 raw=660 hbar=743
+      Nodes:  c13=+2.40, c1=+2.05, c63=+0.36
+      Raw:    health=-264.4, food=-253.8, crouching=+140.6, turning=-0.2
+
+    stand_still:
+      Drive:  hidden=4669 raw=815 hbar=854
+      Nodes:  c13=+2.34, c1=+2.06, c63=+0.47
+      Raw:    health=-333.1, food=-317.6, crouching=+163.0, turning=-0.2

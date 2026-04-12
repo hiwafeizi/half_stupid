@@ -1,0 +1,2338 @@
+[
+  {
+    "tick": 156,
+    "obs": 50,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 20.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.991034,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.008286,
+      "stand_still": 0.00028
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 318,
+    "obs": 100,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 20.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.991034,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.008286,
+      "stand_still": 0.00028
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 471,
+    "obs": 150,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 20.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.991034,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.008286,
+      "stand_still": 0.00028
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 626,
+    "obs": 200,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 20.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.991034,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.008286,
+      "stand_still": 0.00028
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 779,
+    "obs": 250,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 20.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.991034,
+      "hotbar_2": 0.0002,
+      "hotbar_3": 0.008286,
+      "stand_still": 0.00028
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 928,
+    "obs": 300,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 18.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.0002,
+      "hotbar_1": 0.981507,
+      "hotbar_2": 0.000522,
+      "hotbar_3": 0.016872,
+      "stand_still": 0.000899
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 1087,
+    "obs": 350,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 14.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.002201,
+      "hotbar_1": 0.917042,
+      "hotbar_2": 0.005286,
+      "hotbar_3": 0.066628,
+      "stand_still": 0.008843
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 1247,
+    "obs": 400,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 10.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.047837,
+      "hotbar_1": 0.647272,
+      "hotbar_2": 0.040401,
+      "hotbar_3": 0.19877,
+      "stand_still": 0.065719
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 1401,
+    "obs": 450,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 6.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 1555,
+    "obs": 500,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 2.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 1693,
+    "obs": 550,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.4552,
+      "hotbar_1": 0.142536,
+      "hotbar_2": 0.090899,
+      "hotbar_3": 0.178694,
+      "stand_still": 0.132671
+    },
+    "chosen": "hotbar_2"
+  },
+  {
+    "tick": 1846,
+    "obs": 600,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.414299,
+      "hotbar_1": 0.159859,
+      "hotbar_2": 0.094591,
+      "hotbar_3": 0.187392,
+      "stand_still": 0.143859
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 2001,
+    "obs": 650,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 20.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.4552,
+      "hotbar_1": 0.142536,
+      "hotbar_2": 0.090899,
+      "hotbar_3": 0.178694,
+      "stand_still": 0.132671
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 2154,
+    "obs": 700,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 19.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.465278,
+      "hotbar_1": 0.140867,
+      "hotbar_2": 0.089348,
+      "hotbar_3": 0.172811,
+      "stand_still": 0.131696
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 2319,
+    "obs": 750,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 19.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.760356,
+      "hotbar_1": 0.021387,
+      "hotbar_2": 0.044763,
+      "hotbar_3": 0.13926,
+      "stand_still": 0.034234
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 2466,
+    "obs": 800,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 19.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 2625,
+    "obs": 850,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 18.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_2"
+  },
+  {
+    "tick": 2782,
+    "obs": 900,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 18.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.476998,
+      "hotbar_1": 0.138319,
+      "hotbar_2": 0.087661,
+      "hotbar_3": 0.166929,
+      "stand_still": 0.130093
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 2939,
+    "obs": 950,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 18.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 3080,
+    "obs": 1000,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 17.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.752356,
+      "hotbar_1": 0.022873,
+      "hotbar_2": 0.047143,
+      "hotbar_3": 0.142232,
+      "stand_still": 0.035397
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 3238,
+    "obs": 1050,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 17.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.744037,
+      "hotbar_1": 0.02447,
+      "hotbar_2": 0.047834,
+      "hotbar_3": 0.145791,
+      "stand_still": 0.037867
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 3391,
+    "obs": 1100,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 17.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 3536,
+    "obs": 1150,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 17.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 3682,
+    "obs": 1200,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 16.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 3818,
+    "obs": 1250,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 16.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.51613,
+      "hotbar_1": 0.125472,
+      "hotbar_2": 0.082961,
+      "hotbar_3": 0.154168,
+      "stand_still": 0.121269
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 3982,
+    "obs": 1300,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 16.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.51613,
+      "hotbar_1": 0.125472,
+      "hotbar_2": 0.082961,
+      "hotbar_3": 0.154168,
+      "stand_still": 0.121269
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 4138,
+    "obs": 1350,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 15.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.535634,
+      "hotbar_1": 0.119224,
+      "hotbar_2": 0.080518,
+      "hotbar_3": 0.147813,
+      "stand_still": 0.116811
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 4298,
+    "obs": 1400,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 15.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 4446,
+    "obs": 1450,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 15.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.535634,
+      "hotbar_1": 0.119224,
+      "hotbar_2": 0.080518,
+      "hotbar_3": 0.147813,
+      "stand_still": 0.116811
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 4601,
+    "obs": 1500,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 14.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.530964,
+      "hotbar_1": 0.120711,
+      "hotbar_2": 0.081109,
+      "hotbar_3": 0.149335,
+      "stand_still": 0.117882
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 4758,
+    "obs": 1550,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 14.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.726907,
+      "hotbar_1": 0.027942,
+      "hotbar_2": 0.051979,
+      "hotbar_3": 0.152069,
+      "stand_still": 0.041102
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 4903,
+    "obs": 1600,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 14.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.7179,
+      "hotbar_1": 0.029853,
+      "hotbar_2": 0.052671,
+      "hotbar_3": 0.155664,
+      "stand_still": 0.043912
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 5059,
+    "obs": 1650,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 13.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 5203,
+    "obs": 1700,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 13.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.55038,
+      "hotbar_1": 0.114566,
+      "hotbar_2": 0.078628,
+      "hotbar_3": 0.143011,
+      "stand_still": 0.113415
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 5360,
+    "obs": 1750,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 13.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.708744,
+      "hotbar_1": 0.031869,
+      "hotbar_2": 0.05434,
+      "hotbar_3": 0.158956,
+      "stand_still": 0.046092
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 5522,
+    "obs": 1800,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 12.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.708834,
+      "hotbar_1": 0.03186,
+      "hotbar_2": 0.055353,
+      "hotbar_3": 0.158647,
+      "stand_still": 0.045307
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 5646,
+    "obs": 1850,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 12.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 5802,
+    "obs": 1900,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 12.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.59319,
+      "hotbar_1": 0.101349,
+      "hotbar_2": 0.072938,
+      "hotbar_3": 0.129083,
+      "stand_still": 0.10344
+    },
+    "chosen": "hotbar_1"
+  },
+  {
+    "tick": 5960,
+    "obs": 1950,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 11.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.699465,
+      "hotbar_1": 0.033996,
+      "hotbar_2": 0.05708,
+      "hotbar_3": 0.161926,
+      "stand_still": 0.047534
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 6112,
+    "obs": 2000,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 11.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 6264,
+    "obs": 2050,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 11.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.699465,
+      "hotbar_1": 0.033996,
+      "hotbar_2": 0.05708,
+      "hotbar_3": 0.161926,
+      "stand_still": 0.047534
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 6417,
+    "obs": 2100,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 10.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.67995,
+      "hotbar_1": 0.038658,
+      "hotbar_2": 0.059493,
+      "hotbar_3": 0.168754,
+      "stand_still": 0.053145
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 6555,
+    "obs": 2150,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 10.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 6711,
+    "obs": 2200,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 10.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.3134,
+      "hotbar_1": 0.197578,
+      "hotbar_2": 0.103899,
+      "hotbar_3": 0.22031,
+      "stand_still": 0.164813
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 6846,
+    "obs": 2250,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 10.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.689876,
+      "hotbar_1": 0.036257,
+      "hotbar_2": 0.058831,
+      "hotbar_3": 0.16519,
+      "stand_still": 0.049845
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7005,
+    "obs": 2300,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 9.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.68007,
+      "hotbar_1": 0.038648,
+      "hotbar_2": 0.060605,
+      "hotbar_3": 0.168434,
+      "stand_still": 0.052242
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7151,
+    "obs": 2350,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 9.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.648192,
+      "hotbar_1": 0.085007,
+      "hotbar_2": 0.065193,
+      "hotbar_3": 0.111226,
+      "stand_still": 0.090381
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7299,
+    "obs": 2400,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 9.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.68007,
+      "hotbar_1": 0.038648,
+      "hotbar_2": 0.060605,
+      "hotbar_3": 0.168434,
+      "stand_still": 0.052242
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7445,
+    "obs": 2450,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 8.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.643919,
+      "hotbar_1": 0.086252,
+      "hotbar_2": 0.065812,
+      "hotbar_3": 0.112612,
+      "stand_still": 0.091405
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7588,
+    "obs": 2500,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 8.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.66574,
+      "hotbar_1": 0.079941,
+      "hotbar_2": 0.06262,
+      "hotbar_3": 0.10554,
+      "stand_still": 0.08616
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 7736,
+    "obs": 2550,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 8.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.276832,
+      "hotbar_1": 0.233255,
+      "hotbar_2": 0.100264,
+      "hotbar_3": 0.230223,
+      "stand_still": 0.159426
+    },
+    "chosen": "hotbar_2"
+  },
+  {
+    "tick": 7853,
+    "obs": 2600,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 7.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.66157,
+      "hotbar_1": 0.081138,
+      "hotbar_2": 0.063236,
+      "hotbar_3": 0.106891,
+      "stand_still": 0.087165
+    },
+    "chosen": "hotbar_2"
+  },
+  {
+    "tick": 7982,
+    "obs": 2650,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 7.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.682829,
+      "hotbar_1": 0.075073,
+      "hotbar_2": 0.060066,
+      "hotbar_3": 0.100008,
+      "stand_still": 0.082024
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 8131,
+    "obs": 2700,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 7.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.662609,
+      "hotbar_1": 0.043256,
+      "hotbar_2": 0.063825,
+      "hotbar_3": 0.173584,
+      "stand_still": 0.056727
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 8294,
+    "obs": 2750,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 6.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.678773,
+      "hotbar_1": 0.076222,
+      "hotbar_2": 0.060677,
+      "hotbar_3": 0.101321,
+      "stand_still": 0.083008
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 8438,
+    "obs": 2800,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 6.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.678975,
+      "hotbar_1": 0.040396,
+      "hotbar_2": 0.061896,
+      "hotbar_3": 0.164839,
+      "stand_still": 0.053893
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 8588,
+    "obs": 2850,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 6.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.699428,
+      "hotbar_1": 0.070409,
+      "hotbar_2": 0.05754,
+      "hotbar_3": 0.09464,
+      "stand_still": 0.077982
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 8735,
+    "obs": 2900,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 5.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.223865,
+      "hotbar_1": 0.294223,
+      "hotbar_2": 0.092853,
+      "hotbar_3": 0.240878,
+      "stand_still": 0.148181
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 8902,
+    "obs": 2950,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 5.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.695492,
+      "hotbar_1": 0.071509,
+      "hotbar_2": 0.058143,
+      "hotbar_3": 0.095913,
+      "stand_still": 0.078943
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 9059,
+    "obs": 3000,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 5.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.223865,
+      "hotbar_1": 0.294223,
+      "hotbar_2": 0.092853,
+      "hotbar_3": 0.240878,
+      "stand_still": 0.148181
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 9212,
+    "obs": 3050,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 4.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.159264,
+      "hotbar_1": 0.38804,
+      "hotbar_2": 0.079741,
+      "hotbar_3": 0.245054,
+      "stand_still": 0.127901
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 9366,
+    "obs": 3100,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 4.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.633157,
+      "hotbar_1": 0.056641,
+      "hotbar_2": 0.064765,
+      "hotbar_3": 0.186209,
+      "stand_still": 0.059227
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 9508,
+    "obs": 3150,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 8
+    },
+    "raw": {
+      "health": 4.0,
+      "food": 0.0,
+      "held_count": 1,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.633157,
+      "hotbar_1": 0.056641,
+      "hotbar_2": 0.064765,
+      "hotbar_3": 0.186209,
+      "stand_still": 0.059227
+    },
+    "chosen": "hotbar_3"
+  },
+  {
+    "tick": 9672,
+    "obs": 3200,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 4.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.711701,
+      "hotbar_1": 0.067,
+      "hotbar_2": 0.055644,
+      "hotbar_3": 0.090676,
+      "stand_still": 0.07498
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 9821,
+    "obs": 3250,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 3.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.746038,
+      "hotbar_1": 0.057646,
+      "hotbar_2": 0.050203,
+      "hotbar_3": 0.079602,
+      "stand_still": 0.066511
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 9962,
+    "obs": 3300,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 3.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.746038,
+      "hotbar_1": 0.057646,
+      "hotbar_2": 0.050203,
+      "hotbar_3": 0.079602,
+      "stand_still": 0.066511
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 10118,
+    "obs": 3350,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 3.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 0
+    },
+    "probs": {
+      "use_eat": 0.727375,
+      "hotbar_1": 0.062697,
+      "hotbar_2": 0.053185,
+      "hotbar_3": 0.085617,
+      "stand_still": 0.071126
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 10280,
+    "obs": 3400,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 2.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.760453,
+      "hotbar_1": 0.053801,
+      "hotbar_2": 0.047857,
+      "hotbar_3": 0.074963,
+      "stand_still": 0.062926
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 10436,
+    "obs": 3450,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 9
+    },
+    "raw": {
+      "health": 2.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.142866,
+      "hotbar_1": 0.416369,
+      "hotbar_2": 0.075547,
+      "hotbar_3": 0.243866,
+      "stand_still": 0.121352
+    },
+    "chosen": "stand_still"
+  },
+  {
+    "tick": 10602,
+    "obs": 3500,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 2.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.760453,
+      "hotbar_1": 0.053801,
+      "hotbar_2": 0.047857,
+      "hotbar_3": 0.074963,
+      "stand_still": 0.062926
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 10731,
+    "obs": 3550,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 1.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.774288,
+      "hotbar_1": 0.050157,
+      "hotbar_2": 0.045571,
+      "hotbar_3": 0.070515,
+      "stand_still": 0.059469
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 10894,
+    "obs": 3600,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 1.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.774288,
+      "hotbar_1": 0.050157,
+      "hotbar_2": 0.045571,
+      "hotbar_3": 0.070515,
+      "stand_still": 0.059469
+    },
+    "chosen": "use_eat"
+  },
+  {
+    "tick": 11047,
+    "obs": 3650,
+    "ids": {
+      "hotbar": [
+        17,
+        8,
+        9,
+        11,
+        14,
+        16,
+        15,
+        7,
+        20
+      ],
+      "held": 17
+    },
+    "raw": {
+      "health": 1.0,
+      "food": 0.0,
+      "held_count": 4,
+      "eating": 1
+    },
+    "probs": {
+      "use_eat": 0.774288,
+      "hotbar_1": 0.050157,
+      "hotbar_2": 0.045571,
+      "hotbar_3": 0.070515,
+      "stand_still": 0.059469
+    },
+    "chosen": "use_eat"
+  }
+]

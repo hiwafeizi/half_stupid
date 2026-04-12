@@ -1,0 +1,52 @@
+[
+  {
+    "tick": 70739,
+    "obs": 50000,
+    "ids": {
+      "hotbar": [
+        29,
+        36,
+        37,
+        23,
+        33,
+        0,
+        0,
+        0,
+        0
+      ],
+      "held": 0
+    },
+    "raw": {
+      "health": 1.0,
+      "food": 0.0,
+      "held_count": 0,
+      "eating": 1
+    },
+    "probs": {
+      "W_forward": 0.000199,
+      "S_backward": 0.000199,
+      "A_strafe_left": 0.000199,
+      "D_strafe_right": 0.000199,
+      "turn_left": 0.000199,
+      "turn_right": 0.000199,
+      "look_up": 0.000199,
+      "look_down": 0.000199,
+      "jump": 0.000199,
+      "crouch": 0.000199,
+      "use_eat": 0.995619,
+      "attack": 0.000199,
+      "Q_throw": 0.000199,
+      "hotbar_1": 0.000199,
+      "hotbar_2": 0.000199,
+      "hotbar_3": 0.000199,
+      "hotbar_4": 0.000199,
+      "hotbar_5": 0.000199,
+      "hotbar_6": 0.000199,
+      "hotbar_7": 0.000199,
+      "hotbar_8": 0.000199,
+      "hotbar_9": 0.000199,
+      "stand_still": 0.000199
+    },
+    "chosen": "use_eat"
+  }
+]
